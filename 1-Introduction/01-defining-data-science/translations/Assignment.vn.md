@@ -35,12 +35,11 @@ Exemplary - Mẫu mực | Adequate - Đạt | Needs Improvement - Cần cải th
 --- | --- | -- |
 Người ta có thể xác định các nguồn dữ liệu hợp lý, cách lưu trữ dữ liệu và các quyết định/hiểu biết có thể có cho tất cả các vấn đề lĩnh vực | Một số khía cạnh của giải pháp không được trình bày chi tiết, lưu trữ dữ liệu không được thảo luận, ít nhất 2 vấn đề lĩnh vực được mô tả | Chỉ mô tả một phần của giải pháp dữ liệu, chỉ xem xét một lĩnh vực vấn đề.
 
-## Bài thực hành - Lĩnh vực giáo dục:
+## 1.Bài thực hành - Lĩnh vực giáo dục:
 
 | STT | Nhóm vấn đề | Những dữ liệu cần thu thập | Phương pháp thu thập | Cách thức lưu trữ | Insights rút ra hoặc quyết định từ việc sử dụng dữ liệu | 
 |----------------|---------|-----------------------|-----------------------|-------------------------------|--------|
-| 1 | Kết quả học tập| Điểm bài thi, điểm kiểm tra, GPA| - Giáo viên nhập liệu vào hệ thống quản lý học tập (LMS).
-- Sử dụng phần mềm chấm điểm tự động.| | |
+| 1 | Kết quả học tập| Điểm bài thi, điểm kiểm tra, GPA| Giáo viên nhập liệu vào hệ thống quản lý học tập (LMS) hoặc sử dụng phần mềm chấm điểm tự động| Lưu trữ trong cơ sở dữ liệu của trường hoặc hệ thống LMS| Xác định học sinh cần hỗ trợ thêm hoặc điều chỉnh phương pháp giảng dạy|
 | 2 | | | | | |
 | 3 | | | | | |
 | 4 | | | | | |
