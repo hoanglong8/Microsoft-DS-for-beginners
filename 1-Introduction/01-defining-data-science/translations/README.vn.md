@@ -160,9 +160,9 @@ Truy cập [`notebook.ipynb`](/1-Introduction/01-defining-data-science/notebook.
 
 ## Assignments - Bài tập thực hành
 
-* **Task 1**: Sửa đổi mã trên để tìm ra các khái niệm liên quan cho các lĩnh vực **Big Data** and **Machine Learning**
-* **Task 2**: [Hãy suy nghĩ về các tình huống giả định trong Khoa học dữ liệu](assignment.md)
+* **Task 1**: Hãy sửa code trong bài tập để vẽ biểu đồ các khái niệm liên quan tới lĩnh vực **Big Data** and **Machine Learning** => [Bài làm assignment 1](https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/blob/main/1-Introduction/01-defining-data-science/task_1_vn.ipynb).
+* **Task 2**: Hãy suy nghĩ về **các tình huống giả định** trong Khoa học dữ liệu (Why, How, What about Getting Data in...) => [Bài làm assignment 2](https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/blob/main/1-Introduction/01-defining-data-science/translations/Assignment.vn.md).
 
 ## Credits
 
-Bài giảng này đã được biên soạn ♥️ bởi [Dmitry Soshnikov](http://soshnikov.com) và được dịch sang tiếng Việt bởi [hoanglong208](https://github.com/hoanglong8)
+[Bài giảng này](https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/blob/main/1-Introduction/01-defining-data-science/translations/README.vn.md) đã được biên soạn ♥️ bởi [Dmitry Soshnikov](http://soshnikov.com) và được dịch sang tiếng Việt bởi [hoanglong208](https://github.com/hoanglong8)
