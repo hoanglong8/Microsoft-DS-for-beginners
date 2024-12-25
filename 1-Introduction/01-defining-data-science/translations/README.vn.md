@@ -1,14 +1,14 @@
 # Định nghĩa Khoa học dữ liệu
 
-| https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/blob/main/sketchnotes/01-Definitions.png |
+![Sketchnote by @sketchthedocs](https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/raw/main/sketchnotes/01-Definitions.png)
 | :----------------------------------------------------------------------------------------------------: |
 |              Defining Data Science - _Sketchnote by [@nitya](https://twitter.com/nitya)_               |
 
 ---
 
-[https://youtu.be/beZ7Mb_oz9I]
+[![Defining Data Science Video](https://raw.githubusercontent.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/main/1-Introduction/01-defining-data-science/images/video-def-ds.png)](https://youtu.be/beZ7Mb_oz9I)
 
-## [Câu hỏi trước bài luận](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/0)
+## [Câu hỏi trước bài giảng](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/0)
 
 ## Dữ liệu là gì?
 Trong cuộc sống hàng ngày, chúng ta liên tục bị bao quanh bởi dữ liệu. Văn bản bạn đang đọc hiện tại là dữ liệu. Danh sách số điện thoại của bạn bè trong điện thoại thông minh của bạn là dữ liệu, cũng như thời gian hiện tại hiển thị trên đồng hồ của bạn. Là con người, chúng ta hoạt động theo bản năng với dữ liệu bằng cách đếm số tiền mình có hoặc viết thư cho bạn bè.
@@ -24,142 +24,145 @@ Trong [Wikipedia](https://en.wikipedia.org/wiki/Data_science), **Khoa học dữ
 
 Định nghĩa này nêu bật những khía cạnh quan trọng sau đây của khoa học dữ liệu:
 
-* The main goal of data science is to **extract knowledge** from data, in other words - to **understand** data, find some hidden relationships and build a **model**.
-* Data science uses **scientific methods**, such as probability and statistics.  In fact, when the term *data science* was first introduced, some people argued that data science was just a new fancy name for statistics.  Nowadays it has become evident that the field is much broader.    
-* Obtained knowledge should be applied to produce some **actionable insights**, i.e. practical insights that you can apply to real business situations.
-* We should be able to operate on both **structured** and **unstructured** data.  We will come back to discuss different types of data later in the course.
-* **Application domain** is an important concept, and data scientists often need at least some degree of expertise in the problem domain, for example: finance, medicine, marketing, etc.
+* Mục tiêu chính của khoa học dữ liệu là **trích xuất kiến ​​thức** từ dữ liệu, nói cách khác là hiểu dữ liệu, tìm ra một số mối quan hệ ẩn và xây dựng mô hình .
+* Khoa học dữ liệu sử dụng các phương pháp khoa học , chẳng hạn như **xác suất và thống kê**. Trên thực tế, khi thuật ngữ khoa học dữ liệu lần đầu tiên được giới thiệu, một số người cho rằng khoa học dữ liệu chỉ là một cái tên mới lạ cho thống kê. Ngày nay, rõ ràng là lĩnh vực này rộng hơn nhiều.
+* Kiến thức thu được nên được áp dụng để đưa ra những **hiểu biết thực tế** , tức là những hiểu biết thiết thực mà bạn có thể áp dụng vào các tình huống kinh doanh thực tế.
+* Chúng ta có thể vận hành trên cả dữ liệu **có cấu trúc và phi cấu trúc** . Chúng ta sẽ quay lại thảo luận về các loại dữ liệu khác nhau sau trong khóa học.
+* **Lĩnh vực ứng dụng** là một khái niệm quan trọng và các nhà khoa học dữ liệu thường cần ít nhất một số mức độ chuyên môn trong lĩnh vực vấn đề, ví dụ: tài chính, y học, tiếp thị, v.v....
 
-> Another important aspect of Data Science is that it studies how data can be gathered, stored and operated upon using computers.  While statistics gives us mathematical foundations, data science applies mathematical concepts to actually draw insights from data.
+> Một khía cạnh quan trọng khác của Khoa học dữ liệu là nó nghiên cứu cách dữ liệu có thể được thu thập, lưu trữ và vận hành bằng máy tính. Trong khi thống kê cung cấp cho chúng ta nền tảng toán học, khoa học dữ liệu áp dụng các khái niệm toán học để thực sự rút ra hiểu biết từ dữ liệu.
 
-One of the ways (attributed to [Jim Gray](https://en.wikipedia.org/wiki/Jim_Gray_(computer_scientist))) to look at the data science is to consider it to be a separate paradigm of science:
-* **Empirical**, in which we rely mostly on observations and results of experiments
-* **Theoretical**, where new concepts emerge from existing scientific knowledge
-* **Computational**, where we discover new principles based on some computational experiments
-* **Data-Driven**, based on discovering relationships and patterns in the data  
+Một trong những cách (được cho là của [Jim Gray](https://en.wikipedia.org/wiki/Jim_Gray_(computer_scientist))) để xem xét khoa học dữ liệu là coi nó như một mô hình khoa học riêng biệt:
+* **Thực nghiệm** , trong đó chúng ta chủ yếu dựa vào quan sát và kết quả của các thí nghiệm
+* **Lý thuyết** , nơi các khái niệm mới xuất hiện từ kiến ​​thức khoa học hiện có
+* **Tính toán** , nơi chúng ta khám phá ra những nguyên lý mới dựa trên một số thí nghiệm tính toán
+* **Dựa trên dữ liệu** , dựa trên việc khám phá các mối quan hệ và mô hình trong dữ liệu  
 
-## Other Related Fields
+## Các lĩnh vực liên quan khác
 
-Since data is pervasive, data science itself is also a broad field, touching many other disciplines.
+Vì dữ liệu có tính phổ biến nên khoa học dữ liệu cũng là một lĩnh vực rộng lớn, liên quan đến nhiều ngành khác.
 
 <dl>
-<dt>Databases</dt>
+<dt>Cơ sở dữ liệu</dt>
 <dd>
-A critical consideration is **how to store** the data, i.e. how to structure it in a way that allows faster processing.  There are different types of databases that store structured and unstructured data, which <a href="../../2-Working-With-Data/README.md">we will consider in our course</a>.
+Một cân nhắc quan trọng là **cách lưu trữ** dữ liệu, tức là cách cấu trúc dữ liệu theo cách cho phép xử lý nhanh hơn. Có nhiều loại cơ sở dữ liệu khác nhau lưu trữ dữ liệu có cấu trúc và không có cấu trúc, <a href="../../2-Working-With-Data/README.md">chúng ta sẽ xem xét trong phần tiếp theo của khóa học này</a>.
 </dd>
-<dt>Big Data</dt>
+<dt>Dữ liệu lớn</dt>
 <dd>
-Often we need to store and process very large quantities of data with a relatively simple structure.  There are special approaches and tools to store that data in a distributed manner on a computer cluster, and process it efficiently.
+Thông thường chúng ta cần lưu trữ và xử lý lượng dữ liệu rất lớn với cấu trúc tương đối đơn giản. Có những cách tiếp cận và công cụ đặc biệt để lưu trữ dữ liệu đó theo cách phân tán trên cụm máy tính và xử lý dữ liệu đó một cách hiệu quả.
 </dd>
-<dt>Machine Learning</dt>
+<dt>Máy học tập</dt>
 <dd>
-One way to understand data is to **build a model** that will be able to predict a desired outcome.  Developing models from data is called **machine learning**. You may want to have a look at our <a href="https://aka.ms/ml-beginners">Machine Learning for Beginners</a> Curriculum to learn more about it.
+Một cách để hiểu dữ liệu là **xây dựng một mô hình** có thể dự đoán được kết quả mong muốn. Phát triển các mô hình từ dữ liệu được gọi là **học máy**. Bạn có thể muốn xem Chương trình <a href="https://aka.ms/ml-beginners">Machine Learning for Beginners</a> để tìm hiểu thêm về nó.
 </dd>
-<dt>Artificial Intelligence</dt>
+<dt>Trí tuệ nhân tạo</dt>
 <dd>
-An area of machine learning known as artificial intelligence (AI) also relies on data, and it involves building high complexity models that mimic human thought processes.  AI methods often allow us to turn unstructured data (e.g. natural language) into structured insights. 
+Một lĩnh vực học máy được gọi là trí tuệ nhân tạo (AI) cũng dựa vào dữ liệu và liên quan đến việc xây dựng các mô hình có độ phức tạp cao mô phỏng các quá trình suy nghĩ của con người. Các phương pháp AI thường cho phép chúng ta biến dữ liệu phi cấu trúc (ví dụ: ngôn ngữ tự nhiên) thành thông tin chi tiết có cấu trúc.
 </dd>
-<dt>Visualization</dt>
+<dt>Trực quan hóa</dt>
 <dd>
-Vast amounts of data are incomprehensible for a human being, but once we create useful visualizations using that data, we can make more sense of the data, and draw some conclusions. Thus, it is important to know many ways to visualize information - something that we will cover in <a href="../../3-Data-Visualization/README.md">Section 3</a> of our course. Related fields also include **Infographics**, and **Human-Computer Interaction** in general. 
+Một lượng lớn dữ liệu là điều không thể hiểu được đối với con người, nhưng một khi chúng ta tạo ra các hình ảnh trực quan hữu ích bằng cách sử dụng dữ liệu đó, chúng ta có thể hiểu rõ hơn về dữ liệu và rút ra một số kết luận. Do đó, điều quan trọng là phải biết nhiều cách để trực quan hóa thông tin - điều mà chúng ta sẽ đề cập trong <a href="../../3-Data-Visualization/README.md">Section 3</a> của khóa học. Các lĩnh vực liên quan cũng bao gồm **Đồ họa thông tin** và **Tương tác giữa người và máy tính** nói chung. 
 </dd>
 </dl>
 
-## Types of Data
+## Các loại dữ liệu
 
-As we have already mentioned, data is everywhere.  We just need to capture it in the right way!  It is useful to distinguish between **structured** and **unstructured** data. The former is typically represented in some well-structured form, often as a table or number of tables, while the latter is just a collection of files.  Sometimes we can also talk about **semi-structured** data, that have some sort of a structure that may vary greatly.
+Như chúng tôi đã đề cập, dữ liệu ở khắp mọi nơi. Chúng ta chỉ cần nắm bắt nó theo đúng cách! Phân biệt giữa dữ liệu **có cấu trúc** và dữ liệu **phi cấu trúc** là rất hữu ích . Dữ liệu có cấu trúc thường được biểu diễn dưới dạng có cấu trúc tốt, thường là bảng hoặc một số bảng, trong khi dữ liệu không có cấu trúc chỉ là một tập hợp các tệp. Đôi khi chúng ta cũng có thể nói về dữ liệu **bán cấu trúc** , có một số loại cấu trúc có thể thay đổi rất nhiều.
 
-| Structured                                                                   | Semi-structured                                                                                | Unstructured                            |
+| Có cấu trúc                                                                   | Bán cấu trúc                                                                                | Phi cấu trúc                            |
 | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | --------------------------------------- |
-| List of people with their phone numbers                                      | Wikipedia pages with links                                                                     | Text of Encyclopedia Britannica        |
-| Temperature in all rooms of a building at every minute for the last 20 years | Collection of scientific papers in JSON format with authors, data of publication, and abstract | File share with corporate documents     |
-| Data for age and gender of all people entering the building                  | Internet pages                                                                                 | Raw video feed from surveillance camera |
+| Danh sách những người có số điện thoại của họ                                      | Các trang Wikipedia có liên kết                                                                     | Văn bản của Bách khoa toàn thư Britannica        |
+| Nhiệt độ trong tất cả các phòng của một tòa nhà tại mọi phút trong 20 năm qua | Bộ sưu tập các bài báo khoa học ở định dạng JSON với tác giả, dữ liệu xuất bản và tóm tắt | Chia sẻ tập tin với các tài liệu của công ty     |
+| Dữ liệu về độ tuổi và giới tính của tất cả mọi người vào tòa nhà                 | Các trang Internet                                                                                 | Nguồn cấp video thô từ camera giám sát |
 
-## Where to get Data
+## Nơi để thu thập Dữ liệu
 
-There are many possible sources of data, and it will be impossible to list all of them! However, let's mention some of the typical places where you can get data:
+Có nhiều nguồn dữ liệu có thể có và không thể liệt kê hết tất cả! Tuy nhiên, chúng ta hãy đề cập đến một số nơi điển hình mà bạn có thể lấy dữ liệu:
 
-* **Structured**
-  - **Internet of Things** (IoT), including data from different sensors, such as temperature or pressure sensors, provides a lot of useful data.  For example, if an office building is equipped with IoT sensors, we can automatically control heating and lighting in order to minimize costs. 
-  - **Surveys** that we ask users to complete after a purchase, or after visiting a web site.
-  - **Analysis of behavior** can, for example, help us understand how deeply a user goes into a site, and what is the typical reason for leaving the site.
-* **Unstructured**
-  - **Texts** can be a rich source of insights, such as an overall **sentiment score**, or extracting keywords and semantic meaning.
-  - **Images** or **Video**. A video from a surveillance camera can be used to estimate traffic on the road, and inform people about potential traffic jams.
-  - Web server **Logs** can be used to understand which pages of our site are most often visited, and for how long.
-* Semi-structured
-  - **Social Network** graphs can be great sources of data about user personalities and potential effectiveness in spreading information around.
-  - When we have a bunch of photographs from a party, we can try to extract **Group Dynamics** data by building a graph of people taking pictures with each other.
+* **Có cấu trúc**
+  - **Internet vạn vật (IoT)**, bao gồm dữ liệu từ các cảm biến khác nhau, chẳng hạn như cảm biến nhiệt độ hoặc áp suất, cung cấp rất nhiều dữ liệu hữu ích. Ví dụ, nếu một tòa nhà văn phòng được trang bị cảm biến IoT, chúng ta có thể tự động kiểm soát hệ thống sưởi ấm và chiếu sáng để giảm thiểu chi phí.
+  - **Các cuộc khảo sát** mà chúng tôi yêu cầu người dùng hoàn thành sau khi mua hàng hoặc sau khi truy cập một trang web.
+  - **Các phân tích hành vi** có thể giúp chúng ta hiểu được mức độ người dùng truy cập sâu vào một trang web và lý do điển hình khiến họ rời khỏi trang web đó là gì.
 
-By knowing different possible sources of data, you can try to think about different scenarios where data science techniques can be applied to know the situation better, and to improve business processes. 
+* **Phi cấu trúc**
+  - **Văn bản** có thể là nguồn thông tin chi tiết phong phú, chẳng hạn như điểm số tình cảm chung hoặc trích xuất từ ​​khóa và ý nghĩa ngữ nghĩa.
+  - **Hình ảnh hoặc Video** . Video từ camera giám sát có thể được sử dụng để ước tính lưu lượng giao thông trên đường và thông báo cho mọi người về tình trạng tắc đường tiềm ẩn.
+  - **File Log (Nhật ký)** máy chủ web có thể được sử dụng để hiểu những trang nào trên trang web của chúng tôi được truy cập nhiều nhất và trong bao lâu.
 
-## What you can do with Data
+* **Bán cấu trúc**
+  - **Mạng xã hội** có thể là nguồn dữ liệu tuyệt vời về tính cách người dùng và hiệu quả tiềm năng trong việc truyền bá thông tin.
+  - Khi chúng ta có một loạt ảnh chụp từ một bữa tiệc, chúng ta có thể thử trích xuất dữ liệu **Group Dynamics** bằng cách xây dựng biểu đồ về những người chụp ảnh với nhau.
 
-In Data Science, we focus on the following steps of data journey:
+Bằng cách biết nhiều nguồn dữ liệu khác nhau, bạn có thể thử nghĩ về các tình huống khác nhau mà các kỹ thuật khoa học dữ liệu có thể được áp dụng để hiểu rõ hơn về tình hình và cải thiện quy trình kinh doanh.
+
+
+## Bạn có thể làm gì với Dữ liệu
+
+Trong Khoa học dữ liệu, chúng ta cần tập trung vào các bước sau của quá trình làm việc với dữ liệu:
 
 <dl>
-<dt>1) Data Acquisition</dt>
+<dt>1) Data Acquisition - Thu thập dữ liệu</dt>
 <dd>
-The first step is to collect the data.  While in many cases it can be a straightforward process, like data coming to a database from a web application, sometimes we need to use special techniques. For example, data from IoT sensors can be overwhelming, and it is a good practice to use buffering endpoints such as IoT Hub to collect all the data before further processing.
+Bước đầu tiên là thu thập dữ liệu. Trong khi trong nhiều trường hợp, đây có thể là một quá trình đơn giản, như dữ liệu đến cơ sở dữ liệu từ ứng dụng web, đôi khi chúng ta cần sử dụng các kỹ thuật đặc biệt. Ví dụ, dữ liệu từ các cảm biến IoT có thể rất nhiều và việc sử dụng các điểm cuối đệm như IoT Hub để thu thập tất cả dữ liệu trước khi xử lý thêm là một biện pháp tốt.
 </dd>
-<dt>2) Data Storage</dt>
+<dt>2) Data Storage - Lưu trữ dữ liệu</dt>
 <dd>
-Storing data can be challenging, especially if we are talking about big data.  When deciding how to store data, it makes sense to anticipate the way you would like to query the data in the future.  There are several ways data can be stored:
+Việc lưu trữ dữ liệu có thể là một thách thức, đặc biệt là khi chúng ta đang nói về dữ liệu lớn. Khi quyết định cách lưu trữ dữ liệu, bạn nên dự đoán cách bạn muốn truy vấn dữ liệu trong tương lai. Có một số cách dữ liệu có thể được lưu trữ:
 <ul>
-<li>A relational database stores a collection of tables, and uses a special language called SQL to query them. Typically, tables are organized into different groups called schemas. In many cases we need to convert the data from original form to fit the schema.</li>
-<li><a href="https://en.wikipedia.org/wiki/NoSQL">A NoSQL</a> database, such as <a href="https://azure.microsoft.com/services/cosmos-db/?WT.mc_id=academic-77958-bethanycheum">CosmosDB</a>, does not enforce schemas on data, and allows storing more complex data, for example, hierarchical JSON documents or graphs. However, NoSQL databases do not have the rich querying capabilities of SQL, and cannot enforce referential integrity, i.e. rules on how the data is structured in tables and governing the relationships between tables.</li>
-<li><a href="https://en.wikipedia.org/wiki/Data_lake">Data Lake</a> storage is used for large collections of data in raw, unstructured form. Data lakes are often used with big data, where all data cannot fit on one machine, and has to be stored and processed by a cluster of servers. <a href="https://en.wikipedia.org/wiki/Apache_Parquet">Parquet</a> is the data format that is often used in conjunction with big data.</li> 
+<li>A Cơ sở dữ liệu quan hệ lưu trữ một tập hợp các bảng và sử dụng một ngôn ngữ đặc biệt gọi là SQL để truy vấn chúng. Thông thường, các bảng được tổ chức thành các nhóm khác nhau gọi là lược đồ. Trong nhiều trường hợp, chúng ta cần chuyển đổi dữ liệu từ dạng ban đầu để phù hợp với lược đồ.</li>
+<li><a href="https://en.wikipedia.org/wiki/NoSQL">Một cơ sở dữ liệu phi truy vấn NoSQL</a> (database), ví dụ như <a href="https://azure.microsoft.com/services/cosmos-db/?WT.mc_id=academic-77958-bethanycheum">CosmosDB</a>, không áp dụng lược đồ cho dữ liệu và cho phép lưu trữ dữ liệu phức tạp hơn, ví dụ như tài liệu JSON phân cấp hoặc đồ thị. Tuy nhiên, cơ sở dữ liệu NoSQL không có khả năng truy vấn phong phú của SQL và không thể áp dụng tính toàn vẹn tham chiếu, tức là các quy tắc về cách dữ liệu được cấu trúc trong các bảng và quản lý mối quan hệ giữa các bảng.</li>
+<li><a href="https://en.wikipedia.org/wiki/Data_lake">Hồ dữ liệu</a> được sử dụng cho các bộ sưu tập dữ liệu lớn ở dạng thô, không có cấu trúc. Data lake thường được sử dụng với dữ liệu lớn, trong đó tất cả dữ liệu không thể vừa trên một máy và phải được lưu trữ và xử lý bởi một cụm máy chủ. <a href="https://en.wikipedia.org/wiki/Apache_Parquet">Parquet</a> là định dạng dữ liệu thường được sử dụng kết hợp với dữ liệu lớn.</li> 
 </ul>
 </dd>
-<dt>3) Data Processing</dt>
+<dt>3) Data Processing - Xử lý dữ liệu</dt>
 <dd>
-This is the most exciting part of the data journey, which involves converting the data from its original form into a form that can be used for visualization/model training.  When dealing with unstructured data such as text or images, we may need to use some AI techniques to extract **features** from the data, thus converting it to structured form.
+Đây là phần thú vị nhất của hành trình dữ liệu, bao gồm việc chuyển đổi dữ liệu từ dạng ban đầu sang dạng có thể sử dụng để trực quan hóa/đào tạo mô hình. Khi xử lý dữ liệu phi cấu trúc như văn bản hoặc hình ảnh, chúng ta có thể cần sử dụng một số kỹ thuật AI để trích xuất **các tính năng** từ dữ liệu, do đó chuyển đổi dữ liệu sang dạng có cấu trúc.
 </dd>
-<dt>4) Visualization / Human Insights</dt>
+<dt>4) Visualization for Human Insights - Hình dung, trực quan hóa cho phù hợp với nhận thức của con người</dt>
 <dd>
-Oftentimes, in order to understand the data, we need to visualize it.  Having many different visualization techniques in our toolbox, we can find the right view to make an insight.  Often, a data scientist needs to "play with data", visualizing it many times and looking for some relationships.  Also, we may use statistical techniques to test a hypotheses or prove a correlation between different pieces of data.   
+Thông thường, để hiểu dữ liệu, chúng ta cần trực quan hóa dữ liệu. Có nhiều kỹ thuật trực quan hóa khác nhau trong hộp công cụ của mình, chúng ta có thể tìm ra chế độ xem phù hợp để đưa ra hiểu biết sâu sắc. Thông thường, một nhà khoa học dữ liệu cần "chơi với dữ liệu", trực quan hóa dữ liệu nhiều lần và tìm kiếm một số mối quan hệ. Ngoài ra, chúng ta có thể sử dụng các kỹ thuật thống kê để kiểm tra giả thuyết hoặc chứng minh mối tương quan giữa các phần dữ liệu khác nhau.   
 </dd>
-<dt>5) Training a predictive model</dt>
+<dt>5) Training a predictive model - Huấn luyện mô hình dự đoán</dt>
 <dd>
-Because the ultimate goal of data science is to be able to make decisions based on data, we may want to use the techniques of <a href="http://github.com/microsoft/ml-for-beginners">Machine Learning</a> to build a predictive model.  We can then use this to make predictions using new data sets with similar structures.
+Vì mục tiêu cuối cùng của khoa học dữ liệu là có thể đưa ra quyết định dựa trên dữ liệu, chúng ta có thể muốn sử dụng các kỹ thuật của <a href="http://github.com/microsoft/ml-for-beginners">Machine Learning</a> để xây dựng một mô hình dự đoán. Sau đó, chúng ta có thể sử dụng mô hình này để đưa ra dự đoán bằng cách sử dụng các tập dữ liệu mới có cấu trúc tương tự.
 </dd>
 </dl>
 
-Of course, depending on the actual data, some steps might be missing (e.g., when we already have the data in the database, or when we do not need model training), or some steps might be repeated several times (such as data processing).
+Tất nhiên, tùy thuộc vào dữ liệu thực tế, một số bước có thể bị thiếu (ví dụ: khi chúng ta đã có dữ liệu trong cơ sở dữ liệu hoặc khi chúng ta không cần đào tạo mô hình) hoặc một số bước có thể được lặp lại nhiều lần (chẳng hạn như xử lý dữ liệu).
 
-## Digitalization and Digital Transformation
+## Số hóa và chuyển đổi số
 
-In the last decade, many businesses started to understand the importance of data when making business decisions.  To apply data science principles to running a business, one first needs to collect some data, i.e. translate business processes into digital form. This is known as **digitalization**.  Applying data science techniques to this data to guide decisions can lead to significant increases in productivity (or even business pivot), called **digital transformation**.
+Trong thập kỷ qua, nhiều doanh nghiệp bắt đầu hiểu được tầm quan trọng của dữ liệu khi đưa ra quyết định kinh doanh. Để áp dụng các nguyên tắc khoa học dữ liệu vào việc điều hành doanh nghiệp, trước tiên người ta cần thu thập một số dữ liệu, tức là chuyển đổi các quy trình kinh doanh sang dạng kỹ thuật số. Điều này được gọi là số hóa . Việc áp dụng các kỹ thuật khoa học dữ liệu vào dữ liệu này để hướng dẫn các quyết định có thể dẫn đến sự gia tăng đáng kể về năng suất (hoặc thậm chí là sự thay đổi trong kinh doanh), được gọi là chuyển đổi kỹ thuật số .
 
-Let's consider an example.  Suppose we have a data science course (like this one) which we deliver online to students, and we want to use data science to improve it.  How can we do it?
+Hãy xem xét một ví dụ. Giả sử chúng ta có một khóa học khoa học dữ liệu (như khóa học này) mà chúng ta cung cấp trực tuyến cho sinh viên và chúng ta muốn sử dụng khoa học dữ liệu để cải thiện khóa học đó. Chúng ta có thể làm như thế nào?
 
-We can start by asking "What can be digitized?"  The simplest way would be to measure the time it takes each student to complete each module, and to measure the obtained knowledge by giving a multiple-choice test at the end of each module.  By averaging time-to-complete across all students, we can find out which modules cause the most difficulties for students, and work on simplifying them.
+Chúng ta có thể bắt đầu bằng cách hỏi "Những gì có thể được số hóa?" Cách đơn giản nhất là đo thời gian mỗi học sinh hoàn thành từng mô-đun và đo lượng kiến ​​thức thu được bằng cách đưa ra bài kiểm tra trắc nghiệm vào cuối mỗi mô-đun. Bằng cách tính trung bình thời gian hoàn thành của tất cả học sinh, chúng ta có thể tìm ra mô-đun nào gây khó khăn nhất cho học sinh và thực hiện đơn giản hóa chúng.
 
-> You may argue that this approach is not ideal, because modules can be of different lengths.  It is probably more fair to divide the time by the length of the module (in number of characters), and compare those values instead.
+> Bạn có thể cho rằng cách tiếp cận này không lý tưởng, vì các mô-đun có thể có độ dài khác nhau. Có lẽ công bằng hơn khi chia thời gian cho độ dài của mô-đun (theo số ký tự) và so sánh các giá trị đó.
 
-When we start analyzing results of multiple-choice tests, we can try to determine which concepts that students have difficulty understanding, and use that information to improve the content.  To do that, we need to design tests in such a way that each question maps to a certain concept or chunk of knowledge.
+Khi chúng ta bắt đầu phân tích kết quả của các bài kiểm tra trắc nghiệm, chúng ta có thể cố gắng xác định những khái niệm nào mà học sinh gặp khó khăn khi hiểu và sử dụng thông tin đó để cải thiện nội dung. Để làm được điều đó, chúng ta cần thiết kế các bài kiểm tra theo cách mà mỗi câu hỏi đều liên quan đến một khái niệm hoặc khối kiến ​​thức nhất định.
 
-If we want to get even more complicated, we can plot the time taken for each module against the age category of students.  We might find out that for some age categories it takes an inappropriately long time to complete the module, or that students drop out before completing it.  This can help us provide age recommendations for the module, and minimize people's dissatisfaction from wrong expectations.
+Nếu chúng ta muốn phức tạp hơn nữa, chúng ta có thể lập biểu đồ thời gian dành cho từng mô-đun so với nhóm tuổi của học sinh. Chúng ta có thể phát hiện ra rằng đối với một số nhóm tuổi, thời gian hoàn thành mô-đun là quá dài không phù hợp hoặc học sinh bỏ học trước khi hoàn thành. Điều này có thể giúp chúng ta đưa ra khuyến nghị về độ tuổi cho mô-đun và giảm thiểu sự không hài lòng của mọi người do kỳ vọng sai lầm.
 
-## 🚀 Challenge
+## 🚀 Challenge - Thử thách
 
-In this challenge, we will try to find concepts relevant to the field of Data Science by looking at texts.  We will take a Wikipedia article on Data Science, download and process the text, and then build a word cloud like this one:
+Trong thử thách này, chúng ta sẽ cố gắng tìm các khái niệm có liên quan đến lĩnh vực Khoa học dữ liệu bằng cách xem xét các văn bản. Chúng ta sẽ lấy một bài viết trên Wikipedia về Khoa học dữ liệu, tải xuống và xử lý văn bản, sau đó xây dựng một đám mây từ như thế này:
 
-![Word Cloud for Data Science](images/ds_wordcloud.png)
+![Word Cloud for Data Science](https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/blob/main/1-Introduction/01-defining-data-science/images/ds_wordcloud.png)
 
-Visit [`notebook.ipynb`](/1-Introduction/01-defining-data-science/notebook.ipynb ':ignore') to read through the code.  You can also run the code, and see how it performs all data transformations in real time. 
+Truy cập [`notebook.ipynb`](/1-Introduction/01-defining-data-science/notebook.ipynb ':ignore') để đọc qua mã. Bạn cũng có thể chạy mã và xem cách nó thực hiện tất cả các chuyển đổi dữ liệu theo thời gian thực. 
 
-> If you do not know how to run code in a Jupyter Notebook, have a look at [this article](https://soshnikov.com/education/how-to-execute-notebooks-from-github/).
+> Nếu bạn không biết cách chạy mã trong Jupyter Notebook, hãy xem [this article](https://soshnikov.com/education/how-to-execute-notebooks-from-github/).
 
 
 
-## [Post-lecture quiz](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/1)
+## [Kiểm tra sau bài giảng](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/1)
 
-## Assignments
+## Assignments - Bài tập thực hành
 
-* **Task 1**: Modify the code above to find out related concepts for the fields of **Big Data** and **Machine Learning**
-* **Task 2**: [Think About Data Science Scenarios](assignment.md)
+* **Task 1**: Sửa đổi mã trên để tìm ra các khái niệm liên quan cho các lĩnh vực **Big Data** and **Machine Learning**
+* **Task 2**: [Hãy suy nghĩ về các tình huống giả định trong Khoa học dữ liệu](assignment.md)
 
 ## Credits
 
-This lesson has been authored with ♥️ by [Dmitry Soshnikov](http://soshnikov.com)
+Bài giảng này đã được biên soạn ♥️ bởi [Dmitry Soshnikov](http://soshnikov.com) và được dịch sang tiếng Việt bởi @hoanglong208
