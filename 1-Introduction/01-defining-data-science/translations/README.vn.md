@@ -20,7 +20,7 @@ Với sự ra đời của Internet, vai trò của máy tính như một thiế
 
 ## Khoa học dữ liệu là gì?
 
-Trong [Wikipedia](https://en.wikipedia.org/wiki/Data_science), **Khoa học dữ liệu** được định nghĩa là lĩnh vực khoa học sử dụng các phương pháp khoa học để **trích xuất kiến ​​thức (knowledge) và hiểu biết thực tế (insights)** từ dữ liệu có cấu trúc và phi cấu trúc, đồng thời ứng dụng các kiến ​​thức đó vào nhiều lĩnh vực ứng dụng khác nhau.
+Theo [Wikipedia](https://en.wikipedia.org/wiki/Data_science), **Khoa học dữ liệu** được định nghĩa là lĩnh vực khoa học sử dụng các phương pháp khoa học để **trích xuất kiến ​​thức (knowledge) và hiểu biết thực tế (insights)** từ dữ liệu có cấu trúc và phi cấu trúc, đồng thời ứng dụng các kiến ​​thức đó vào nhiều lĩnh vực ứng dụng khác nhau.
 
 Định nghĩa này nêu bật những khía cạnh quan trọng sau đây của khoa học dữ liệu:
 
@@ -144,7 +144,7 @@ Khi chúng ta bắt đầu phân tích kết quả của các bài kiểm tra tr
 
 Nếu chúng ta muốn phức tạp hơn nữa, chúng ta có thể lập biểu đồ thời gian dành cho từng mô-đun so với nhóm tuổi của học sinh. Chúng ta có thể phát hiện ra rằng đối với một số nhóm tuổi, thời gian hoàn thành mô-đun là quá dài không phù hợp hoặc học sinh bỏ học trước khi hoàn thành. Điều này có thể giúp chúng ta đưa ra khuyến nghị về độ tuổi cho mô-đun và giảm thiểu sự không hài lòng của mọi người do kỳ vọng sai lầm.
 
-## 🚀 Challenge - Thử thách
+## 🚀 Challenge - Thử thách cuối bài học
 
 Trong thử thách này, chúng ta sẽ cố gắng tìm các khái niệm có liên quan đến lĩnh vực Khoa học dữ liệu bằng cách xem xét các văn bản. Chúng ta sẽ lấy một bài viết trên Wikipedia về Khoa học dữ liệu, tải xuống và xử lý văn bản, sau đó xây dựng một đám mây từ như thế này:
 
