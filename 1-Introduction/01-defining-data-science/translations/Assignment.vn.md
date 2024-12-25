@@ -1,19 +1,20 @@
-# Assignment: Data Science Scenarios
+# Bài tập: Các tình huống khoa học dữ liệu
 
-In this first assignment, we ask you to think about some real-life process or problem in different problem domains, and how you can improve it using the Data Science process. Think about the following:
+Trong bài tập thứ 2 này, chúng tôi yêu cầu bạn suy nghĩ về một số quy trình hoặc vấn đề thực tế trong các lĩnh vực vấn đề khác nhau và cách bạn có thể cải thiện nó bằng quy trình Khoa học dữ liệu. Hãy suy nghĩ về những điều sau:
 
-1. Which data can you collect?
-1. How would you collect it?
-1. How would you store the data? How large the data is likely to be?
-1. Which insights you might be able to get from this data? Which decisions we would be able to take based on the data?
+1. Bạn có thể thu thập những dữ liệu nào?
+2. Bạn sẽ thu thập dữ liệu bằng cách nào?
+3. Bạn sẽ lưu trữ dữ liệu như thế nào? Dữ liệu có thể lớn đến mức nào?
+4. Bạn có thể có được những tri thức nào từ dữ liệu này? Bạn có thể đưa ra những quyết định nào dựa trên dữ liệu này?
 
-Try to think about 3 different problems/processes and describe each of the points above for each problem domain.
+Hãy thử nghĩ về 3 vấn đề/quy trình khác nhau và mô tả từng ý trên cho từng lĩnh vực.
 
-Here are some of the problem domains and problems that can get you started thinking:
+Sau đây là một số lĩnh vực và vấn đề có thể khiến bạn bắt đầu suy nghĩ:
 
-1. How can you use data to improve education process for children in schools?
-1. How can you use data to control vaccination during the pandemic?
-1. How can you use data to make sure you are being productive at work?
+1. **Giáo dục**: Bạn có thể sử dụng dữ liệu như thế nào để cải thiện quá trình giáo dục cho trẻ em tại trường học?
+2. **Y tế**: Bạn có thể sử dụng dữ liệu để kiểm soát việc tiêm chủng trong thời kỳ đại dịch như thế nào?
+3. **Công việc thường ngày**: Bạn có thể sử dụng dữ liệu như thế nào để đảm bảo bạn đang làm việc hiệu quả?
+
 ## Instructions
 
 Fill in the following table (substitute suggested problem domains for your own ones if needed):
