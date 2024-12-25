@@ -1,4 +1,5 @@
-# Defining Data Science!
+# Defining Data Science
+[Bản dịch tiếng Việt](https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/blob/main/1-Introduction/01-defining-data-science/translations/README.vn.md)
 
 | ![ Sketchnote by [(@sketchthedocs)](https://sketchthedocs.dev) ](../../sketchnotes/01-Definitions.png) |
 | :----------------------------------------------------------------------------------------------------: |
