@@ -41,6 +41,9 @@ Người ta có thể xác định các nguồn dữ liệu hợp lý, cách lư
 |----------------|---------|-----------------------|-----------------------|-------------------------------|--------|
 | 1 | Kết quả học tập| Điểm bài thi, điểm kiểm tra, GPA| Giáo viên nhập liệu vào hệ thống quản lý học tập (LMS) hoặc sử dụng phần mềm chấm điểm tự động| Lưu trữ trong cơ sở dữ liệu của trường hoặc hệ thống LMS| Xác định học sinh cần hỗ trợ thêm; Điều chỉnh phương pháp giảng dạy|
 | 2 | Thời gian học| Điểm danh (học offline) hoặc đo lường thời gian học trên hệ thống e-learning| Sử dụng hệ thống điểm danh điện tử, quét thẻ học sinh hoặc nhận diện khuôn mặt| Giáo viên nhập liệu vào hệ thống điểm danh điện tử và lưu trữ trên cơ sở dữ liệu của trường học| Phát hiện xu hướng vắng mặt để can thiệp kịp thời; Đánh giá mối liên hệ giữa tham dự và kết quả học tập|
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| 3 | Hành vi và thái độ học tập| Sự chấp hành, tính kỷ luật, tinh thần hăng hái tham gia| Quan sát và ghi chép của giáo viên; Sử dụng ứng dụng theo dõi hành vi học sinh| Lưu trữ trong hồ sơ cá nhân của học sinh trên hệ thống quản lý| Xác định học sinh gặp khó khăn về hành vi; Phát triển chương trình hỗ trợ tâm lý hoặc kỹ năng mềm|
+| 4 | Phản hồi từ học sinh và phụ huynh| Ý kiến của học sinh và phụ huynh| Khảo sát trực tuyến định kỳ; Họp phụ huynh và ghi nhận ý kiến| Lưu trữ dưới dạng báo cáo trong hệ thống quản lý| Cải thiện môi trường học tập; Tăng cường sự tham gia của phụ huynh|
+| 5 | Dữ liệu sức khỏe| Sức khỏe thể chất, sức khỏe tinh thần| Khám sức khỏe định kỳ; Báo cáo từ nhân viên y tế trường học| Lưu trữ trong hồ sơ y tế điện tử của học sinh| Phát hiện sớm vấn đề sức khỏe ảnh hưởng đến học tập; Triển khai chương trình giáo dục sức khỏe phù hợp|
+| 6 | Sử dụng công nghệ trong học tập| Thời gian, số lượng, tần suất, hiệu quả| Theo dõi hoạt động trên các nền tảng học tập trực tuyến; Sử dụng phần mềm phân tích hành vi học tập| Lưu trữ trong hệ thống LMS hoặc cơ sở dữ liệu trường học| Đánh giá hiệu quả của công nghệ trong giảng dạy; Điều chỉnh tài nguyên học tập số cho phù hợp|
+| 7 | Dữ liệu về môi trường học tập| Cơ sở vật chất, tài nguyên, giáo cụ và thiết bị hỗ trợ học tập| Kiểm tra định kỳ cơ sở vật chất; Khảo sát ý kiến học sinh và giáo viên về môi trường học tập| Lưu trữ trong hệ thống quản lý cơ sở vật chất của trường| Xác định nhu cầu nâng cấp cơ sở vật chất; Phân bổ nguồn lực hợp lý để cải thiện môi trường học tập|
+
