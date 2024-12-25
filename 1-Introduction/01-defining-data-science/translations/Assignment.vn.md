@@ -7,26 +7,30 @@ Trong bài tập thứ 2 này, chúng tôi yêu cầu bạn suy nghĩ về một
 3. Bạn sẽ lưu trữ dữ liệu như thế nào? Dữ liệu có thể lớn đến mức nào?
 4. Bạn có thể có được những tri thức nào từ dữ liệu này? Bạn có thể đưa ra những quyết định nào dựa trên dữ liệu này?
 
-Hãy thử nghĩ về 3 vấn đề/quy trình khác nhau và mô tả từng ý trên cho từng lĩnh vực.
+Hãy thử nghĩ về 5 vấn đề/quy trình khác nhau và mô tả từng ý trên cho từng lĩnh vực.
 
 Sau đây là một số lĩnh vực và vấn đề có thể khiến bạn bắt đầu suy nghĩ:
 
 1. **Giáo dục**: Bạn có thể sử dụng dữ liệu như thế nào để cải thiện quá trình giáo dục cho trẻ em tại trường học?
 2. **Y tế**: Bạn có thể sử dụng dữ liệu để kiểm soát việc tiêm chủng trong thời kỳ đại dịch như thế nào?
-3. **Công việc thường ngày**: Bạn có thể sử dụng dữ liệu như thế nào để đảm bảo bạn đang làm việc hiệu quả?
+3. **Năng suất**: Bạn có thể sử dụng dữ liệu như thế nào để đảm bảo bạn đang làm việc hiệu quả (Viết kịch bản, học tập, đăng bài lên website, tạo ebook, tạo audiobook, quay video, đăng bài lên các nền tảng, quản lý lượt truy cập...)?
+4. **Tài chính - Đầu tư**: Bạn có thể sử dụng dữ liệu như thế nào để phân tích, đánh giá, lựa chọn danh mục để đầu tư (vàng, hàng hóa, chứng khoán, bất động sản, forex, coin...) sao cho tối đa hóa lợi nhuận?
+5. **Điều hành - Quản lý**: Bạn có thể sử dụng dữ liệu như thế nào để quản lý doanh nghiệp kinh doanh hiệu quả?
 
-## Instructions
+## Hướng dẫn
 
-Fill in the following table (substitute suggested problem domains for your own ones if needed):
+Điền vào bảng sau (có thể thay thế lĩnh vực được đề xuất bằng lĩnh vực của riêng bạn - nếu cần):
 
-| Problem Domain | Problem | Which data to collect | How to store the data | Which insights/decisions we can make | 
+| Lĩnh vực | Vấn đề mục tiêu | Dữ liệu nào cần thu thập | Lưu trữ ntn | Quyết định nào có thể đưa ra | 
 |----------------|---------|-----------------------|-----------------------|--------------------------------------|
-| Education | | | | |
-| Vaccination | | | | |
-| Productivity | | | | |
+| Giáo dục | | | | |
+| Y tế | | | | |
+| Năng suất | | | | |
+| Tài chính | | | | |
+| Điều hành | | | | |
 
-## Rubric
+## Rubric - Thang điểm đánh giá
 
-Exemplary | Adequate | Needs Improvement
+Exemplary - Mẫu mực | Adequate - Đạt | Needs Improvement - Cần cải thiện
 --- | --- | -- |
-One was able to identify reasonable data sources, ways of storing data and possible decisions/insights for all problem domains | Some of the aspects of the solution are not detailed, data storage is not discussed, at least 2 problem domains are described | Only parts of the data solution are described, only one problem domain is considered.
+Người ta có thể xác định các nguồn dữ liệu hợp lý, cách lưu trữ dữ liệu và các quyết định/hiểu biết có thể có cho tất cả các vấn đề lĩnh vực | Một số khía cạnh của giải pháp không được trình bày chi tiết, lưu trữ dữ liệu không được thảo luận, ít nhất 2 vấn đề lĩnh vực được mô tả | Chỉ mô tả một phần của giải pháp dữ liệu, chỉ xem xét một lĩnh vực vấn đề.
