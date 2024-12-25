@@ -14,10 +14,10 @@ Sau đây là một số lĩnh vực và vấn đề có thể khiến bạn b�
 1. **Giáo dục**: Bạn có thể sử dụng dữ liệu như thế nào để cải thiện quá trình giáo dục cho trẻ em tại trường học?
 2. **Y tế**: Bạn có thể sử dụng dữ liệu để kiểm soát việc tiêm chủng trong thời kỳ đại dịch như thế nào?
 3. **Năng suất**: Bạn có thể sử dụng dữ liệu như thế nào để đảm bảo bạn đang làm việc hiệu quả (Viết kịch bản, học tập, đăng bài lên website, tạo ebook, tạo audiobook, quay video, đăng bài lên các nền tảng, quản lý lượt truy cập...)?
-4. **Tài chính - Đầu tư**: Bạn có thể sử dụng dữ liệu như thế nào để phân tích, đánh giá, lựa chọn danh mục để đầu tư (vàng, hàng hóa, chứng khoán, bất động sản, forex, coin...) sao cho tối đa hóa lợi nhuận?
-5. **Điều hành - Quản lý**: Bạn có thể sử dụng dữ liệu như thế nào để quản lý doanh nghiệp kinh doanh hiệu quả?
+4. **Tài chính đầu tư**: Bạn có thể sử dụng dữ liệu như thế nào để phân tích, đánh giá, lựa chọn danh mục để đầu tư (vàng, hàng hóa, chứng khoán, bất động sản, forex, coin...) sao cho tối đa hóa lợi nhuận?
+5. **Quản trị kinh doanh**: Bạn có thể sử dụng dữ liệu như thế nào để quản trị doanh nghiệp về các mảng marketing, bán hàng, tài chính, nhân sự, truyền thông, thương hiệu...một cách hiệu quả?
 
-## Hướng dẫn
+## Instructions - Hướng dẫn
 
 Điền vào bảng sau (có thể thay thế lĩnh vực được đề xuất bằng lĩnh vực của riêng bạn - nếu cần):
 
@@ -34,3 +34,14 @@ Sau đây là một số lĩnh vực và vấn đề có thể khiến bạn b�
 Exemplary - Mẫu mực | Adequate - Đạt | Needs Improvement - Cần cải thiện
 --- | --- | -- |
 Người ta có thể xác định các nguồn dữ liệu hợp lý, cách lưu trữ dữ liệu và các quyết định/hiểu biết có thể có cho tất cả các vấn đề lĩnh vực | Một số khía cạnh của giải pháp không được trình bày chi tiết, lưu trữ dữ liệu không được thảo luận, ít nhất 2 vấn đề lĩnh vực được mô tả | Chỉ mô tả một phần của giải pháp dữ liệu, chỉ xem xét một lĩnh vực vấn đề.
+
+## Bài thực hành - Lĩnh vực giáo dục:
+
+| STT | Nhóm vấn đề | Những dữ liệu cần thu thập | Phương pháp thu thập | Cách thức lưu trữ | Insights rút ra hoặc quyết định từ việc sử dụng dữ liệu | 
+|----------------|---------|-----------------------|-----------------------|-------------------------------|--------|
+| 1 | Kết quả học tập| Điểm bài thi, điểm kiểm tra, GPA| - Giáo viên nhập liệu vào hệ thống quản lý học tập (LMS).
+- Sử dụng phần mềm chấm điểm tự động.| | |
+| 2 | | | | | |
+| 3 | | | | | |
+| 4 | | | | | |
+| 5 | | | | | |
