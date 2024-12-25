@@ -165,4 +165,4 @@ Truy cập [`notebook.ipynb`](/1-Introduction/01-defining-data-science/notebook.
 
 ## Credits
 
-Bài giảng này đã được biên soạn ♥️ bởi [Dmitry Soshnikov](http://soshnikov.com) và được dịch sang tiếng Việt bởi @hoanglong208
+Bài giảng này đã được biên soạn ♥️ bởi [Dmitry Soshnikov](http://soshnikov.com) và được dịch sang tiếng Việt bởi [hoanglong208](https://github.com/hoanglong8)
