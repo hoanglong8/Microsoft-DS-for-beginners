@@ -1,28 +1,28 @@
-# Defining Data Science
+# Định nghĩa Khoa học dữ liệu
 
-| ![ Sketchnote by [(@sketchthedocs)](https://sketchthedocs.dev) ](../../sketchnotes/01-Definitions.png) |
+| https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/blob/main/sketchnotes/01-Definitions.png |
 | :----------------------------------------------------------------------------------------------------: |
 |              Defining Data Science - _Sketchnote by [@nitya](https://twitter.com/nitya)_               |
 
 ---
 
-[![Defining Data Science Video](images/video-def-ds.png)](https://youtu.be/beZ7Mb_oz9I)
+[https://youtu.be/beZ7Mb_oz9I]
 
-## [Pre-lecture quiz](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/0)
+## [Câu hỏi trước bài luận](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/0)
 
-## What is Data?
-In our everyday life, we are constantly surrounded by data. The text you are reading now is data.  The list of phone numbers of your friends in your smartphone is data, as well as the current time displayed on your watch. As human beings, we naturally operate with data by counting the money we have or by writing letters to our friends.
+## Dữ liệu là gì?
+Trong cuộc sống hàng ngày, chúng ta liên tục bị bao quanh bởi dữ liệu. Văn bản bạn đang đọc hiện tại là dữ liệu. Danh sách số điện thoại của bạn bè trong điện thoại thông minh của bạn là dữ liệu, cũng như thời gian hiện tại hiển thị trên đồng hồ của bạn. Là con người, chúng ta hoạt động theo bản năng với dữ liệu bằng cách đếm số tiền mình có hoặc viết thư cho bạn bè.
 
-However, data became much more critical with the creation of computers.  The primary role of computers is to perform computations, but they need data to operate on.  Thus, we need to understand how computers store and process data.
+Tuy nhiên, dữ liệu trở nên quan trọng hơn nhiều với sự ra đời của máy tính. Vai trò chính của máy tính là thực hiện tính toán, nhưng chúng cần dữ liệu để hoạt động. Do đó, chúng ta cần hiểu cách máy tính lưu trữ và xử lý dữ liệu.
 
-With the emergence of the Internet, the role of computers as data handling devices increased.  If you think about it, we now use computers more and more for data processing and communication, rather than actual computations. When we write an e-mail to a friend or search for some information on the Internet - we are essentially creating, storing, transmitting, and manipulating data.
-> Can you remember the last time you have used computers to actually compute something? 
+Với sự ra đời của Internet, vai trò của máy tính như một thiết bị xử lý dữ liệu đã tăng lên. Nếu bạn nghĩ về điều đó, chúng ta hiện sử dụng máy tính ngày càng nhiều hơn để xử lý dữ liệu và giao tiếp, thay vì tính toán thực tế. Khi chúng ta viết email cho bạn bè hoặc tìm kiếm thông tin nào đó trên Internet - về cơ bản chúng ta đang tạo, lưu trữ, truyền và thao tác dữ liệu.
+> Bạn có nhớ lần cuối cùng bạn sử dụng máy tính để tính toán một cái gì đó là khi nào không? 
 
-## What is Data Science?
+## Khoa học dữ liệu là gì?
 
-In [Wikipedia](https://en.wikipedia.org/wiki/Data_science), **Data Science** is defined as *a scientific field that uses scientific methods to extract knowledge and insights from structured and unstructured data, and apply knowledge and actionable insights from data across a broad range of application domains*. 
+Trong [Wikipedia](https://en.wikipedia.org/wiki/Data_science), **Khoa học dữ liệu** được định nghĩa là lĩnh vực khoa học sử dụng các phương pháp khoa học để **trích xuất kiến ​​thức (knowledge) và hiểu biết thực tế (insights)** từ dữ liệu có cấu trúc và phi cấu trúc, đồng thời ứng dụng các kiến ​​thức đó vào nhiều lĩnh vực ứng dụng khác nhau.
 
-This definition highlights the following important aspects of data science:
+Định nghĩa này nêu bật những khía cạnh quan trọng sau đây của khoa học dữ liệu:
 
 * The main goal of data science is to **extract knowledge** from data, in other words - to **understand** data, find some hidden relationships and build a **model**.
 * Data science uses **scientific methods**, such as probability and statistics.  In fact, when the term *data science* was first introduced, some people argued that data science was just a new fancy name for statistics.  Nowadays it has become evident that the field is much broader.    
