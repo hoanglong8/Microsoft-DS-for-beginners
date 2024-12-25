@@ -70,3 +70,25 @@ Người ta có thể xác định các nguồn dữ liệu hợp lý, cách lư
 |6|Quản lý tài chính|Doanh thu và chi phí liên quan đến việc tạo và phân phối nội dung|Ghi nhận doanh thu từ bán hàng, quảng cáo; Theo dõi chi phí sản xuất, quảng bá|Lưu trữ trong hệ thống kế toán hoặc bảng tính tài chính; Sử dụng phần mềm quản lý hiệu suất để theo dõi tài chính|Đánh giá lợi nhuận và hiệu quả kinh tế của hoạt động; Quyết định đầu tư vào các dự án tiềm năng|
 |7|Quản lý phát triển bản thân|Hiệu quả học tập và phát triển kỹ năng (tiến bộ, chứng chỉ đạt được)|Theo dõi tiến độ học tập qua các khóa học trực tuyến; Ghi nhận các chứng chỉ hoặc kỹ năng mới|Lưu trữ trong hồ sơ cá nhân hoặc hệ thống quản lý học tập (LMS); Sử dụng bảng theo dõi công việc để quản lý tiến độ học tập|Xác định kỹ năng cần cải thiện; Lập kế hoạch học tập và phát triển cá nhân|
 
+## 4.Bài thực hành - Lĩnh vực tài chính đầu tư:
+
+| STT | Nhóm vấn đề | Những dữ liệu cần thu thập | Phương pháp thu thập | Cách thức lưu trữ | Insights rút ra hoặc quyết định từ việc sử dụng dữ liệu | 
+|----------------|---------|-----------------------|-----------------------|-------------------------------|--------|
+|1|Giá cả và biến động thị trường|Giá vàng, hàng hóa, chứng khoán, bất động sản, forex, coin ... hàng phút|Sử dụng API từ các sàn giao dịch và nguồn dữ liệu tài chính; Thu thập dữ liệu lịch sử và theo thời gian thực|Lưu trữ trong cơ sở dữ liệu quan hệ (SQL) hoặc phi quan hệ (NoSQL). Sử dụng các công cụ ETL để xử lý và lưu trữ dữ liệu|Phân tích xu hướng giá và biến động thị trường. Xác định thời điểm mua/bán tối ưu để tối đa hóa lợi nhuận|
+|2|Chỉ số tài chính và kinh tế vĩ mô|Lãi suất, lạm phát, GDP, tỷ giá hối đoái|Thu thập từ các báo cáo kinh tế, ngân hàng trung ương, tổ chức tài chính quốc tế. Sử dụng API từ các nguồn dữ liệu kinh tế|Lưu trữ trong cơ sở dữ liệu thời gian thực hoặc kho dữ liệu (data warehouse). Sử dụng các công cụ BI để trực quan hóa dữ liệu|Đánh giá tác động của các chỉ số kinh tế đến danh mục đầu tư. Điều chỉnh chiến lược đầu tư dựa trên biến động kinh tế|
+|3|Báo cáo tài chính|Báo cáo tài chính và hiệu quả kinh doanh của doanh nghiệp|Thu thập từ các báo cáo thường niên, quý của doanh nghiệp. Sử dụng dịch vụ cung cấp dữ liệu tài chính chuyên nghiệp|Lưu trữ trong hệ thống quản lý tài liệu hoặc cơ sở dữ liệu chuyên dụng. Sử dụng phần mềm phân tích tài chính để xử lý dữ liệu.|Đánh giá sức khỏe tài chính và tiềm năng tăng trưởng của doanh nghiệp. Lựa chọn cổ phiếu hoặc trái phiếu phù hợp cho danh mục đầu tư|
+|4|Tâm lý thị trường và xu hướng đầu tư| Tin tức, mạng xã hội, diễn đàn, khảo sát các chuyên gia|Sử dụng công cụ thu thập dữ liệu từ mạng xã hội, diễn đàn đầu tư. Phân tích tin tức từ các nguồn truyền thông uy tín|Lưu trữ trong cơ sở dữ liệu văn bản hoặc hệ thống phân tích dữ liệu lớn (big data); Sử dụng công cụ phân tích ngữ nghĩa để xử lý dữ liệu|Đánh giá tâm lý thị trường và dự báo xu hướng đầu tư. Điều chỉnh danh mục đầu tư dựa trên sự thay đổi của tâm lý thị trường|
+|5|Rủi ro và biến động thị trường|Biến động giá, sự kiện kinh tế, chính trị|Theo dõi các sự kiện kinh tế, chính trị có thể ảnh hưởng đến thị trường. Sử dụng công cụ phân tích rủi ro tài chính|Lưu trữ trong hệ thống quản lý rủi ro hoặc cơ sở dữ liệu chuyên dụng. Sử dụng mô hình định lượng để đánh giá rủi ro|Xác định và lượng hóa các rủi ro tiềm ẩn trong danh mục đầu tư. Thực hiện các biện pháp phòng ngừa và quản lý rủi ro hiệu quả|
+|6|Hiệu suất danh mục đầu tư hiện tại|Lợi nhuận, rủi ro, tỷ lệ Sharpe|Sử dụng phần mềm quản lý danh mục đầu tư để theo dõi hiệu suất. Tính toán các chỉ số hiệu suất định kỳ|Lưu trữ trong hệ thống quản lý danh mục đầu tư hoặc bảng tính Excel. Sử dụng công cụ BI để trực quan hóa hiệu suất|Đánh giá hiệu quả của danh mục đầu tư so với mục tiêu đề ra. Tái cân bằng danh mục để tối ưu hóa lợi nhuận và rủi ro|
+
+## 5.Bài thực hành - Lĩnh vực quản trị kinh doanh:
+
+| STT | Nhóm vấn đề | Những dữ liệu cần thu thập | Phương pháp thu thập | Cách thức lưu trữ | Insights rút ra hoặc quyết định từ việc sử dụng dữ liệu | 
+|----------------|---------|-----------------------|-----------------------|-------------------------------|--------|
+|1|---------|-----------------------|-----------------------|-------------------------------|--------|
+|2|---------|-----------------------|-----------------------|-------------------------------|--------|
+|3|---------|-----------------------|-----------------------|-------------------------------|--------|
+|4|---------|-----------------------|-----------------------|-------------------------------|--------|
+|5|---------|-----------------------|-----------------------|-------------------------------|--------|
+|6|---------|-----------------------|-----------------------|-------------------------------|--------|
+
