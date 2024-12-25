@@ -1,4 +1,4 @@
-# Defining Data Science
+# Defining Data Science!
 
 | ![ Sketchnote by [(@sketchthedocs)](https://sketchthedocs.dev) ](../../sketchnotes/01-Definitions.png) |
 | :----------------------------------------------------------------------------------------------------: |
