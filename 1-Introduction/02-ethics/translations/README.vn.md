@@ -267,4 +267,4 @@ Các khóa học và sách giúp hiểu các khái niệm và thách thức cố
 
 # Assignment - Bài tập phân công
 
-[Bạn hãy viết một case-study về chủ đề đạo đức dữ liệu](assignment.md)
+[Bạn hãy viết một case-study về chủ đề đạo đức dữ liệu](https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/blob/main/1-Introduction/02-ethics/translations/Assignment.vn.md)
