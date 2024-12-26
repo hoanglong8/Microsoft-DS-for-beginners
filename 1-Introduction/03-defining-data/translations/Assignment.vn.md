@@ -1,65 +1,64 @@
-# Classifying Datasets
+# Classifying Datasets - Phân loại tập dữ liệu
 
-## Instructions
+## Instructions (Hướng dẫn)
 
-Follow the prompts in this assignment to identify and classify the data with one of each of the following data types:
+Thực hiện theo các lời nhắc trong bài tập này để xác định và phân loại dữ liệu theo một trong các kiểu dữ liệu sau:
 
-**Structure Types**: Structured, Semi-Structured, or Unstructured
+* **Theo cấu trúc:** Có cấu trúc, Bán cấu trúc hoặc Không có cấu trúc
 
-**Value Types**: Qualitative or Quantitative 
+* **Theo loại giá trị:** Định tính hoặc định lượng
 
-**Source Types**: Primary or Secondary
+* **Theo loại nguồn gốc:** Chính hoặc Phụ
 
-1. A company has been acquired and now has a parent company. The data scientists have received a spreadsheet of customer phone numbers from the parent company. 
+1. Một công ty đã được mua lại và hiện có công ty mẹ. Các nhà khoa học dữ liệu đã nhận được bảng tính số điện thoại khách hàng từ công ty mẹ.
 
-Structure Type:
+Structure Type (Loại cấu trúc):
 
-Value Type: 
+Value Type (Loại giá trị): 
 
-Source Type: 
-
----
-
-2. A smart watch has been collecting heart rate data from its wearer, and the raw data is in JSON format.
-
-Structure Type:
-
-Value Type: 
-
-Source Type: 
+Source Type (Loại nguồn): 
 
 ---
 
-3. A workplace survey of employee morale that is stored in a CSV file. 
+2. Một chiếc đồng hồ thông minh đã thu thập dữ liệu nhịp tim từ người đeo và dữ liệu thô có định dạng JSON.
 
-Structure Type:
+Structure Type (Loại cấu trúc):
 
-Value Type: 
+Value Type (Loại giá trị): 
 
-Source Type: 
+Source Type (Loại nguồn):
+---
+
+3. Khảo sát tinh thần làm việc của nhân viên được lưu trữ trong tệp CSV.
+
+Structure Type (Loại cấu trúc):
+
+Value Type (Loại giá trị): 
+
+Source Type (Loại nguồn):
 
 ---
 
 4. Astrophysicists are accessing a database of galaxies that has been collected by a space probe. The data contains the number of planets within in each galaxy.
 
-Structure Type:
+Structure Type (Loại cấu trúc):
 
-Value Type: 
+Value Type (Loại giá trị): 
 
-Source Type: 
+Source Type (Loại nguồn):
 
 ---
 
 5. A personal finance app uses APIs to connect to a user's financial accounts in order to calculate their net worth. They can see all of their transactions in a format of rows and columns and looks similar to a spreadsheet.
 
-Structure Type:
+Structure Type (Loại cấu trúc):
 
-Value Type: 
+Value Type (Loại giá trị): 
 
-Source Type: 
+Source Type (Loại nguồn):
 
-## Rubric
+## Rubric - Thang chấm điểm
 
-Exemplary | Adequate | Needs Improvement
+Exemplary - Mẫu mực | Adequate - Đạt yêu cầu | Needs Improvement - Cần cải thiện
 --- | --- | -- |
-Correctly identifies all structure, value, and sources |Correctly identifies 3 all structure, value, and sources|Correctly identifies 2 or less all structure, value, and sources|
+Xác định chính xác tất cả các cấu trúc, giá trị và nguồn |Xác định đúng 3 cấu trúc, giá trị và nguồn|Xác định đúng 2 hoặc ít hơn tất cả các cấu trúc, giá trị và nguồn|
