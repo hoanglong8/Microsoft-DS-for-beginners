@@ -62,5 +62,48 @@ Một số bài báo khoa học thảo luận về các vấn đề đạo đứ
 Những nguồn tài nguyên này cung cấp cái nhìn sâu sắc về tầm quan trọng của sự đồng ý sau khi được thông báo và các biện pháp cần thiết để đảm bảo tính đạo đức trong nghiên cứu y sinh học:
 
 * [Chúng ta có nên cấy ghép nội tạng lợn vào người không? Chúng tôi đã hỏi một nhà đạo đức học.](https://www.vox.com/future-perfect/388544/pig-organ-transplants-xenotransplantation-ethics-consent?utm_source=chatgpt.com)
-
 * [Khi nào thì các nhà kinh tế có thể tiến hành thử nghiệm trên con người?](https://www.ft.com/content/df7c0a50-dcc6-4b3a-b3dc-22f742125421?utm_source=chatgpt.com)
+
+## Case study 2 - Nghiên cứu tình huống về Quyền riêng tư và bảo mật dữ liệu (Data Privacy)
+
+Trong thời đại số hóa, việc thu thập và sử dụng dữ liệu cá nhân đã trở nên phổ biến, đặt ra nhiều thách thức về quyền riêng tư và bảo mật. Một ví dụ điển hình là vụ việc của Cambridge Analytica, nơi dữ liệu cá nhân của hàng triệu người dùng Facebook bị thu thập và sử dụng mà không có sự đồng ý rõ ràng, dẫn đến những hậu quả nghiêm trọng về đạo đức và pháp lý.
+
+[**1.Tình huống: Vụ bê bối Cambridge Analytica**](https://en.wikipedia.org/wiki/Facebook%E2%80%93Cambridge_Analytica_data_scandal)
+
+Vào năm 2018, Cambridge Analytica, một công ty phân tích dữ liệu, đã thu thập thông tin cá nhân từ khoảng 87 triệu người dùng Facebook mà không có sự đồng ý của họ. Dữ liệu này sau đó được sử dụng để tạo ra các quảng cáo chính trị được cá nhân hóa, nhằm ảnh hưởng đến kết quả bầu cử ở nhiều quốc gia.
+
+**2.Các câu hỏi về đạo đức dữ liệu:**
+
+* **Quyền riêng tư:** Việc thu thập dữ liệu cá nhân mà không có sự đồng ý vi phạm quyền riêng tư của người dùng như thế nào?
+
+* **Minh bạch:** Người dùng có được thông báo rõ ràng về cách dữ liệu của họ được sử dụng không?
+
+* **Đồng ý:** Liệu người dùng có cơ hội từ chối việc thu thập và sử dụng dữ liệu của họ không?
+
+* **Tác động xã hội:** Việc sử dụng dữ liệu để thao túng quan điểm chính trị ảnh hưởng đến quá trình dân chủ và niềm tin của công chúng như thế nào?
+
+**3.Tác hại tiềm ẩn và hậu quả không mong muốn:**
+
+* **Mất niềm tin:** Người dùng có thể mất niềm tin vào các nền tảng trực tuyến và các tổ chức thu thập dữ liệu.
+
+* **Can thiệp chính trị:** Việc thao túng dữ liệu có thể dẫn đến kết quả bầu cử không phản ánh đúng ý chí của cử tri.
+
+* **Vi phạm pháp lý:** Các tổ chức có thể phải đối mặt với các hình phạt pháp lý và tài chính do vi phạm quyền riêng tư.
+
+**4.Giải pháp và quy trình tiềm năng:**
+
+* **Chính sách minh bạch:** Các tổ chức nên cung cấp thông tin rõ ràng về cách dữ liệu được thu thập và sử dụng.
+
+* **Đồng ý rõ ràng:** Đảm bảo rằng người dùng cung cấp sự đồng ý rõ ràng trước khi thu thập và sử dụng dữ liệu của họ.
+
+* **Bảo mật dữ liệu:** Áp dụng các biện pháp bảo mật mạnh mẽ để bảo vệ dữ liệu cá nhân khỏi việc truy cập trái phép.
+
+* **Giáo dục người dùng:** Tăng cường nhận thức của người dùng về quyền riêng tư và cách bảo vệ thông tin cá nhân trực tuyến.
+
+**5.Những bài viết liên quan đến đạo đức dữ liệu và AI**
+
+Những nguồn tài nguyên này cung cấp cái nhìn sâu sắc về các thách thức đạo đức trong việc thu thập và sử dụng dữ liệu, cũng như các biện pháp để ngăn chặn các sự cố tương tự trong tương lai.
+
+* [Thực tế là không thể điều hành một công ty AI lớn một cách có đạo đức](https://www.vox.com/future-perfect/364384/its-practically-impossible-to-run-a-big-ai-company-ethically?utm_source=chatgpt.com)
+* [Các nhà lãnh đạo doanh nghiệp có nguy cơ bị mộng du khi sử dụng AI sai mục đích](https://www.reuters.com/sustainability/society-equity/comment-business-leaders-risk-sleepwalking-towards-ai-misuse-2024-11-19/?utm_source=chatgpt.com)
+* [Bốn điều các thương hiệu nên cân nhắc khi phát triển giao thức AI](https://www.voguebusiness.com/story/technology/four-things-brands-should-consider-when-developing-ai-protocols?utm_source=chatgpt.com)
