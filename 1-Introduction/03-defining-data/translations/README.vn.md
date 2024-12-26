@@ -24,28 +24,55 @@ Dữ liệu định lượng là các quan sát số trong một tập dữ li�
 ### Qualitative Data - Dữ liệu định tính
 Dữ liệu định tính, còn được gọi là dữ liệu phân loại, là dữ liệu không thể đo lường một cách khách quan như quan sát dữ liệu định lượng. Nhìn chung, đó là nhiều định dạng dữ liệu chủ quan khác nhau nắm bắt chất lượng của một thứ gì đó, chẳng hạn như sản phẩm hoặc quy trình. Đôi khi, dữ liệu định tính là số và thường không được sử dụng theo phương pháp toán học, như số điện thoại hoặc dấu thời gian. Một số ví dụ về dữ liệu định tính là: bình luận video, nhãn hiệu và kiểu xe hoặc màu sắc yêu thích của bạn thân nhất. Dữ liệu định tính có thể được sử dụng để hiểu người tiêu dùng thích sản phẩm nào nhất hoặc xác định các từ khóa phổ biến trong sơ yếu lý lịch xin việc.
 
+![Minh họa 3 loại dữ liệu](https://bigdatauni.com/wp-content/uploads/2018/10/m2_structure.png)
+
 ### Structured Data - Dữ liệu có cấu trúc
 Dữ liệu có cấu trúc là dữ liệu được sắp xếp thành các hàng và cột, trong đó mỗi hàng sẽ có cùng một tập hợp các cột. Các cột biểu thị một giá trị của một loại cụ thể và sẽ được xác định bằng tên mô tả giá trị biểu thị, trong khi các hàng chứa các giá trị thực tế. Các cột thường sẽ có một tập hợp các quy tắc hoặc hạn chế cụ thể đối với các giá trị, để đảm bảo rằng các giá trị biểu thị chính xác cho cột. Ví dụ, hãy tưởng tượng một bảng tính về khách hàng, trong đó mỗi hàng phải có một số điện thoại và các số điện thoại không bao giờ chứa các ký tự chữ cái. Có thể có các quy tắc được áp dụng cho cột số điện thoại để đảm bảo rằng nó không bao giờ trống và chỉ chứa các số.
 
-[Trong hình ảnh sau, một bảng có dữ liệu về điểm số lấy dữ liệu từ bảng tên học sinh và bảng dữ liệu lớp học bằng cách sử dụng các cột khóa.](https://learn.microsoft.com/en-us/training/modules/choose-storage-approach-in-azure/media/relational-database.png)
+Trong hình ảnh sau, một bảng có dữ liệu về điểm số lấy dữ liệu từ bảng tên học sinh và bảng dữ liệu lớp học bằng cách sử dụng các cột khóa.
+![Hình ảnh minh họa 1](https://learn.microsoft.com/en-us/training/modules/choose-storage-approach-in-azure/media/relational-database.png)
 
 Một lợi ích của dữ liệu có cấu trúc là nó có thể được sắp xếp theo cách có thể liên quan đến dữ liệu có cấu trúc khác. Tuy nhiên, vì dữ liệu được thiết kế để sắp xếp theo một cách cụ thể, nên việc thay đổi cấu trúc tổng thể của nó có thể tốn nhiều công sức. Ví dụ, thêm một cột email vào bảng tính khách hàng không được để trống có nghĩa là bạn sẽ cần tìm ra cách thêm các giá trị này vào các hàng khách hàng hiện có trong tập dữ liệu.
 
 Ví dụ về dữ liệu có cấu trúc: bảng tính, cơ sở dữ liệu quan hệ, số điện thoại, sao kê ngân hàng...
+
+![Ví dụ minh họa](https://cdn.prod.website-files.com/6130fa1501794e37c21867cf/63ee646df6efc13f2301a30f_AvDOGKePZPFCAFIxzsE92MfSHPqAKKbiSM-eRzRRiQvbAi6sQHj9pxDYhCkip7CFnQisdtdbK4AqR9OGz1awtwXuMSMzAu3XDrDxUr0H0WYTp_2n89H02HLFqvIBBnOPlc2vHma5Up5ekOwC93_JzrE.png)
 
 ### Unstructured Data - Dữ liệu phi cấu trúc
 Dữ liệu phi cấu trúc thường không thể được phân loại thành các hàng hoặc cột và không chứa định dạng hoặc bộ quy tắc để tuân theo. Vì dữ liệu phi cấu trúc có ít hạn chế hơn về cấu trúc nên việc thêm thông tin mới dễ dàng hơn so với tập dữ liệu có cấu trúc. Nếu một cảm biến thu thập dữ liệu về áp suất khí quyển cứ sau 2 phút đã nhận được bản cập nhật hiện cho phép đo và ghi lại nhiệt độ, thì không cần phải thay đổi dữ liệu hiện có nếu dữ liệu đó không có cấu trúc. Tuy nhiên, điều này có thể khiến việc phân tích hoặc điều tra loại dữ liệu này mất nhiều thời gian hơn. Ví dụ, một nhà khoa học muốn tìm nhiệt độ trung bình của tháng trước từ dữ liệu cảm biến, nhưng phát hiện ra rằng cảm biến đã ghi lại chữ "e" trong một số dữ liệu đã ghi của mình để lưu ý rằng nó đã bị hỏng thay vì một số thông thường, điều đó có nghĩa là dữ liệu không đầy đủ.
 
 Ví dụ về dữ liệu phi cấu trúc: tệp văn bản, tin nhắn văn bản, tệp âm thanh, tệp video, tệp hình ảnh...
 
+![Ví dụ minh họa](https://www.altexsoft.com/static/blog-post/2024/3/39dd00f9-5d05-4cae-b530-f332e95f087d.jpg)
+
 ### Semi-structured - Dữ liệu bán cấu trúc
 Dữ liệu bán cấu trúc có các tính năng khiến nó trở thành sự kết hợp giữa dữ liệu có cấu trúc và không có cấu trúc. Dữ liệu này thường không tuân theo định dạng hàng và cột nhưng được sắp xếp theo cách được coi là có cấu trúc và có thể tuân theo một định dạng hoặc bộ quy tắc cố định. Cấu trúc sẽ thay đổi tùy theo nguồn, chẳng hạn như hệ thống phân cấp được xác định rõ ràng đến thứ gì đó linh hoạt hơn cho phép tích hợp dễ dàng thông tin mới. Siêu dữ liệu là các chỉ báo giúp quyết định cách dữ liệu được sắp xếp và lưu trữ và sẽ có nhiều tên khác nhau, dựa trên loại dữ liệu. Một số tên phổ biến cho siêu dữ liệu là thẻ, phần tử, thực thể và thuộc tính. Ví dụ: một email thông thường sẽ có chủ đề, nội dung và một tập hợp người nhận và có thể được sắp xếp theo người hoặc thời điểm gửi.
 
-Ví dụ về dữ liệu bán cấu trúc: HTML, tệp CSV, JavaScript Object Notation (JSON)...
+![Ví dụ minh họa 2](https://sg.o3.huawei.com/enbpitservicegateway/sxzservicecommunity/web/attachment/down-attachment?attachmentId=202411041631451238_Semi-structured-Data.jpg)
+
+Ví dụ về dữ liệu bán cấu trúc: HTML, tệp CSV, JavaScript Object Notation (JSON)... trong đó 3 ngôn ngữ tuần tự hóa phổ biến là XML, JSON và YAML.
+
+![Ví dụ minh họa 3](https://i.ytimg.com/vi/noFFdhO8jxM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDOLPzcY3ndqSi6OcMWJY4mzOZGbw)
+
+* **XML**
+
+Ngôn ngữ đánh dấu mở rộng (XML) là một trong những ngôn ngữ dữ liệu đầu tiên được sử dụng rộng rãi. XML dựa trên văn bản, giúp con người và máy có thể đọc dễ dàng. Trình phân tích cú pháp XML có sẵn cho hầu hết các nền tảng phát triển phổ biến.
+
+Bạn có thể sử dụng XML để thể hiện mối quan hệ. XML có các tiêu chuẩn cho lược đồ, chuyển đổi và thậm chí hiển thị trên web.
+
+* **JSON**
+
+JavaScript Object Notation (JSON) có thông số kỹ thuật nhẹ và sử dụng dấu ngoặc nhọn để chỉ cấu trúc dữ liệu. So với XML, JSON ít dài dòng hơn và dễ đọc hơn đối với con người. JSON thường được các dịch vụ web sử dụng để trả về dữ liệu.
+
+* **YAML**
+
+YAML Ain't Markup Language (YAML) là ngôn ngữ tuần tự hóa dữ liệu được phát triển gần đây hơn. Một trong những lợi ích của việc sử dụng YAML là con người dễ đọc hơn một số ngôn ngữ khác. Phân tách dòng và thụt lề xác định cấu trúc dữ liệu. Định dạng YAML làm giảm sự phụ thuộc vào các ký tự cấu trúc như dấu ngoặc đơn, dấu phẩy và dấu ngoặc vuông.
 
 ## Sources of Data - Nguồn dữ liệu
 
 Nguồn dữ liệu là vị trí ban đầu nơi dữ liệu được tạo ra hoặc nơi dữ liệu "sống" và sẽ thay đổi tùy theo cách thức và thời điểm dữ liệu được thu thập. Dữ liệu do người dùng tạo ra được gọi là dữ liệu chính trong khi dữ liệu thứ cấp đến từ một nguồn đã thu thập dữ liệu để sử dụng chung. Ví dụ, một nhóm các nhà khoa học thu thập dữ liệu quan sát trong một khu rừng nhiệt đới sẽ được coi là chính và nếu họ quyết định chia sẻ dữ liệu đó với các nhà khoa học khác thì dữ liệu đó sẽ được coi là thứ cấp đối với những người sử dụng dữ liệu đó.
+
+![Ví dụ minh họa](https://page.sapp.edu.vn/hubfs/image-png-Jul-31-2020-10-30-12-18-AM.png)
 
 Cơ sở dữ liệu là một nguồn phổ biến và dựa vào hệ thống quản lý cơ sở dữ liệu để lưu trữ và duy trì dữ liệu, trong đó người dùng sử dụng các lệnh gọi là truy vấn để khám phá dữ liệu. Tệp làm nguồn dữ liệu có thể là tệp âm thanh, hình ảnh và video cũng như bảng tính như Excel. Nguồn Internet là vị trí phổ biến để lưu trữ dữ liệu, nơi có thể tìm thấy cả cơ sở dữ liệu cũng như tệp. Giao diện lập trình ứng dụng, còn được gọi là API, cho phép lập trình viên tạo ra các cách chia sẻ dữ liệu với người dùng bên ngoài thông qua Internet, trong khi quá trình thu thập dữ liệu web trích xuất dữ liệu từ một trang web. Các bài trong phần 2 [Working with Data](/2-Working-With-Data) tập trung vào cách sử dụng các nguồn dữ liệu khác nhau. 
 
