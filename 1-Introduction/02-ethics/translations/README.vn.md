@@ -1,66 +1,63 @@
-# Introduction to Data Ethics
+# Đạo đức trong Khoa học dữ liệu
 
-|![ Sketchnote by [(@sketchthedocs)](https://sketchthedocs.dev) ](../../sketchnotes/02-Ethics.png)|
+![Sketchnote by [(@sketchthedocs)](https://sketchthedocs.dev)](https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/raw/main/sketchnotes/02-Ethics.png)
 |:---:|
 | Data Science Ethics - _Sketchnote by [@nitya](https://twitter.com/nitya)_ |
 
 ---
 
-We are all data citizens living in a datafied world.
+Chúng ta đều là công dân dữ liệu sống trong thế giới dữ liệu hóa.
 
-Market trends tell us that by 2022, 1-in-3 large organizations will buy and sell their data through online [Marketplaces and Exchanges](https://www.gartner.com/smarterwithgartner/gartner-top-10-trends-in-data-and-analytics-for-2020/). As **App Developers**, we'll find it easier and cheaper to integrate data-driven insights and algorithm-driven automation into daily user experiences. But as AI becomes pervasive, we'll also need to understand the potential harms caused by the [weaponization](https://www.youtube.com/watch?v=TQHs8SA1qpk) of such algorithms at scale.
+Xu hướng thị trường cho chúng ta biết rằng đến năm 2022, 1/3 các tổ chức lớn sẽ mua và bán dữ liệu của họ thông qua [Marketplaces and Exchanges - sàn giao dịch](https://www.gartner.com/smarterwithgartner/gartner-top-10-trends-in-data-and-analytics-for-2020/) trực tuyến. Với vai trò **Nhà phát triển ứng dụng**, chúng ta sẽ thấy việc tích hợp thông tin chi tiết dựa trên dữ liệu và tự động hóa dựa trên thuật toán vào trải nghiệm người dùng hàng ngày dễ dàng và rẻ hơn. Nhưng khi AI trở nên phổ biến, chúng ta cũng cần hiểu những tác hại tiềm ẩn do việc [weaponization - vũ trang hóa](https://www.youtube.com/watch?v=TQHs8SA1qpk) các thuật toán như vậy ở quy mô lớn gây ra.
 
-Trends also indicate that we will create and consume over [180 zettabytes](https://www.statista.com/statistics/871513/worldwide-data-created/) of data by 2025. As **Data Scientists**, this gives us unprecedented levels of access to personal data. This means we can build behavioral profiles of users and influence decision-making in ways that create an [illusion of free choice](https://www.datasciencecentral.com/profiles/blogs/the-illusion-of-choice) while potentially nudging users towards outcomes we prefer. It also raises broader questions on data privacy and user protections.
+Xu hướng cũng chỉ ra rằng chúng ta sẽ tạo ra và tiêu thụ hơn [180 zettabytes](https://www.statista.com/statistics/871513/worldwide-data-created/) dữ liệu vào năm 2025. Với vai trò **Nhà khoa học dữ liệu**, điều này mang lại cho chúng ta mức độ truy cập chưa từng có vào dữ liệu cá nhân. Điều này có nghĩa là chúng ta có thể xây dựng hồ sơ hành vi của người dùng và tác động đến việc ra quyết định theo những cách tạo ra [ảo tưởng của sự lựa chọn](https://www.datasciencecentral.com/profiles/blogs/the-illusion-of-choice) trong khi có khả năng thúc đẩy người dùng hướng đến kết quả mà chúng ta mong muốn. Nó cũng đặt ra những câu hỏi rộng hơn về quyền riêng tư dữ liệu và bảo vệ người dùng.
 
-Data ethics are now _necessary guardrails_ for data science and engineering, helping us minimize potential harms and unintended consequences from our data-driven actions. The [Gartner Hype Cycle for AI](https://www.gartner.com/smarterwithgartner/2-megatrends-dominate-the-gartner-hype-cycle-for-artificial-intelligence-2020/) identifies relevant trends in digital ethics, responsible AI, and AI governance as key drivers for larger megatrends around _democratization_ and _industrialization_ of AI.
+Đạo đức dữ liệu hiện là rào cản cần thiết cho khoa học dữ liệu và kỹ thuật, giúp chúng ta giảm thiểu những tác hại tiềm ẩn và hậu quả không mong muốn từ các hành động dựa trên dữ liệu của mình. Chu trình [Cường điệu hóa AI của Gartner](https://www.gartner.com/smarterwithgartner/2-megatrends-dominate-the-gartner-hype-cycle-for-artificial-intelligence-2020/) xác định các xu hướng có liên quan trong đạo đức kỹ thuật số, AI có trách nhiệm và quản trị AI là những động lực chính cho các xu hướng lớn hơn xung quanh dân chủ hóa và công nghiệp hóa AI.
 
 ![Gartner's Hype Cycle for AI - 2020](https://images-cdn.newscred.com/Zz1mOWJhNzlkNDA2ZTMxMWViYjRiOGFiM2IyMjQ1YmMwZQ==)
 
-In this lesson, we'll explore the fascinating area of data ethics - from core concepts and challenges, to case studies and applied AI concepts like governance - that help establish an ethics culture in teams and organizations that work with data and AI.
+Trong bài học này, chúng ta sẽ khám phá lĩnh vực đạo đức dữ liệu hấp dẫn - từ các khái niệm và thách thức cốt lõi, đến các nghiên cứu tình huống và khái niệm AI ứng dụng như quản trị - giúp thiết lập văn hóa đạo đức trong các nhóm và tổ chức làm việc với dữ liệu và AI.
 
 
 
+## [Câu hỏi chuẩn bị trước bài giảng](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/2) 🎯
 
-## [Pre-lecture quiz](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/2) 🎯
+## Khái niệm cơ bản
 
-## Basic Definitions
+Chúng ta hãy bắt đầu bằng cách hiểu thuật ngữ cơ bản.
 
-Let's start by understanding the basic terminology.
+Từ "đạo đức" xuất phát từ ["ethikos" trong tiếng Hy Lạp](https://en.wikipedia.org/wiki/Ethics) (gốc từ "ethos") có nghĩa là tính cách hoặc bản chất đạo đức .
 
-The word "ethics" comes from the [Greek word "ethikos"](https://en.wikipedia.org/wiki/Ethics) (and its root "ethos") meaning _character or moral nature_. 
+**Đạo đức** là về các giá trị chung và các nguyên tắc đạo đức chi phối hành vi của chúng ta trong xã hội. Đạo đức không dựa trên luật pháp mà dựa trên các chuẩn mực được chấp nhận rộng rãi về điều gì là "đúng so với sai". Tuy nhiên, các cân nhắc về đạo đức có thể ảnh hưởng đến các sáng kiến ​​quản trị doanh nghiệp và các quy định của chính phủ tạo ra nhiều động lực hơn để tuân thủ.
 
-**Ethics** is about the shared values and moral principles that govern our behavior in society. Ethics is based not on laws but on
-widely accepted norms of what is "right vs. wrong". However, ethical considerations can influence corporate governance initiatives and government regulations that create more incentives for compliance.
+**Đạo đức dữ liệu học** là một [nhánh của Đạo đức học](https://royalsocietypublishing.org/doi/full/10.1098/rsta.2016.0360#sec-1) "nghiên cứu và đánh giá các vấn đề đạo đức liên quan đến dữ liệu, thuật toán và các hoạt động tương ứng ". Ở đây, "dữ liệu" tập trung vào các hành động liên quan đến việc tạo, ghi lại, quản lý, xử lý, phổ biến, chia sẻ và sử dụng, "thuật toán" tập trung vào AI, tác nhân, máy học và rô-bốt, và "thực hành" tập trung vào các chủ đề như đổi mới có trách nhiệm, lập trình, hack và các quy tắc đạo đức.
 
-**Data Ethics** is a [new branch of ethics](https://royalsocietypublishing.org/doi/full/10.1098/rsta.2016.0360#sec-1) that "studies and evaluates moral problems related to _data, algorithms and corresponding practices_". Here, **"data"** focuses on actions related to generation, recording, curation, processing, dissemination, sharing, and usage, **"algorithms"** focuses on AI, agents, machine learning, and robots, and **"practices"** focuses on topics like responsible innovation, programming, hacking, and ethics codes.
+**Vận dụng Đạo đức** là [ứng dụng đạo đức vào thực tế](https://en.wikipedia.org/wiki/Applied_ethics). Đó là quá trình chủ động điều tra các vấn đề đạo đức trong bối cảnh các hành động, sản phẩm và quy trình trong thế giới thực , và thực hiện các biện pháp khắc phục để đảm bảo chúng phù hợp với các giá trị đạo đức đã xác định của chúng tôi.
 
-**Applied Ethics** is the [practical application of moral considerations](https://en.wikipedia.org/wiki/Applied_ethics). It's the process of actively investigating ethical issues in the context of _real-world actions, products and processes_, and taking corrective measures to make that these remain aligned with our defined ethical values.
-
-**Ethics Culture** is about [_operationalizing_ applied ethics](https://hbr.org/2019/05/how-to-design-an-ethical-organization) to make sure that our ethical principles and practices are adopted in a consistent and scalable manner across the entire organization. Successful ethics cultures define organization-wide ethical principles, provide meaningful incentives for compliance, and reinforce ethics norms by encouraging and amplifying desired behaviors at every level of the organization.
+**Văn hóa đạo đức** là về [việc thực hành các quy tắc đạo đức](https://hbr.org/2019/05/how-to-design-an-ethical-organization) để đảm bảo rằng các nguyên tắc và thực hành đạo đức của chúng ta được áp dụng theo cách nhất quán và có thể mở rộng trên toàn bộ tổ chức. Văn hóa đạo đức thành công xác định các nguyên tắc đạo đức trên toàn tổ chức, cung cấp các động lực có ý nghĩa để tuân thủ và củng cố các chuẩn mực đạo đức bằng cách khuyến khích và khuếch đại các hành vi mong muốn ở mọi cấp độ của tổ chức.
 
 
-## Ethics Concepts
+## Khái niệm Đạo đức
 
-In this section, we'll discuss concepts like **shared values** (principles) and **ethical challenges** (problems) for data ethics - and explore **case studies** that help you understand these concepts in real-world contexts.
+Trong phần này, chúng ta sẽ thảo luận về các khái niệm như giá trị chung (nguyên tắc) và thách thức về mặt đạo đức (vấn đề) đối với đạo đức dữ liệu - và khám phá các nghiên cứu điển hình giúp bạn hiểu các khái niệm này trong bối cảnh thực tế.
 
-### 1. Ethics Principles
+### 1. Nguyên tắc đạo đức
+Mọi chiến lược đạo đức dữ liệu đều bắt đầu bằng việc xác định các nguyên tắc đạo đức - "các giá trị chung" mô tả các hành vi có thể chấp nhận được và hướng dẫn các hành động tuân thủ trong các dự án dữ liệu & AI của chúng tôi. Bạn có thể xác định những điều này ở cấp độ cá nhân hoặc nhóm. Tuy nhiên, hầu hết các tổ chức lớn đều phác thảo những điều này trong một tuyên bố sứ mệnh hoặc khuôn khổ đạo đức AI được xác định ở cấp độ công ty và được thực thi nhất quán trên tất cả các nhóm.
 
-Every data ethics strategy begins by defining _ethical principles_ - the "shared values" that describe acceptable behaviors, and guide compliant actions, in our data & AI projects. You can define these at an individual or team level. However, most large organizations outline these in an _ethical AI_ mission statement or framework that is defined at corporate levels and enforced consistently across all teams.
-
-**Example:** Microsoft's [Responsible AI](https://www.microsoft.com/en-us/ai/responsible-ai) mission statement reads: _"We are committed to the advancement of AI-driven by ethical principles that put people first"_ - identifying 6 ethical principles in the framework below:
+Ví dụ: Tuyên bố của Microsoft về [nghĩa vụ của AI](https://www.microsoft.com/en-us/ai/responsible-ai) của Microsoft có nội dung: "Chúng tôi cam kết phát triển AI theo các nguyên tắc đạo đức đặt con người lên hàng đầu" - xác định 6 nguyên tắc đạo đức trong khuôn khổ bên dưới:
 
 ![Responsible AI at Microsoft](https://docs.microsoft.com/en-gb/azure/cognitive-services/personalizer/media/ethics-and-responsible-use/ai-values-future-computed.png)
 
-Let's briefly explore these principles. _Transparency_ and _accountability_ are foundational values that other principles built upon - so let's begin there:
+Chúng ta hãy cùng khám phá những nguyên tắc này một cách ngắn gọn. Tính minh bạch và trách nhiệm giải trình là những giá trị nền tảng mà các nguyên tắc khác xây dựng dựa trên - vì vậy chúng ta hãy bắt đầu từ đó:
 
-* [**Accountability**](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1:primaryr6) makes practitioners _responsible_ for their data & AI operations, and compliance with these ethical principles.
-* [**Transparency**](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1:primaryr6) ensures that data and AI actions are _understandable_ (interpretable) to users, explaining the what and why behind decisions.
-* [**Fairness**](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1%3aprimaryr6) - focuses on ensuring AI treats _all people_ fairly, addressing any systemic or implicit socio-technical biases in data and systems.
-* [**Reliability & Safety**](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1:primaryr6) - ensures that AI behaves _consistently_ with defined values, minimizing potential harms or unintended consequences.
-* [**Privacy & Security**](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1:primaryr6) - is about understanding data lineage, and providing _data privacy and related protections_ to users.
-* [**Inclusiveness**](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1:primaryr6) - is about designing AI solutions with intention, adapting them to meet a _broad range of human needs_ & capabilities.
+* [**Accountability - Trách nhiệm**](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1:primaryr6) khiến người thực hành phải chịu trách nhiệm về dữ liệu và hoạt động AI của mình, cũng như việc tuân thủ các nguyên tắc đạo đức này.
+* [**Transparency - Minh bạch**](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1:primaryr6) đảm bảo rằng dữ liệu và hành động của AI có thể hiểu được (diễn giải được) đối với người dùng, giải thích mục đích và lý do đằng sau các quyết định.
+* [**Fairness - Công bằng**](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1%3aprimaryr6) tập trung vào việc đảm bảo AI đối xử công bằng với mọi người , giải quyết mọi thành kiến ​​xã hội - kỹ thuật có hệ thống hoặc tiềm ẩn trong dữ liệu và hệ thống.
+* [**Reliability & Safety - An toàn và tin cậy**](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1:primaryr6) đảm bảo AI hoạt động nhất quán với các giá trị đã xác định, giảm thiểu tác hại tiềm ẩn hoặc hậu quả không mong muốn.
+* [**Privacy & Security - Quyền riêng tư và bảo mật**](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1:primaryr6) là về việc hiểu nguồn gốc dữ liệu và cung cấp quyền riêng tư dữ liệu cùng các biện pháp bảo vệ liên quan cho người dùng.
+* [**Inclusiveness - Toàn diện**](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1:primaryr6) là về việc thiết kế các giải pháp AI có chủ đích, điều chỉnh chúng để đáp ứng nhiều nhu cầu và khả năng khác nhau của con người.
 
-> 🚨 Think about what your data ethics mission statement could be. Explore ethical AI frameworks from other organizations - here are examples from [IBM](https://www.ibm.com/cloud/learn/ai-ethics), [Google](https://ai.google/principles), and [Facebook](https://ai.facebook.com/blog/facebooks-five-pillars-of-responsible-ai/). What shared values do they have in common? How do these principles relate to the AI product or industry they operate in?
+> 🚨 Hãy nghĩ về tuyên bố sứ mệnh đạo đức dữ liệu của bạn có thể là gì. Khám phá các khuôn khổ AI đạo đức từ các tổ chức khác - đây là các ví dụ từ [IBM](https://www.ibm.com/cloud/learn/ai-ethics), [Google](https://ai.google/principles), and [Facebook](https://ai.facebook.com/blog/facebooks-five-pillars-of-responsible-ai/). Họ có những giá trị chung nào? Những nguyên tắc này liên quan như thế nào đến sản phẩm hoặc ngành AI mà họ hoạt động?
 
 ### 2. Ethics Challenges
 
