@@ -40,7 +40,7 @@ Source Type (Loại nguồn):
 
 ---
 
-4. Astrophysicists are accessing a database of galaxies that has been collected by a space probe. The data contains the number of planets within in each galaxy.
+4. Các nhà vật lý thiên văn đang truy cập vào cơ sở dữ liệu về các thiên hà được thu thập bởi một tàu thăm dò không gian. Dữ liệu chứa số lượng hành tinh trong mỗi thiên hà.
 
 Structure Type (Loại cấu trúc):
 
@@ -50,7 +50,7 @@ Source Type (Loại nguồn):
 
 ---
 
-5. A personal finance app uses APIs to connect to a user's financial accounts in order to calculate their net worth. They can see all of their transactions in a format of rows and columns and looks similar to a spreadsheet.
+5. Ứng dụng tài chính cá nhân sử dụng API để kết nối với tài khoản tài chính của người dùng nhằm tính giá trị tài sản ròng của họ. Họ có thể xem tất cả các giao dịch của mình theo định dạng hàng và cột và trông giống như bảng tính.
 
 Structure Type (Loại cấu trúc):
 
