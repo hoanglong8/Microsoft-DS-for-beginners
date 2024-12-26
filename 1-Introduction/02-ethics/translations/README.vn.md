@@ -59,202 +59,212 @@ Chúng ta hãy cùng khám phá những nguyên tắc này một cách ngắn g�
 
 > 🚨 Hãy nghĩ về tuyên bố sứ mệnh đạo đức dữ liệu của bạn có thể là gì. Khám phá các khuôn khổ AI đạo đức từ các tổ chức khác - đây là các ví dụ từ [IBM](https://www.ibm.com/cloud/learn/ai-ethics), [Google](https://ai.google/principles), and [Facebook](https://ai.facebook.com/blog/facebooks-five-pillars-of-responsible-ai/). Họ có những giá trị chung nào? Những nguyên tắc này liên quan như thế nào đến sản phẩm hoặc ngành AI mà họ hoạt động?
 
-### 2. Ethics Challenges
+### 2. Thách thức về Đạo đức
 
-Once we have ethical principles defined, the next step is to evaluate our data and AI actions to see if they align with those shared values. Think about your actions in two categories: _data collection_ and _algorithm design_. 
+Sau khi chúng ta đã xác định được các nguyên tắc đạo đức, bước tiếp theo là đánh giá dữ liệu và hành động AI của chúng ta để xem liệu chúng có phù hợp với các giá trị chung đó hay không. Hãy nghĩ về hành động của bạn theo hai loại: thu thập dữ liệu và thiết kế thuật toán .
 
-With data collection, actions will likely involve **personal data** or personally identifiable information (PII) for identifiable living individuals. This includes [diverse items of non-personal data](https://ec.europa.eu/info/law/law-topic/data-protection/reform/what-personal-data_en) that _collectively_ identify an individual. Ethical challenges can relate to _data privacy_, _data ownership_, and related topics like _informed consent_ and _intellectual property rights_ for users.
+Với việc thu thập dữ liệu, các hành động có thể liên quan đến dữ liệu cá nhân hoặc thông tin nhận dạng cá nhân (PII) đối với các cá nhân còn sống có thể nhận dạng được. Điều này bao gồm [nhiều loại dữ liệu phi cá nhân](https://ec.europa.eu/info/law/law-topic/data-protection/reform/what-personal-data_en) có thể nhận dạng chung một cá nhân. Các thách thức về mặt đạo đức có thể liên quan đến quyền riêng tư dữ liệu , quyền sở hữu dữ liệu và các chủ đề liên quan như sự đồng ý có thông tin và quyền sở hữu trí tuệ đối với người dùng.
 
-With algorithm design, actions will involve collecting & curating **datasets**, then using them to train & deploy **data models** that predict outcomes or automate decisions in real-world contexts. Ethical challenges can arise from _dataset bias_, _data quality_ issues, _unfairness_ ,and _misrepresentation_ in algorithms - including some issues that are systemic in nature.
+Với thiết kế thuật toán, các hành động sẽ bao gồm việc thu thập và quản lý các tập dữ liệu , sau đó sử dụng chúng để đào tạo và triển khai các mô hình dữ liệu dự đoán kết quả hoặc tự động hóa các quyết định trong bối cảnh thế giới thực. Các thách thức về đạo đức có thể phát sinh từ sự thiên vị của tập dữ liệu , các vấn đề về chất lượng dữ liệu , sự không công bằng và sự trình bày sai lệch trong các thuật toán - bao gồm một số vấn đề mang tính hệ thống.
 
-In both cases, ethics challenges highlight areas where our actions may encounter conflict with our shared values. To detect, mitigate, minimize, or eliminate, these concerns - we need to ask moral "yes/no" questions related to our actions, then take corrective actions as needed. Let's take a look at some ethical challenges and the moral questions they raise:
-
-
-#### 2.1 Data Ownership
-
-Data collection often involves personal data that can identify the data subjects. [Data ownership](https://permission.io/blog/data-ownership) is about _control_ and [_user rights_](https://permission.io/blog/data-ownership) related to the creation, processing ,and dissemination of data. 
-
-The moral questions we need to ask are: 
- * Who owns the data? (user or organization)
- * What rights do data subjects have? (ex: access, erasure, portability)
- * What rights do organizations have? (ex: rectify malicious user reviews)
-
-#### 2.2 Informed Consent
-
-[Informed consent](https://legaldictionary.net/informed-consent/) defines the act of users agreeing to an action (like data collection) with a _full understanding_ of relevant facts including the purpose, potential risks, and alternatives. 
-
-Questions to explore here are:
- * Did the user (data subject) give permission for data capture and usage?
- * Did the user understand the purpose for which that data was captured?
- * Did the user understand the potential risks from  their participation?
-
-#### 2.3 Intellectual Property
-
-[Intellectual property](https://en.wikipedia.org/wiki/Intellectual_property) refers to intangible creations resulting from the human initiative, that may _have economic value_ to individuals or businesses. 
-
-Questions to explore here are:
- * Did the collected data have economic value to a user or business?
- * Does the **user** have intellectual property here?
- * Does the **organization** have intellectual property here?
- * If these rights exist, how are we protecting them?
-
-#### 2.4 Data Privacy
-
-[Data privacy](https://www.northeastern.edu/graduate/blog/what-is-data-privacy/) or information privacy refers to the preservation of user privacy and protection of user identity with respect to personally identifiable information. 
-
-Questions to explore here are:
- * Is users' (personal) data secured against hacks and leaks?
- * Is users' data accessible only to authorized users and contexts?
- * Is users' anonymity preserved when data is shared or disseminated?
- * Can a user be de-identified from anonymized datasets?
+Trong cả hai trường hợp, những thách thức về đạo đức đều nêu bật những lĩnh vực mà hành động của chúng ta có thể gặp phải xung đột với các giá trị chung của chúng ta. Để phát hiện, giảm thiểu, tối thiểu hóa hoặc loại bỏ những mối quan tâm này - chúng ta cần đặt ra những câu hỏi "có/không" về mặt đạo đức liên quan đến hành động của mình, sau đó thực hiện các hành động khắc phục khi cần thiết. Hãy cùng xem xét một số thách thức về đạo đức và những câu hỏi đạo đức mà chúng nêu ra:
 
 
-#### 2.5 Right To Be Forgotten
+#### 2.1 Quyền sở hữu dữ liệu
 
-The [Right To Be Forgotten](https://en.wikipedia.org/wiki/Right_to_be_forgotten) or [Right to Erasure](https://www.gdpreu.org/right-to-be-forgotten/) provides additional personal data protection to users. Specifically, it gives users the right to request deletion or removal of personal data from Internet searches and other locations, _under specific circumstances_ - allowing them a fresh start online without past actions being held against them.
+Việc thu thập dữ liệu thường liên quan đến dữ liệu cá nhân có thể xác định chủ thể dữ liệu. [Quyền sở hữu](https://permission.io/blog/data-ownership) liên quan đến [_quyền người dùng_](https://permission.io/blog/data-ownership) liên quan đến việc tạo, xử lý và phổ biến dữ liệu.
 
-Questions to explore here are:
- * Does the system allow data subjects to request erasure?
- * Should the withdrawal of user consent trigger automated erasure?
- * Was data collected without consent or by unlawful means?
- * Are we compliant with government regulations for data privacy?
+Những câu hỏi đạo đức chúng ta cần hỏi là:
+
+* Ai sở hữu dữ liệu? (người dùng hoặc tổ chức)
+* Chủ thể dữ liệu có những quyền gì? (ví dụ: quyền truy cập, quyền xóa, quyền di chuyển)
+* Các tổ chức có những quyền gì? (ví dụ: sửa các đánh giá độc hại của người dùng)
+
+#### 2.2 Informed Consent - Sự đồng ý được thông báo
+
+[Informed consent](https://legaldictionary.net/informed-consent/) định nghĩa hành động của người dùng đồng ý thực hiện một hành động (như thu thập dữ liệu) với sự hiểu biết đầy đủ về các sự kiện có liên quan bao gồm mục đích, rủi ro tiềm ẩn và các giải pháp thay thế.
+
+Những câu hỏi cần khám phá ở đây là:
+
+* Người dùng (chủ thể dữ liệu) có cấp quyền thu thập và sử dụng dữ liệu không?
+* Người dùng có hiểu mục đích thu thập dữ liệu đó không?
+* Người dùng có hiểu được những rủi ro tiềm ẩn khi tham gia không?
+
+#### 2.3 Intellectual Property - Sở hữu trí tuệ
+
+[Intellectual property](https://en.wikipedia.org/wiki/Intellectual_property) là những sáng tạo vô hình xuất phát từ sáng kiến ​​của con người, có thể có giá trị kinh tế đối với cá nhân hoặc doanh nghiệp.
+
+Những câu hỏi cần khám phá ở đây là:
+
+* Dữ liệu thu thập được có giá trị kinh tế đối với người dùng hoặc doanh nghiệp không?
+* Người dùng có sở hữu trí tuệ ở đây không ?
+* Tổ chức có sở hữu trí tuệ ở đây không ?
+* Nếu những quyền này tồn tại, chúng ta sẽ bảo vệ chúng như thế nào?
+
+#### 2.4 Data Privacy - Bảo mật dữ liệu
+
+[Data privacy](https://www.northeastern.edu/graduate/blog/what-is-data-privacy/) hoặc quyền riêng tư thông tin đề cập đến việc bảo vệ quyền riêng tư của người dùng và bảo vệ danh tính người dùng đối với thông tin nhận dạng cá nhân.
+
+Những câu hỏi cần khám phá ở đây là:
+
+* Dữ liệu (cá nhân) của người dùng có được bảo mật trước nguy cơ bị hack và rò rỉ không?
+* Dữ liệu của người dùng chỉ có người dùng và bối cảnh được ủy quyền mới có thể truy cập được phải không?
+* Liệu tính ẩn danh của người dùng có được bảo vệ khi dữ liệu được chia sẻ hoặc phổ biến không?
+* Người dùng có thể được xóa thông tin nhận dạng khỏi các tập dữ liệu ẩn danh không?
 
 
-#### 2.6 Dataset Bias
+#### 2.5 Right To Be Forgotten - Quyền được quên
 
-Dataset or [Collection Bias](http://researcharticles.com/index.php/bias-in-data-collection-in-research/) is about selecting a _non-representative_ subset of data for algorithm development, creating potential  unfairness in result outcomes for diverse groups. Types of bias include selection or sampling bias, volunteer bias, and instrument bias. 
+[Quyền được quên](https://en.wikipedia.org/wiki/Right_to_be_forgotten) hay [Quyền được xóa bỏ](https://www.gdpreu.org/right-to-be-forgotten/) cung cấp thêm quyền bảo vệ dữ liệu cá nhân cho người dùng. Cụ thể, nó trao cho người dùng quyền yêu cầu xóa hoặc gỡ bỏ dữ liệu cá nhân khỏi các tìm kiếm trên Internet và các vị trí khác, trong những trường hợp cụ thể - cho phép họ bắt đầu lại trực tuyến mà không bị xử lý các hành động trong quá khứ.
 
-Questions to explore here are:
- * Did we recruit a representative set of data subjects?
- * Did we test our collected or curated dataset for various biases?
- * Can we mitigate or remove any discovered biases?
+Những câu hỏi cần khám phá ở đây là:
 
-#### 2.7 Data Quality
+* Hệ thống có cho phép chủ thể dữ liệu yêu cầu xóa dữ liệu không?
+* Việc thu hồi sự đồng ý của người dùng có gây ra việc xóa tự động không?
+* Dữ liệu được thu thập mà không có sự đồng ý hoặc bằng phương tiện bất hợp pháp?
+* Chúng ta có tuân thủ các quy định của chính phủ về quyền riêng tư dữ liệu không?
 
-[Data Quality](https://lakefs.io/data-quality-testing/) looks at the validity of the curated dataset used to develop our algorithms, checking to see if features and records meet requirements for the level of accuracy and consistency needed for our AI purpose.
 
-Questions to explore here are:
- * Did we capture valid _features_ for our use case?
- * Was data captured _consistently_ across diverse data sources?
- * Is the dataset _complete_ for diverse conditions or scenarios?
- * Is information captured _accurately_ in reflecting reality?
+#### 2.6 Dataset Bias - Sai lệch của tệp dữ liệu
 
-#### 2.8 Algorithm Fairness
+Dataset or [Collection Bias](http://researcharticles.com/index.php/bias-in-data-collection-in-research/) về tập dữ liệu hoặc bộ sưu tập là về việc lựa chọn một tập hợp dữ liệu không đại diện để phát triển thuật toán, tạo ra sự bất công tiềm ẩn trong kết quả đầu ra cho các nhóm khác nhau. Các loại sai lệch bao gồm sai lệch lựa chọn hoặc lấy mẫu, sai lệch tình nguyện và sai lệch công cụ.
 
-[Algorithm Fairness](https://towardsdatascience.com/what-is-algorithm-fairness-3182e161cf9f) checks to see if the algorithm design systematically discriminates against specific subgroups of data subjects leading to [potential harms](https://docs.microsoft.com/en-us/azure/machine-learning/concept-fairness-ml) in _allocation_ (where resources are denied or withheld from that group) and _quality of service_ (where AI is not as accurate for some subgroups as it is for others). 
+Những câu hỏi cần khám phá ở đây là:
 
-Questions to explore here are:
- * Did we evaluate model accuracy for diverse subgroups and conditions?
- * Did we scrutinize the system for potential harms (e.g., stereotyping)?
- * Can we revise data or retrain models to mitigate identified harms?
+* Chúng tôi có tuyển dụng được nhóm đối tượng dữ liệu đại diện không?
+* Chúng tôi đã kiểm tra tập dữ liệu đã thu thập hoặc tuyển chọn của mình để tìm ra nhiều sai lệch khác nhau chưa?
+* Chúng ta có thể giảm thiểu hoặc loại bỏ bất kỳ thành kiến ​​nào được phát hiện không?
 
-Explore resources like [AI Fairness checklists](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4t6dA) to learn more.
+#### 2.7 Data Quality - Chất lượng dữ liệu
 
-#### 2.9 Misrepresentation
+[Data Quality](https://lakefs.io/data-quality-testing/) xem xét tính hợp lệ của tập dữ liệu được quản lý dùng để phát triển thuật toán của chúng tôi, kiểm tra xem các tính năng và bản ghi có đáp ứng các yêu cầu về mức độ chính xác và tính nhất quán cần thiết cho mục đích AI của chúng tôi hay không.
 
-[Data Misrepresentation](https://www.sciencedirect.com/topics/computer-science/misrepresentation) is about asking whether we are communicating insights from honestly reported data in a deceptive manner to support a desired narrative. 
+Những câu hỏi cần khám phá ở đây là:
 
-Questions to explore here are:
- * Are we reporting incomplete or inaccurate data?
- * Are we visualizing data in a manner that drives misleading conclusions?
- * Are we using selective statistical techniques to manipulate outcomes?
- * Are there alternative explanations that may offer a different conclusion?
+* Chúng ta có nắm bắt được những tính năng hợp lệ cho trường hợp sử dụng của mình không ?
+* Dữ liệu có được thu thập một cách nhất quán từ nhiều nguồn dữ liệu khác nhau không ?
+* Bộ dữ liệu có đầy đủ cho nhiều điều kiện hoặc tình huống khác nhau không?
+* Thông tin có được ghi lại chính xác và phản ánh đúng thực tế không?
 
-#### 2.10 Free Choice
-The [Illusion of Free Choice](https://www.datasciencecentral.com/profiles/blogs/the-illusion-of-choice) occurs when system "choice architectures" use decision-making algorithms to nudge people towards taking a preferred outcome while seeming to give them options and control. These [dark patterns](https://www.darkpatterns.org/) can cause social and economic harm to users. Because user decisions impact behavior profiles, these actions potentially drive future choices that can amplify or extend the impact of these harms.
+#### 2.8 Algorithm Fairness - Thuật toán đảm bảo công bằng
 
-Questions to explore here are:
- * Did the user understand the implications of making that choice?
- * Was the user aware of (alternative) choices and the pros & cons of each?
- * Can the user reverse an automated or influenced choice later?
+[Algorithm Fairness](https://towardsdatascience.com/what-is-algorithm-fairness-3182e161cf9f) kiểm tra xem thiết kế thuật toán có phân biệt đối xử một cách có hệ thống với các nhóm đối tượng dữ liệu cụ thể dẫn đến [tác hại tiềm ẩn](https://docs.microsoft.com/en-us/azure/machine-learning/concept-fairness-ml) trong việc phân bổ (khi tài nguyên bị từ chối hoặc không được cung cấp cho nhóm đó) và chất lượng dịch vụ (khi AI không chính xác đối với một số nhóm đối tượng như các nhóm khác) hay không.
 
-### 3. Case Studies
+Những câu hỏi cần khám phá ở đây là:
 
-To put these ethical challenges in real-world contexts, it helps to look at case studies that highlight the potential harms and consequences to individuals and society, when such ethics violations are overlooked. 
+* Chúng ta đã đánh giá độ chính xác của mô hình cho nhiều nhóm con và điều kiện khác nhau chưa?
+* Chúng ta đã xem xét kỹ lưỡng hệ thống để tìm ra những tác hại tiềm ẩn (ví dụ: định kiến) chưa?
+* Chúng ta có thể sửa đổi dữ liệu hoặc đào tạo lại các mô hình để giảm thiểu những tác hại đã xác định được không?
 
-Here are a few examples:
+Khám phá các tài nguyên như [AI Fairness checklists](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4t6dA) để hiểu thêm.
 
-| Ethics Challenge | Case Study  | 
+#### 2.9 Misrepresentation - Suy diễn dữ liệu
+
+[Data Misrepresentation](https://www.sciencedirect.com/topics/computer-science/misrepresentation) là về việc đặt câu hỏi liệu chúng ta có đang truyền đạt thông tin chi tiết từ dữ liệu được báo cáo trung thực theo cách gian dối để hỗ trợ cho một câu chuyện mong muốn hay không.
+
+Những câu hỏi cần khám phá ở đây là:
+
+* Chúng ta có báo cáo dữ liệu không đầy đủ hoặc không chính xác không?
+* Chúng ta có đang trực quan hóa dữ liệu theo cách dẫn đến kết luận sai lệch không?
+* Chúng ta có đang sử dụng các kỹ thuật thống kê có chọn lọc để thao túng kết quả không?
+* Có lời giải thích nào khác có thể đưa ra kết luận khác không?
+
+#### 2.10 Free Choice - Tự do lựa chọn
+[Ảo tưởng tự do lựa chọn](https://www.datasciencecentral.com/profiles/blogs/the-illusion-of-choice) xảy ra khi "kiến trúc lựa chọn" của hệ thống sử dụng các thuật toán ra quyết định để thúc đẩy mọi người hướng đến kết quả mong muốn trong khi dường như trao cho họ các lựa chọn và quyền kiểm soát. Những mô hình đen tối này có thể gây ra tác hại về mặt xã hội và kinh tế cho người dùng. Vì các quyết định của người dùng tác động đến hồ sơ hành vi, những hành động này có khả năng thúc đẩy các lựa chọn trong tương lai có thể khuếch đại hoặc mở rộng tác động của những tác hại này.
+
+Những câu hỏi cần khám phá ở đây là:
+
+* Người dùng có hiểu được ý nghĩa của việc đưa ra lựa chọn đó không?
+* Người dùng có biết về các lựa chọn (thay thế) và ưu, nhược điểm của từng lựa chọn không?
+* Người dùng có thể đảo ngược lựa chọn tự động hoặc bị ảnh hưởng sau này không?
+
+### 3. Case Studies - Các nghiên cứu tình huống
+
+Để đưa những thách thức về đạo đức này vào bối cảnh thực tế, chúng ta cần xem xét các nghiên cứu điển hình nêu bật những tác hại và hậu quả tiềm ẩn đối với cá nhân và xã hội khi những vi phạm đạo đức như vậy bị bỏ qua.
+
+Sau đây là một số ví dụ:
+
+| Vấn đề về đạo đức | Tình huống thực tế  | 
 |--- |--- |
-| **Informed Consent** | 1972 - [Tuskegee Syphilis Study](https://en.wikipedia.org/wiki/Tuskegee_Syphilis_Study) - African American men who participated in the study were promised free medical care _but deceived_ by researchers who failed to inform subjects of their diagnosis or about availability of treatment. Many subjects died & partners or children were affected; the study lasted 40 years. | 
-| **Data Privacy** |  2007 - The [Netflix data prize](https://www.wired.com/2007/12/why-anonymous-data-sometimes-isnt/) provided researchers with _10M anonymized movie rankings from 50K customers_ to help improve recommendation algorithms. However, researchers were able to correlate anonymized data with personally-identifiable data in _external datasets_ (e.g., IMDb comments) - effectively "de-anonymizing" some Netflix subscribers.|
-| **Collection Bias**  | 2013 - The City of Boston [developed Street Bump](https://www.boston.gov/transportation/street-bump), an app that let citizens report potholes, giving the city better roadway data to find and fix issues. However, [people in lower income groups had less access to cars and phones](https://hbr.org/2013/04/the-hidden-biases-in-big-data), making their roadway issues invisible in this app. Developers worked with academics to _equitable access and digital divides_ issues for fairness. |
-| **Algorithmic Fairness**  | 2018 - The MIT [Gender Shades Study](http://gendershades.org/overview.html) evaluated the accuracy of gender classification AI products, exposing gaps in accuracy for women and persons of color. A [2019 Apple Card](https://www.wired.com/story/the-apple-card-didnt-see-genderand-thats-the-problem/) seemed to offer less credit to women than men. Both illustrated issues in algorithmic bias leading to socio-economic harms.|
-| **Data Misrepresentation** | 2020 - The [Georgia Department of Public Health released COVID-19 charts](https://www.vox.com/covid-19-coronavirus-us-response-trump/2020/5/18/21262265/georgia-covid-19-cases-declining-reopening) that appeared to mislead citizens about trends in confirmed cases with non-chronological ordering on the x-axis. This illustrates misrepresentation through visualization tricks. |
-| **Illusion of free choice** | 2020 - Learning app [ABCmouse paid $10M to settle an FTC complaint](https://www.washingtonpost.com/business/2020/09/04/abcmouse-10-million-ftc-settlement/) where parents were trapped into paying for subscriptions they couldn't cancel. This illustrates dark patterns in choice architectures, where users were nudged towards potentially harmful choices. |
-| **Data Privacy & User Rights** | 2021 - Facebook [Data Breach](https://www.npr.org/2021/04/09/986005820/after-data-breach-exposes-530-million-facebook-says-it-will-not-notify-users) exposed data from 530M users, resulting in a $5B settlement to the FTC. It however refused to notify users of the breach violating user rights around data transparency and access. |
+| **Đồng ý nhận thông báo** | 1972 - [Tuskegee Syphilis Study](https://en.wikipedia.org/wiki/Tuskegee_Syphilis_Study) - Những người đàn ông Mỹ gốc Phi tham gia nghiên cứu được hứa hẹn sẽ được chăm sóc y tế miễn phí nhưng bị các nhà nghiên cứu lừa dối vì họ đã không thông báo cho đối tượng về chẩn đoán của mình hoặc về khả năng điều trị. Nhiều đối tượng đã tử vong và bạn tình hoặc con cái bị ảnh hưởng; nghiên cứu này kéo dài tới 40 năm. | 
+| **Bảo mật dữ liệu** |  2007 - Nguồn dữ liệu [Netflix data prize](https://www.wired.com/2007/12/why-anonymous-data-sometimes-isnt/) cung cấp cho các nhà nghiên cứu 10 triệu bảng xếp hạng phim ẩn danh từ 50 nghìn khách hàng để giúp cải thiện thuật toán đề xuất. Tuy nhiên, các nhà nghiên cứu đã có thể liên kết dữ liệu ẩn danh này với dữ liệu nhận dạng cá nhân trong các tập dữ liệu bên ngoài (ví dụ: bình luận trên IMDb) - qua đó đã làm lộ thông tin một số người đăng ký Netflix.|
+| **Thu thập dữ liệu bị thiên lệch**  | 2013 - Thành phố Boston [phát hành ứng dụng Street Bump](https://www.boston.gov/transportation/street-bump), một ứng dụng cho phép người dân báo cáo ổ gà, cung cấp cho thành phố dữ liệu đường bộ tốt hơn để tìm và khắc phục sự cố. Tuy nhiên [những người thu nhập thấp thì ít có cơ hội tiếp cận với ô tô và điện thoại](https://hbr.org/2013/04/the-hidden-biases-in-big-data), khiến các vấn đề về đường bộ của họ trở nên "vô hình" trong ứng dụng này. Các nhà phát triển đã làm việc với các học giả để tiếp cận công bằng và xóa bỏ khoảng cách kỹ thuật số vì sự công bằng. |
+| **Thuật toán đảm bảo công bằng**  | 2018 - The MIT [Gender Shades Study](http://gendershades.org/overview.html) đã đánh giá độ chính xác của các sản phẩm AI phân loại giới tính, chỉ ra những khoảng cách về độ chính xác đối với phụ nữ và người da màu. Thẻ [2019 Apple Card](https://www.wired.com/story/the-apple-card-didnt-see-genderand-thats-the-problem/) dường như cung cấp ít chính xác hơn cho phụ nữ so với nam giới. Cả hai đều minh họa các vấn đề về thiên vị thuật toán dẫn đến tác hại kinh tế xã hội.|
+| **Suy diễn dữ liệu** | 2020 - [Georgia Department of Public Health released COVID-19 charts](https://www.vox.com/covid-19-coronavirus-us-response-trump/2020/5/18/21262265/georgia-covid-19-cases-declining-reopening) dường như gây hiểu lầm cho người dân về xu hướng các ca bệnh được xác nhận với thứ tự không theo thứ tự thời gian trên trục x. Điều này minh họa cho việc trình bày sai lệch thông qua các thủ thuật trực quan hóa. |
+| **Ảo tưởng tự do lựa chọn** | 2020 - Learning app [ABCmouse paid $10M to settle an FTC complaint](https://www.washingtonpost.com/business/2020/09/04/abcmouse-10-million-ftc-settlement/) trong đó phụ huynh bị mắc kẹt khi phải trả tiền cho các gói đăng ký mà họ không thể hủy. Điều này minh họa cho các mô hình đen tối trong kiến ​​trúc lựa chọn, nơi người dùng bị thúc đẩy đến các lựa chọn có khả năng gây hại. |
+| **Quyền riêng tư của người dùng** | 2021 - Facebook [Data Breach](https://www.npr.org/2021/04/09/986005820/after-data-breach-exposes-530-million-facebook-says-it-will-not-notify-users) đã tiết lộ dữ liệu của 530 triệu người dùng, dẫn đến khoản thanh toán 5 tỷ đô la cho FTC. Tuy nhiên, công ty này đã từ chối thông báo cho người dùng về vụ vi phạm quyền của người dùng liên quan đến tính minh bạch và quyền truy cập dữ liệu. |
 
-Want to explore more case studies? Check out these resources:
-* [Ethics Unwrapped](https://ethicsunwrapped.utexas.edu/case-studies) - ethics dilemmas across diverse industries. 
-* [Data Science Ethics course](https://www.coursera.org/learn/data-science-ethics#syllabus) - landmark case studies explored.
-* [Where things have gone wrong](https://deon.drivendata.org/examples/) - deon checklist with examples
+Bạn muốn khám phá thêm các nghiên cứu tình huống? Hãy xem các nguồn tài nguyên sau:
+* [Ethics Unwrapped](https://ethicsunwrapped.utexas.edu/case-studies) - những vấn đề nan giải về đạo đức trong nhiều ngành công nghiệp khác nhau.
+* [Data Science Ethics course](https://www.coursera.org/learn/data-science-ethics#syllabus) - khám phá các nghiên cứu điển hình mang tính bước ngoặt.
+* [Where things have gone wrong](https://deon.drivendata.org/examples/) - danh sách kiểm tra phương pháp Deon với các ví dụ.
 
-> 🚨 Think about the case studies you've seen - have you experienced, or been affected by, a similar ethical challenge in your life? Can you think of at least one other case study that illustrates one of the ethical challenges we've discussed in this section?
+> 🚨 Hãy nghĩ về các nghiên cứu điển hình mà bạn đã thấy - bạn đã từng trải qua hay bị ảnh hưởng bởi một thách thức đạo đức tương tự trong cuộc sống của mình chưa? Bạn có thể nghĩ ra ít nhất một nghiên cứu điển hình khác minh họa cho một trong những thách thức đạo đức mà chúng ta đã thảo luận trong phần này không?
 
-## Applied Ethics
+## Applied Ethics - Vận dụng các quy tắc đạo đức
 
-We've talked about ethics concepts, challenges ,and case studies in real-world contexts. But how do we get started _applying_ ethical principles and practices in our projects? And how do we _operationalize_ these practices for better governance? Let's explore some real-world solutions: 
+Chúng ta đã nói về các khái niệm, thách thức và nghiên cứu tình huống về đạo đức trong bối cảnh thực tế. Nhưng làm thế nào để chúng ta bắt đầu áp dụng các nguyên tắc và thực hành đạo đức trong các dự án của mình? Và làm thế nào để chúng ta vận hành các thực hành này để quản lý tốt hơn? Hãy cùng khám phá một số giải pháp thực tế:
 
-### 1. Professional Codes
+### 1. Professional Codes - Quy tắc chuyên nghiệp
 
-Professional Codes offer one option for organizations to "incentivize" members to support their ethical principles and mission statement. Codes are _moral guidelines_ for professional behavior, helping employees or members make decisions that align with their organization's principles. They are only as good as the voluntary compliance from members; however, many organizations offer additional rewards and penalties to motivate compliance from members.
+Bộ quy tắc chuyên nghiệp cung cấp một lựa chọn cho các tổ chức để "khuyến khích" các thành viên ủng hộ các nguyên tắc đạo đức và tuyên bố sứ mệnh của họ. Bộ quy tắc là các hướng dẫn đạo đức cho hành vi chuyên nghiệp, giúp nhân viên hoặc thành viên đưa ra quyết định phù hợp với các nguyên tắc của tổ chức. Chúng chỉ tốt khi các thành viên tự nguyện tuân thủ; tuy nhiên, nhiều tổ chức cung cấp thêm phần thưởng và hình phạt để thúc đẩy sự tuân thủ của các thành viên.
 
-Examples include:
+Các ví dụ bao gồm:
 
- * [Oxford Munich](http://www.code-of-ethics.org/code-of-conduct/) Code of Ethics
- * [Data Science Association](http://datascienceassn.org/code-of-conduct.html) Code of Conduct (created 2013)
+ * [Oxford Munich](http://www.code-of-ethics.org/code-of-conduct/) Code of Ethics - Quy tắc đạo đức
+ * [Data Science Association](http://datascienceassn.org/code-of-conduct.html) Code of Conduct - Quy tắc ứng xử (created 2013)
  * [ACM Code of Ethics and Professional Conduct](https://www.acm.org/code-of-ethics) (since 1993)
 
-> 🚨 Do you belong to a professional engineering or data science organization? Explore their site to see if they define a professional code of ethics. What does this say about their ethical principles? How are they "incentivizing" members to follow the code?
+> 🚨 Bạn có thuộc về một tổ chức khoa học dữ liệu hoặc kỹ thuật chuyên nghiệp không? Hãy khám phá trang web của họ để xem liệu họ có định nghĩa một bộ quy tắc đạo đức nghề nghiệp hay không. Điều này nói lên điều gì về các nguyên tắc đạo đức của họ? Họ "khuyến khích" các thành viên tuân theo bộ quy tắc như thế nào?
 
-### 2. Ethics Checklists
+### 2. Ethics Checklists - Kiểm tra đạo đức
 
-While professional codes define required _ethical behavior_ from practitioners, they [have known limitations](https://resources.oreilly.com/examples/0636920203964/blob/master/of_oaths_and_checklists.md) in enforcement, particularly in large-scale projects. Instead, many data Science experts [advocate for checklists](https://resources.oreilly.com/examples/0636920203964/blob/master/of_oaths_and_checklists.md), that can **connect principles to practices** in more deterministic and actionable ways. 
+Trong khi các quy tắc chuyên nghiệp xác định hành vi đạo đức bắt buộc từ những người hành nghề, họ có [những hạn chế biết trước](https://resources.oreilly.com/examples/0636920203964/blob/master/of_oaths_and_checklists.md) trong việc thực thi, đặc biệt là trong các dự án quy mô lớn. Thay vào đó, nhiều chuyên gia khoa học dữ liệu [ủng hộ phương pháp checklists](https://resources.oreilly.com/examples/0636920203964/blob/master/of_oaths_and_checklists.md), có thể kết nối các nguyên tắc với thực hành theo những cách xác định và có thể hành động hơn.
 
-Checklists convert questions into "yes/no" tasks that can be operationalized, allowing them to be tracked as part of standard product release workflows. 
+Danh sách kiểm tra chuyển đổi các câu hỏi thành các nhiệm vụ "có/không" có thể được vận hành, cho phép theo dõi chúng như một phần của quy trình phát hành sản phẩm tiêu chuẩn.
 
-Examples include:
- * [Deon](https://deon.drivendata.org/) - a general-purpose data ethics checklist created from [industry recommendations](https://deon.drivendata.org/#checklist-citations) with a command-line tool for easy integration.
- * [Privacy Audit Checklist](https://cyber.harvard.edu/ecommerce/privacyaudit.html) - provides general guidance for information handling practices from legal and social exposure perspectives.
- * [AI Fairness Checklist](https://www.microsoft.com/en-us/research/project/ai-fairness-checklist/) - created by AI practitioners to support the adoption and integration of fairness checks into AI development cycles.
- * [22 questions for ethics in data and AI](https://medium.com/the-organization/22-questions-for-ethics-in-data-and-ai-efb68fd19429) - more open-ended framework, structured for initial exploration of ethical issues in design, implementation, and organizational, contexts.
+Các ví dụ bao gồm:
+ * [Deon](https://deon.drivendata.org/) - danh sách kiểm tra đạo đức dữ liệu đa năng được tạo ra từ [industry recommendations](https://deon.drivendata.org/#checklist-citations) với công cụ dòng lệnh để tích hợp dễ dàng.
+ * [Privacy Audit Checklist](https://cyber.harvard.edu/ecommerce/privacyaudit.html) - cung cấp hướng dẫn chung về các hoạt động xử lý thông tin theo quan điểm pháp lý và xã hội.
+ * [AI Fairness Checklist](https://www.microsoft.com/en-us/research/project/ai-fairness-checklist/) -  do các chuyên gia AI tạo ra để hỗ trợ việc áp dụng và tích hợp các kiểm tra tính công bằng vào chu kỳ phát triển AI.
+ * [22 questions for ethics in data and AI](https://medium.com/the-organization/22-questions-for-ethics-in-data-and-ai-efb68fd19429) - khuôn khổ mở hơn, được xây dựng để khám phá ban đầu các vấn đề đạo đức trong bối cảnh thiết kế, triển khai và tổ chức.
 
-### 3. Ethics Regulations
+### 3. Ethics Regulations - Quy định về đạo đức
 
-Ethics is about defining shared values and doing the right thing _voluntarily_. **Compliance** is about _following the law_ if and where defined. **Governance** broadly covers all the ways in which organizations operate to enforce ethical principles and comply with established laws.
+Đạo đức là về việc xác định các giá trị chung và làm điều đúng đắn một cách tự nguyện . Tuân thủ là về việc tuân thủ luật pháp nếu và ở nơi được xác định. Quản trị bao gồm rộng rãi tất cả các cách thức mà các tổ chức hoạt động để thực thi các nguyên tắc đạo đức và tuân thủ các luật đã được thiết lập.
 
-Today, governance takes two forms within organizations. First, it's about defining **ethical AI** principles and establishing practices to operationalize adoption across all AI-related projects in the organization. Second, it's about complying with all government-mandated **data protection regulations** for regions it operates in.
+Ngày nay, quản trị có hai hình thức trong các tổ chức. Đầu tiên, đó là về việc xác định các nguyên tắc AI có đạo đức và thiết lập các hoạt động để vận hành việc áp dụng trên tất cả các dự án liên quan đến AI trong tổ chức. Thứ hai, đó là về việc tuân thủ tất cả các quy định bảo vệ dữ liệu do chính phủ yêu cầu đối với các khu vực mà tổ chức hoạt động.
 
-Examples of data protection and privacy regulations:
+Ví dụ về quy định bảo vệ dữ liệu và quyền riêng tư:
 
- * `1974`, [US Privacy Act](https://www.justice.gov/opcl/privacy-act-1974) - regulates _federal govt._ collection, use ,and disclosure of personal information.
- * `1996`, [US Health Insurance Portability & Accountability Act (HIPAA)](https://www.cdc.gov/phlp/publications/topic/hipaa.html) - protects personal health data.
- * `1998`, [US Children's Online Privacy Protection Act (COPPA)](https://www.ftc.gov/enforcement/rules/rulemaking-regulatory-reform-proceedings/childrens-online-privacy-protection-rule) - protects data privacy of children under 13.
- * `2018`, [General Data Protection Regulation (GDPR)](https://gdpr-info.eu/) - provides user rights, data protection ,and privacy.
- * `2018`, [California Consumer Privacy Act (CCPA)](https://www.oag.ca.gov/privacy/ccpa) gives consumers more _rights_ over their (personal) data.
- * `2021`, China's [Personal Information Protection Law](https://www.reuters.com/world/china/china-passes-new-personal-data-privacy-law-take-effect-nov-1-2021-08-20/) just passed, creating one of the strongest online data privacy regulations worldwide.
+ * `1974`, [US Privacy Act - Đạo luật](https://www.justice.gov/opcl/privacy-act-1974) - điều chỉnh việc thu thập, sử dụng và tiết lộ thông tin cá nhân của chính quyền liên bang .
+ * `1996`, [US Health Insurance Portability & Accountability Act (HIPAA)](https://www.cdc.gov/phlp/publications/topic/hipaa.html) - bảo vệ dữ liệu sức khỏe cá nhân.
+ * `1998`, [US Children's Online Privacy Protection Act (COPPA)](https://www.ftc.gov/enforcement/rules/rulemaking-regulatory-reform-proceedings/childrens-online-privacy-protection-rule) - bảo vệ quyền riêng tư dữ liệu của trẻ em dưới 13 tuổi.
+ * `2018`, [General Data Protection Regulation (GDPR)](https://gdpr-info.eu/) - cung cấp quyền của người dùng, bảo vệ dữ liệu và quyền riêng tư.
+ * `2018`, [California Consumer Privacy Act (CCPA)](https://www.oag.ca.gov/privacy/ccpa) trao cho người tiêu dùng nhiều quyền hơn đối với dữ liệu (cá nhân) của họ.
+ * `2021`, China's [Personal Information Protection Law](https://www.reuters.com/world/china/china-passes-new-personal-data-privacy-law-take-effect-nov-1-2021-08-20/) vừa được thông qua, tạo ra một trong những quy định về quyền riêng tư dữ liệu trực tuyến mạnh mẽ nhất trên toàn thế giới.
 
-> 🚨 The European Union defined GDPR (General Data Protection Regulation) remains one of the most influential data privacy regulations today. Did you know it also defines [8 user rights](https://www.freeprivacypolicy.com/blog/8-user-rights-gdpr) to protect citizens' digital privacy and personal data? Learn about what these are, and why they matter.
+> 🚨 GDPR (Quy định bảo vệ dữ liệu chung) do Liên minh châu Âu định nghĩa vẫn là một trong những quy định về quyền riêng tư dữ liệu có ảnh hưởng nhất hiện nay. Bạn có biết quy định này cũng định nghĩa [8 user rights](https://www.freeprivacypolicy.com/blog/8-user-rights-gdpr) để bảo vệ quyền riêng tư kỹ thuật số và dữ liệu cá nhân của công dân không? Tìm hiểu về những quyền này và lý do tại sao chúng quan trọng.
 
 
-### 4. Ethics Culture
+### 4. Ethics Culture - Văn hóa đạo đức
 
-Note that there remains an intangible gap between _compliance_ (doing enough to meet "the letter of the law") and addressing [systemic issues](https://www.coursera.org/learn/data-science-ethics/home/week/4) (like ossification, information asymmetry, and distributional unfairness) that can speed up the weaponization of AI. 
+Lưu ý rằng vẫn còn một khoảng cách vô hình giữa việc tuân thủ (thực hiện đủ để đáp ứng "đúng theo luật") và giải quyết [systemic issues - vấn đề có tính hệ thống](https://www.coursera.org/learn/data-science-ethics/home/week/4) (như sự cứng nhắc, bất đối xứng thông tin và bất công trong phân phối) có thể đẩy nhanh quá trình vũ khí hóa AI.
 
-The latter requires [collaborative approaches to defining ethics cultures](https://towardsdatascience.com/why-ai-ethics-requires-a-culture-driven-approach-26f451afa29f) that build emotional connections and consistent shared values _across organizations_ in the industry. This calls for more [formalized data ethics cultures](https://www.codeforamerica.org/news/formalizing-an-ethical-data-culture/) in organizations - allowing _anyone_ to [pull the Andon cord](https://en.wikipedia.org/wiki/Andon_(manufacturing)) (to raise ethics concerns early in the process) and making _ethical assessments_ (e.g., in hiring) a core criteria team formation in AI projects.
+Điều sau đòi hỏi [các biện pháp tiếp cận ở khía cạnh ethics cultures](https://towardsdatascience.com/why-ai-ethics-requires-a-culture-driven-approach-26f451afa29f) xây dựng các kết nối cảm xúc và các giá trị chung nhất quán giữa các tổ chức trong ngành. Điều này đòi hỏi [sự định hình văn hóa đạo đức](https://www.codeforamerica.org/news/formalizing-an-ethical-data-culture/) nhiều hơn trong các tổ chức - cho phép bất kỳ ai cũng có thể kéo [pull the Andon cord - gióng lên hồi chuông cảnh báo](https://en.wikipedia.org/wiki/Andon_(manufacturing)) (để nêu ra các mối quan tâm về đạo đức ngay từ đầu quá trình) và biến các đánh giá đạo đức (ví dụ, khi tuyển dụng) thành một tiêu chí cốt lõi trong việc hình thành nhóm trong các dự án AI.
 
 ---
-## [Post-lecture quiz](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/3) 🎯
-## Review & Self Study 
+## [Kiểm tra sau bài giảng](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/3) 🎯
+## Review & Self Study - Đánh giá & Tự học
 
-Courses and books help with understanding core ethics concepts and challenges, while case studies and tools help with applied ethics practices in real-world contexts. Here are a few resources to start with.
+Các khóa học và sách giúp hiểu các khái niệm và thách thức cốt lõi về đạo đức, trong khi các nghiên cứu tình huống và công cụ giúp thực hành đạo đức ứng dụng trong bối cảnh thực tế. Sau đây là một số tài nguyên để bắt đầu.
 
-* [Machine Learning For Beginners](https://github.com/microsoft/ML-For-Beginners/blob/main/1-Introduction/3-fairness/README.md) - lesson on Fairness, from Microsoft.
-* [Principles of Responsible AI](https://docs.microsoft.com/en-us/learn/modules/responsible-ai-principles/) - free learning path from Microsoft Learn.
-* [Ethics and Data Science](https://resources.oreilly.com/examples/0636920203964) - O'Reilly EBook (M. Loukides, H. Mason et. al)
-* [Data Science Ethics](https://www.coursera.org/learn/data-science-ethics#syllabus) - online course from the University of Michigan.
-* [Ethics Unwrapped](https://ethicsunwrapped.utexas.edu/case-studies) - case studies from the University of Texas.
+* [Machine Learning For Beginners](https://github.com/microsoft/ML-For-Beginners/blob/main/1-Introduction/3-fairness/README.md) - bài học về Công bằng, từ Microsoft.
+* [Principles of Responsible AI](https://docs.microsoft.com/en-us/learn/modules/responsible-ai-principles/) - lộ trình học miễn phí từ Microsoft Learn.
+* [Ethics and Data Science](https://resources.oreilly.com/examples/0636920203964) - Sách điện tử O'Reilly (M. Loukides, H. Mason và cộng sự)
+* [Data Science Ethics](https://www.coursera.org/learn/data-science-ethics#syllabus) - khóa học trực tuyến từ Đại học Michigan.
+* [Ethics Unwrapped](https://ethicsunwrapped.utexas.edu/case-studies) -  các nghiên cứu điển hình từ Đại học Texas.
 
-# Assignment 
+# Assignment - Bài tập phân công
 
-[Write A Data Ethics Case Study](assignment.md)
+[Bạn hãy viết một case-study về chủ đề đạo đức dữ liệu](assignment.md)
