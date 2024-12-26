@@ -56,3 +56,11 @@ Giữa những năm 1990, các nhà nghiên cứu từ Đại học Bang Arizona
 
 * **Giám sát đạo đức:** Thiết lập các ủy ban đạo đức độc lập để giám sát và đảm bảo tuân thủ các nguyên tắc đạo đức trong nghiên cứu.
 
+**5.Những thách thức đạo đức trong nghiên cứu y sinh học**
+
+Một số bài báo khoa học thảo luận về các vấn đề đạo đức liên quan đến sự đồng ý sau khi được thông báo trong nghiên cứu y sinh học.
+Những nguồn tài nguyên này cung cấp cái nhìn sâu sắc về tầm quan trọng của sự đồng ý sau khi được thông báo và các biện pháp cần thiết để đảm bảo tính đạo đức trong nghiên cứu y sinh học:
+
+* [Chúng ta có nên cấy ghép nội tạng lợn vào người không? Chúng tôi đã hỏi một nhà đạo đức học.](https://www.vox.com/future-perfect/388544/pig-organ-transplants-xenotransplantation-ethics-consent?utm_source=chatgpt.com)
+
+* [Khi nào thì các nhà kinh tế có thể tiến hành thử nghiệm trên con người?](https://www.ft.com/content/df7c0a50-dcc6-4b3a-b3dc-22f742125421?utm_source=chatgpt.com)
