@@ -1,4 +1,5 @@
 # Introduction to Data Ethics
+[Bản dịch tiếng Việt](https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/blob/main/1-Introduction/02-ethics/translations/README.vn.md)
 
 |![ Sketchnote by [(@sketchthedocs)](https://sketchthedocs.dev) ](../../sketchnotes/02-Ethics.png)|
 |:---:|
