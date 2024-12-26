@@ -1,31 +1,65 @@
-# Assignment: Data Science Scenarios
+# Classifying Datasets
 
-In this first assignment, we ask you to think about some real-life process or problem in different problem domains, and how you can improve it using the Data Science process. Think about the following:
-
-1. Which data can you collect?
-1. How would you collect it?
-1. How would you store the data? How large the data is likely to be?
-1. Which insights you might be able to get from this data? Which decisions we would be able to take based on the data?
-
-Try to think about 3 different problems/processes and describe each of the points above for each problem domain.
-
-Here are some of the problem domains and problems that can get you started thinking:
-
-1. How can you use data to improve education process for children in schools?
-1. How can you use data to control vaccination during the pandemic?
-1. How can you use data to make sure you are being productive at work?
 ## Instructions
 
-Fill in the following table (substitute suggested problem domains for your own ones if needed):
+Follow the prompts in this assignment to identify and classify the data with one of each of the following data types:
 
-| Problem Domain | Problem | Which data to collect | How to store the data | Which insights/decisions we can make | 
-|----------------|---------|-----------------------|-----------------------|--------------------------------------|
-| Education | | | | |
-| Vaccination | | | | |
-| Productivity | | | | |
+**Structure Types**: Structured, Semi-Structured, or Unstructured
+
+**Value Types**: Qualitative or Quantitative 
+
+**Source Types**: Primary or Secondary
+
+1. A company has been acquired and now has a parent company. The data scientists have received a spreadsheet of customer phone numbers from the parent company. 
+
+Structure Type:
+
+Value Type: 
+
+Source Type: 
+
+---
+
+2. A smart watch has been collecting heart rate data from its wearer, and the raw data is in JSON format.
+
+Structure Type:
+
+Value Type: 
+
+Source Type: 
+
+---
+
+3. A workplace survey of employee morale that is stored in a CSV file. 
+
+Structure Type:
+
+Value Type: 
+
+Source Type: 
+
+---
+
+4. Astrophysicists are accessing a database of galaxies that has been collected by a space probe. The data contains the number of planets within in each galaxy.
+
+Structure Type:
+
+Value Type: 
+
+Source Type: 
+
+---
+
+5. A personal finance app uses APIs to connect to a user's financial accounts in order to calculate their net worth. They can see all of their transactions in a format of rows and columns and looks similar to a spreadsheet.
+
+Structure Type:
+
+Value Type: 
+
+Source Type: 
 
 ## Rubric
 
 Exemplary | Adequate | Needs Improvement
 --- | --- | -- |
-One was able to identify reasonable data sources, ways of storing data and possible decisions/insights for all problem domains | Some of the aspects of the solution are not detailed, data storage is not discussed, at least 2 problem domains are described | Only parts of the data solution are described, only one problem domain is considered.
+Correctly identifies all structure, value, and sources |Correctly identifies 3 all structure, value, and sources|Correctly identifies 2 or less all structure, value, and sources|
