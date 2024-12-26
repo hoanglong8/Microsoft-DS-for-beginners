@@ -1,4 +1,5 @@
 # Defining Data
+[Bản dịch tiếng Việt](https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/blob/main/1-Introduction/03-defining-data/translations/README.vn.md)
 
 |![ Sketchnote by [(@sketchthedocs)](https://sketchthedocs.dev) ](../../sketchnotes/03-DefiningData.png)|
 |:---:|
