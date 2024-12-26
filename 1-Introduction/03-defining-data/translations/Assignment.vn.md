@@ -27,6 +27,7 @@ Structure Type (Loại cấu trúc):
 Value Type (Loại giá trị): 
 
 Source Type (Loại nguồn):
+
 ---
 
 3. Khảo sát tinh thần làm việc của nhân viên được lưu trữ trong tệp CSV.
