@@ -16,7 +16,7 @@ Xu hướng cũng chỉ ra rằng chúng ta sẽ tạo ra và tiêu thụ hơn [
 
 ![Gartner's Hype Cycle for AI - 2020](https://images-cdn.newscred.com/Zz1mOWJhNzlkNDA2ZTMxMWViYjRiOGFiM2IyMjQ1YmMwZQ==)
 
-Trong bài học này, chúng ta sẽ khám phá lĩnh vực đạo đức dữ liệu hấp dẫn - từ các khái niệm và thách thức cốt lõi, đến các nghiên cứu tình huống và khái niệm AI ứng dụng như quản trị - giúp thiết lập văn hóa đạo đức trong các nhóm và tổ chức làm việc với dữ liệu và AI.
+Trong bài học này, chúng ta sẽ khám phá lĩnh vực đạo đức dữ liệu - từ các khái niệm và thách thức cốt lõi, đến các nghiên cứu tình huống (case-study) và khái niệm AI ứng dụng như quản trị - giúp thiết lập văn hóa đạo đức trong các nhóm/tổ chức làm việc với dữ liệu + AI.
 
 
 
@@ -24,13 +24,13 @@ Trong bài học này, chúng ta sẽ khám phá lĩnh vực đạo đức dữ 
 
 ## Khái niệm cơ bản
 
-Chúng ta hãy bắt đầu bằng cách hiểu thuật ngữ cơ bản.
+Chúng ta hãy bắt đầu bằng cách hiểu các thuật ngữ cơ bản.
 
 Từ "đạo đức" xuất phát từ ["ethikos" trong tiếng Hy Lạp](https://en.wikipedia.org/wiki/Ethics) (gốc từ "ethos") có nghĩa là tính cách hoặc bản chất đạo đức .
 
 **Đạo đức** là về các giá trị chung và các nguyên tắc đạo đức chi phối hành vi của chúng ta trong xã hội. Đạo đức không dựa trên luật pháp mà dựa trên các chuẩn mực được chấp nhận rộng rãi về điều gì là "đúng so với sai". Tuy nhiên, các cân nhắc về đạo đức có thể ảnh hưởng đến các sáng kiến ​​quản trị doanh nghiệp và các quy định của chính phủ tạo ra nhiều động lực hơn để tuân thủ.
 
-**Đạo đức dữ liệu học** là một [nhánh của Đạo đức học](https://royalsocietypublishing.org/doi/full/10.1098/rsta.2016.0360#sec-1) "nghiên cứu và đánh giá các vấn đề đạo đức liên quan đến dữ liệu, thuật toán và các hoạt động tương ứng ". Ở đây, "dữ liệu" tập trung vào các hành động liên quan đến việc tạo, ghi lại, quản lý, xử lý, phổ biến, chia sẻ và sử dụng, "thuật toán" tập trung vào AI, tác nhân, máy học và rô-bốt, và "thực hành" tập trung vào các chủ đề như đổi mới có trách nhiệm, lập trình, hack và các quy tắc đạo đức.
+**Đạo đức khoa học dữ liệu** là một [nhánh của Đạo đức học](https://royalsocietypublishing.org/doi/full/10.1098/rsta.2016.0360#sec-1) "nghiên cứu và đánh giá các vấn đề đạo đức liên quan đến dữ liệu, thuật toán và các hoạt động tương ứng ". Ở đây, "dữ liệu" tập trung vào các hành động liên quan đến việc tạo, ghi lại, quản lý, xử lý, phổ biến, chia sẻ và sử dụng, "thuật toán" tập trung vào AI, tác nhân, máy học và rô-bốt, và "thực hành" tập trung vào các chủ đề như đổi mới có trách nhiệm, lập trình, hack và các quy tắc đạo đức.
 
 **Vận dụng Đạo đức** là [ứng dụng đạo đức vào thực tế](https://en.wikipedia.org/wiki/Applied_ethics). Đó là quá trình chủ động điều tra các vấn đề đạo đức trong bối cảnh các hành động, sản phẩm và quy trình trong thế giới thực , và thực hiện các biện pháp khắc phục để đảm bảo chúng phù hợp với các giá trị đạo đức đã xác định của chúng tôi.
 
@@ -41,7 +41,7 @@ Từ "đạo đức" xuất phát từ ["ethikos" trong tiếng Hy Lạp](https:
 
 Trong phần này, chúng ta sẽ thảo luận về các khái niệm như giá trị chung (nguyên tắc) và thách thức về mặt đạo đức (vấn đề) đối với đạo đức dữ liệu - và khám phá các nghiên cứu điển hình giúp bạn hiểu các khái niệm này trong bối cảnh thực tế.
 
-### 1. Nguyên tắc đạo đức
+### 1. Nguyên tắc đạo đức - Ethics Principles
 Mọi chiến lược đạo đức dữ liệu đều bắt đầu bằng việc xác định các nguyên tắc đạo đức - "các giá trị chung" mô tả các hành vi có thể chấp nhận được và hướng dẫn các hành động tuân thủ trong các dự án dữ liệu & AI của chúng tôi. Bạn có thể xác định những điều này ở cấp độ cá nhân hoặc nhóm. Tuy nhiên, hầu hết các tổ chức lớn đều phác thảo những điều này trong một tuyên bố sứ mệnh hoặc khuôn khổ đạo đức AI được xác định ở cấp độ công ty và được thực thi nhất quán trên tất cả các nhóm.
 
 Ví dụ: Tuyên bố của Microsoft về [nghĩa vụ của AI](https://www.microsoft.com/en-us/ai/responsible-ai) của Microsoft có nội dung: "Chúng tôi cam kết phát triển AI theo các nguyên tắc đạo đức đặt con người lên hàng đầu" - xác định 6 nguyên tắc đạo đức trong khuôn khổ bên dưới:
@@ -59,9 +59,9 @@ Chúng ta hãy cùng khám phá những nguyên tắc này một cách ngắn g�
 
 > 🚨 Hãy nghĩ về tuyên bố sứ mệnh đạo đức dữ liệu của bạn có thể là gì. Khám phá các khuôn khổ AI đạo đức từ các tổ chức khác - đây là các ví dụ từ [IBM](https://www.ibm.com/cloud/learn/ai-ethics), [Google](https://ai.google/principles), and [Facebook](https://ai.facebook.com/blog/facebooks-five-pillars-of-responsible-ai/). Họ có những giá trị chung nào? Những nguyên tắc này liên quan như thế nào đến sản phẩm hoặc ngành AI mà họ hoạt động?
 
-### 2. Thách thức về Đạo đức
+### 2. Thách thức về Đạo đức - Ethics Challenges
 
-Sau khi chúng ta đã xác định được các nguyên tắc đạo đức, bước tiếp theo là đánh giá dữ liệu và hành động AI của chúng ta để xem liệu chúng có phù hợp với các giá trị chung đó hay không. Hãy nghĩ về hành động của bạn theo hai loại: thu thập dữ liệu và thiết kế thuật toán .
+Sau khi chúng ta đã xác định được các nguyên tắc đạo đức, bước tiếp theo là đánh giá dữ liệu và hành động AI của chúng ta để xem liệu chúng có phù hợp với các giá trị chung đó hay không. Hãy nghĩ về hành động của bạn theo hai loại: **thu thập dữ liệu** và **thiết kế thuật toán**.
 
 Với việc thu thập dữ liệu, các hành động có thể liên quan đến dữ liệu cá nhân hoặc thông tin nhận dạng cá nhân (PII) đối với các cá nhân còn sống có thể nhận dạng được. Điều này bao gồm [nhiều loại dữ liệu phi cá nhân](https://ec.europa.eu/info/law/law-topic/data-protection/reform/what-personal-data_en) có thể nhận dạng chung một cá nhân. Các thách thức về mặt đạo đức có thể liên quan đến quyền riêng tư dữ liệu , quyền sở hữu dữ liệu và các chủ đề liên quan như sự đồng ý có thông tin và quyền sở hữu trí tuệ đối với người dùng.
 
@@ -113,7 +113,7 @@ Những câu hỏi cần khám phá ở đây là:
 * Người dùng có thể được xóa thông tin nhận dạng khỏi các tập dữ liệu ẩn danh không?
 
 
-#### 2.5 Right To Be Forgotten - Quyền được quên
+#### 2.5 Right To Be Forgotten - Quyền được quên/xóa bỏ
 
 [Quyền được quên](https://en.wikipedia.org/wiki/Right_to_be_forgotten) hay [Quyền được xóa bỏ](https://www.gdpreu.org/right-to-be-forgotten/) cung cấp thêm quyền bảo vệ dữ liệu cá nhân cho người dùng. Cụ thể, nó trao cho người dùng quyền yêu cầu xóa hoặc gỡ bỏ dữ liệu cá nhân khỏi các tìm kiếm trên Internet và các vị trí khác, trong những trường hợp cụ thể - cho phép họ bắt đầu lại trực tuyến mà không bị xử lý các hành động trong quá khứ.
 
