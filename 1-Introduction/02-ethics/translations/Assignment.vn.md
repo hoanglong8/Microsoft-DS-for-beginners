@@ -18,8 +18,41 @@ Trong bài tập này, bạn sẽ viết nghiên cứu tình huống của riên
 
 
 
-## Rubric - Bố cục trình bày
+## Rubric - Thang chấm điểm
 
 Exemplary - Mẫu mực| Adequate - Đạt yêu cầu | Needs Improvement - Cần cải thiện
 --- | --- | -- |
 Một hoặc nhiều thách thức về đạo đức dữ liệu được xác định. <br/> <br/> Nghiên cứu tình huống mô tả rõ ràng một sự cố trong thế giới thực phản ánh thách thức đó và nêu bật những hậu quả hoặc tác hại không mong muốn mà nó gây ra. <br/><br/> Có ít nhất một nguồn tài nguyên được liên kết để chứng minh điều này đã xảy ra. | Một thách thức về đạo đức dữ liệu được xác định. <br/><br/> Ít nhất một tác hại hoặc hậu quả có liên quan được thảo luận ngắn gọn. <br/><br/> Tuy nhiên, thảo luận bị hạn chế hoặc thiếu bằng chứng về sự kiện thực tế. | Xác định được một thách thức về dữ liệu. <br/><br/> Tuy nhiên, mô tả hoặc tài nguyên không phản ánh đầy đủ thách thức hoặc chứng minh được sự xuất hiện trong thế giới thực của nó. |
+
+## Case study 1 - Nghiên cứu tình huống về Sự đồng ý sau khi được thông báo (Informed Consent)
+
+Trong nghiên cứu y sinh học, việc thu thập mẫu sinh học từ người tham gia đòi hỏi sự đồng ý sau khi được thông báo đầy đủ về mục đích và phạm vi sử dụng mẫu. Tuy nhiên, có những trường hợp mà sự đồng ý này không được thực hiện đúng cách, dẫn đến vi phạm đạo đức nghiên cứu.
+
+[**1.Tình huống: Vụ việc của Bộ lạc Havasupai và Đại học Bang Arizona**](https://en.wikipedia.org/wiki/Havasupai_Tribe_v._the_Arizona_Board_of_Regents)
+
+Giữa những năm 1990, các nhà nghiên cứu từ Đại học Bang Arizona (ASU) đã thu thập mẫu máu từ khoảng 400 thành viên của bộ lạc Havasupai với mục đích nghiên cứu bệnh tiểu đường, một vấn đề sức khỏe nghiêm trọng trong cộng đồng này. Tuy nhiên, sau đó, các mẫu này được sử dụng cho nhiều nghiên cứu khác như tâm thần phân liệt, cận huyết và di cư dân số mà không có sự đồng ý rõ ràng từ các thành viên bộ lạc.
+
+**2.Các câu hỏi về đạo đức dữ liệu:**
+
+* **Sự đồng ý sau khi được thông báo:** Người tham gia có được cung cấp đầy đủ thông tin về mục đích và phạm vi sử dụng mẫu sinh học của họ không?
+
+* **Quyền tự quyết:** Liệu quyền của người tham gia trong việc quyết định sử dụng mẫu sinh học của họ có bị vi phạm không?
+
+* **Tôn trọng văn hóa:** Việc sử dụng mẫu sinh học mà không có sự đồng ý có vi phạm niềm tin và giá trị văn hóa của bộ lạc Havasupai không?
+
+**3.Tác hại tiềm ẩn và hậu quả không mong muốn:**
+
+* **Mất niềm tin:** Cộng đồng Havasupai mất niềm tin vào các nhà nghiên cứu và tổ chức y tế, ảnh hưởng đến sự hợp tác trong các nghiên cứu ở tương lai.
+
+* **Tổn thương văn hóa:** Việc sử dụng mẫu máu mà không có sự đồng ý vi phạm niềm tin văn hóa và tôn giáo của bộ lạc, gây ra tổn thương tinh thần.
+
+* **Hậu quả pháp lý:** ASU - Đại học Bang Arizona phải đối mặt với các vụ kiện và bồi thường tài chính, ảnh hưởng đến uy tín và tài chính của tổ chức.
+
+**4.Giải pháp và quy trình tiềm năng:**
+
+* **Quy trình đồng ý rõ ràng:** Thiết lập quy trình đồng ý sau khi được thông báo rõ ràng, đảm bảo người tham gia hiểu và đồng ý với tất cả các mục đích sử dụng mẫu sinh học (có ký biên bản rõ ràng).
+
+* **Tôn trọng văn hóa:** Tìm hiểu và tôn trọng giá trị văn hóa của cộng đồng tham gia, đảm bảo nghiên cứu không vi phạm niềm tin và phong tục địa phương.
+
+* **Giám sát đạo đức:** Thiết lập các ủy ban đạo đức độc lập để giám sát và đảm bảo tuân thủ các nguyên tắc đạo đức trong nghiên cứu.
+
