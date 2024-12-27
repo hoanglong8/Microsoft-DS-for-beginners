@@ -65,27 +65,27 @@ Một ví dụ khác, trong tập dữ liệu {1, 3, 6, 6, 6, 7, 7, 12, 12, 17},
 
 ## Real-world Data (Dữ liệu trong thực tế)
 
-Khi chúng ta phân tích dữ liệu từ cuộc sống thực, chúng thường không phải là các biến ngẫu nhiên, theo nghĩa là chúng ta không thực hiện các thí nghiệm với kết quả chưa biết. Ví dụ, hãy xem xét một đội cầu thủ bóng chày và dữ liệu cơ thể của họ, chẳng hạn như chiều cao, cân nặng và tuổi tác. Những con số đó không hoàn toàn ngẫu nhiên, nhưng chúng ta vẫn có thể áp dụng các khái niệm toán học tương tự. Ví dụ, một chuỗi cân nặng của mọi người có thể được coi là một chuỗi các giá trị được rút ra từ một số biến ngẫu nhiên. Dưới đây là chuỗi cân nặng của các cầu thủ bóng chày thực tế từ Giải [Major League Baseball](http://mlb.mlb.com/index.jsp), được lấy từ [this dataset](http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_MLB_HeightsWeights) (để thuận tiện cho bạn, chỉ hiển thị 20 giá trị đầu tiên):
+Khi chúng ta phân tích dữ liệu từ cuộc sống thực, chúng thường không phải là các biến ngẫu nhiên, theo nghĩa là chúng ta không thực hiện các thí nghiệm với kết quả chưa biết. Ví dụ, hãy xem xét một đội cầu thủ bóng chày và dữ liệu cơ thể của họ, chẳng hạn như chiều cao, cân nặng và tuổi tác. Những con số đó không hoàn toàn ngẫu nhiên, nhưng chúng ta vẫn có thể áp dụng các khái niệm toán học tương tự. Ví dụ, một chuỗi cân nặng của mọi người có thể được coi là một chuỗi các giá trị được rút ra từ một số biến ngẫu nhiên. Dưới đây là chuỗi **cân nặng** của các cầu thủ bóng chày thực tế từ giải đấu [Major League Baseball](http://mlb.mlb.com/index.jsp), được lấy từ [dataset](http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_MLB_HeightsWeights) (để thuận tiện cho bạn, chỉ hiển thị 20 giá trị đầu tiên):
 
 ```
 [180.0, 215.0, 210.0, 210.0, 188.0, 176.0, 209.0, 200.0, 231.0, 180.0, 188.0, 180.0, 185.0, 160.0, 180.0, 185.0, 197.0, 189.0, 185.0, 219.0]
 ```
 
-> **Note**: To see the example of working with this dataset, have a look at the [accompanying notebook](notebook.ipynb). There are also a number of challenges throughout this lesson, and you may complete them by adding some code to that notebook. If you are not sure how to operate on data, do not worry - we will come back to working with data using Python at a later time. If you do not know how to run code in Jupyter Notebook, have a look at [this article](https://soshnikov.com/education/how-to-execute-notebooks-from-github/).
+> **Lưu ý :** Để xem ví dụ về cách làm việc với tập dữ liệu này, hãy xem [accompanying notebook](notebook.ipynb). Ngoài ra còn có một số thử thách trong suốt bài học này và bạn có thể hoàn thành chúng bằng cách thêm một số mã vào sổ tay đó. Nếu bạn không chắc chắn về cách vận hành dữ liệu, đừng lo lắng - chúng ta sẽ quay lại làm việc với dữ liệu bằng Python sau. Nếu bạn không biết cách chạy mã trong Jupyter Notebook, hãy xem [Hướng dẫn](https://soshnikov.com/education/how-to-execute-notebooks-from-github/).
 
-Here is the box plot showing mean, median and quartiles for our data:
+Sau đây là biểu đồ hộp hiển thị giá trị trung bình, trung vị và tứ phân vị cho dữ liệu của chúng ta:
 
-![Weight Box Plot](images/weight-boxplot.png)
+![Weight Box Plot](https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/raw/main/1-Introduction/04-stats-and-probability/images/weight-boxplot.png)
 
-Since our data contains information about different player **roles**, we can also do the box plot by role - it will allow us to get the idea on how parameters values differ across roles. This time we will consider height:
+Vì dữ liệu của chúng tôi chứa thông tin về các **vai trò** khác nhau của người chơi , chúng tôi cũng có thể thực hiện biểu đồ hộp theo vai trò - điều này sẽ cho phép chúng tôi hiểu được cách các giá trị tham số khác nhau giữa các vai trò. Lần này chúng tôi sẽ xem xét **chiều cao**:
 
-![Box plot by role](images/boxplot_byrole.png)
+![Box plot by role](https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/blob/main/1-Introduction/04-stats-and-probability/images/boxplot_byrole.png)
 
-This diagram suggests that, on average, height of first basemen is higher that height of second basemen. Later in this lesson we will learn how we can test this hypothesis more formally, and how to demonstrate that our data is statistically significant to show that.
+Biểu đồ này cho thấy rằng, trung bình, chiều cao của cầu thủ _gôn đầu tiên_ cao hơn chiều cao của cầu thủ _gôn thứ hai_. Sau này trong bài học này, chúng ta sẽ tìm hiểu cách chúng ta có thể **kiểm định giả thuyết** này một cách chính thức hơn và cách chứng minh rằng dữ liệu của chúng ta có ý nghĩa thống kê để chứng minh điều đó.
 
-> When working with real-world data, we assume that all data points are samples drawn from some probability distribution. This assumption allows us to apply machine learning techniques and build working predictive models.
+> Khi làm việc với dữ liệu thực tế, chúng tôi giả định rằng tất cả các điểm dữ liệu đều là các mẫu được rút ra từ một số phân phối xác suất. Giả định này cho phép chúng tôi áp dụng các kỹ thuật học máy và xây dựng các mô hình dự đoán hoạt động.
 
-To see what the distribution of our data is, we can plot a graph called a **histogram**. X-axis would contain a number of different weight intervals (so-called **bins**), and the vertical axis would show the number of times our random variable sample was inside a given interval. 
+Để xem phân phối dữ liệu của chúng ta là gì, chúng ta có thể vẽ một biểu đồ gọi là **biểu đồ histogram** . Trục X sẽ chứa một số khoảng trọng số khác nhau (còn gọi là **bin** ), và trục dọc sẽ hiển thị số lần mẫu biến ngẫu nhiên của chúng ta nằm trong một khoảng nhất định.
 
 ![Histogram of real world data](images/weight-histogram.png)
 
