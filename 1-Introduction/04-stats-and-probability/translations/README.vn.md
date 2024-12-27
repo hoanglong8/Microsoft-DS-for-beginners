@@ -160,21 +160,21 @@ Tuy nhiên, không phải lúc nào cũng rõ ràng liệu chúng ta có thể �
 
 Hãy tính toán riêng khoảng tin cậy cho chiều cao của cầu thủ gôn thứ nhất và thứ hai:
 
-| Độ tin cậy | First Basemen | Second Basemen |
+| Độ tin cậy | First Basemen (min-max) | Second Basemen (min-max) |
 |------------|---------------|----------------|
-| 0.85 | 73.62..74.38 | 71.04..71.69 |
-| 0.90 | 73.56..74.44 | 70.99..71.73 |
-| 0.95 | 73.47..74.53 | 70.92..71.81 |
+| 0.85 | 73.62 - 74.38 | 71.04 - 71.69 |
+| 0.90 | 73.56 - 74.44 | 70.99 - 71.73 |
+| 0.95 | 73.47 - 74.53 | 70.92 - 71.81 |
 
 Chúng ta có thể thấy rằng trong điều kiện không có sự tin cậy, các khoảng thời gian chồng chéo lên nhau. Điều đó chứng minh cho giả thuyết của chúng ta rằng cầu thủ gôn đầu tiên cao hơn cầu thủ gôn thứ hai.
 
 Chính thức hơn, vấn đề chúng ta đang giải quyết là xem **hai phân phối xác suất có giống nhau** hay ít nhất là có cùng tham số hay không. Tùy thuộc vào phân phối, chúng ta cần sử dụng các phép thử khác nhau cho việc đó. Nếu chúng ta biết rằng phân phối của mình là chuẩn, chúng ta có thể áp dụng **[phép thử t của phân phối Student](https://en.wikipedia.org/wiki/Student%27s_t-test)**. 
 
-In Student t-test, we compute so-called **t-value**, which indicates the difference between means, taking into account the variance. It is demonstrated that t-value follows **student distribution**, which allows us to get the threshold value for a given confidence level **p** (this can be computed, or looked up in the numerical tables). We then compare t-value to this threshold to approve or reject the hypothesis.
+Trong kiểm định t của Student, chúng ta tính toán cái gọi là **giá trị t** , biểu thị sự khác biệt giữa các giá trị trung bình, có tính đến phương sai. Điều này chứng minh rằng giá trị t tuân theo **phân phối Student** , cho phép chúng ta có được giá trị ngưỡng cho một mức độ tin cậy p nhất định (có thể tính toán hoặc tra cứu trong các bảng số). Sau đó, chúng ta so sánh giá trị t với ngưỡng này để chấp thuận hoặc bác bỏ giả thuyết.
 
-In Python, we can use the **SciPy** package, which includes `ttest_ind` function (in addition to many other useful statistical functions!). It computes the t-value for us, and also does the reverse lookup of confidence p-value, so that we can just look at the confidence to draw the conclusion.
+Trong Python, chúng ta có thể sử dụng **thư viện SciPy** , bao gồm `hàm ttest_ind` (cùng với nhiều hàm thống kê hữu ích khác!). Nó tính toán giá trị t cho chúng ta và cũng thực hiện tra cứu ngược lại giá trị p của độ tin cậy, do đó chúng ta có thể chỉ cần xem độ tin cậy để rút ra kết luận.
 
-For example, our comparison between heights of first and second basemen give us the following results: 
+Ví dụ, khi so sánh chiều cao của cầu thủ chơi ở vị trí gôn thứ nhất và thứ hai, chúng ta thu được kết quả sau:
 ```python
 from scipy.stats import ttest_ind
 
@@ -185,14 +185,15 @@ print(f"T-value = {tval[0]:.2f}\nP-value: {pval[0]}")
 T-value = 7.65
 P-value: 9.137321189738925e-12
 ```
-In our case, p-value is very low, meaning that there is strong evidence supporting that first basemen are taller.
+Trong trường hợp của chúng tôi, giá trị p-value rất thấp, nghĩa là có bằng chứng mạnh mẽ chứng minh rằng cầu thủ chơi ở vị trí gôn đầu tiên cao hơn.
 
-There are also different other types of hypothesis that we might want to test, for example:
-* To prove that a given sample follows some distribution. In our case we have assumed that heights are normally distributed, but that needs formal statistical verification. 
-* To prove that a mean value of a sample corresponds to some predefined value
-* To compare means of a number of samples (eg. what is the difference in happiness levels among different age groups)
+Ngoài ra còn có nhiều loại giả thuyết khác mà chúng ta có thể muốn kiểm tra, ví dụ:
 
-## Law of Large Numbers and Central Limit Theorem
+* Để chứng minh rằng một mẫu nhất định tuân theo một số phân phối. Trong trường hợp của chúng tôi, chúng tôi đã giả định rằng chiều cao được phân phối bình thường, nhưng điều đó cần xác minh thống kê chính thức.
+* Để chứng minh rằng giá trị trung bình của một mẫu tương ứng với một số giá trị được xác định trước
+* Để so sánh giá trị trung bình của một số mẫu (ví dụ: mức độ hạnh phúc khác nhau giữa các nhóm tuổi khác nhau là bao nhiêu)
+
+## Law of Large Numbers and Central Limit Theorem - 
 
 One of the reasons why normal distribution is so important is so-called **central limit theorem**. Suppose we have a large sample of independent N values X<sub>1</sub>, ..., X<sub>N</sub>, sampled from any distribution with mean &mu; and variance &sigma;<sup>2</sup>. Then, for sufficiently large N (in other words, when N&rarr;&infin;), the mean &Sigma;<sub>i</sub>X<sub>i</sub> would be normally distributed, with mean &mu; and variance &sigma;<sup>2</sup>/N.
 
