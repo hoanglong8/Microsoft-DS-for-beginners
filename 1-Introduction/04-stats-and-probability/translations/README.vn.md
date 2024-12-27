@@ -1,43 +1,42 @@
-# A Brief Introduction to Statistics and Probability
+# A Brief Introduction to Statistics and Probability - Giới thiệu về Thống kê và Xác suất
 
-|![ Sketchnote by [(@sketchthedocs)](https://sketchthedocs.dev) ](../../sketchnotes/04-Statistics-Probability.png)|
+![Sketchnote by [(@sketchthedocs)](https://sketchthedocs.dev) ](https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/raw/main/sketchnotes/04-Statistics-Probability.png)
 |:---:|
 | Statistics and Probability - _Sketchnote by [@nitya](https://twitter.com/nitya)_ |
 
-Statistics and Probability Theory are two highly related areas of Mathematics that are highly relevant to Data Science. It is possible to operate with data without deep knowledge of mathematics, but it is still better to know at least some basic concepts. Here we will present a short introduction that will help you get started.
+Thống kê và Lý thuyết xác suất là hai lĩnh vực liên quan chặt chẽ với nhau của Toán học và có liên quan chặt chẽ đến Khoa học dữ liệu. Có thể vận hành dữ liệu mà không cần kiến ​​thức sâu về toán học, nhưng vẫn tốt hơn nếu biết ít nhất một số khái niệm cơ bản. Sau đây chúng tôi sẽ giới thiệu một phần giới thiệu ngắn gọn giúp bạn bắt đầu.
 
-[![Intro Video](images/video-prob-and-stats.png)](https://youtu.be/Z5Zy85g4Yjw)
+[![Intro Video](https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/blob/main/1-Introduction/04-stats-and-probability/images/video-prob-and-stats.png)](https://youtu.be/Z5Zy85g4Yjw)
 
+## [Câu hỏi chuẩn bị trước bài giảng](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/6)
 
-## [Pre-lecture quiz](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/6)
+## Probability and Random Variables - Xác suất và Biến ngẫu nhiên
 
-## Probability and Random Variables
+**Xác suất** là một con số từ 0 đến 1 thể hiện mức độ có thể xảy ra của một **sự kiện** . Xác suất được định nghĩa là số kết quả tích cực (dẫn đến sự kiện), chia cho tổng số kết quả, với điều kiện là tất cả các kết quả đều có xác suất như nhau. Ví dụ, khi chúng ta tung một con xúc xắc, xác suất chúng ta nhận được một số chẵn là 3/6 = 0,5.
 
-**Probability** is a number between 0 and 1 that expresses how probable an **event** is. It is defined as a number of positive outcomes (that lead to the event), divided by total number of outcomes, given that all outcomes are equally probable. For example, when we roll a dice, the probability that we get an even number is 3/6 = 0.5.
+Khi chúng ta nói về các sự kiện, chúng ta sử dụng các **biến ngẫu nhiên** . Ví dụ, biến ngẫu nhiên biểu diễn một số thu được khi tung xúc xắc sẽ lấy các giá trị từ 1 đến 6. Tập hợp các số từ 1 đến 6 được gọi là **không gian mẫu** . Chúng ta có thể nói về xác suất của một biến ngẫu nhiên lấy một giá trị nhất định, ví dụ P(X=3)=1/6.
 
-When we talk about events, we use **random variables**. For example, the random variable that represents a number obtained when rolling a dice would take values from 1 to 6. Set of numbers from 1 to 6 is called **sample space**. We can talk about the probability of a random variable taking a certain value, for example P(X=3)=1/6.
+Biến ngẫu nhiên trong ví dụ trước được gọi là **rời rạc** , vì nó có không gian mẫu đếm được, tức là có các giá trị riêng biệt có thể được liệt kê. Có những trường hợp khi không gian mẫu là một phạm vi các số thực hoặc toàn bộ tập hợp các số thực. Các biến như vậy được gọi là **liên tục** . Một ví dụ hay là thời gian xe buýt đến.
 
-The random variable in previous example is called **discrete**, because it has a countable sample space, i.e. there are separate values that can be enumerated. There are cases when sample space is a range of real numbers, or the whole set of real numbers. Such variables are called **continuous**. A good example is the time when the bus arrives.
+## Probability Distribution - Phân phối xác suất
 
-## Probability Distribution
+Trong trường hợp các biến ngẫu nhiên rời rạc, rất dễ để mô tả xác suất của mỗi sự kiện bằng hàm P(X). Đối với mỗi giá trị s từ không gian mẫu S, nó sẽ đưa ra một số từ 0 đến 1, sao cho tổng của tất cả các giá trị của P(X=s) cho tất cả các sự kiện sẽ là 1.
 
-In the case of discrete random variables, it is easy to describe the probability of each event by a function P(X). For each value *s* from sample space *S* it will give a number from 0 to 1, such that the sum of all values of P(X=s) for all events would be 1.
+Phân phối rời rạc được biết đến nhiều nhất là **phân phối đều** , trong đó có một không gian mẫu gồm N phần tử, với xác suất bằng nhau là 1/N cho mỗi phần tử.
 
-The most well-known discrete distribution is **uniform distribution**, in which there is a sample space of N elements, with equal probability of 1/N for each of them. 
+Khó hơn để mô tả phân phối xác suất của một biến liên tục, với các giá trị được rút ra từ một khoảng [a,b], hoặc toàn bộ tập hợp các số thực ℝ. Hãy xem xét trường hợp thời gian đến của xe buýt. Trên thực tế, đối với mỗi thời gian đến chính xác t , xác suất xe buýt đến đúng thời điểm đó là 0!
 
-It is more difficult to describe the probability distribution of a continuous variable, with values drawn from some interval [a,b], or the whole set of real numbers &Ropf;. Consider the case of bus arrival time. In fact, for each exact arrival time *t*, the probability of a bus arriving at exactly that time is 0!
+> Bây giờ bạn biết rằng các sự kiện có xác suất bằng 0 xảy ra, và rất thường xuyên! Ít nhất là mỗi lần xe buýt đến!
 
-> Now you know that events with 0 probability happen, and very often! At least each time when the bus arrives!
-
-We can only talk about the probability of a variable falling in a given interval of values, eg. P(t<sub>1</sub>&le;X&lt;t<sub>2</sub>). In this case, probability distribution is described by a **probability density function** p(x), such that
+Chúng ta chỉ có thể nói về xác suất của một biến rơi vào một khoảng giá trị nhất định, ví dụ: P(t 1 ≤X<t 2 ). Trong trường hợp này, phân phối xác suất được mô tả bằng **hàm mật độ xác suất** p(x), sao cho:
 
 ![P(t_1\le X<t_2)=\int_{t_1}^{t_2}p(x)dx](./images/probability-density.png)
   
-A continuous analog of uniform distribution is called **continuous uniform**, which is defined on a finite interval. A probability that the value X falls into an interval of length l is proportional to l, and rises up to 1.
+Một phép tương tự liên tục của phân phối đều được gọi là **phân phối đều liên tục** , được định nghĩa trên một khoảng hữu hạn. Xác suất giá trị X rơi vào một khoảng có độ dài l tỷ lệ thuận với l và tăng lên đến 1.
 
-Another important distribution is **normal distribution**, which we will talk about in more detail below.
+Một phân phối quan trọng khác là **phân phối chuẩn** , chúng ta sẽ nói chi tiết hơn về phân phối này bên dưới.
 
-## Mean, Variance and Standard Deviation
+## Mean (Giá trị kỳ vọng), Variance (Phương sai) and Standard Deviation (Độ lệch chuẩn)
 
 Suppose we draw a sequence of n samples of a random variable X: x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub>. We can define **mean** (or **arithmetic average**) value of the sequence in the traditional way as (x<sub>1</sub>+x<sub>2</sub>+x<sub>n</sub>)/n. As we grow the size of the sample (i.e. take the limit with n&rarr;&infin;), we will obtain the mean (also called **expectation**) of the distribution. We will denote expectation by **E**(x).
 
