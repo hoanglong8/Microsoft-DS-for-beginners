@@ -30,7 +30,7 @@ Khó hơn để mô tả phân phối xác suất của một biến liên tục
 
 Chúng ta chỉ có thể nói về xác suất của một biến rơi vào một khoảng giá trị nhất định, ví dụ: P(t 1 ≤X<t 2 ). Trong trường hợp này, phân phối xác suất được mô tả bằng **hàm mật độ xác suất** p(x), sao cho:
 
-![P(t_1\le X<t_2)=\int_{t_1}^{t_2}p(x)dx](./images/probability-density.png)
+![P(t_1\le X<t_2)=\int_{t_1}^{t_2}p(x)dx](https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/blob/main/1-Introduction/04-stats-and-probability/images/probability-density.png?raw=true)
   
 Một phép tương tự liên tục của phân phối đều được gọi là **phân phối đều liên tục** , được định nghĩa trên một khoảng hữu hạn. Xác suất giá trị X rơi vào một khoảng có độ dài l tỷ lệ thuận với l và tăng lên đến 1.
 
@@ -38,31 +38,34 @@ Một phân phối quan trọng khác là **phân phối chuẩn** , chúng ta s
 
 ## Mean (Giá trị kỳ vọng), Variance (Phương sai) and Standard Deviation (Độ lệch chuẩn)
 
-Suppose we draw a sequence of n samples of a random variable X: x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub>. We can define **mean** (or **arithmetic average**) value of the sequence in the traditional way as (x<sub>1</sub>+x<sub>2</sub>+x<sub>n</sub>)/n. As we grow the size of the sample (i.e. take the limit with n&rarr;&infin;), we will obtain the mean (also called **expectation**) of the distribution. We will denote expectation by **E**(x).
+Giả sử chúng ta vẽ một chuỗi n mẫu của một biến ngẫu nhiên X: x 1 , x 2 , ..., x n . Chúng ta có thể định nghĩa **giá trị trung bình** (hoặc **trung bình số học**) của chuỗi theo cách truyền thống là (x 1 + x 2 + x n )/n. Khi chúng ta tăng kích thước của mẫu (tức là lấy giới hạn với n→∞), chúng ta sẽ thu được giá trị trung bình (còn gọi là **kỳ vọng**) của phân phối. Chúng ta sẽ biểu thị kỳ vọng là **E (x)**.
 
-> It can be demonstrated that for any discrete distribution with values {x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>N</sub>} and corresponding probabilities p<sub>1</sub>, p<sub>2</sub>, ..., p<sub>N</sub>, the expectation would equal to E(X)=x<sub>1</sub>p<sub>1</sub>+x<sub>2</sub>p<sub>2</sub>+...+x<sub>N</sub>p<sub>N</sub>.
+> Có thể chứng minh rằng đối với bất kỳ phân phối rời rạc nào có các giá trị {x 1 , x 2 , ..., x N } và các xác suất tương ứng p 1 , p 2 , ..., p N , thì kỳ vọng sẽ bằng E(X)=x 1 p 1 +x 2 p 2 +...+x N p N .
 
-To identify how far the values are spread, we can compute the variance &sigma;<sup>2</sup> = &sum;(x<sub>i</sub> - &mu;)<sup>2</sup>/n, where &mu; is the mean of the sequence. The value &sigma; is called **standard deviation**, and &sigma;<sup>2</sup> is called a **variance**.
+Để xác định các giá trị được phân tán xa đến mức nào, chúng ta có thể tính toán phương sai σ^2 = ∑(x i - μ)^2 /n, trong đó μ là giá trị trung bình của chuỗi. Giá trị σ được gọi là **độ lệch chuẩn** và σ^2 được gọi là **phương sai**.
 
-## Mode, Median and Quartiles
+## Mode (Yếu vị), Median (Trung vị) and Quartiles (Tứ phân vị)
 
-Sometimes, mean does not adequately represent the "typical" value for data. For example, when there are a few extreme values that are completely out of range, they can affect the mean. Another good indication is a **median**, a value such that half of data points are lower than it, and another half - higher.
+Đôi khi, giá trị trung bình không thể hiện đầy đủ giá trị "điển hình" cho dữ liệu. Ví dụ, khi có một vài giá trị cực trị nằm ngoài phạm vi, chúng có thể ảnh hưởng đến giá trị trung bình. Một chỉ báo tốt khác là **trung vị** , một giá trị sao cho một nửa số điểm dữ liệu thấp hơn nó và một nửa khác cao hơn.
 
-To help us understand the distribution of data, it is helpful to talk about **quartiles**:
+Để giúp chúng ta hiểu được sự phân bổ dữ liệu, sẽ hữu ích khi nói về **tứ phân vị** :
 
-* First quartile, or Q1, is a value, such that 25% of the data fall below it
-* Third quartile, or Q3, is a value that 75% of the data fall below it
+* Tứ phân vị đầu tiên, hay Q1, là một giá trị sao cho 25% dữ liệu nằm dưới nó
+* Tứ phân vị thứ ba, hay Q3, là giá trị mà 75% dữ liệu nằm dưới nó
 
-Graphically we can represent relationship between median and quartiles in a diagram called the **box plot**:
+Về mặt đồ họa, chúng ta có thể biểu diễn mối quan hệ giữa trung vị và tứ phân vị trong một sơ đồ gọi là **biểu đồ hộp** :
 
-<img src="images/boxplot_explanation.png" width="50%"/>
+<img src="https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/blob/main/1-Introduction/04-stats-and-probability/images/boxplot_explanation.png?raw=true" width="75%"/>
 
-Here we also compute **inter-quartile range** IQR=Q3-Q1, and so-called **outliers** - values, that lie outside the boundaries [Q1-1.5*IQR,Q3+1.5*IQR].
+Ở đây chúng ta cũng tính toán khoảng **tứ phân vị** IQR=Q3-Q1 và các **giá trị ngoại lai** nằm ngoài ranh giới [Q1-1,5 IQR,Q3+1,5 IQR].
 
-For finite distribution that contains a small number of possible values, a good "typical" value is the one that appears the most frequently, which is called **mode**. It is often applied to categorical data, such as colors. Consider a situation when we have two groups of people - some that strongly prefer red, and others who prefer blue. If we code colors by numbers, the mean value for a favorite color would be somewhere in the orange-green spectrum, which does not indicate the actual preference on neither group. However, the mode would be either one of the colors, or both colors, if the number of people voting for them is equal (in this case we call the sample **multimodal**).
-## Real-world Data
+Đối với phân phối hữu hạn chứa một số lượng nhỏ các giá trị có thể, một giá trị "điển hình" tốt là giá trị xuất hiện thường xuyên nhất, được gọi là **Mode (yếu vị)** . Nó thường được áp dụng cho dữ liệu phân loại, chẳng hạn như màu sắc. Hãy xem xét một tình huống khi chúng ta có hai nhóm người - một số người thích màu đỏ và những người khác thích màu xanh lam. Nếu chúng ta mã hóa màu theo số, giá trị trung bình cho một màu yêu thích sẽ nằm ở đâu đó trong quang phổ màu cam-xanh lục, điều này không chỉ ra sở thích thực tế của cả hai nhóm. Tuy nhiên, yếu vị sẽ là một trong hai màu hoặc cả hai màu, nếu số người bỏ phiếu cho chúng bằng nhau (trong trường hợp này, chúng ta gọi mẫu là **đa phương thức**).
 
-When we analyze data from real life, they often are not random variables as such, in a sense that we do not perform experiments with unknown result. For example, consider a team of baseball players, and their body data, such as height, weight and age. Those numbers are not exactly random, but we can still apply the same mathematical concepts. For example, a sequence of people's weights can be considered to be a sequence of values drawn from some random variable. Below is the sequence of weights of actual baseball players from [Major League Baseball](http://mlb.mlb.com/index.jsp), taken from [this dataset](http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_MLB_HeightsWeights) (for your convenience, only first 20 values are shown):
+Một ví dụ khác, trong tập dữ liệu {1, 3, 6, 6, 6, 7, 7, 12, 12, 17}, yếu vị (mốt) là 6, vì nó xuất hiện nhiều lần nhất. Yếu vị giúp xác định giá trị phổ biến nhất trong tập dữ liệu, đặc biệt hữu ích khi phân tích các tập dữ liệu phân loại hoặc khi cần xác định tần suất xuất hiện của một giá trị cụ thể. Và theo đó, một tập dữ liệu có thể có một hoặc nhiều yếu vị, hoặc không có yếu vị nào cả, tùy thuộc vào tần suất xuất hiện của các giá trị trong tập dữ liệu đó.
+
+## Real-world Data (Dữ liệu trong thực tế)
+
+Khi chúng ta phân tích dữ liệu từ cuộc sống thực, chúng thường không phải là các biến ngẫu nhiên, theo nghĩa là chúng ta không thực hiện các thí nghiệm với kết quả chưa biết. Ví dụ, hãy xem xét một đội cầu thủ bóng chày và dữ liệu cơ thể của họ, chẳng hạn như chiều cao, cân nặng và tuổi tác. Những con số đó không hoàn toàn ngẫu nhiên, nhưng chúng ta vẫn có thể áp dụng các khái niệm toán học tương tự. Ví dụ, một chuỗi cân nặng của mọi người có thể được coi là một chuỗi các giá trị được rút ra từ một số biến ngẫu nhiên. Dưới đây là chuỗi cân nặng của các cầu thủ bóng chày thực tế từ Giải [Major League Baseball](http://mlb.mlb.com/index.jsp), được lấy từ [this dataset](http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_MLB_HeightsWeights) (để thuận tiện cho bạn, chỉ hiển thị 20 giá trị đầu tiên):
 
 ```
 [180.0, 215.0, 210.0, 210.0, 188.0, 176.0, 209.0, 200.0, 231.0, 180.0, 188.0, 180.0, 185.0, 160.0, 180.0, 185.0, 197.0, 189.0, 185.0, 219.0]
