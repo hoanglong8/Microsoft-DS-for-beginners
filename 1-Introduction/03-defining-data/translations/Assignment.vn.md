@@ -68,6 +68,14 @@ Source Type (Loại nguồn): Dữ liệu này được thu thập trực tiếp
 
 **4. Dữ liệu số lượng hành tinh trong mỗi thiên hà**
 
+![Hình ảnh](https://www.choichiemtinh.net/images/choichiemtinh/1xx/101/ChiemTinhHoc-008.jpg)
+
+Dataset 1: [Space Objects Around Black Holes Dataset](https://www.kaggle.com/datasets/brsdincer/space-objects-around-black-holes-esa?utm_source=chatgpt.com)
+
+Dataset 2: [Planets Dataset](https://www.kaggle.com/datasets/prathamjyotsingh/planets-dataset?utm_source=chatgpt.com)
+
+Dataset 3: [Dữ liệu SETI - tín hiệu vô tuyến ngoài vũ trụ](https://www.kaggle.com/datasets/tentotheminus9/seti-data)
+
 Các nhà vật lý thiên văn đang truy cập vào cơ sở dữ liệu về các thiên hà được thu thập bởi một tàu thăm dò không gian. Dữ liệu chứa số lượng hành tinh trong mỗi thiên hà.
 
 Structure Type (Loại cấu trúc): **Có cấu trúc** vì Dataset này được tổ chức thông tin theo các bảng với các hàng và cột, mỗi cột đại diện cho một thuộc tính (ví dụ: tên thiên hà, số lượng hành tinh), giúp dễ dàng truy cập và phân tích.
@@ -78,13 +86,15 @@ Source Type (Loại nguồn): Dữ liệu này được thu thập trực tiếp
 
 ---
 
-5. Ứng dụng tài chính cá nhân sử dụng API để kết nối với tài khoản tài chính của người dùng nhằm tính giá trị tài sản ròng của họ. Họ có thể xem tất cả các giao dịch của mình theo định dạng hàng và cột và trông giống như bảng tính.
+**5.Bảng tính tất cả giao dịch tài chính cá nhân**
 
-Structure Type (Loại cấu trúc):
+Ứng dụng tài chính cá nhân sử dụng API để kết nối với tài khoản tài chính của người dùng nhằm tính giá trị tài sản ròng của họ. Họ có thể xem tất cả các giao dịch của mình theo định dạng hàng và cột và trông giống như bảng tính.
 
-Value Type (Loại giá trị): 
+Structure Type (Loại cấu trúc): **Có cấu trúc** vì dữ liệu được tổ chức theo định dạng bảng, với các hàng và cột rõ ràng, giúp dễ dàng truy cập và phân tích.
 
-Source Type (Loại nguồn):
+Value Type (Loại giá trị): **Định lượng** vì các giao dịch tài chính thường bao gồm các số liệu như số tiền, số dư tài khoản, ngày giao dịch, v.v., là những thông tin có thể đo lường và tính toán được.
+
+Source Type (Loại nguồn): **Thứ cấp** vì dữ liệu này được thu thập từ các tài khoản tài chính của người dùng thông qua API, tức là từ một nguồn đã tồn tại trước đó, không phải được thu thập trực tiếp từ người dùng tại thời điểm hiện tại.
 
 ## Rubric - Thang chấm điểm
 
