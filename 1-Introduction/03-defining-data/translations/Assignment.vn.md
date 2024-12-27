@@ -90,6 +90,12 @@ Source Type (Loại nguồn): Dữ liệu này được thu thập trực tiếp
 
 Ứng dụng tài chính cá nhân sử dụng API để kết nối với tài khoản tài chính của người dùng nhằm tính giá trị tài sản ròng của họ. Họ có thể xem tất cả các giao dịch của mình theo định dạng hàng và cột và trông giống như bảng tính.
 
+![Hình ảnh](https://cdn-thumbnails.huggingface.co/social-thumbnails/collections/bhashwarsengupta/personal-finance-datasets-for-kaggle-fellowship-66f2bcc9f6f09166aec4d57f.png)
+
+Dataset 1: [Personal Budget Transactions](https://www.kaggle.com/datasets/ismetsemedov/personal-budget-transactions-dataset?utm_source=chatgpt.com)
+
+Dataset 2: [Personal Finance](https://www.kaggle.com/datasets/bukolafatunde/personal-finance?utm_source=chatgpt.com)
+
 Structure Type (Loại cấu trúc): **Có cấu trúc** vì dữ liệu được tổ chức theo định dạng bảng, với các hàng và cột rõ ràng, giúp dễ dàng truy cập và phân tích.
 
 Value Type (Loại giá trị): **Định lượng** vì các giao dịch tài chính thường bao gồm các số liệu như số tiền, số dư tài khoản, ngày giao dịch, v.v., là những thông tin có thể đo lường và tính toán được.
