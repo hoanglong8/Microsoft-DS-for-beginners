@@ -193,25 +193,25 @@ Ngoài ra còn có nhiều loại giả thuyết khác mà chúng ta có thể m
 * Để chứng minh rằng giá trị trung bình của một mẫu tương ứng với một số giá trị được xác định trước
 * Để so sánh giá trị trung bình của một số mẫu (ví dụ: mức độ hạnh phúc khác nhau giữa các nhóm tuổi khác nhau là bao nhiêu)
 
-## Law of Large Numbers and Central Limit Theorem - 
+## Law of Large Numbers and Central Limit Theorem - Luật số lớn và định lý giới hạn trung tâm
 
-One of the reasons why normal distribution is so important is so-called **central limit theorem**. Suppose we have a large sample of independent N values X<sub>1</sub>, ..., X<sub>N</sub>, sampled from any distribution with mean &mu; and variance &sigma;<sup>2</sup>. Then, for sufficiently large N (in other words, when N&rarr;&infin;), the mean &Sigma;<sub>i</sub>X<sub>i</sub> would be normally distributed, with mean &mu; and variance &sigma;<sup>2</sup>/N.
+Một trong những lý do tại sao phân phối chuẩn lại quan trọng như vậy là cái gọi là **định lý giới hạn trung tâm**. Giả sử chúng ta có một mẫu lớn gồm N giá trị độc lập X 1 , ..., X N , được lấy mẫu từ bất kỳ phân phối nào có trung bình μ và phương sai σ 2 . Khi đó, đối với N đủ lớn (nói cách khác, khi N→∞), trung bình Σ i X i sẽ được phân phối chuẩn, với trung bình μ và phương sai σ 2 /N.
 
-> Another way to interpret the central limit theorem is to say that regardless of distribution, when you compute the mean of a sum of any random variable values you end up with normal distribution. 
+> Một cách khác để diễn giải định lý giới hạn trung tâm là nói rằng bất kể phân phối nào, khi bạn tính giá trị trung bình của tổng các giá trị biến ngẫu nhiên, bạn sẽ thu được phân phối chuẩn.
 
-From the central limit theorem it also follows that, when N&rarr;&infin;, the probability of the sample mean to be equal to &mu; becomes 1. This is known as **the law of large numbers**.
+Từ định lý giới hạn trung tâm, ta cũng suy ra rằng khi N→∞, xác suất trung bình mẫu bằng μ trở thành 1. Điều này được gọi là **định luật số lớn** .
 
-## Covariance and Correlation
+## Covariance and Correlation - Hiệp phương sai và tương quan
 
-One of the things Data Science does is finding relations between data. We say that two sequences **correlate** when they exhibit the similar behavior at the same time, i.e. they either rise/fall simultaneously, or one sequence rises when another one falls and vice versa. In other words, there seems to be some relation between two sequences.
+Một trong những việc mà Khoa học dữ liệu làm là tìm ra mối quan hệ giữa dữ liệu. Chúng ta nói rằng hai chuỗi **tương quan** khi chúng thể hiện hành vi tương tự nhau cùng một lúc, tức là chúng tăng/giảm đồng thời, hoặc một chuỗi tăng khi chuỗi khác giảm và ngược lại. Nói cách khác, có vẻ như có một số mối quan hệ giữa hai chuỗi.
 
-> Correlation does not necessarily indicate causal relationship between two sequences; sometimes both variables can depend on some external cause, or it can be purely by chance the two sequences correlate. However, strong mathematical correlation is a good indication that two variables are somehow connected.
+> Tương quan không nhất thiết chỉ ra mối quan hệ nhân quả giữa hai chuỗi; đôi khi cả hai biến có thể phụ thuộc vào một số nguyên nhân bên ngoài, hoặc có thể hoàn toàn ngẫu nhiên khi hai chuỗi tương quan. Tuy nhiên, tương quan toán học mạnh là một dấu hiệu tốt cho thấy hai biến có liên quan với nhau theo một cách nào đó.
 
- Mathematically, the main concept that shows the relation between two random variables is **covariance**, that is computed like this: Cov(X,Y) = **E**\[(X-**E**(X))(Y-**E**(Y))\]. We compute the deviation of both variables from their mean values, and then product of those deviations. If both variables deviate together, the product would always be a positive value, that would add up to positive covariance. If both variables deviate out-of-sync (i.e. one falls below average when another one rises above average), we will always get negative numbers, that will add up to negative covariance. If the deviations are not dependent, they will add up to roughly zero.
+Về mặt toán học, khái niệm chính thể hiện mối quan hệ giữa hai biến ngẫu nhiên là **hiệp phương sai**, được tính như sau: Cov(X,Y) = E [(X- E (X))(Y- E (Y))]. Chúng ta tính độ lệch của cả hai biến so với giá trị trung bình của chúng, sau đó tính tích của các độ lệch đó. Nếu cả hai biến cùng lệch, tích sẽ luôn là một giá trị dương, tổng hợp sẽ thành **hiệp phương sai dương**. Nếu cả hai biến đều lệch không đồng bộ (tức là một biến giảm xuống dưới mức trung bình khi biến kia tăng lên trên mức trung bình), chúng ta sẽ luôn nhận được các số âm, tổng hợp sẽ thành **hiệp phương sai âm**. Nếu các độ lệch không phụ thuộc, tổng hợp của chúng sẽ gần bằng không.
 
-The absolute value of covariance does not tell us much on how large the correlation is, because it depends on the magnitude of actual values. To normalize it, we can divide covariance by standard deviation of both variables, to get **correlation**. The good thing is that correlation is always in the range of [-1,1], where 1 indicates strong positive correlation between values, -1 - strong negative correlation, and 0 - no correlation at all (variables are independent). 
+Giá trị tuyệt đối của hiệp phương sai không cho chúng ta biết nhiều về mức độ tương quan lớn như thế nào, vì nó phụ thuộc vào độ lớn của các giá trị thực tế. Để chuẩn hóa nó, chúng ta có thể chia hiệp phương sai cho độ lệch chuẩn của cả hai biến, để có được tương quan . Điều tốt là tương quan luôn nằm trong phạm vi [-1,1], trong đó 1 biểu thị tương quan dương mạnh giữa các giá trị, -1 - tương quan âm mạnh và 0 - không có tương quan nào cả **(các biến độc lập)**.
 
-**Example**: We can compute correlation between weights and heights of baseball players from the dataset mentioned above:
+**Ví dụ :** Chúng ta có thể tính toán mối tương quan giữa cân nặng và chiều cao của cầu thủ bóng chày từ tập dữ liệu được đề cập ở trên:
 ```python
 print(np.corrcoef(weights,heights))
 ```
@@ -221,47 +221,48 @@ array([[1.        , 0.52959196],
        [0.52959196, 1.        ]])
 ```
 
-> Correlation matrix C can be computed for any number of input sequences S<sub>1</sub>, ..., S<sub>n</sub>. The value of C<sub>ij</sub> is the correlation between S<sub>i</sub> and S<sub>j</sub>, and diagonal elements are always 1 (which is also self-correlation of S<sub>i</sub>).
+> Ma trận tương quan C có thể được tính toán cho bất kỳ số lượng chuỗi đầu vào nào S 1 , ..., S n . Giá trị của C ij là tương quan giữa S i và S j , và các phần tử đường chéo luôn là 1 (cũng là tự tương quan của S i ).
 
-In our case, the value 0.53 indicates that there is some correlation between weight and height of a person. We can also make the scatter plot of one value against the other to see the relationship visually:
+Trong trường hợp này, giá trị 0,53 cho biết có một số mối tương quan giữa cân nặng và chiều cao của một cầu thủ. Chúng ta cũng có thể tạo biểu đồ phân tán của một giá trị so với giá trị kia để xem mối quan hệ trực quan:
 
-![Relationship between weight and height](images/weight-height-relationship.png)
+![Relationship between weight and height](https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/raw/main/1-Introduction/04-stats-and-probability/images/weight-height-relationship.png)
 
-> More examples of correlation and covariance can be found in [accompanying notebook](notebook.ipynb).
+> Có thể tìm thêm ví dụ về tương quan và hiệp phương sai trong [notebook](notebook.ipynb).
 
-## Conclusion
+## Conclusion - Kết luận
 
-In this section, we have learnt:
+Trong phần này, chúng ta đã học:
 
-* basic statistical properties of data, such as mean, variance, mode and quartiles
-* different distributions of random variables, including normal distribution
-* how to find correlation between different properties
-* how to use sound apparatus of math and statistics in order to prove some hypotheses, 
-* how to compute confidence intervals for random variable given data sample
+* Các thuộc tính thống kê cơ bản của dữ liệu, chẳng hạn như trung bình, phương sai, mốt và tứ phân vị;
+* Các phân phối khác nhau của các biến ngẫu nhiên, bao gồm phân phối chuẩn;
+* Làm thế nào để tìm mối tương quan giữa các thuộc tính khác nhau;
+* Cách sử dụng công cụ toán học và thống kê để chứng minh một số giả thuyết;
+* Cách tính khoảng tin cậy cho biến ngẫu nhiên với mẫu dữ liệu cho trước;
 
-While this is definitely not exhaustive list of topics that exist within probability and statistics, it should be enough to give you a good start into this course.
+Mặc dù đây không phải là danh sách đầy đủ các chủ đề trong xác suất và thống kê, nhưng nó cũng đủ để giúp bạn bắt đầu khóa học này.
 
-## 🚀 Challenge
+## 🚀 Challenge - Thử thách thực hành
 
-Use the sample code in the notebook to test other hypothesis that: 
-1. First basemen are older than second basemen
-2. First basemen are taller than third basemen
-3. Shortstops are taller than second basemen
+Sử dụng mã mẫu trong sổ tay để kiểm tra giả thuyết khác rằng:
 
-## [Post-lecture quiz](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/7)
+1. Cầu thủ gôn đầu tiên lớn tuổi hơn cầu thủ gôn thứ hai
+2. Cầu thủ gôn đầu tiên cao hơn cầu thủ gôn thứ ba
+3. Cầu thủ chặn bóng đầu tiên thấp hơn cầu thủ chặn bóng thứ hai
 
-## Review & Self Study
+## [Câu hỏi sau bài giảng](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/7)
 
-Probability and statistics is such a broad topic that it deserves its own course. If you are interested to go deeper into theory, you may want to continue reading some of the following books:
+## Review & Self Study - Đánh giá & Tự học
 
-1. [Carlos Fernandez-Granda](https://cims.nyu.edu/~cfgranda/) from New York University has great lecture notes [Probability and Statistics for Data Science](https://cims.nyu.edu/~cfgranda/pages/stuff/probability_stats_for_DS.pdf) (available online)
+Xác suất và thống kê là một chủ đề rộng đến mức nó xứng đáng có một khóa học riêng. Nếu bạn muốn tìm hiểu sâu hơn về lý thuyết, bạn có thể muốn tiếp tục đọc một số cuốn sách sau:
+
+1. [Carlos Fernandez-Granda](https://cims.nyu.edu/~cfgranda/) từ Đại học New York có các bài giảng tuyệt vời [Probability and Statistics for Data Science](https://cims.nyu.edu/~cfgranda/pages/stuff/probability_stats_for_DS.pdf) (available online)
 1. [Peter and Andrew Bruce. Practical Statistics for Data Scientists.](https://www.oreilly.com/library/view/practical-statistics-for/9781491952955/) [[sample code in R](https://github.com/andrewgbruce/statistics-for-data-scientists)]. 
 1. [James D. Miller. Statistics for Data Science](https://www.packtpub.com/product/statistics-for-data-science/9781788290678) [[sample code in R](https://github.com/PacktPublishing/Statistics-for-Data-Science)]
 
-## Assignment
+## Assignment - Bài tập phân công
 
-[Small Diabetes Study](assignment.md)
+[Nghiên cứu nhỏ về bệnh tiểu đường](assignment.md)
 
 ## Credits
 
-This lesson has been authored with ♥️ by [Dmitry Soshnikov](http://soshnikov.com)
+Bài học này đã được biên soạn ♥️ bởi [Dmitry Soshnikov](http://soshnikov.com)
