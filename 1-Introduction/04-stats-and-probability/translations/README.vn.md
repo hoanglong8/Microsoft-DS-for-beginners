@@ -87,87 +87,88 @@ Biểu đồ này cho thấy rằng, trung bình, chiều cao của cầu thủ 
 
 Để xem phân phối dữ liệu của chúng ta là gì, chúng ta có thể vẽ một biểu đồ gọi là **biểu đồ histogram** . Trục X sẽ chứa một số khoảng trọng số khác nhau (còn gọi là **bin** ), và trục dọc sẽ hiển thị số lần mẫu biến ngẫu nhiên của chúng ta nằm trong một khoảng nhất định.
 
-![Histogram of real world data](images/weight-histogram.png)
+![Histogram of real world data](https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/blob/main/1-Introduction/04-stats-and-probability/images/weight-histogram.png)
 
-From this histogram you can see that all values are centered around certain mean weight, and the further we go from that weight - the fewer weights of that value are encountered. I.e., it is very improbable that the weight of a baseball player would be very different from the mean weight. Variance of weights show the extent to which weights are likely to differ from the mean.
+Từ biểu đồ này, bạn có thể thấy rằng tất cả các giá trị đều tập trung quanh một trọng số trung bình nhất định và càng xa trọng số đó thì càng ít trọng số của giá trị đó được tìm thấy. Tức là, rất khó có khả năng trọng lượng của một cầu thủ bóng chày sẽ khác nhiều so với trọng lượng trung bình. Phương sai của trọng số cho thấy mức độ mà trọng số có thể khác so với trọng lượng trung bình.
 
-> If we take weights of other people, not from the baseball league, the distribution is likely to be different. However, the shape of the distribution will be the same, but mean and variance would change. So, if we train our model on baseball players, it is likely to give wrong results when applied to students of a university, because the underlying distribution is different.
-## Normal Distribution
+> Nếu chúng ta lấy trọng số của những người khác, không phải từ giải bóng chày, thì phân phối có thể sẽ khác. Tuy nhiên, hình dạng của phân phối sẽ giống nhau, nhưng giá trị trung bình và phương sai sẽ thay đổi. Vì vậy, nếu chúng ta đào tạo mô hình của mình trên các cầu thủ bóng chày, thì có khả năng sẽ đưa ra kết quả sai khi áp dụng cho sinh viên của một trường đại học, vì phân phối cơ bản là khác nhau.
 
-The distribution of weights that we have seen above is very typical, and many measurements from real world follow the same type of distribution, but with different mean and variance. This distribution is called **normal distribution**, and it plays a very important role in statistics.
+## Normal Distribution - Phân phối chuẩn
 
-Using normal distribution is a correct way to generate random weights of potential baseball players. Once we know mean weight `mean` and standard deviation `std`, we can generate 1000 weight samples in the following way:
+Phân phối trọng số mà chúng ta đã thấy ở trên là rất điển hình, và nhiều phép đo từ thế giới thực tuân theo cùng một loại phân phối, nhưng có giá trị trung bình và phương sai khác nhau. Phân phối này được gọi là **phân phối chuẩn** , và nó đóng vai trò rất quan trọng trong thống kê.
+
+Sử dụng phân phối chuẩn là cách đúng để tạo ra trọng số ngẫu nhiên của các cầu thủ bóng chày tiềm năng. Khi chúng ta biết trọng lượng trung bình `mean` và độ lệch chuẩn `std`, chúng ta có thể tạo ra 1000 mẫu trọng số theo cách sau:
 ```python
 samples = np.random.normal(mean,std,1000)
 ``` 
 
-If we plot the histogram of the generated samples we will see the picture very similar to the one shown above. And if we increase the number of samples and the number of bins, we can generate a picture of a normal distribution that is more close to ideal:
+Nếu chúng ta vẽ biểu đồ histogram của các mẫu được tạo ra, chúng ta sẽ thấy hình ảnh rất giống với hình ảnh được hiển thị ở trên. Và nếu chúng ta tăng số lượng `mẫu` và số lượng `bin` (giảm bước nhảy trọng số ở trục X), chúng ta có thể tạo ra hình ảnh phân phối chuẩn gần với lý tưởng hơn:
 
-![Normal Distribution with mean=0 and std.dev=1](images/normal-histogram.png)
+![Normal Distribution with mean=0 and std.dev=1](https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/raw/main/1-Introduction/04-stats-and-probability/images/normal-histogram.png)
 
-*Normal Distribution with mean=0 and std.dev=1*
+*Phân phối chuẩn với trung bình = 0 và độ lệch chuẩn = 1*
 
-## Confidence Intervals
+## Confidence Intervals - Khoảng tin cậy
 
-When we talk about weights of baseball players, we assume that there is certain **random variable W** that corresponds to ideal probability distribution of weights of all baseball players (so-called **population**). Our sequence of weights corresponds to a subset of all baseball players that we call **sample**. An interesting question is, can we know the parameters of distribution of W, i.e. mean and variance of the population?
+Khi chúng ta nói về trọng lượng của các cầu thủ bóng chày, chúng ta giả định rằng có một **biến ngẫu nhiên W** nhất định tương ứng với phân phối xác suất lý tưởng của trọng lượng của tất cả các cầu thủ bóng chày (còn gọi là **tổng thể** ). Chuỗi trọng lượng của chúng ta tương ứng với một tập hợp con của tất cả các cầu thủ bóng chày mà chúng ta gọi là **mẫu** . Một câu hỏi thú vị là, chúng ta có thể biết các tham số phân phối của W, tức là trung bình và phương sai của quần thể không?
 
-The easiest answer would be to calculate mean and variance of our sample. However, it could happen that our random sample does not accurately represent complete population. Thus it makes sense to talk about **confidence interval**.
+Câu trả lời dễ nhất là tính toán giá trị trung bình và phương sai của mẫu của chúng ta. Tuy nhiên, có thể mẫu ngẫu nhiên của chúng ta không đại diện chính xác cho toàn bộ dân số. Do đó, việc nói về **khoảng tin cậy** là hợp lý .
 
-> **Confidence interval** is the estimation of true mean of the population given our sample, which is accurate is a certain probability (or **level of confidence**).
+> **Khoảng tin cậy** là ước tính giá trị trung bình thực của quần thể dựa trên mẫu của chúng ta, độ chính xác là một xác suất nhất định (hoặc **mức độ tin cậy** ).
 
-Suppose we have a sample X<sub>1</sub>, ..., X<sub>n</sub> from our distribution. Each time we draw a sample from our distribution, we would end up with different mean value &mu;. Thus &mu; can be considered to be a random variable. A **confidence interval** with confidence p is a pair of values (L<sub>p</sub>,R<sub>p</sub>), such that **P**(L<sub>p</sub>&leq;&mu;&leq;R<sub>p</sub>) = p, i.e. a probability of measured mean value falling within the interval equals to p.
+Giả sử chúng ta có một mẫu X 1 , ..., X n từ phân phối của chúng ta. Mỗi lần chúng ta lấy một mẫu từ phân phối của mình, chúng ta sẽ kết thúc với giá trị trung bình khác nhau μ. Do đó, μ có thể được coi là một biến ngẫu nhiên. **Khoảng tin cậy** với độ tin cậy p là một cặp giá trị (L p ,R p ), sao cho P (L p ≤μ≤R p ) = p, tức là xác suất giá trị trung bình đo được nằm trong khoảng bằng p.
 
-It does beyond our short intro to discuss in detail how those confidence intervals are calculated. Some more details can be found [on Wikipedia](https://en.wikipedia.org/wiki/Confidence_interval). In short, we define the distribution of computed sample mean relative to the true mean of the population, which is called **student distribution**.
+Ngoài phần giới thiệu ngắn gọn của chúng tôi, chúng tôi sẽ thảo luận chi tiết về cách tính toán các khoảng tin cậy đó. Bạn có thể tìm thêm thông tin chi tiết [trên Wikipedia](https://en.wikipedia.org/wiki/Confidence_interval). Tóm lại, chúng tôi định nghĩa phân phối của giá trị trung bình mẫu được tính toán so với giá trị trung bình thực của quần thể, được gọi là **phân phối Student** .
 
-> **Interesting fact**: Student distribution is named after mathematician William Sealy Gosset, who published his paper under the pseudonym "Student". He worked in the Guinness brewery, and, according to one of the versions, his employer did not want general public to know that they were using statistical tests to determine the quality of raw materials.
+> **Sự thật thú vị :** Phân phối sinh viên được đặt theo tên của nhà toán học William Sealy Gosset, người đã xuất bản bài báo của mình dưới bút danh "Student". Ông làm việc tại nhà máy bia Guinness và theo một trong những phiên bản, công ty của ông không muốn công chúng biết rằng họ đang sử dụng các bài kiểm tra thống kê để xác định chất lượng nguyên liệu thô.
 
-If we want to estimate the mean &mu; of our population with confidence p, we need to take *(1-p)/2-th percentile* of a Student distribution A, which can either be taken from tables, or computer using some built-in functions of statistical software (eg. Python, R, etc.). Then the interval for &mu; would be given by X&pm;A*D/&radic;n, where X is the obtained mean of the sample, D is the standard deviation.
+Nếu chúng ta muốn ước tính giá trị trung bình μ của quần thể với độ tin cậy p, chúng ta cần lấy (1-p)/phần trăm thứ 2 của Phân phối Student A, có thể lấy từ bảng hoặc máy tính sử dụng một số hàm tích hợp của phần mềm thống kê (ví dụ: Python, R, v.v.). Khi đó, khoảng cho μ sẽ được đưa ra bởi X±A*D/√n, trong đó X là giá trị trung bình thu được của mẫu, D là độ lệch chuẩn.
 
-> **Note**: We also omit the discussion of an important concept of [degrees of freedom](https://en.wikipedia.org/wiki/Degrees_of_freedom_(statistics)), which is important in relation to Student distribution. You can refer to more complete books on statistics to understand this concept deeper.
+> **Lưu ý :** Chúng tôi cũng bỏ qua phần thảo luận về một khái niệm quan trọng về [bậc tự do](https://en.wikipedia.org/wiki/Degrees_of_freedom_(statistics)), điều này rất quan trọng liên quan đến phân phối Student. Bạn có thể tham khảo các sách đầy đủ hơn về thống kê để hiểu sâu hơn về khái niệm này.
 
-An example of calculating confidence interval for weights and heights is given in the [accompanying notebooks](notebook.ipynb).
+Một ví dụ về cách tính khoảng tin cậy cho cân nặng và chiều cao được đưa ra trong [notebooks](notebook.ipynb).
 
-| p | Weight mean |
+| p | Trọng lượng TB |
 |-----|-----------|
 | 0.85 | 201.73±0.94 |
 | 0.90 | 201.73±1.08 |
 | 0.95 | 201.73±1.28 |
 
-Notice that the higher is the confidence probability, the wider is the confidence interval. 
+Lưu ý rằng xác suất tin cậy càng cao thì khoảng tin cậy càng rộng.
 
-## Hypothesis Testing 
+## Hypothesis Testing - Kiểm định giả thuyết
 
-In our baseball players dataset, there are different player roles, that can be summarized below (look at the [accompanying notebook](notebook.ipynb) to see how this table can be calculated):
+Trong tập dữ liệu cầu thủ bóng chày của chúng tôi, có nhiều vai trò khác nhau của cầu thủ, có thể được tóm tắt bên dưới (hãy xem [notebook](notebook.ipynb) để biết cách tính bảng này):
 
-| Role | Height | Weight | Count |
+| Vai trò | Chiều cao | Cân nặng | Số lượng |
 |------|--------|--------|-------|
 | Catcher | 72.723684 | 204.328947 | 76 |
 | Designated_Hitter | 74.222222 | 220.888889 | 18 |
-| First_Baseman | 74.000000 | 213.109091 | 55 |
+| First_Baseman (cầu thủ gôn đầu tiên) | 74.000000 | 213.109091 | 55 |
 | Outfielder | 73.010309 | 199.113402 | 194 |
 | Relief_Pitcher | 74.374603 | 203.517460 | 315 |
-| Second_Baseman | 71.362069 | 184.344828 | 58 |
+| Second_Baseman (cầu thủ gôn thứ hai) | 71.362069 | 184.344828 | 58 |
 | Shortstop | 71.903846 | 182.923077 | 52 |
 | Starting_Pitcher | 74.719457 | 205.163636 | 221 |
 | Third_Baseman | 73.044444 | 200.955556 | 45 |
 
-We can notice that the mean heights of first basemen is higher than that of second basemen. Thus, we may be tempted to conclude that **first basemen are higher than second basemen**.
+Chúng ta có thể nhận thấy rằng chiều cao trung bình của cầu thủ gôn đầu tiên cao hơn cầu thủ gôn thứ hai. Do đó, chúng ta dễ có khuynh hướng kết luận rằng **cầu thủ gôn đầu tiên cao hơn cầu thủ gôn thứ hai** .
 
-> This statement is called **a hypothesis**, because we do not know whether the fact is actually true or not.
+> Câu phát biểu này được gọi là **giả thuyết** , vì chúng ta không biết liệu sự thật có thực sự đúng hay không.
 
-However, it is not always obvious whether we can make this conclusion. From the discussion above we know that each mean has an associated confidence interval, and thus this difference can just be a statistical error. We need some more formal way to test our hypothesis.
+Tuy nhiên, không phải lúc nào cũng rõ ràng liệu chúng ta có thể đưa ra kết luận này hay không. Từ thảo luận ở trên, chúng ta biết rằng mỗi giá trị trung bình có một khoảng tin cậy liên quan và do đó sự khác biệt này chỉ có thể là một lỗi thống kê. Chúng ta cần một số cách chính thức hơn để kiểm tra giả thuyết của mình.
 
-Let's compute confidence intervals separately for heights of first and second basemen:
+Hãy tính toán riêng khoảng tin cậy cho chiều cao của cầu thủ gôn thứ nhất và thứ hai:
 
-| Confidence | First Basemen | Second Basemen |
+| Độ tin cậy | First Basemen | Second Basemen |
 |------------|---------------|----------------|
 | 0.85 | 73.62..74.38 | 71.04..71.69 |
 | 0.90 | 73.56..74.44 | 70.99..71.73 |
 | 0.95 | 73.47..74.53 | 70.92..71.81 |
 
-We can see that under no confidence the intervals overlap. That proves our hypothesis that first basemen are higher than second basemen.
+Chúng ta có thể thấy rằng trong điều kiện không có sự tin cậy, các khoảng thời gian chồng chéo lên nhau. Điều đó chứng minh cho giả thuyết của chúng ta rằng cầu thủ gôn đầu tiên cao hơn cầu thủ gôn thứ hai.
 
-More formally, the problem we are solving is to see if **two probability distributions are the same**, or at least have the same parameters. Depending on the distribution, we need to use different tests for that. If we know that our distributions are normal, we can apply **[Student t-test](https://en.wikipedia.org/wiki/Student%27s_t-test)**. 
+Chính thức hơn, vấn đề chúng ta đang giải quyết là xem **hai phân phối xác suất có giống nhau** hay ít nhất là có cùng tham số hay không. Tùy thuộc vào phân phối, chúng ta cần sử dụng các phép thử khác nhau cho việc đó. Nếu chúng ta biết rằng phân phối của mình là chuẩn, chúng ta có thể áp dụng **[phép thử t của phân phối Student](https://en.wikipedia.org/wiki/Student%27s_t-test)**. 
 
 In Student t-test, we compute so-called **t-value**, which indicates the difference between means, taking into account the variance. It is demonstrated that t-value follows **student distribution**, which allows us to get the threshold value for a given confidence level **p** (this can be computed, or looked up in the numerical tables). We then compare t-value to this threshold to approve or reject the hypothesis.
 
