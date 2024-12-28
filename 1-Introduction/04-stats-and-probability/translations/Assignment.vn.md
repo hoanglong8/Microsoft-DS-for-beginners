@@ -1,6 +1,6 @@
-# Small Diabetes Study
+# Small Diabetes Study - Nghiên cứu về bệnh tiểu đường
 
-In this assignment, we will work with a small dataset of diabetes patients taken from [here](https://www4.stat.ncsu.edu/~boos/var.select/diabetes.html).
+Trong bài tập này, chúng ta sẽ làm việc với một tập dữ liệu nhỏ về bệnh nhân tiểu đường được lấy [từ đây](https://www4.stat.ncsu.edu/~boos/var.select/diabetes.html).
 
 |   | AGE | SEX | BMI | BP | S1 | S2 | S3 | S4 | S5 | S6 | Y  |
 |---|-----|-----|-----|----|----|----|----|----|----|----|----|
@@ -9,18 +9,18 @@ In this assignment, we will work with a small dataset of diabetes patients taken
 | 2 | 72 | 2 | 30.5 | 93.0 | 156 | 93.6 | 41.0 | 4.0 | 4. | 85 | 141 |
 | ... | ... | ... | ... | ...| ...| ...| ...| ...| ...| ...| ... |
 
-## Instructions
+## Instructions - Hướng dẫn
 
-* Open the [assignment notebook](assignment.ipynb) in a jupyter notebook environment
-* Complete all tasks listed in the notebook, namely:
-   * [ ] Compute mean values and variance for all values
-   * [ ] Plot boxplots for BMI, BP and Y depending on gender
-   * [ ] What is the the distribution of Age, Sex, BMI and Y variables?
-   * [ ] Test the correlation between different variables and disease progression (Y)
-   * [ ] Test the hypothesis that the degree of diabetes progression is different between men and women
+* Mở [assignment notebook](assignment.ipynb) trong môi trường sổ ghi chép Jupyter, Google Colab...
+* Hoàn thành tất cả các nhiệm vụ được liệt kê trong sổ tay, cụ thể là:
+   * [ ] Tính giá trị trung bình và phương sai cho tất cả các giá trị
+   * [ ] Vẽ biểu đồ hộp cho BMI, BP và Y theo giới tính
+   * [ ] Biểu đồ phân phối của các biến Tuổi, Giới tính, BMI và Y như thế nào?
+   * [ ] Kiểm tra mối tương quan giữa các biến khác nhau và tiến triển của bệnh (Y)
+   * [ ] Kiểm tra giả thuyết rằng mức độ tiến triển của bệnh tiểu đường là khác nhau giữa nam và nữ
    
-## Rubric
+## Rubric - Thang điểm
 
-Exemplary | Adequate | Needs Improvement
+Exemplary - Mẫu mực | Adequate - Đạt yêu cầu | Needs Improvement - Cần cải thiện
 --- | --- | -- |
-All required tasks are complete, graphically illustrated and explained | Most of the tasks are complete, explanations or takeaways from graphs and/or obtained values are missing | Only basic tasks such as computation of mean/variance and basic plots are complete, no conclusions are made from the data
+ATất cả các nhiệm vụ bắt buộc đều được hoàn thành, minh họa và giải thích bằng đồ họa | Hầu hết các nhiệm vụ đã hoàn thành, phần giải thích hoặc phần rút ra từ biểu đồ và/hoặc các giá trị thu được còn thiếu | Chỉ có các nhiệm vụ cơ bản như tính toán giá trị trung bình/phương sai và biểu đồ cơ bản được hoàn thành, không có kết luận nào được đưa ra từ dữ liệu
