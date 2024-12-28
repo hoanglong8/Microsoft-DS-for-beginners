@@ -1,5 +1,7 @@
 # A Brief Introduction to Statistics and Probability
 
+[Bản dịch tiếng Việt](https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/blob/main/1-Introduction/04-stats-and-probability/translations/README.vn.md)
+
 |![ Sketchnote by [(@sketchthedocs)](https://sketchthedocs.dev) ](../../sketchnotes/04-Statistics-Probability.png)|
 |:---:|
 | Statistics and Probability - _Sketchnote by [@nitya](https://twitter.com/nitya)_ |
