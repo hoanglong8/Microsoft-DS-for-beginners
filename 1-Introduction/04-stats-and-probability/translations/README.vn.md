@@ -89,20 +89,20 @@ Biểu đồ này cho thấy rằng, trung bình, chiều cao của cầu thủ 
 
 ![Histogram of real world data](https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/blob/main/1-Introduction/04-stats-and-probability/images/weight-histogram.png)
 
-Từ biểu đồ này, bạn có thể thấy rằng tất cả các giá trị đều tập trung quanh một trọng số trung bình nhất định và càng xa trọng số đó thì càng ít trọng số của giá trị đó được tìm thấy. Tức là, rất khó có khả năng trọng lượng của một cầu thủ bóng chày sẽ khác nhiều so với trọng lượng trung bình. Phương sai của trọng số cho thấy mức độ mà trọng số có thể khác so với trọng lượng trung bình.
+Từ biểu đồ này, bạn có thể thấy rằng tất cả các giá trị đều tập trung quanh một **trọng lượng trung bình** nhất định và càng xa trọng lượng đó thì càng ít trọng lượng của giá trị đó được tìm thấy. Tức là, rất khó có khả năng trọng lượng của một cầu thủ bóng chày sẽ khác nhiều so với trọng lượng trung bình. Phương sai của trọng lượng cho thấy mức độ mà trọng lượng có thể khác so với trọng lượng trung bình.
 
-> Nếu chúng ta lấy trọng số của những người khác, không phải từ giải bóng chày, thì phân phối có thể sẽ khác. Tuy nhiên, hình dạng của phân phối sẽ giống nhau, nhưng giá trị trung bình và phương sai sẽ thay đổi. Vì vậy, nếu chúng ta đào tạo mô hình của mình trên các cầu thủ bóng chày, thì có khả năng sẽ đưa ra kết quả sai khi áp dụng cho sinh viên của một trường đại học, vì phân phối cơ bản là khác nhau.
+> Nếu chúng ta lấy trọng lượng của những người khác, không phải từ giải bóng chày MLB thì phân phối có thể sẽ khác. Tuy nhiên, hình dạng của phân phối sẽ giống nhau, nhưng giá trị trung bình và phương sai sẽ thay đổi. Vì vậy, nếu chúng ta đào tạo mô hình của mình trên các cầu thủ bóng chày, thì có khả năng sẽ đưa ra kết quả sai khi áp dụng cho sinh viên của một trường đại học, vì phân phối cơ bản là khác nhau.
 
 ## Normal Distribution - Phân phối chuẩn
 
-Phân phối trọng số mà chúng ta đã thấy ở trên là rất điển hình, và nhiều phép đo từ thế giới thực tuân theo cùng một loại phân phối, nhưng có giá trị trung bình và phương sai khác nhau. Phân phối này được gọi là **phân phối chuẩn** , và nó đóng vai trò rất quan trọng trong thống kê.
+Phân phối trọng lượng mà chúng ta đã thấy ở trên là rất điển hình, và nhiều phép đo từ thế giới thực tuân theo cùng một loại phân phối, nhưng có giá trị trung bình và phương sai khác nhau. Phân phối này được gọi là **phân phối chuẩn** , và nó đóng vai trò rất quan trọng trong thống kê.
 
 Sử dụng phân phối chuẩn là cách đúng để tạo ra trọng số ngẫu nhiên của các cầu thủ bóng chày tiềm năng. Khi chúng ta biết trọng lượng trung bình `mean` và độ lệch chuẩn `std`, chúng ta có thể tạo ra 1000 mẫu trọng số theo cách sau:
 ```python
 samples = np.random.normal(mean,std,1000)
 ``` 
 
-Nếu chúng ta vẽ biểu đồ histogram của các mẫu được tạo ra, chúng ta sẽ thấy hình ảnh rất giống với hình ảnh được hiển thị ở trên. Và nếu chúng ta tăng số lượng `mẫu` và số lượng `bin` (giảm bước nhảy trọng số ở trục X), chúng ta có thể tạo ra hình ảnh phân phối chuẩn gần với lý tưởng hơn:
+Nếu chúng ta vẽ biểu đồ histogram của các mẫu được tạo ra, chúng ta sẽ thấy hình ảnh rất giống với hình ảnh được hiển thị ở trên. Và nếu chúng ta tăng số lượng `mẫu` và số lượng `bin` (số khoảng bước nhảy dữ liệu ở trục X), chúng ta có thể tạo ra hình ảnh phân phối chuẩn gần với lý tưởng hơn:
 
 ![Normal Distribution with mean=0 and std.dev=1](https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/raw/main/1-Introduction/04-stats-and-probability/images/normal-histogram.png)
 
