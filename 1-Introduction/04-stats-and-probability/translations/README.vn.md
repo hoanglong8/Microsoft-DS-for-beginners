@@ -71,7 +71,7 @@ Khi chúng ta phân tích dữ liệu từ cuộc sống thực, chúng thườn
 [180.0, 215.0, 210.0, 210.0, 188.0, 176.0, 209.0, 200.0, 231.0, 180.0, 188.0, 180.0, 185.0, 160.0, 180.0, 185.0, 197.0, 189.0, 185.0, 219.0]
 ```
 
-> **Lưu ý :** Để xem ví dụ về cách làm việc với tập dữ liệu này, hãy xem [accompanying notebook](notebook.ipynb). Ngoài ra còn có một số thử thách trong suốt bài học này và bạn có thể hoàn thành chúng bằng cách thêm một số mã vào sổ tay đó. Nếu bạn không chắc chắn về cách vận hành dữ liệu, đừng lo lắng - chúng ta sẽ quay lại làm việc với dữ liệu bằng Python sau. Nếu bạn không biết cách chạy mã trong Jupyter Notebook, hãy xem [Hướng dẫn](https://soshnikov.com/education/how-to-execute-notebooks-from-github/).
+> **Lưu ý :** Để xem ví dụ về cách làm việc với tập dữ liệu này, hãy xem [notebook.vn](https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/blob/main/1-Introduction/04-stats-and-probability/translations/01.04.notebook.ipynb). Ngoài ra còn có một số thử thách trong suốt bài học này và bạn có thể hoàn thành chúng bằng cách thêm một số mã vào sổ tay đó. Nếu bạn không chắc chắn về cách vận hành dữ liệu, đừng lo lắng - chúng ta sẽ quay lại làm việc với dữ liệu bằng Python sau. Nếu bạn không biết cách chạy mã trong Jupyter Notebook, hãy xem [Hướng dẫn](https://soshnikov.com/education/how-to-execute-notebooks-from-github/).
 
 Sau đây là biểu đồ hộp hiển thị giá trị trung bình, trung vị và tứ phân vị cho dữ liệu của chúng ta:
 
@@ -126,7 +126,7 @@ Nếu chúng ta muốn ước tính giá trị trung bình μ của quần thể
 
 > **Lưu ý :** Chúng tôi cũng bỏ qua phần thảo luận về một khái niệm quan trọng về [bậc tự do](https://en.wikipedia.org/wiki/Degrees_of_freedom_(statistics)), điều này rất quan trọng liên quan đến phân phối Student. Bạn có thể tham khảo các sách đầy đủ hơn về thống kê để hiểu sâu hơn về khái niệm này.
 
-Một ví dụ về cách tính khoảng tin cậy cho cân nặng và chiều cao được đưa ra trong [notebooks](notebook.ipynb).
+Một ví dụ về cách tính khoảng tin cậy cho cân nặng và chiều cao được đưa ra trong [notebook.vn](https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/blob/main/1-Introduction/04-stats-and-probability/translations/01.04.notebook.ipynb).
 
 | p | Trọng lượng TB |
 |-----|-----------|
@@ -138,7 +138,7 @@ Lưu ý rằng xác suất tin cậy càng cao thì khoảng tin cậy càng r�
 
 ## Hypothesis Testing - Kiểm định giả thuyết
 
-Trong tập dữ liệu cầu thủ bóng chày của chúng tôi, có nhiều vai trò khác nhau của cầu thủ, có thể được tóm tắt bên dưới (hãy xem [notebook](notebook.ipynb) để biết cách tính bảng này):
+Trong tập dữ liệu cầu thủ bóng chày của chúng tôi, có nhiều vai trò khác nhau của cầu thủ, có thể được tóm tắt bên dưới (hãy xem [notebook.vn](https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/blob/main/1-Introduction/04-stats-and-probability/translations/01.04.notebook.ipynb) để biết cách tính bảng này):
 
 | Vai trò | Chiều cao | Cân nặng | Số lượng |
 |------|--------|--------|-------|
@@ -227,7 +227,7 @@ Trong trường hợp này, giá trị 0,53 cho biết có một số mối tư�
 
 ![Relationship between weight and height](https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/raw/main/1-Introduction/04-stats-and-probability/images/weight-height-relationship.png)
 
-> Có thể tìm thêm ví dụ về tương quan và hiệp phương sai trong [notebook](notebook.ipynb).
+> Có thể tìm thêm ví dụ về tương quan và hiệp phương sai trong [notebook.vn](https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/blob/main/1-Introduction/04-stats-and-probability/translations/01.04.notebook.ipynb).
 
 ## Conclusion - Kết luận
 
