@@ -85,7 +85,7 @@ Biểu đồ này cho thấy rằng, trung bình, chiều cao của cầu thủ 
 
 > Khi làm việc với dữ liệu thực tế, chúng tôi giả định rằng tất cả các điểm dữ liệu đều là các mẫu được rút ra từ một số phân phối xác suất. Giả định này cho phép chúng tôi áp dụng các kỹ thuật học máy và xây dựng các mô hình dự đoán hoạt động.
 
-Để xem phân phối dữ liệu của chúng ta là gì, chúng ta có thể vẽ một biểu đồ gọi là **biểu đồ histogram** . Trục X sẽ chứa một số khoảng cân nặng khác nhau (còn gọi là **bin** ) ví dụ 15 khoảng từ 65.0-65.9kg, 66.0-66.9kg..., và trục dọc sẽ hiển thị số lần mẫu biến ngẫu nhiên của chúng ta nằm trong một khoảng nhất định.
+Để xem phân phối dữ liệu của chúng ta là gì, chúng ta có thể vẽ một biểu đồ gọi là **biểu đồ histogram** . Trục X sẽ chứa một số khoảng cân nặng khác nhau (còn gọi là **bin** ), ví dụ trong bài có 15 khoảng dữ liệu từ 151-160 lbs, 161-170 lbs..., và trục dọc sẽ hiển thị số lần mẫu biến ngẫu nhiên của chúng ta nằm trong một khoảng nhất định.
 
 ![Histogram of real world data](https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/blob/main/1-Introduction/04-stats-and-probability/images/weight-histogram.png)
 
