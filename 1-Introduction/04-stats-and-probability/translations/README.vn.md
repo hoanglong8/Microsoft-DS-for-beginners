@@ -261,7 +261,7 @@ Xác suất và thống kê là một chủ đề rộng đến mức nó xứng
 
 ## Assignment - Bài tập phân công
 
-[Nghiên cứu nhỏ về bệnh tiểu đường](assignment.md)
+[Nghiên cứu nhỏ về bệnh tiểu đường](https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/blob/main/1-Introduction/04-stats-and-probability/translations/Assignment.vn.md)
 
 ## Credits
 
