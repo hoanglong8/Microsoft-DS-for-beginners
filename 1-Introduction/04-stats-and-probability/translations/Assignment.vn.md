@@ -11,7 +11,7 @@ Trong bài tập này, chúng ta sẽ làm việc với một tập dữ liệu 
 
 ## Instructions - Hướng dẫn
 
-* Mở [assignment notebook](assignment.ipynb) trong môi trường sổ ghi chép Jupyter, Google Colab...
+* Mở bài tập này [Assignment.vn](https://github.com/hoanglong8/Microsoft-courses_Data-Science-For-Beginners/blob/main/1-Introduction/04-stats-and-probability/translations/Assignment.vn.md) trong môi trường sổ ghi chép Jupyter, Google Colab...
 * Hoàn thành tất cả các nhiệm vụ được liệt kê trong sổ tay, cụ thể là:
    * [ ] Tính giá trị trung bình và phương sai cho tất cả các giá trị
    * [ ] Vẽ biểu đồ hộp cho BMI, BP và Y theo giới tính
