@@ -1,5 +1,7 @@
 # Working with Data: Relational Databases
 
+[Bản dịch tiếng Việt](https://github.com/hoanglong8/Microsoft-DS-for-beginners/blob/main/2-Working-With-Data/05-relational-databases/translations/README.vn.md)
+
 |![ Sketchnote by [(@sketchthedocs)](https://sketchthedocs.dev) ](../../sketchnotes/05-RelationalData.png)|
 |:---:|
 | Working With Data: Relational Databases - _Sketchnote by [@nitya](https://twitter.com/nitya)_ |
