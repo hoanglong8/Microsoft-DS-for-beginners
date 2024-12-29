@@ -27,9 +27,9 @@ Sau khi mở, cửa sổ truy vấn mới có thể được sử dụng để c
 
 > [!NOTE] Để biết thêm thông tin về tiện ích mở rộng SQLite, bạn có thể tham khảo [tài liệu](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite&WT.mc_id=academic-77958-bethanycheum)
 
-## Database schema
+## Database schema - Sơ đồ dữ liệu
 
-A database's schema is its table design and structure. The **airports** database as two tables, `cities`, which contains a list of cities in the United Kingdom and Ireland, and `airports`, which contains the list of all airports. Because some cities may have multiple airports, two tables were created to store the information. In this exercise you will use joins to display information for different cities.
+Sơ đồ của cơ sở dữ liệu là thiết kế và cấu trúc bảng của nó. Cơ sở dữ liệu sân bay gồm hai bảng: `cities` chứa danh sách các thành phố ở Vương quốc Anh + Ireland và `airports` chứa danh sách tất cả các sân bay. Vì một số thành phố có thể có nhiều sân bay, nên hai bảng được tạo ra để lưu trữ thông tin. Trong bài tập này, bạn sẽ sử dụng các phép nối để hiển thị thông tin cho các thành phố khác nhau.
 
 | Cities           |
 | ---------------- |
@@ -44,16 +44,17 @@ A database's schema is its table design and structure. The **airports** database
 | code (text)                      |
 | city_id (FK to id in **Cities**) |
 
-## Assignment
+## Assignment - Bài tập
 
-Create queries to return the following information:
+Tạo truy vấn để trả về thông tin sau:
 
-1. all city names in the `Cities` table
-1. all cities in Ireland in the `Cities` table
-1. all airport names with their city and country
-1. all airports in London, United Kingdom
+1. Tất cả tên thành phố trong bảng `Cities`
+2. Tất cả các thành phố ở Ireland trong bảng `Cities`
+3. Tất cả tên sân bay cùng với thành phố và quốc gia của họ
+4. Tất cả các sân bay ở London, Vương quốc Anh
 
-## Rubric
+## Rubric - Thang điểm
 
-| Exemplary | Adequate | Needs Improvement |
+| Exemplary - Mẫu mực | Adequate - Đạt yêu cầu | Needs Improvement - Cần cải thiện|
 | --------- | -------- | ----------------- |
+| Tạo đủ 4 truy vấn chính xác | Tạo được 2-3 truy vấn chính xác | Tạo được 1 truy vấn chính xác |
