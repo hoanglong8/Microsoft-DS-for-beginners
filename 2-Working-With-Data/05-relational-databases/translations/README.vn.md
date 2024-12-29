@@ -166,16 +166,16 @@ Có rất nhiều cơ sở dữ liệu quan hệ có sẵn trên [Microsoft](htt
 
 ## Post-Lecture Quiz
 
-
+[Kiểm tra sau bài giảng](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/9)
 
 ## Review & Self Study - Đánh giá & Tự học
 
-There are several resources available on [Microsoft Learn](https://docs.microsoft.com/learn?WT.mc_id=academic-77958-bethanycheum) for you to continue your exploration of SQL and relational database concepts
+Có một số tài nguyên có sẵn trên [Microsoft Learn](https://docs.microsoft.com/learn?WT.mc_id=academic-77958-bethanycheum) để bạn tiếp tục khám phá các khái niệm về SQL và cơ sở dữ liệu quan hệ:
 
-- [Describe concepts of relational data](https://docs.microsoft.com//learn/modules/describe-concepts-of-relational-data?WT.mc_id=academic-77958-bethanycheum)
-- [Get Started Querying with Transact-SQL](https://docs.microsoft.com//learn/paths/get-started-querying-with-transact-sql?WT.mc_id=academic-77958-bethanycheum) (Transact-SQL is a version of SQL)
-- [SQL content on Microsoft Learn](https://docs.microsoft.com/learn/browse/?products=azure-sql-database%2Csql-server&expanded=azure&WT.mc_id=academic-77958-bethanycheum)
+- [Mô tả các khái niệm về dữ liệu quan hệ](https://docs.microsoft.com//learn/modules/describe-concepts-of-relational-data?WT.mc_id=academic-77958-bethanycheum)
+- [Bắt đầu truy vấn với Transact-SQL (Transact-SQL là một phiên bản của SQL)](https://docs.microsoft.com//learn/paths/get-started-querying-with-transact-sql?WT.mc_id=academic-77958-bethanycheum)
+- [Nội dung SQL trên Microsoft Learn](https://docs.microsoft.com/learn/browse/?products=azure-sql-database%2Csql-server&expanded=azure&WT.mc_id=academic-77958-bethanycheum)
 
-## Assignment
+## Assignment - Bài tập
 
-[Assignment Title](assignment.md)
+[Tiêu đề bài tập](https://github.com/hoanglong8/Microsoft-DS-for-beginners/blob/main/2-Working-With-Data/05-relational-databases/translations/Assignment.vn.md)
