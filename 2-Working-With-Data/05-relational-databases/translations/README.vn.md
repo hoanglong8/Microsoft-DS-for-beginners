@@ -1,18 +1,18 @@
-# Working with Data: Relational Databases
+# Làm việc với Cơ sở dữ liệu - dạng có quan hệ
 
-|![ Sketchnote by [(@sketchthedocs)](https://sketchthedocs.dev) ](../../sketchnotes/05-RelationalData.png)|
+![Sketchnote by [(@sketchthedocs)](https://sketchthedocs.dev)](https://github.com/hoanglong8/Microsoft-DS-for-beginners/raw/main/sketchnotes/05-RelationalData.png)
 |:---:|
 | Working With Data: Relational Databases - _Sketchnote by [@nitya](https://twitter.com/nitya)_ |
 
-Chances are you have used a spreadsheet in the past to store information. You had a set of rows and columns, where the rows contained the information (or data), and the columns described the information (sometimes called metadata). A relational database is built upon this core principle of columns and rows in tables, allowing you to have information spread across multiple tables. This allows you to work with more complex data, avoid duplication, and have flexibility in the way you explore the data. Let's explore the concepts of a relational database.
+Có khả năng là bạn đã từng sử dụng bảng tính để lưu trữ thông tin. Bạn có một tập hợp các hàng và cột, trong đó các hàng chứa thông tin (hoặc dữ liệu) và các cột mô tả thông tin (đôi khi được gọi là siêu dữ liệu). Cơ sở dữ liệu quan hệ được xây dựng dựa trên nguyên tắc cốt lõi này của các cột và hàng trong bảng, cho phép bạn có thông tin trải rộng trên nhiều bảng. Điều này cho phép bạn làm việc với dữ liệu phức tạp hơn, tránh trùng lặp và có tính linh hoạt trong cách bạn khám phá dữ liệu. Hãy cùng khám phá các khái niệm về cơ sở dữ liệu quan hệ.
 
 ## [Pre-lecture quiz](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/8)
 
-## It all starts with tables
+## Bảng tính
 
-A relational database has at its core tables. Just as with the spreadsheet, a table is a collection of columns and rows. The row contains the data or information we wish to work with, such as the name of a city or the amount of rainfall. The columns describe the data they store.
+Một cơ sở dữ liệu quan hệ có các bảng cốt lõi. Cũng giống như bảng tính, một bảng là một tập hợp các cột và hàng. Hàng chứa dữ liệu hoặc thông tin mà chúng ta muốn làm việc, chẳng hạn như tên của một thành phố hoặc lượng mưa. Các cột mô tả dữ liệu mà chúng lưu trữ.
 
-Let's begin our exploration by starting a table to store information about cities. We might start with their name and country. You could store this in a table as follows:
+Chúng ta hãy bắt đầu khám phá bằng cách lập một bảng để lưu trữ thông tin về các thành phố. Chúng ta có thể bắt đầu bằng tên và quốc gia của thành phố. Bạn có thể lưu trữ thông tin này trong một bảng như sau:
 
 | City     | Country       |
 | -------- | ------------- |
@@ -20,11 +20,11 @@ Let's begin our exploration by starting a table to store information about citie
 | Atlanta  | United States |
 | Auckland | New Zealand   |
 
-Notice the column names of **city**, **country** and **population** describe the data being stored, and each row has information about one city.
+Lưu ý tên cột thành phố , quốc gia và dân số mô tả dữ liệu đang được lưu trữ và mỗi hàng có thông tin về một thành phố.
 
-## The shortcomings of a single table approach
+## Những hạn chế của phương pháp tiếp cận bảng đơn
 
-Chances are, the table above seems relatively familiar to you. Let's start to add some additional data to our burgeoning database - annual rainfall (in millimeters). We'll focus on the years 2018, 2019 and 2020. If we were to add it for Tokyo, it might look something like this:
+Rất có thể, bảng trên có vẻ khá quen thuộc với bạn. Chúng ta hãy bắt đầu thêm một số dữ liệu bổ sung vào cơ sở dữ liệu đang phát triển của chúng ta - lượng mưa hàng năm (tính bằng milimét). Chúng ta sẽ tập trung vào các năm 2018, 2019 và 2020. Nếu chúng ta thêm nó cho Tokyo, nó có thể trông giống như thế này:
 
 | City  | Country | Year | Amount |
 | ----- | ------- | ---- | ------ |
@@ -32,9 +32,9 @@ Chances are, the table above seems relatively familiar to you. Let's start to ad
 | Tokyo | Japan   | 2019 | 1874   |
 | Tokyo | Japan   | 2018 | 1445   |
 
-What do you notice about our table? You might notice we're duplicating the name and country of the city over and over. That could take up quite a bit of storage, and is largely unnecessary to have multiple copies of. After all, Tokyo has just the one name we're interested in.
+Bạn nhận thấy điều gì về bảng của chúng tôi? Bạn có thể nhận thấy chúng tôi sao chép tên và quốc gia của thành phố nhiều lần. Điều đó có thể chiếm khá nhiều dung lượng lưu trữ và phần lớn là không cần thiết để có nhiều bản sao. Xét cho cùng, Tokyo chỉ có một cái tên mà chúng tôi quan tâm.
 
-OK, let's try something else. Let's add new columns for each year:
+Được rồi, chúng ta hãy thử cách khác. Hãy thêm các cột mới cho mỗi năm:
 
 | City     | Country       | 2018 | 2019 | 2020 |
 | -------- | ------------- | ---- | ---- | ---- |
@@ -42,13 +42,13 @@ OK, let's try something else. Let's add new columns for each year:
 | Atlanta  | United States | 1779 | 1111 | 1683 |
 | Auckland | New Zealand   | 1386 | 942  | 1176 |
 
-While this avoids the row duplication, it adds a couple of other challenges. We would need to modify the structure of our table each time there's a new year. Additionally, as our data grows having our years as columns will make it trickier to retrieve and calculate values.
+Mặc dù điều này tránh được việc trùng lặp hàng, nhưng nó lại thêm một vài thách thức khác. Chúng ta sẽ cần phải sửa đổi cấu trúc bảng của mình mỗi khi có một năm mới. Ngoài ra, khi dữ liệu của chúng ta tăng lên, việc có các năm dưới dạng cột sẽ khiến việc truy xuất và tính toán giá trị trở nên khó khăn hơn.
 
-This is why we need multiple tables and relationships. By breaking apart our data we can avoid duplication and have more flexibility in how we work with our data.
+Đây là lý do tại sao chúng ta cần nhiều bảng và mối quan hệ. Bằng cách chia nhỏ dữ liệu, chúng ta có thể tránh trùng lặp và linh hoạt hơn trong cách làm việc với dữ liệu.
 
-## The concepts of relationships
+## Khái niệm của mối quan hệ
 
-Let's return to our data and determine how we want to split things up. We know we want to store the name and country for our cities, so this will probably work best in one table.
+Hãy quay lại dữ liệu của chúng ta và xác định cách chúng ta muốn chia nhỏ mọi thứ. Chúng ta biết rằng chúng ta muốn lưu trữ tên và quốc gia cho các thành phố của mình, vì vậy điều này có thể sẽ hiệu quả nhất trong một bảng.
 
 | City     | Country       |
 | -------- | ------------- |
@@ -56,11 +56,11 @@ Let's return to our data and determine how we want to split things up. We know w
 | Atlanta  | United States |
 | Auckland | New Zealand   |
 
-But before we create the next table, we need to figure out how to reference each city. We need some form of an identifier, ID or (in technical database terms) a primary key. A primary key is a value used to identify one specific row in a table. While this could be based on a value itself (we could use the name of the city, for example), it should almost always be a number or other identifier. We don't want the id to ever change as it would break the relationship. You will find in most cases the primary key or id will be an auto-generated number.
+Nhưng trước khi tạo bảng tiếp theo, chúng ta cần tìm ra cách tham chiếu đến từng thành phố. Chúng ta cần một số dạng mã định danh, ID hoặc (theo thuật ngữ cơ sở dữ liệu kỹ thuật) là **khóa chính (primary key)**. Khóa chính là giá trị được sử dụng để xác định một hàng cụ thể trong bảng. Mặc dù điều này có thể dựa trên chính giá trị (ví dụ, chúng ta có thể sử dụng tên thành phố), nhưng nó gần như luôn phải là một số hoặc mã định danh khác. Chúng ta không muốn id thay đổi vì nó sẽ phá vỡ mối quan hệ. Trong hầu hết các trường hợp, bạn sẽ thấy khóa chính hoặc id sẽ là một số được tạo tự động.
 
-> ✅ Primary key is frequently abbreviated as PK
+> ✅ Primary key thường được viết tắt là PK
 
-### cities
+### Bảng 1 - Thành phố
 
 | city_id | City     | Country       |
 | ------- | -------- | ------------- |
@@ -68,11 +68,11 @@ But before we create the next table, we need to figure out how to reference each
 | 2       | Atlanta  | United States |
 | 3       | Auckland | New Zealand   |
 
-> ✅ You will notice we use the terms "id" and "primary key" interchangeably during this lesson. The concepts here apply to DataFrames, which you will explore later. DataFrames don't use the terminology of "primary key", however you will notice they behave much in the same way.
+> ✅ Bạn sẽ thấy chúng ta sử dụng các thuật ngữ "id" và "primary key" thay thế cho nhau trong bài học này. Các khái niệm ở đây áp dụng cho DataFrames, mà bạn sẽ khám phá sau. DataFrames không sử dụng thuật ngữ "primary key", tuy nhiên bạn sẽ thấy chúng hoạt động theo cùng một cách.
 
-With our cities table created, let's store the rainfall. Rather than duplicating the full information about the city, we can use the id. We should also ensure the newly created table has an *id* column as well, as all tables should have an id or primary key.
+Với bảng cities đã tạo, hãy lưu trữ lượng mưa. Thay vì sao chép toàn bộ thông tin về thành phố, chúng ta có thể sử dụng id. Chúng ta cũng nên đảm bảo bảng mới tạo cũng có một cột id , vì tất cả các bảng đều phải có id hoặc khóa chính.
 
-### rainfall
+### Bảng 2 - Lượng mưa
 
 | rainfall_id | city_id | Year | Amount |
 | ----------- | ------- | ---- | ------ |
@@ -86,15 +86,15 @@ With our cities table created, let's store the rainfall. Rather than duplicating
 | 8           | 3       | 2019 | 942    |
 | 9           | 3       | 2020 | 1176   |
 
-Notice the **city_id** column inside the newly created **rainfall** table. This column contains values which reference the IDs in the **cities** table. In technical relational data terms, this is called a **foreign key**; it's a primary key from another table. You can just think of it as a reference or a pointer. **city_id** 1 references Tokyo.
+Lưu ý cột `city_id` bên trong **bảng 2 Lượng mưa** mới tạo . Cột này chứa các giá trị tham chiếu đến `ID` trong **bảng 1 Thành phố** . Theo thuật ngữ dữ liệu quan hệ kỹ thuật, đây được gọi là **khóa ngoại (Foreign key)**; đây là khóa chính từ một bảng khác. Bạn có thể coi nó như một tham chiếu hoặc một con trỏ (pointer). Ví dụ: city_id 1 tham chiếu đến Tokyo.
 
-> [!NOTE] Foreign key is frequently abbreviated as FK
+> ✅ Foreign key thường được viết tắt là FK
 
-## Retrieving the data
+## Retrieving the data - Truy vấn dữ liệu
 
-With our data separated into two tables, you may be wondering how we retrieve it. If we are using a relational database such as MySQL, SQL Server or Oracle, we can use a language called Structured Query Language or SQL. SQL (sometimes pronounced sequel) is a standard language used to retrieve and modify data in a relational database.
+Với dữ liệu của chúng ta được chia thành hai bảng, bạn có thể tự hỏi làm thế nào chúng ta có thể truy xuất dữ liệu. Nếu chúng ta sử dụng cơ sở dữ liệu quan hệ như MySQL, SQL Server hoặc Oracle, chúng ta có thể sử dụng ngôn ngữ được gọi là Ngôn ngữ truy vấn có cấu trúc hoặc SQL. SQL (đôi khi được phát âm là sequel) là ngôn ngữ chuẩn được sử dụng để truy xuất và sửa đổi dữ liệu trong cơ sở dữ liệu quan hệ.
 
-To retrieve data you use the command `SELECT`. At its core, you **select** the columns you want to see **from** the table they're contained in. If you wanted to display just the names of the cities, you could use the following:
+Để lấy dữ liệu, bạn sử dụng lệnh `SELECT`. Về cơ bản, bạn `Select` các cột bạn muốn xem `From` bảng chứa chúng. Nếu bạn chỉ muốn hiển thị tên các thành phố, bạn có thể sử dụng lệnh sau:
 
 ```sql
 SELECT city
@@ -106,11 +106,11 @@ FROM cities;
 -- Auckland
 ```
 
-`SELECT` is where you list the columns, and `FROM` is where you list the tables.
+`SELECT` là nơi bạn liệt kê các cột và `FROM` là nơi bạn liệt kê các bảng.
 
-> [NOTE] SQL syntax is case-insensitive, meaning `select` and `SELECT` mean the same thing. However, depending on the type of database you are using the columns and tables might be case sensitive. As a result, it's a best practice to always treat everything in programming like it's case sensitive. When writing SQL queries common convention is to put the keywords in all upper-case letters.
+> ✅ Cú pháp SQL không phân biệt chữ hoa chữ thường, có nghĩa `select` là `SELECT` giống nhau. Tuy nhiên, tùy thuộc vào loại cơ sở dữ liệu bạn đang sử dụng, các cột và bảng có thể phân biệt chữ hoa chữ thường. Do đó, cách thực hành tốt nhất là luôn xử lý mọi thứ trong lập trình như thể chúng phân biệt chữ hoa chữ thường. Khi viết các truy vấn SQL, quy ước chung là đặt tất cả các từ khóa bằng chữ in hoa.
 
-The query above will display all cities. Let's imagine we only wanted to display cities in New Zealand. We need some form of a filter. The SQL keyword for this is `WHERE`, or "where something is true".
+Truy vấn trên sẽ hiển thị tất cả các thành phố. Hãy tưởng tượng chúng ta chỉ muốn hiển thị các thành phố ở New Zealand. Chúng ta cần một số dạng bộ lọc. Từ khóa SQL cho việc này là `WHERE`, hoặc "nơi cần chọn".
 
 ```sql
 SELECT city
@@ -121,15 +121,15 @@ WHERE country = 'New Zealand';
 -- Auckland
 ```
 
-## Joining data
+## Joining data - Nối dữ liệu
 
-Until now we've retrieved data from a single table. Now we want to bring the data together from both **cities** and **rainfall**. This is done by *joining* them together. You will effectively create a seam between the two tables, and match up the values from a column from each table.
+Cho đến bây giờ chúng ta đã lấy dữ liệu từ một bảng duy nhất. Bây giờ chúng ta muốn đưa dữ liệu từ cả thành phố và lượng mưa lại với nhau . Điều này được thực hiện bằng cách nối chúng lại với nhau. Bạn sẽ tạo ra một đường nối hiệu quả giữa hai bảng và khớp các giá trị từ một cột của mỗi bảng.
 
-In our example, we will match the **city_id** column in **rainfall** with the **city_id** column in **cities**. This will match the rainfall value with its respective city. The type of join we will perform is what's called an *inner* join, meaning if any rows don't match with anything from the other table they won't be displayed. In our case every city has rainfall, so everything will be displayed.
+Trong ví dụ của chúng tôi, chúng tôi sẽ khớp cột `city_id` trong **bảng 2 Lượng mưa** với cột `city_id` trong **bảng 1 Thành phố** . Điều này sẽ khớp giá trị lượng mưa với thành phố tương ứng. Kiểu liên kết mà chúng tôi sẽ thực hiện được gọi là **liên kết bên trong - Inner Joiner** , nghĩa là nếu bất kỳ hàng nào không khớp với bất kỳ thứ gì từ bảng khác, chúng sẽ không được hiển thị. Trong trường hợp của chúng tôi, mọi thành phố đều có lượng mưa tương ứng, vì vậy mọi thứ sẽ được hiển thị.
 
-Let's retrieve the rainfall for 2019 for all our cities.
+Hãy cùng ước tính lượng mưa năm 2019 cho tất cả các thành phố của chúng ta.
 
-We're going to do this in steps. The first step is to join the data together by indicating the columns for the seam - **city_id** as highlighted before.
+Chúng ta sẽ thực hiện theo từng bước. Bước đầu tiên là nối dữ liệu lại với nhau bằng cách chỉ ra các cột cho đường nối - `city_id`.
 
 ```sql
 SELECT cities.city
@@ -138,7 +138,7 @@ FROM cities
     INNER JOIN rainfall ON cities.city_id = rainfall.city_id
 ```
 
-We have highlighted the two columns we want, and the fact we want to join the tables together by the **city_id**. Now we can add the `WHERE` statement to filter out only year 2019.
+Chúng tôi đã đánh dấu hai cột mà chúng tôi muốn và thực tế là chúng tôi muốn nối các bảng lại với nhau bằng `city_id` . Bây giờ chúng tôi có thể thêm `WHERE` câu lệnh để chỉ lọc ra năm 2019.
 
 ```sql
 SELECT cities.city
@@ -156,19 +156,19 @@ WHERE rainfall.year = 2019
 -- Auckland |  942
 ```
 
-## Summary
+## Summary - Tổng kết
 
-Relational databases are centered around dividing information between multiple tables which is then brought back together for display and analysis. This provides a high degree of flexibility to perform calculations and otherwise manipulate data. You have seen the core concepts of a relational database, and how to perform a join between two tables.
+Cơ sở dữ liệu quan hệ tập trung vào việc phân chia thông tin giữa nhiều bảng sau đó được đưa trở lại với nhau để hiển thị và phân tích. Điều này cung cấp mức độ linh hoạt cao để thực hiện tính toán và thao tác dữ liệu. Bạn đã thấy các khái niệm cốt lõi của cơ sở dữ liệu quan hệ và cách thực hiện nối giữa hai bảng.
 
 ## 🚀 Challenge
 
-There are numerous relational databases available on the internet. You can explore the data by using the skills you've learned above.
+Có rất nhiều cơ sở dữ liệu quan hệ có sẵn trên [Microsoft](https://learn.microsoft.com/vi-vn/training/?WT.mc_id=academic-77958-bethanycheum). Bạn có thể khám phá dữ liệu bằng cách sử dụng các kỹ năng bạn đã học ở trên.
 
 ## Post-Lecture Quiz
 
-## [Post-lecture quiz](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/9)
 
-## Review & Self Study
+
+## Review & Self Study - Đánh giá & Tự học
 
 There are several resources available on [Microsoft Learn](https://docs.microsoft.com/learn?WT.mc_id=academic-77958-bethanycheum) for you to continue your exploration of SQL and relational database concepts
 
