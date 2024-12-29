@@ -23,4 +23,8 @@ Trong bài tập này, chúng ta sẽ làm việc với một tập dữ liệu 
 
 Exemplary - Mẫu mực | Adequate - Đạt yêu cầu | Needs Improvement - Cần cải thiện
 --- | --- | -- |
-ATất cả các nhiệm vụ bắt buộc đều được hoàn thành, minh họa và giải thích bằng đồ họa | Hầu hết các nhiệm vụ đã hoàn thành, phần giải thích hoặc phần rút ra từ biểu đồ và/hoặc các giá trị thu được còn thiếu | Chỉ có các nhiệm vụ cơ bản như tính toán giá trị trung bình/phương sai và biểu đồ cơ bản được hoàn thành, không có kết luận nào được đưa ra từ dữ liệu
+ATất cả các nhiệm vụ bắt buộc đều được hoàn thành, minh họa và giải thích bằng đồ họa | Hầu hết các nhiệm vụ đã hoàn thành, phần giải thích hoặc phần rút ra từ biểu đồ và/hoặc các giá trị thu được còn thiếu | Chỉ có các nhiệm vụ cơ bản như tính toán giá trị trung bình/phương sai và biểu đồ cơ bản được hoàn thành, không có kết luận nào được đưa ra từ dữ liệu |
+
+[File Notebook.ipynb](https://github.com/hoanglong8/Microsoft-DS-for-beginners/blob/main/1-Introduction/04-stats-and-probability/translations/01.04.notebook.ipynb)
+
+[File Bài tập.ipynb](https://github.com/hoanglong8/Microsoft-DS-for-beginners/blob/main/1-Introduction/04-stats-and-probability/translations/01.04.assignment.vn.ipynb)
