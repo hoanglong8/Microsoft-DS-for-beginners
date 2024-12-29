@@ -57,7 +57,7 @@ Tạo truy vấn để trả về thông tin sau:
 
 **1. Tất cả tên thành phố trong bảng `Cities`**
 
-```SELECT DISTINCT city FROM Cities ORDER BY city ASC```
+``SELECT DISTINCT city FROM Cities ORDER BY city ASC``
 
 SELECT city: Truy vấn cột `city`
 
@@ -67,11 +67,35 @@ FROM Cities: Lấy từ bảng Cities
 
 ORDER BY city ASC: Sắp xếp theo thứ tự tăng dần (A-Z).
 
-Kết quả
+Kết quả 1
 
-3. Tất cả các thành phố ở Ireland trong bảng `Cities`
-4. Tất cả tên sân bay cùng với thành phố và quốc gia của họ
-5. Tất cả các sân bay ở London, Vương quốc Anh
+**2. Tất cả các thành phố ở Ireland trong bảng `Cities`**
+
+`SELECT city FROM Cities WHERE country = 'Ireland'`
+
+WHERE country = 'Ireland': Chỉ lấy các thành phố ở Ireland.
+
+Kết quả 2
+
+**3. Tất cả tên sân bay cùng với thành phố và quốc gia của họ**
+
+`SELECT Airports.name, Cities.city, Cities.country
+FROM Airports
+INNER JOIN Cities ON Airports.city_id = Cities.id`
+
+Kết quả 3
+| name | city | country |
+|---|---|---|
+| Belfast International Airport | Belfast |	United Kingdom |
+| St Angelo Airport | Enniskillen | United Kingdom |
+| George Best Belfast City Airport |	Belfast |	United Kingdom |
+| City of Derry Airport	| Londonderry |	United Kingdom |
+| ... | ... | ... |
+
+
+**4. Tất cả các sân bay ở London, Vương quốc Anh**
+
+
 
 ## Rubric - Thang điểm
 
