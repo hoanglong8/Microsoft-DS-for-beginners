@@ -51,39 +51,79 @@ Sơ đồ của cơ sở dữ liệu là thiết kế và cấu trúc bảng c�
 | code (text)                      |
 | city_id (FK to id in **Cities**) |
 
-## Assignment - Bài tập
+## Assignment - Bài tập tạo câu lệnh truy vấn trong SQL
 
-Tạo truy vấn để trả về thông tin sau:
+**1. Hiển thị tất cả các cột trong bảng Cities, bảng Airports:**
 
-**1. Tất cả tên thành phố trong bảng `Cities`**
+`SELECT * FROM Cities`
 
-``SELECT DISTINCT city FROM Cities ORDER BY city ASC``
+Kết quả:
 
-SELECT city: Truy vấn cột `city`
+| id | City | Country |
+|---|---|---|
+|2|	Belfast|	United Kingdom|
+|3|	Enniskillen|	United Kingdom|
+|5|	Londonderry|	United Kingdom|
+|6|	Birmingham|	United Kingdom|
+| ...|	...|	...|
 
-DISTINCT: Chỉ lấy các giá trị một lần, loại bỏ các tên thành phố trùng lặp trong kết quả.
+`SELECT * FROM Airports`
 
-FROM Cities: Lấy từ bảng Cities
+Kết quả:
 
-ORDER BY city ASC: Sắp xếp theo thứ tự tăng dần (A-Z).
+|id|name|code|city_id|
+|---|---|---|---|
+|183|	Belfast International Airport|	EGAA|	2|
+|184|	St Angelo Airport|	EGAB|	3|
+|185|	George Best Belfast City Airport|	EGAC|	2|
+|186|	City of Derry Airport|	EGAE|	5|
+|...|...|...|...|
+
+
+**2. Tất cả tên thành phố trong bảng `Cities`, mỗi giá trị chỉ lấy 1 lần và sắp xếp theo thứ tự tăng dần**
+
+`SELECT DISTINCT city FROM Cities ORDER BY city ASC`
+
+Trong câu lệnh này:
+
+**SELECT city:** Truy vấn cột `city`
+
+**DISTINCT:** Chỉ lấy các giá trị một lần, loại bỏ các tên thành phố trùng lặp trong kết quả.
+
+**FROM Cities:** Lấy từ bảng Cities
+
+**ORDER BY city ASC:** Sắp xếp theo thứ tự tăng dần (A-Z).
 
 Kết quả 1
 
-**2. Tất cả các thành phố ở Ireland trong bảng `Cities`**
+**3. Tất cả các thành phố ở Ireland trong bảng `Cities`**
 
 `SELECT city FROM Cities WHERE country = 'Ireland'`
 
-WHERE country = 'Ireland': Chỉ lấy các thành phố ở Ireland.
+Trong câu lệnh này:
+
+**WHERE country = 'Ireland':** Chỉ lấy các thành phố ở Ireland.
 
 Kết quả 2
 
-**3. Tất cả tên sân bay cùng với thành phố và quốc gia của họ**
+**4. Tất cả tên sân bay cùng với thành phố và quốc gia của chúng**
 
 `SELECT Airports.name, Cities.city, Cities.country
+
 FROM Airports
+
 INNER JOIN Cities ON Airports.city_id = Cities.id`
 
-Kết quả 3
+Trong câu lệnh này:
+
+* **SELECT Airports.name, Cities.city, Cities.country:** Chọn các cột name từ bảng Airports, city và country từ bảng Cities.
+
+* **FROM Airports:** Xác định bảng chính là Airports.
+
+* **INNER JOIN Cities ON Airports.city_id = Cities.id:** Thực hiện phép nối giữa bảng Airports và Cities dựa trên điều kiện city_id trong bảng Airports khớp với id trong bảng Cities.
+
+Kết quả:
+
 | name | city | country |
 |---|---|---|
 | Belfast International Airport | Belfast |	United Kingdom |
@@ -95,7 +135,24 @@ Kết quả 3
 
 **4. Tất cả các sân bay ở London, Vương quốc Anh**
 
+`SELECT Airports.name
 
+FROM Airports
+
+INNER JOIN Cities ON Airports.city_id = Cities.id
+
+WHERE cities.city = 'London'`
+
+Kết quả:
+
+|Airports|
+|---|
+|London Luton Airport|
+|London Gatwick Airport|
+|London City Airport|
+|London Heathrow Airport|
+|London Stansted Airport|
+|London Heliport|
 
 ## Rubric - Thang điểm
 
