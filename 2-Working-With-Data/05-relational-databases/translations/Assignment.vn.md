@@ -32,6 +32,8 @@ Hoặc cách 2: Sử dụng DB Browser for SQLite:
 
 > [!NOTE] Để biết thêm thông tin về tiện ích mở rộng SQLite, bạn có thể tham khảo tài liệu trên [Marketplace](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite&WT.mc_id=academic-77958-bethanycheum) hoặc [GitHub](https://github.com/nalgeon/sqlean/blob/main/docs/time.md)
 
+Giao diện phần mềm
+
 ## Database schema - Sơ đồ dữ liệu
 
 Sơ đồ của cơ sở dữ liệu là thiết kế và cấu trúc bảng của nó. Cơ sở dữ liệu sân bay gồm hai bảng: `cities` chứa danh sách các thành phố ở Vương quốc Anh + Ireland và `airports` chứa danh sách tất cả các sân bay. Vì một số thành phố có thể có nhiều sân bay, nên hai bảng được tạo ra để lưu trữ thông tin. Trong bài tập này, bạn sẽ sử dụng các phép nối để hiển thị thông tin cho các thành phố khác nhau.
@@ -53,10 +55,23 @@ Sơ đồ của cơ sở dữ liệu là thiết kế và cấu trúc bảng c�
 
 Tạo truy vấn để trả về thông tin sau:
 
-1. Tất cả tên thành phố trong bảng `Cities`
-2. Tất cả các thành phố ở Ireland trong bảng `Cities`
-3. Tất cả tên sân bay cùng với thành phố và quốc gia của họ
-4. Tất cả các sân bay ở London, Vương quốc Anh
+**1. Tất cả tên thành phố trong bảng `Cities`**
+
+```SELECT DISTINCT city FROM Cities ORDER BY city ASC```
+
+SELECT city: Truy vấn cột `city`
+
+DISTINCT: Chỉ lấy các giá trị một lần, loại bỏ các tên thành phố trùng lặp trong kết quả.
+
+FROM Cities: Lấy từ bảng Cities
+
+ORDER BY city ASC: Sắp xếp theo thứ tự tăng dần (A-Z).
+
+Kết quả
+
+3. Tất cả các thành phố ở Ireland trong bảng `Cities`
+4. Tất cả tên sân bay cùng với thành phố và quốc gia của họ
+5. Tất cả các sân bay ở London, Vương quốc Anh
 
 ## Rubric - Thang điểm
 
