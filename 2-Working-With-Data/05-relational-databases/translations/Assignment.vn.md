@@ -26,7 +26,7 @@ Tiếp theo bạn sẽ tải xuống và mở cơ sở dữ liệu.
 Sau khi mở, cửa sổ truy vấn mới có thể được sử dụng để chạy các câu lệnh SQL đối với cơ sở dữ liệu. Bạn có thể sử dụng lệnh **Ctl-Shift-Q** (hoặc **Cmd-Shift-Q** trên máy Mac) để chạy các truy vấn đối với cơ sở dữ liệu.
 
 Hoặc cách 2: Sử dụng DB Browser for SQLite:
-* Tải và cài đặt `DB Browser for SQLite`.
+* Tải và cài đặt [DB Browser for SQLite](https://sqlitebrowser.org/).
 * Mở ứng dụng, chọn "Open Database" và chọn tệp `.db`.
 * Sử dụng giao diện đồ họa để thực hiện các truy vấn SQL.
 
