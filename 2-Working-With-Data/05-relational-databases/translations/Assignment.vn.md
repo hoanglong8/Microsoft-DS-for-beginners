@@ -32,7 +32,7 @@ Hoặc cách 2: Sử dụng DB Browser for SQLite:
 
 > [!NOTE] Để biết thêm thông tin về tiện ích mở rộng SQLite, bạn có thể tham khảo tài liệu trên [Marketplace](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite&WT.mc_id=academic-77958-bethanycheum) hoặc [GitHub](https://github.com/nalgeon/sqlean/blob/main/docs/time.md)
 
-Giao diện phần mềm
+![Giao diện phần mềm](https://github.com/hoanglong8/Microsoft-DS-for-beginners/blob/main/2-Working-With-Data/05-relational-databases/translations/DB%20Browse%20for%20SQLite-0.png?raw=true)
 
 ## Database schema - Sơ đồ dữ liệu
 
@@ -94,7 +94,7 @@ Trong câu lệnh này:
 
 **ORDER BY city ASC:** Sắp xếp theo thứ tự tăng dần (A-Z).
 
-Kết quả 1
+![Kết quả 1](https://github.com/hoanglong8/Microsoft-DS-for-beginners/blob/main/2-Working-With-Data/05-relational-databases/translations/DB%20Browse%20for%20SQLite-1.png?raw=true)
 
 **3. Tất cả các thành phố ở Ireland trong bảng `Cities`**
 
@@ -104,7 +104,7 @@ Trong câu lệnh này:
 
 **WHERE country = 'Ireland':** Chỉ lấy các thành phố ở Ireland.
 
-Kết quả 2
+![Kết quả 2](https://github.com/hoanglong8/Microsoft-DS-for-beginners/blob/main/2-Working-With-Data/05-relational-databases/translations/DB%20Browse%20for%20SQLite-2.png?raw=true)
 
 **4. Tất cả tên sân bay cùng với thành phố và quốc gia của chúng**
 
@@ -124,6 +124,8 @@ Trong câu lệnh này:
 
 Kết quả:
 
+![Hình ảnh 4](https://github.com/hoanglong8/Microsoft-DS-for-beginners/blob/main/2-Working-With-Data/05-relational-databases/translations/DB%20Browse%20for%20SQLite-4.png?raw=true)
+
 | name | city | country |
 |---|---|---|
 | Belfast International Airport | Belfast |	United Kingdom |
@@ -133,7 +135,7 @@ Kết quả:
 | ... | ... | ... |
 
 
-**4. Tất cả các sân bay ở London, Vương quốc Anh**
+**5. Tất cả các sân bay ở London, Vương quốc Anh**
 
 `SELECT Airports.name
 
@@ -144,6 +146,8 @@ INNER JOIN Cities ON Airports.city_id = Cities.id
 WHERE cities.city = 'London'`
 
 Kết quả:
+
+![Hình ảnh 5](https://github.com/hoanglong8/Microsoft-DS-for-beginners/blob/main/2-Working-With-Data/05-relational-databases/translations/DB%20Browse%20for%20SQLite-5.png?raw=true)
 
 |Airports|
 |---|
@@ -158,4 +162,4 @@ Kết quả:
 
 | Exemplary - Mẫu mực | Adequate - Đạt yêu cầu | Needs Improvement - Cần cải thiện|
 | --------- | -------- | ----------------- |
-| Tạo đủ 4 truy vấn chính xác | Tạo được 2-3 truy vấn chính xác | Tạo được 1 truy vấn chính xác |
+| Tạo đủ 5 truy vấn chính xác, có giải thích câu lệnh và đính kèm kết quả | Tạo được 3-4 truy vấn chính xác, giải thích câu lệnh hoặc đính kèm kết quả | Tạo được dưới 2 truy vấn chính xác hoặc không giải thích câu lệnh, đính kèm kết quả |
