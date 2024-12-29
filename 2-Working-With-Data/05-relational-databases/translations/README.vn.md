@@ -6,7 +6,9 @@
 
 Có khả năng là bạn đã từng sử dụng bảng tính để lưu trữ thông tin. Bạn có một tập hợp các hàng và cột, trong đó các hàng chứa thông tin (hoặc dữ liệu) và các cột mô tả thông tin (đôi khi được gọi là siêu dữ liệu). Cơ sở dữ liệu quan hệ được xây dựng dựa trên nguyên tắc cốt lõi này của các cột và hàng trong bảng, cho phép bạn có thông tin trải rộng trên nhiều bảng. Điều này cho phép bạn làm việc với dữ liệu phức tạp hơn, tránh trùng lặp và có tính linh hoạt trong cách bạn khám phá dữ liệu. Hãy cùng khám phá các khái niệm về cơ sở dữ liệu quan hệ.
 
-## [Pre-lecture quiz](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/8)
+## Pre-lecture quiz
+
+[Chuẩn bị trước bài giảng](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/8)
 
 ## Bảng tính
 
