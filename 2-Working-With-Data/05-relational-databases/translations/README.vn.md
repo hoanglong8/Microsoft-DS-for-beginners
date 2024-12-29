@@ -1,165 +1,181 @@
-# Defining Data Science
+# Working with Data: Relational Databases
 
-| ![ Sketchnote by [(@sketchthedocs)](https://sketchthedocs.dev) ](../../sketchnotes/01-Definitions.png) |
-| :----------------------------------------------------------------------------------------------------: |
-|              Defining Data Science - _Sketchnote by [@nitya](https://twitter.com/nitya)_               |
+|![ Sketchnote by [(@sketchthedocs)](https://sketchthedocs.dev) ](../../sketchnotes/05-RelationalData.png)|
+|:---:|
+| Working With Data: Relational Databases - _Sketchnote by [@nitya](https://twitter.com/nitya)_ |
 
----
+Chances are you have used a spreadsheet in the past to store information. You had a set of rows and columns, where the rows contained the information (or data), and the columns described the information (sometimes called metadata). A relational database is built upon this core principle of columns and rows in tables, allowing you to have information spread across multiple tables. This allows you to work with more complex data, avoid duplication, and have flexibility in the way you explore the data. Let's explore the concepts of a relational database.
 
-[![Defining Data Science Video](images/video-def-ds.png)](https://youtu.be/beZ7Mb_oz9I)
+## [Pre-lecture quiz](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/8)
 
-## [Pre-lecture quiz](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/0)
+## It all starts with tables
 
-## What is Data?
-In our everyday life, we are constantly surrounded by data. The text you are reading now is data.  The list of phone numbers of your friends in your smartphone is data, as well as the current time displayed on your watch. As human beings, we naturally operate with data by counting the money we have or by writing letters to our friends.
+A relational database has at its core tables. Just as with the spreadsheet, a table is a collection of columns and rows. The row contains the data or information we wish to work with, such as the name of a city or the amount of rainfall. The columns describe the data they store.
 
-However, data became much more critical with the creation of computers.  The primary role of computers is to perform computations, but they need data to operate on.  Thus, we need to understand how computers store and process data.
+Let's begin our exploration by starting a table to store information about cities. We might start with their name and country. You could store this in a table as follows:
 
-With the emergence of the Internet, the role of computers as data handling devices increased.  If you think about it, we now use computers more and more for data processing and communication, rather than actual computations. When we write an e-mail to a friend or search for some information on the Internet - we are essentially creating, storing, transmitting, and manipulating data.
-> Can you remember the last time you have used computers to actually compute something? 
+| City     | Country       |
+| -------- | ------------- |
+| Tokyo    | Japan         |
+| Atlanta  | United States |
+| Auckland | New Zealand   |
 
-## What is Data Science?
+Notice the column names of **city**, **country** and **population** describe the data being stored, and each row has information about one city.
 
-In [Wikipedia](https://en.wikipedia.org/wiki/Data_science), **Data Science** is defined as *a scientific field that uses scientific methods to extract knowledge and insights from structured and unstructured data, and apply knowledge and actionable insights from data across a broad range of application domains*. 
+## The shortcomings of a single table approach
 
-This definition highlights the following important aspects of data science:
+Chances are, the table above seems relatively familiar to you. Let's start to add some additional data to our burgeoning database - annual rainfall (in millimeters). We'll focus on the years 2018, 2019 and 2020. If we were to add it for Tokyo, it might look something like this:
 
-* The main goal of data science is to **extract knowledge** from data, in other words - to **understand** data, find some hidden relationships and build a **model**.
-* Data science uses **scientific methods**, such as probability and statistics.  In fact, when the term *data science* was first introduced, some people argued that data science was just a new fancy name for statistics.  Nowadays it has become evident that the field is much broader.    
-* Obtained knowledge should be applied to produce some **actionable insights**, i.e. practical insights that you can apply to real business situations.
-* We should be able to operate on both **structured** and **unstructured** data.  We will come back to discuss different types of data later in the course.
-* **Application domain** is an important concept, and data scientists often need at least some degree of expertise in the problem domain, for example: finance, medicine, marketing, etc.
+| City  | Country | Year | Amount |
+| ----- | ------- | ---- | ------ |
+| Tokyo | Japan   | 2020 | 1690   |
+| Tokyo | Japan   | 2019 | 1874   |
+| Tokyo | Japan   | 2018 | 1445   |
 
-> Another important aspect of Data Science is that it studies how data can be gathered, stored and operated upon using computers.  While statistics gives us mathematical foundations, data science applies mathematical concepts to actually draw insights from data.
+What do you notice about our table? You might notice we're duplicating the name and country of the city over and over. That could take up quite a bit of storage, and is largely unnecessary to have multiple copies of. After all, Tokyo has just the one name we're interested in.
 
-One of the ways (attributed to [Jim Gray](https://en.wikipedia.org/wiki/Jim_Gray_(computer_scientist))) to look at the data science is to consider it to be a separate paradigm of science:
-* **Empirical**, in which we rely mostly on observations and results of experiments
-* **Theoretical**, where new concepts emerge from existing scientific knowledge
-* **Computational**, where we discover new principles based on some computational experiments
-* **Data-Driven**, based on discovering relationships and patterns in the data  
+OK, let's try something else. Let's add new columns for each year:
 
-## Other Related Fields
+| City     | Country       | 2018 | 2019 | 2020 |
+| -------- | ------------- | ---- | ---- | ---- |
+| Tokyo    | Japan         | 1445 | 1874 | 1690 |
+| Atlanta  | United States | 1779 | 1111 | 1683 |
+| Auckland | New Zealand   | 1386 | 942  | 1176 |
 
-Since data is pervasive, data science itself is also a broad field, touching many other disciplines.
+While this avoids the row duplication, it adds a couple of other challenges. We would need to modify the structure of our table each time there's a new year. Additionally, as our data grows having our years as columns will make it trickier to retrieve and calculate values.
 
-<dl>
-<dt>Databases</dt>
-<dd>
-A critical consideration is **how to store** the data, i.e. how to structure it in a way that allows faster processing.  There are different types of databases that store structured and unstructured data, which <a href="../../2-Working-With-Data/README.md">we will consider in our course</a>.
-</dd>
-<dt>Big Data</dt>
-<dd>
-Often we need to store and process very large quantities of data with a relatively simple structure.  There are special approaches and tools to store that data in a distributed manner on a computer cluster, and process it efficiently.
-</dd>
-<dt>Machine Learning</dt>
-<dd>
-One way to understand data is to **build a model** that will be able to predict a desired outcome.  Developing models from data is called **machine learning**. You may want to have a look at our <a href="https://aka.ms/ml-beginners">Machine Learning for Beginners</a> Curriculum to learn more about it.
-</dd>
-<dt>Artificial Intelligence</dt>
-<dd>
-An area of machine learning known as artificial intelligence (AI) also relies on data, and it involves building high complexity models that mimic human thought processes.  AI methods often allow us to turn unstructured data (e.g. natural language) into structured insights. 
-</dd>
-<dt>Visualization</dt>
-<dd>
-Vast amounts of data are incomprehensible for a human being, but once we create useful visualizations using that data, we can make more sense of the data, and draw some conclusions. Thus, it is important to know many ways to visualize information - something that we will cover in <a href="../../3-Data-Visualization/README.md">Section 3</a> of our course. Related fields also include **Infographics**, and **Human-Computer Interaction** in general. 
-</dd>
-</dl>
+This is why we need multiple tables and relationships. By breaking apart our data we can avoid duplication and have more flexibility in how we work with our data.
 
-## Types of Data
+## The concepts of relationships
 
-As we have already mentioned, data is everywhere.  We just need to capture it in the right way!  It is useful to distinguish between **structured** and **unstructured** data. The former is typically represented in some well-structured form, often as a table or number of tables, while the latter is just a collection of files.  Sometimes we can also talk about **semi-structured** data, that have some sort of a structure that may vary greatly.
+Let's return to our data and determine how we want to split things up. We know we want to store the name and country for our cities, so this will probably work best in one table.
 
-| Structured                                                                   | Semi-structured                                                                                | Unstructured                            |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | --------------------------------------- |
-| List of people with their phone numbers                                      | Wikipedia pages with links                                                                     | Text of Encyclopedia Britannica        |
-| Temperature in all rooms of a building at every minute for the last 20 years | Collection of scientific papers in JSON format with authors, data of publication, and abstract | File share with corporate documents     |
-| Data for age and gender of all people entering the building                  | Internet pages                                                                                 | Raw video feed from surveillance camera |
+| City     | Country       |
+| -------- | ------------- |
+| Tokyo    | Japan         |
+| Atlanta  | United States |
+| Auckland | New Zealand   |
 
-## Where to get Data
+But before we create the next table, we need to figure out how to reference each city. We need some form of an identifier, ID or (in technical database terms) a primary key. A primary key is a value used to identify one specific row in a table. While this could be based on a value itself (we could use the name of the city, for example), it should almost always be a number or other identifier. We don't want the id to ever change as it would break the relationship. You will find in most cases the primary key or id will be an auto-generated number.
 
-There are many possible sources of data, and it will be impossible to list all of them! However, let's mention some of the typical places where you can get data:
+> ✅ Primary key is frequently abbreviated as PK
 
-* **Structured**
-  - **Internet of Things** (IoT), including data from different sensors, such as temperature or pressure sensors, provides a lot of useful data.  For example, if an office building is equipped with IoT sensors, we can automatically control heating and lighting in order to minimize costs. 
-  - **Surveys** that we ask users to complete after a purchase, or after visiting a web site.
-  - **Analysis of behavior** can, for example, help us understand how deeply a user goes into a site, and what is the typical reason for leaving the site.
-* **Unstructured**
-  - **Texts** can be a rich source of insights, such as an overall **sentiment score**, or extracting keywords and semantic meaning.
-  - **Images** or **Video**. A video from a surveillance camera can be used to estimate traffic on the road, and inform people about potential traffic jams.
-  - Web server **Logs** can be used to understand which pages of our site are most often visited, and for how long.
-* Semi-structured
-  - **Social Network** graphs can be great sources of data about user personalities and potential effectiveness in spreading information around.
-  - When we have a bunch of photographs from a party, we can try to extract **Group Dynamics** data by building a graph of people taking pictures with each other.
+### cities
 
-By knowing different possible sources of data, you can try to think about different scenarios where data science techniques can be applied to know the situation better, and to improve business processes. 
+| city_id | City     | Country       |
+| ------- | -------- | ------------- |
+| 1       | Tokyo    | Japan         |
+| 2       | Atlanta  | United States |
+| 3       | Auckland | New Zealand   |
 
-## What you can do with Data
+> ✅ You will notice we use the terms "id" and "primary key" interchangeably during this lesson. The concepts here apply to DataFrames, which you will explore later. DataFrames don't use the terminology of "primary key", however you will notice they behave much in the same way.
 
-In Data Science, we focus on the following steps of data journey:
+With our cities table created, let's store the rainfall. Rather than duplicating the full information about the city, we can use the id. We should also ensure the newly created table has an *id* column as well, as all tables should have an id or primary key.
 
-<dl>
-<dt>1) Data Acquisition</dt>
-<dd>
-The first step is to collect the data.  While in many cases it can be a straightforward process, like data coming to a database from a web application, sometimes we need to use special techniques. For example, data from IoT sensors can be overwhelming, and it is a good practice to use buffering endpoints such as IoT Hub to collect all the data before further processing.
-</dd>
-<dt>2) Data Storage</dt>
-<dd>
-Storing data can be challenging, especially if we are talking about big data.  When deciding how to store data, it makes sense to anticipate the way you would like to query the data in the future.  There are several ways data can be stored:
-<ul>
-<li>A relational database stores a collection of tables, and uses a special language called SQL to query them. Typically, tables are organized into different groups called schemas. In many cases we need to convert the data from original form to fit the schema.</li>
-<li><a href="https://en.wikipedia.org/wiki/NoSQL">A NoSQL</a> database, such as <a href="https://azure.microsoft.com/services/cosmos-db/?WT.mc_id=academic-77958-bethanycheum">CosmosDB</a>, does not enforce schemas on data, and allows storing more complex data, for example, hierarchical JSON documents or graphs. However, NoSQL databases do not have the rich querying capabilities of SQL, and cannot enforce referential integrity, i.e. rules on how the data is structured in tables and governing the relationships between tables.</li>
-<li><a href="https://en.wikipedia.org/wiki/Data_lake">Data Lake</a> storage is used for large collections of data in raw, unstructured form. Data lakes are often used with big data, where all data cannot fit on one machine, and has to be stored and processed by a cluster of servers. <a href="https://en.wikipedia.org/wiki/Apache_Parquet">Parquet</a> is the data format that is often used in conjunction with big data.</li> 
-</ul>
-</dd>
-<dt>3) Data Processing</dt>
-<dd>
-This is the most exciting part of the data journey, which involves converting the data from its original form into a form that can be used for visualization/model training.  When dealing with unstructured data such as text or images, we may need to use some AI techniques to extract **features** from the data, thus converting it to structured form.
-</dd>
-<dt>4) Visualization / Human Insights</dt>
-<dd>
-Oftentimes, in order to understand the data, we need to visualize it.  Having many different visualization techniques in our toolbox, we can find the right view to make an insight.  Often, a data scientist needs to "play with data", visualizing it many times and looking for some relationships.  Also, we may use statistical techniques to test a hypotheses or prove a correlation between different pieces of data.   
-</dd>
-<dt>5) Training a predictive model</dt>
-<dd>
-Because the ultimate goal of data science is to be able to make decisions based on data, we may want to use the techniques of <a href="http://github.com/microsoft/ml-for-beginners">Machine Learning</a> to build a predictive model.  We can then use this to make predictions using new data sets with similar structures.
-</dd>
-</dl>
+### rainfall
 
-Of course, depending on the actual data, some steps might be missing (e.g., when we already have the data in the database, or when we do not need model training), or some steps might be repeated several times (such as data processing).
+| rainfall_id | city_id | Year | Amount |
+| ----------- | ------- | ---- | ------ |
+| 1           | 1       | 2018 | 1445   |
+| 2           | 1       | 2019 | 1874   |
+| 3           | 1       | 2020 | 1690   |
+| 4           | 2       | 2018 | 1779   |
+| 5           | 2       | 2019 | 1111   |
+| 6           | 2       | 2020 | 1683   |
+| 7           | 3       | 2018 | 1386   |
+| 8           | 3       | 2019 | 942    |
+| 9           | 3       | 2020 | 1176   |
 
-## Digitalization and Digital Transformation
+Notice the **city_id** column inside the newly created **rainfall** table. This column contains values which reference the IDs in the **cities** table. In technical relational data terms, this is called a **foreign key**; it's a primary key from another table. You can just think of it as a reference or a pointer. **city_id** 1 references Tokyo.
 
-In the last decade, many businesses started to understand the importance of data when making business decisions.  To apply data science principles to running a business, one first needs to collect some data, i.e. translate business processes into digital form. This is known as **digitalization**.  Applying data science techniques to this data to guide decisions can lead to significant increases in productivity (or even business pivot), called **digital transformation**.
+> [!NOTE] Foreign key is frequently abbreviated as FK
 
-Let's consider an example.  Suppose we have a data science course (like this one) which we deliver online to students, and we want to use data science to improve it.  How can we do it?
+## Retrieving the data
 
-We can start by asking "What can be digitized?"  The simplest way would be to measure the time it takes each student to complete each module, and to measure the obtained knowledge by giving a multiple-choice test at the end of each module.  By averaging time-to-complete across all students, we can find out which modules cause the most difficulties for students, and work on simplifying them.
+With our data separated into two tables, you may be wondering how we retrieve it. If we are using a relational database such as MySQL, SQL Server or Oracle, we can use a language called Structured Query Language or SQL. SQL (sometimes pronounced sequel) is a standard language used to retrieve and modify data in a relational database.
 
-> You may argue that this approach is not ideal, because modules can be of different lengths.  It is probably more fair to divide the time by the length of the module (in number of characters), and compare those values instead.
+To retrieve data you use the command `SELECT`. At its core, you **select** the columns you want to see **from** the table they're contained in. If you wanted to display just the names of the cities, you could use the following:
 
-When we start analyzing results of multiple-choice tests, we can try to determine which concepts that students have difficulty understanding, and use that information to improve the content.  To do that, we need to design tests in such a way that each question maps to a certain concept or chunk of knowledge.
+```sql
+SELECT city
+FROM cities;
 
-If we want to get even more complicated, we can plot the time taken for each module against the age category of students.  We might find out that for some age categories it takes an inappropriately long time to complete the module, or that students drop out before completing it.  This can help us provide age recommendations for the module, and minimize people's dissatisfaction from wrong expectations.
+-- Output:
+-- Tokyo
+-- Atlanta
+-- Auckland
+```
+
+`SELECT` is where you list the columns, and `FROM` is where you list the tables.
+
+> [NOTE] SQL syntax is case-insensitive, meaning `select` and `SELECT` mean the same thing. However, depending on the type of database you are using the columns and tables might be case sensitive. As a result, it's a best practice to always treat everything in programming like it's case sensitive. When writing SQL queries common convention is to put the keywords in all upper-case letters.
+
+The query above will display all cities. Let's imagine we only wanted to display cities in New Zealand. We need some form of a filter. The SQL keyword for this is `WHERE`, or "where something is true".
+
+```sql
+SELECT city
+FROM cities
+WHERE country = 'New Zealand';
+
+-- Output:
+-- Auckland
+```
+
+## Joining data
+
+Until now we've retrieved data from a single table. Now we want to bring the data together from both **cities** and **rainfall**. This is done by *joining* them together. You will effectively create a seam between the two tables, and match up the values from a column from each table.
+
+In our example, we will match the **city_id** column in **rainfall** with the **city_id** column in **cities**. This will match the rainfall value with its respective city. The type of join we will perform is what's called an *inner* join, meaning if any rows don't match with anything from the other table they won't be displayed. In our case every city has rainfall, so everything will be displayed.
+
+Let's retrieve the rainfall for 2019 for all our cities.
+
+We're going to do this in steps. The first step is to join the data together by indicating the columns for the seam - **city_id** as highlighted before.
+
+```sql
+SELECT cities.city
+    rainfall.amount
+FROM cities
+    INNER JOIN rainfall ON cities.city_id = rainfall.city_id
+```
+
+We have highlighted the two columns we want, and the fact we want to join the tables together by the **city_id**. Now we can add the `WHERE` statement to filter out only year 2019.
+
+```sql
+SELECT cities.city
+    rainfall.amount
+FROM cities
+    INNER JOIN rainfall ON cities.city_id = rainfall.city_id
+WHERE rainfall.year = 2019
+
+-- Output
+
+-- city     | amount
+-- -------- | ------
+-- Tokyo    | 1874
+-- Atlanta  | 1111
+-- Auckland |  942
+```
+
+## Summary
+
+Relational databases are centered around dividing information between multiple tables which is then brought back together for display and analysis. This provides a high degree of flexibility to perform calculations and otherwise manipulate data. You have seen the core concepts of a relational database, and how to perform a join between two tables.
 
 ## 🚀 Challenge
 
-In this challenge, we will try to find concepts relevant to the field of Data Science by looking at texts.  We will take a Wikipedia article on Data Science, download and process the text, and then build a word cloud like this one:
+There are numerous relational databases available on the internet. You can explore the data by using the skills you've learned above.
 
-![Word Cloud for Data Science](images/ds_wordcloud.png)
+## Post-Lecture Quiz
 
-Visit [`notebook.ipynb`](/1-Introduction/01-defining-data-science/notebook.ipynb ':ignore') to read through the code.  You can also run the code, and see how it performs all data transformations in real time. 
+## [Post-lecture quiz](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/9)
 
-> If you do not know how to run code in a Jupyter Notebook, have a look at [this article](https://soshnikov.com/education/how-to-execute-notebooks-from-github/).
+## Review & Self Study
 
+There are several resources available on [Microsoft Learn](https://docs.microsoft.com/learn?WT.mc_id=academic-77958-bethanycheum) for you to continue your exploration of SQL and relational database concepts
 
+- [Describe concepts of relational data](https://docs.microsoft.com//learn/modules/describe-concepts-of-relational-data?WT.mc_id=academic-77958-bethanycheum)
+- [Get Started Querying with Transact-SQL](https://docs.microsoft.com//learn/paths/get-started-querying-with-transact-sql?WT.mc_id=academic-77958-bethanycheum) (Transact-SQL is a version of SQL)
+- [SQL content on Microsoft Learn](https://docs.microsoft.com/learn/browse/?products=azure-sql-database%2Csql-server&expanded=azure&WT.mc_id=academic-77958-bethanycheum)
 
-## [Post-lecture quiz](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/1)
+## Assignment
 
-## Assignments
-
-* **Task 1**: Modify the code above to find out related concepts for the fields of **Big Data** and **Machine Learning**
-* **Task 2**: [Think About Data Science Scenarios](assignment.md)
-
-## Credits
-
-This lesson has been authored with ♥️ by [Dmitry Soshnikov](http://soshnikov.com)
+[Assignment Title](assignment.md)
