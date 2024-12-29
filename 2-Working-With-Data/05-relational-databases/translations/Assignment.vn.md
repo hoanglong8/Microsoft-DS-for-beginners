@@ -11,7 +11,7 @@ Bạn đã được cung cấp một [database](https://raw.githubusercontent.co
 Bạn có thể sử dụng Visual Studio Code và tiện ích mở rộng SQLite để tương tác với cơ sở dữ liệu.
 
 1. Truy cập [code.visualstudio.com](https://code.visualstudio.com?WT.mc_id=academic-77958-bethanycheum) và làm theo hướng dẫn để cài đặt Visual Studio Code.
-1. Cài đặt [SQLite extension](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite&WT.mc_id=academic-77958-bethanycheum) theo hướng dẫn trên trang Marketplace.
+2. Cài đặt [SQLite extension](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite&WT.mc_id=academic-77958-bethanycheum) theo hướng dẫn trên trang Marketplace.
 
 ### Download and open the database - Tải xuống và mở cơ sở dữ liệu
 
@@ -25,7 +25,12 @@ Tiếp theo bạn sẽ tải xuống và mở cơ sở dữ liệu.
 
 Sau khi mở, cửa sổ truy vấn mới có thể được sử dụng để chạy các câu lệnh SQL đối với cơ sở dữ liệu. Bạn có thể sử dụng lệnh **Ctl-Shift-Q** (hoặc **Cmd-Shift-Q** trên máy Mac) để chạy các truy vấn đối với cơ sở dữ liệu.
 
-> [!NOTE] Để biết thêm thông tin về tiện ích mở rộng SQLite, bạn có thể tham khảo [tài liệu](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite&WT.mc_id=academic-77958-bethanycheum)
+Hoặc cách 2: Sử dụng DB Browser for SQLite:
+* Tải và cài đặt `DB Browser for SQLite`.
+* Mở ứng dụng, chọn "Open Database" và chọn tệp `.db`.
+* Sử dụng giao diện đồ họa để thực hiện các truy vấn SQL.
+
+> [!NOTE] Để biết thêm thông tin về tiện ích mở rộng SQLite, bạn có thể tham khảo tài liệu trên [Marketplace](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite&WT.mc_id=academic-77958-bethanycheum) hoặc [GitHub](https://github.com/nalgeon/sqlean/blob/main/docs/time.md)
 
 ## Database schema - Sơ đồ dữ liệu
 
