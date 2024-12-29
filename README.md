@@ -1,4 +1,4 @@
-# Data Science for Beginners - A Curriculum
+# Data Science for Beginners - A Curriculum (Chương trình giảng dạy)
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=344191198)
 
@@ -14,7 +14,7 @@
 
 [![](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://discord.gg/zxKYvhSnVp?WT.mc_id=academic-000002-leestott)
 
-Azure Cloud Advocates at Microsoft are pleased to offer a 10-week, 20-lesson curriculum all about Data Science. Each lesson includes pre-lesson and post-lesson quizzes, written instructions to complete the lesson, a solution, and an assignment. Our project-based pedagogy allows you to learn while building, a proven way for new skills to 'stick'.
+Azure Cloud Advocates tại Microsoft rất vui mừng được cung cấp chương trình giảng dạy 10 tuần, 20 bài học về Khoa học dữ liệu. Mỗi bài học bao gồm các bài kiểm tra trước và sau bài học, hướng dẫn bằng văn bản để hoàn thành bài học, giải pháp và bài tập. Phương pháp sư phạm dựa trên dự án của chúng tôi cho phép bạn học trong khi xây dựng, một cách đã được chứng minh để các kỹ năng mới được "stick - gắn kết với nhau".
 
 **Hearty thanks to our authors:** [Jasmine Greenaway](https://www.twitter.com/paladique), [Dmitry Soshnikov](http://soshnikov.com), [Nitya Narasimhan](https://twitter.com/nitya), [Jalen McGee](https://twitter.com/JalenMcG), [Jen Looper](https://twitter.com/jenlooper), [Maud Levy](https://twitter.com/maudstweets), [Tiffany Souterre](https://twitter.com/TiffanySouterre), [Christopher Harrison](https://www.twitter.com/geektrainer).
 
@@ -25,7 +25,7 @@ Azure Cloud Advocates at Microsoft are pleased to offer a 10-week, 20-lesson cur
 |:---:|
 | Data Science For Beginners - _Sketchnote by [@nitya](https://twitter.com/nitya)_ |
 
-## Announcement - New Curriculum on Generative AI was just released!
+## Thông báo - Chương trình giảng dạy mới về AI tạo sinh vừa được phát hành!
 
 We just released a 12 lesson curriculum on generative AI. Come learn things like:
 
@@ -33,24 +33,24 @@ We just released a 12 lesson curriculum on generative AI. Come learn things like
 - text and image app generation
 - search apps
 
-As usual, there's a lesson, assignments to complete, knowledge checks and challenges.
+Như thường lệ, sẽ có bài học, bài tập phải hoàn thành, kiểm tra kiến ​​thức và thử thách.
 
-Check it out:
+Hãy xem thử nhé:
 
 > https://aka.ms/genai-beginners
 
 # Are you a student?
 
-Get started with the following resources:
+Bắt đầu với các tài nguyên sau:
 
-- [Student Hub page](https://docs.microsoft.com/en-gb/learn/student-hub?WT.mc_id=academic-77958-bethanycheum) In this page, you will find beginner resources, Student packs and even ways to get a free cert voucher. This is one page you want to bookmark and check from time to time as we switch out content at least monthly.
-- [Microsoft Learn Student Ambassadors](https://studentambassadors.microsoft.com?WT.mc_id=academic-77958-bethanycheum) Join a global community of student ambassadors, this could be your way into Microsoft.
+- [Student Hub page](https://docs.microsoft.com/en-gb/learn/student-hub?WT.mc_id=academic-77958-bethanycheum) Trong trang này, bạn sẽ tìm thấy các tài nguyên dành cho người mới bắt đầu, gói Student và thậm chí là cách để nhận được chứng chỉ miễn phí. Đây là một trang bạn muốn đánh dấu và kiểm tra theo thời gian vì chúng tôi thay đổi nội dung ít nhất là hàng tháng.
+- [Microsoft Learn Student Ambassadors](https://studentambassadors.microsoft.com?WT.mc_id=academic-77958-bethanycheum) Tham gia cộng đồng đại sứ sinh viên toàn cầu, đây có thể là con đường đưa bạn đến với Microsoft.
 
 # Getting Started
 
-> **Teachers**: we have [included some suggestions](for-teachers.md) on how to use this curriculum.  We'd love your feedback [in our discussion forum](https://github.com/microsoft/Data-Science-For-Beginners/discussions)!
+> **Teachers**: Chúng tôi đã [một vài gợi ý](for-teachers.md) về cách sử dụng chương trình giảng dạy này. Chúng tôi rất mong nhận được phản hồi của bạn [trong diễn đàn thảo luận này](https://github.com/microsoft/Data-Science-For-Beginners/discussions)!
 
-> **[Students](https://aka.ms/student-page)**: to use this curriculum on your own, fork the entire repo and complete the exercises on your own, starting with a pre-lecture quiz.  Then read the lecture and complete the rest of the activities. Try to create the projects by comprehending the lessons rather than copying the solution code; however, that code is available in the /solutions folders in each project-oriented lesson. Another idea would be to form a study group with friends and go through the content together. For further study, we recommend [Microsoft Learn](https://docs.microsoft.com/en-us/users/jenlooper-2911/collections/qprpajyoy3x0g7?WT.mc_id=academic-77958-bethanycheum).
+> **[Students](https://aka.ms/student-page)**: để tự sử dụng giáo trình này, hãy fork toàn bộ kho lưu trữ và tự hoàn thành các bài tập, bắt đầu bằng bài kiểm tra trước bài giảng. Sau đó, đọc bài giảng và hoàn thành các hoạt động còn lại. Cố gắng tạo các dự án bằng cách hiểu các bài học thay vì sao chép mã giải pháp; tuy nhiên, mã đó có sẵn trong các thư mục /solutions trong mỗi bài học theo định hướng dự án. Một ý tưởng khác là thành lập một nhóm học tập với bạn bè và cùng nhau xem qua nội dung. Để học thêm, chúng tôi khuyên bạn nên sử dụng [Microsoft Learn](https://docs.microsoft.com/en-us/users/jenlooper-2911/collections/qprpajyoy3x0g7?WT.mc_id=academic-77958-bethanycheum).
 
 ## Meet the Team
 
@@ -58,13 +58,13 @@ Get started with the following resources:
 
 **Gif by** [Mohit Jaisal](https://www.linkedin.com/in/mohitjaisal)
 
-> 🎥 Click the image above for a video about the project  the folks who created it!
+> 🎥 Nhấp vào hình ảnh ở trên để xem video về dự án và những người đã tạo ra nó!
 
-## Pedagogy
+## Pedagogy - Nguyên lý sư phạm
 
-We have chosen two pedagogical tenets while building this curriculum: ensuring that it is project-based and that it includes frequent quizzes. By the end of this series, students will have learned basic principles of data science, including ethical concepts, data preparation, different ways of working with data, data visualization, data analysis, real-world use cases of data science, and more.
+Chúng tôi đã chọn hai nguyên lý sư phạm khi xây dựng chương trình giảng dạy này: đảm bảo chương trình dựa trên dự án và bao gồm các bài kiểm tra thường xuyên. Đến cuối loạt bài này, sinh viên sẽ học được các nguyên tắc cơ bản của khoa học dữ liệu, bao gồm các khái niệm đạo đức, chuẩn bị dữ liệu, các cách khác nhau để làm việc với dữ liệu, trực quan hóa dữ liệu, phân tích dữ liệu, các trường hợp sử dụng khoa học dữ liệu trong thế giới thực, v.v.
 
-In addition, a low-stakes quiz before a class sets the intention of the student towards learning a topic, while a second quiz after class ensures further retention. This curriculum was designed to be flexible and fun and can be taken in whole or in part. The projects start small and become increasingly complex by the end of the 10 week cycle.
+Ngoài ra, một bài kiểm tra ít rủi ro trước khi vào lớp sẽ thiết lập mục đích của học sinh đối với việc học một chủ đề, trong khi một bài kiểm tra thứ hai sau giờ học đảm bảo khả năng ghi nhớ lâu hơn. Chương trình giảng dạy này được thiết kế linh hoạt và thú vị, có thể học toàn bộ hoặc một phần. Các dự án bắt đầu nhỏ và trở nên phức tạp hơn vào cuối chu kỳ 10 tuần.
 
 > Find our [Code of Conduct](CODE_OF_CONDUCT.md), [Contributing](CONTRIBUTING.md),  [Translation](TRANSLATIONS.md) guidelines. We welcome your constructive feedback!
 
@@ -81,7 +81,7 @@ In addition, a low-stakes quiz before a class sets the intention of the student 
 - Assignment
 - Post-lesson quiz
 
-> **A note about quizzes**: All quizzes are contained in the Quiz-App folder, for 40 total quizzes of three questions each. They are linked from within the lessons, but the quiz app can be run locally or deployed to Azure; follow the instruction in the `quiz-app` folder. They are gradually being localized.
+> **A note about quizzes**: Tất cả các bài kiểm tra đều nằm trong thư mục Quiz-App, tổng cộng có 40 bài kiểm tra, mỗi bài có ba câu hỏi. Chúng được liên kết từ trong các bài học, nhưng ứng dụng bài kiểm tra có thể chạy cục bộ hoặc triển khai trên Azure; hãy làm theo hướng dẫn trong `quiz-app` thư mục. Chúng đang dần được bản địa hóa.
 
 ## Lessons
 
