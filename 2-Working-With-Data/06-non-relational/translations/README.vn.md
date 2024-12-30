@@ -1,48 +1,49 @@
-# Working with Data: Non-Relational Data
+# Làm việc với Dữ liệu - dạng phi quan hệ (NoSQL)
 
-|![ Sketchnote by [(@sketchthedocs)](https://sketchthedocs.dev) ](../../sketchnotes/06-NoSQL.png)|
+![Sketchnote by [(@sketchthedocs)](https://sketchthedocs.dev)](https://github.com/hoanglong8/Microsoft-DS-for-beginners/raw/main/sketchnotes/06-NoSQL.png)
 |:---:|
 |Working with NoSQL Data - _Sketchnote by [@nitya](https://twitter.com/nitya)_ |
 
-## [Pre-Lecture Quiz](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/10)
+## [Chuẩn bị trước bài giảng](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/10)
 
-Data is not limited to relational databases. This lesson focuses on non-relational data and will cover the basics of spreadsheets and NoSQL.
+Dữ liệu không chỉ giới hạn ở cơ sở dữ liệu quan hệ. Bài học này sẽ tập trung vào dữ liệu không quan hệ và sẽ đề cập đến những điều cơ bản về bảng tính và NoSQL.
 
-## Spreadsheets
+## Spreadsheets - Bảng tính
 
-Spreadsheets are a popular way to store and explore data because it requires less work to setup and get started. In this lesson you'll learn the basic components of a spreadsheet, as well as formulas and functions. The examples will be illustrated with Microsoft Excel, but most of the parts and topics will have similar names and steps in comparison to other spreadsheet software. 
+Bảng tính là một cách phổ biến để lưu trữ và khám phá dữ liệu vì nó đòi hỏi ít công sức hơn để thiết lập và bắt đầu. Trong bài học này, bạn sẽ tìm hiểu các thành phần cơ bản của bảng tính, cũng như các công thức và hàm. Các ví dụ sẽ được minh họa bằng Microsoft Excel, nhưng hầu hết các phần và chủ đề sẽ có tên và các bước tương tự khi so sánh với các phần mềm bảng tính khác. 
 
-![An empty Microsoft Excel workbook with two worksheets](images/parts-of-spreadsheet.png)
+![An empty Microsoft Excel workbook with two worksheets](https://github.com/hoanglong8/Microsoft-DS-for-beginners/raw/main/2-Working-With-Data/06-non-relational/images/parts-of-spreadsheet.png)
 
-A spreadsheet is a file and will be accessible in the file system of a computer, device, or cloud based file system. The software itself may be browser based or an application that must be installed on a computer or downloaded as an app. In Excel these files are also defined as **workbooks** and this terminology will be used the remainder of this lesson.
+Bảng tính là một tệp và có thể truy cập được trong hệ thống tệp của máy tính, thiết bị hoặc hệ thống tệp dựa trên đám mây. Bản thân phần mềm có thể dựa trên trình duyệt hoặc là một ứng dụng phải được cài đặt trên máy tính hoặc tải xuống dưới dạng ứng dụng. Trong Excel, các tệp này cũng được định nghĩa là **sổ làm việc (Workbook)** và thuật ngữ này sẽ được sử dụng trong phần còn lại của bài học này.
 
-A workbook contains one or more **worksheets**, where each worksheet are labeled by tabs. Within a worksheet are rectangles called **cells**, which will contain the actual data. A cell is the intersection of a row and column, where the columns are labeled with alphabetical characters and rows labeled numerically. Some spreadsheets will contain headers in the first few rows to describe the data in a cell.
+Một sổ làm việc chứa một hoặc nhiều **trang tính (Sheet)** , trong đó mỗi trang tính được gắn nhãn bằng các tab. Trong một trang tính có các hình chữ nhật được gọi là **ô (Cell)** , sẽ chứa dữ liệu thực tế. Một ô là giao điểm của một hàng và cột, trong đó các cột được gắn nhãn bằng các ký tự chữ cái và các hàng được gắn nhãn bằng số. Một số bảng tính sẽ chứa các tiêu đề trong một vài hàng đầu tiên để mô tả dữ liệu trong một ô.
 
-With these basic elements of an Excel workbook, we'll use and an example from [Microsoft Templates](https://templates.office.com/) focused on an inventory to walk through some additional parts of a spreadsheet. 
+Với các thành phần cơ bản của bảng tính Excel, chúng ta sẽ sử dụng một ví dụ từ [Microsoft Templates](https://templates.office.com/) tập trung vào kiểm kê để xem xét một số phần bổ sung của bảng tính. 
 
-### Managing an Inventory 
+### Managing an Inventory - Quản lý hàng tồn kho
 
-The spreadsheet file named "InventoryExample" is a formatted spreadsheet of items within an inventory that contains three worksheets, where the tabs are labeled "Inventory List", "Inventory Pick List" and "Bin Lookup". Row 4 of the Inventory List worksheet is the header, which describes the value of each cell in the header column.
+Tệp bảng tính có tên "InventoryExample" là bảng tính được định dạng của các mục trong một kho chứa ba trang tính, trong đó các tab được gắn nhãn "Danh sách kho", "Danh sách chọn kho" và "Tra cứu thùng". Hàng 4 của trang tính Danh sách kho là tiêu đề, mô tả giá trị của từng ô trong cột tiêu đề.
 
-![A highlighted formula from an example inventory list in Microsoft Excel](images/formula-excel.png)
+![A highlighted formula from an example inventory list in Microsoft Excel](https://github.com/hoanglong8/Microsoft-DS-for-beginners/raw/main/2-Working-With-Data/06-non-relational/images/formula-excel.png)
 
-There are instances where a cell is dependent on the values of other cells to generate its value. The Inventory List spreadsheet keeps track of the cost of every item in its inventory, but what if we need to know the value of everything in the inventory? [**Formulas**](https://support.microsoft.com/en-us/office/overview-of-formulas-34519a4e-1e8d-4f4b-84d4-d642c4f63263) perform actions on cell data and is used to calculate the cost of the inventory in this example. This spreadsheet used a formula in the Inventory Value column to calculate the value of each item by multiplying the quantity under the QTY header and its costs by the cells under the COST header. Double clicking or highlighting a cell will show the formula. You'll notice that formulas start with an equals sign, followed by the calculation or operation. 
+Có những trường hợp mà một ô phụ thuộc vào giá trị của các ô khác để tạo ra giá trị của nó. Bảng tính Inventory List theo dõi chi phí của mọi mặt hàng trong kho của nó, nhưng nếu chúng ta cần biết giá trị của mọi thứ trong kho thì sao? [**Công thức**](https://support.microsoft.com/en-us/office/overview-of-formulas-34519a4e-1e8d-4f4b-84d4-d642c4f63263) thực hiện các hành động trên dữ liệu ô và được sử dụng để tính chi phí của kho trong ví dụ này. Bảng tính này sử dụng một công thức trong cột Inventory Value để tính giá trị của từng mặt hàng bằng cách nhân số lượng dưới tiêu đề QTY và chi phí của nó với các ô dưới tiêu đề COST. Nhấp đúp hoặc tô sáng một ô sẽ hiển thị công thức. Bạn sẽ nhận thấy rằng các công thức bắt đầu bằng dấu bằng, theo sau là phép tính hoặc phép toán. 
 
-![A highlighted function from an example inventory list in Microsoft Excel](images/function-excel.png)
+![A highlighted function from an example inventory list in Microsoft Excel](https://github.com/hoanglong8/Microsoft-DS-for-beginners/raw/main/2-Working-With-Data/06-non-relational/images/function-excel.png)
 
-We can use another formula to add all the values of Inventory Value together to get its total value. This could be calculated by adding each cell to generate the sum, but that can be a tedious task. Excel has [**functions**](https://support.microsoft.com/en-us/office/sum-function-043e1c7d-7726-4e80-8f32-07b23e057f89), or predefined formulas to perform calculations on cell values. Functions require arguments, which are the required values used to perform these calculations. When functions require more than one argument, they will need to be listed in a particular order or the function may not calculate the correct value. This example uses the SUM function, and uses the values of on Inventory Value as the argument to add generate the total listed under row 3, column B (also referred to as B3).
+Chúng ta có thể sử dụng một công thức khác để cộng tất cả các giá trị của Inventory Value lại với nhau để có được tổng giá trị của nó. Điều này có thể được tính bằng cách cộng từng ô để tạo tổng, nhưng đó có thể là một nhiệm vụ tẻ nhạt. Excel có [**các hàm**](https://support.microsoft.com/en-us/office/sum-function-043e1c7d-7726-4e80-8f32-07b23e057f89), hoặc các công thức được xác định trước để thực hiện các phép tính trên các giá trị ô. Các hàm yêu cầu các đối số, là các giá trị bắt buộc được sử dụng để thực hiện các phép tính này. Khi các hàm yêu cầu nhiều hơn một đối số, chúng sẽ cần được liệt kê theo một thứ tự cụ thể hoặc hàm có thể không tính toán được giá trị chính xác. Ví dụ này sử dụng hàm SUM và sử dụng các giá trị của Inventory Value làm đối số để thêm tạo tổng được liệt kê dưới hàng 3, cột B (còn được gọi là B3).
 
 ## NoSQL
 
-NoSQL is an umbrella term for the different ways to store non-relational data and can be interpreted as "non-SQL", "non-relational" or  "not only SQL". These type of database systems can be categorized into 4 types.
+NoSQL là thuật ngữ chung cho các cách khác nhau để lưu trữ dữ liệu phi quan hệ và có thể được hiểu là "phi SQL", "phi quan hệ" hoặc "không chỉ SQL". Các hệ thống cơ sở dữ liệu loại này có thể được phân loại thành 4 loại:
 
-![Graphical representation of a key-value data store showing 4 unique numerical keys that are associated with 4 various values](images/kv-db.png)
-> Source from [Michał Białecki Blog](https://www.michalbialecki.com/2018/03/18/azure-cosmos-db-key-value-database-cloud/)
+![Graphical representation of a key-value data store showing 4 unique numerical keys that are associated with 4 various values](https://github.com/hoanglong8/Microsoft-DS-for-beginners/raw/main/2-Working-With-Data/06-non-relational/images/kv-db.png)
 
-[Key-value](https://docs.microsoft.com/en-us/azure/architecture/data-guide/big-data/non-relational-data#keyvalue-data-stores) databases pair unique keys, which are a unique identifier associated with a value. These pairs are stored using a [hash table](https://www.hackerearth.com/practice/data-structures/hash-tables/basics-of-hash-tables/tutorial/) with an appropriate hashing function.
+> Nguồn: [Michał Białecki Blog](https://www.michalbialecki.com/2018/03/18/azure-cosmos-db-key-value-database-cloud/)
 
+[Key-value (dạng khóa - giá trị)](https://docs.microsoft.com/en-us/azure/architecture/data-guide/big-data/non-relational-data#keyvalue-data-stores) ghép cặp các khóa duy nhất, là một mã định danh duy nhất được liên kết với một giá trị. Các cặp này được lưu trữ bằng [hash table (bảng băm)](https://www.hackerearth.com/practice/data-structures/hash-tables/basics-of-hash-tables/tutorial/) có hàm băm thích hợp.
 
-![Graphical representation of a graph data store showing the relationships between people, their interests and locations](images/graph-db.png)
+![Graphical representation of a graph data store showing the relationships between people, their interests and locations](https://github.com/hoanglong8/Microsoft-DS-for-beginners/raw/main/2-Working-With-Data/06-non-relational/images/graph-db.png)
+
 > Source from [Microsoft](https://docs.microsoft.com/en-us/azure/cosmos-db/graph/graph-introduction#graph-database-by-example)
 
 [Graph](https://docs.microsoft.com/en-us/azure/architecture/data-guide/big-data/non-relational-data#graph-data-stores) databases describe relationships in data and are represented as a collection of nodes and edges. A node represents an entity, something that exists in the real world such as a student or bank statement. Edges represent the relationship between two entities  Each node and edge have properties that provides additional information about each node and edges.
