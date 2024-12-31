@@ -131,7 +131,7 @@ Sau đây là một số thao tác quan trọng nhất mà chúng ta có thể t
 
 **Filtering** một số hàng nhất định theo tiêu chí. Ví dụ, để chỉ để lại các hàng có `cột A` lớn hơn 5, chúng ta có thể viết `df[df['A']>5]`.
 
-> **Lưu ý:** Cách thức hoạt động của bộ lọc như sau: Biểu thức df['A']<5trả về một chuỗi boolean, biểu thị liệu biểu thức là Truehay Falsecho từng phần tử của chuỗi gốc df['A']. Khi chuỗi boolean được sử dụng làm chỉ mục, nó trả về tập hợp con của các hàng trong DataFrame. Do đó, không thể sử dụng biểu thức boolean Python tùy ý, ví dụ, viết df[df['A']>5 and df['A']<7]sẽ là sai. Thay vào đó, bạn nên sử dụng &thao tác đặc biệt trên chuỗi boolean, viết df[(df['A']>5) & (df['A']<7)]( dấu ngoặc vuông rất quan trọng ở đây ).
+> **Lưu ý:** Cách thức hoạt động của bộ lọc như sau: Biểu thức `df['A']<5` trả về một chuỗi boolean, biểu thị liệu biểu thức là `True` hay `False` cho từng phần tử của chuỗi gốc `df['A']`. Khi chuỗi boolean được sử dụng làm chỉ mục, nó trả về tập hợp con của các hàng trong DataFrame. Do đó, không thể sử dụng biểu thức boolean Python tùy ý, ví dụ, viết `df[df['A']>5 and df['A']<7]` sẽ là sai. Thay vào đó, bạn nên sử dụng `&` thao tác đặc biệt trên chuỗi boolean, viết `df[(df['A']>5) & (df['A']<7)]` (dấu ngoặc vuông rất quan trọng ở đây).
 
 **Creating new computable columns**. We can easily create new computable columns for our DataFrame by using intuitive expression like this:
 ```python
