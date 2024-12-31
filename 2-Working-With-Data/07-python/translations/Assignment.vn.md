@@ -13,10 +13,10 @@ Trong bài tập này, chúng tôi sẽ yêu cầu bạn trình bày chi tiết 
 
 - [ ] Xây dựng ma trận đồng hiện diện (co-occurrence) của các loại thuốc khác nhau và xem loại thuốc nào thường xuất hiện cùng nhau (tức là được đề cập trong một bản tóm tắt). Bạn có thể sửa đổi mã để xây dựng ma trận đồng hiện cho thuốc và chẩn đoán.
 - [ ] Trực quan hóa ma trận này bằng bản đồ nhiệt.
-- [ ] Để đạt được mục tiêu mở rộng, hãy hình dung sự đồng thời của các loại thuốc bằng cách sử dụng [chord diagram](https://en.wikipedia.org/wiki/Chord_diagram). [This library](https://pypi.org/project/chord/) có thể giúp bạn vẽ sơ đồ hợp âm.
+- [ ] Để đạt được mục tiêu mở rộng, hãy hình dung sự đồng thời của các loại thuốc bằng cách sử dụng [chord diagram](https://en.wikipedia.org/wiki/Chord_diagram). [Thư viện này](https://pypi.org/project/chord/) có thể giúp bạn vẽ sơ đồ hợp âm.
 - [ ] Một mục tiêu mở rộng khác là trích xuất liều lượng của các loại thuốc khác nhau (chẳng hạn như **400mg** trong _400mg chloroquine mỗi ngày_) bằng cách sử dụng biểu thức chính quy và xây dựng khung dữ liệu hiển thị liều lượng khác nhau cho các loại thuốc khác nhau. **Lưu ý :** hãy xem xét các giá trị số gần với tên thuốc.
 
-## Rubric
+## Rubric - Thang điểm đánh giá
 
 Exemplary - Mẫu mực | Adequate - Đạt yêu cầu | Needs Improvement - Cẩn cải thiện
 --- | --- | -- |
