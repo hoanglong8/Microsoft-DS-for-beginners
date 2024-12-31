@@ -38,15 +38,15 @@ NoSQL là thuật ngữ chung cho các cách khác nhau để lưu trữ dữ li
 
 ![Graphical representation of a key-value data store showing 4 unique numerical keys that are associated with 4 various values](https://github.com/hoanglong8/Microsoft-DS-for-beginners/raw/main/2-Working-With-Data/06-non-relational/images/kv-db.png)
 
-> Nguồn: [Michał Białecki Blog](https://www.michalbialecki.com/2018/03/18/azure-cosmos-db-key-value-database-cloud/)
+> Minh họa key - value: [Michał Białecki Blog](https://www.michalbialecki.com/2018/03/18/azure-cosmos-db-key-value-database-cloud/)
 
-[Key-value (dạng khóa - giá trị)](https://docs.microsoft.com/en-us/azure/architecture/data-guide/big-data/non-relational-data#keyvalue-data-stores) ghép cặp các khóa duy nhất, là một mã định danh duy nhất được liên kết với một giá trị. Các cặp này được lưu trữ bằng [hash table (bảng băm)](https://www.hackerearth.com/practice/data-structures/hash-tables/basics-of-hash-tables/tutorial/) có hàm băm thích hợp.
+* [Key-value (dạng khóa - giá trị)](https://docs.microsoft.com/en-us/azure/architecture/data-guide/big-data/non-relational-data#keyvalue-data-stores) ghép cặp các khóa duy nhất, là một mã định danh duy nhất được liên kết với một giá trị. Các cặp này được lưu trữ bằng [hash table (bảng băm)](https://www.hackerearth.com/practice/data-structures/hash-tables/basics-of-hash-tables/tutorial/) có hàm băm thích hợp.
 
 ![Graphical representation of a graph data store showing the relationships between people, their interests and locations](https://github.com/hoanglong8/Microsoft-DS-for-beginners/raw/main/2-Working-With-Data/06-non-relational/images/graph-db.png)
 
-> Source from [Microsoft](https://docs.microsoft.com/en-us/azure/cosmos-db/graph/graph-introduction#graph-database-by-example)
+> Minh họa graph [Microsoft](https://docs.microsoft.com/en-us/azure/cosmos-db/graph/graph-introduction#graph-database-by-example)
 
-[Graph](https://docs.microsoft.com/en-us/azure/architecture/data-guide/big-data/non-relational-data#graph-data-stores) databases describe relationships in data and are represented as a collection of nodes and edges. A node represents an entity, something that exists in the real world such as a student or bank statement. Edges represent the relationship between two entities  Each node and edge have properties that provides additional information about each node and edges.
+* [Graph (dạng đồ thị)](https://docs.microsoft.com/en-us/azure/architecture/data-guide/big-data/non-relational-data#graph-data-stores) mô tả các mối quan hệ trong dữ liệu và được biểu diễn dưới dạng tập hợp các nút và đoạn nối (edge). Một nút biểu diễn một thực thể, một thứ tồn tại trong thế giới thực như sao kê của sinh viên hoặc ngân hàng. Các đoạn nối biểu diễn mối quan hệ giữa hai thực thể.
 
 ![Graphical representation of a columnar data store showing a customer database with two column families named Identity and Contact Info](images/columnar-db.png)
 
