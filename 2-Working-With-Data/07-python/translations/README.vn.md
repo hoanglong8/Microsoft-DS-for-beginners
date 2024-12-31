@@ -1,47 +1,45 @@
+# Working with Data: Python và thư viện Pandas, Numpy...
 
-# Working with Data: Python and the Pandas Library
-
-| ![ Sketchnote by [(@sketchthedocs)](https://sketchthedocs.dev) ](../../sketchnotes/07-WorkWithPython.png) |
+![Sketchnote by [(@sketchthedocs)](https://sketchthedocs.dev)](https://github.com/hoanglong8/Microsoft-DS-for-beginners/raw/main/sketchnotes/07-WorkWithPython.png)
 | :-------------------------------------------------------------------------------------------------------: |
 |                 Working With Python - _Sketchnote by [@nitya](https://twitter.com/nitya)_                 |
 
-[![Intro Video](images/video-ds-python.png)](https://youtu.be/dZjWOGbsN4Y)
+[![Intro Video](https://github.com/hoanglong8/Microsoft-DS-for-beginners/raw/main/2-Working-With-Data/07-python/images/video-ds-python.png)](https://youtu.be/dZjWOGbsN4Y)
 
-While databases offer very efficient ways to store data and query them using query languages, the most flexible way of data processing is writing your own program to manipulate data. In many cases, doing a database query would be a more effective way. However in some cases when more complex data processing is needed, it cannot be done easily using SQL. 
-Data processing can be programmed in any programming language, but there are certain languages that are higher level with respect to working with data. Data scientists typically prefer one of the following languages:
+Trong khi cơ sở dữ liệu cung cấp những cách rất hiệu quả để lưu trữ dữ liệu và truy vấn chúng bằng ngôn ngữ truy vấn, cách xử lý dữ liệu linh hoạt nhất là viết chương trình của riêng bạn để thao tác dữ liệu. Trong nhiều trường hợp, thực hiện truy vấn cơ sở dữ liệu sẽ là cách hiệu quả hơn. Tuy nhiên, trong một số trường hợp khi cần xử lý dữ liệu phức tạp hơn, không thể thực hiện dễ dàng bằng SQL. Xử lý dữ liệu có thể được lập trình bằng bất kỳ ngôn ngữ lập trình nào, nhưng có một số ngôn ngữ ở cấp độ cao hơn về mặt làm việc với dữ liệu. Các nhà khoa học dữ liệu thường thích một trong các ngôn ngữ sau:
 
-* **[Python](https://www.python.org/)**, a general-purpose programming language, which is often considered one of the best options for beginners due to its simplicity. Python has a lot of additional libraries that can help you solve many practical problems, such as extracting your data from ZIP archive, or converting picture to grayscale. In addition to data science, Python is also often used for web development. 
-* **[R](https://www.r-project.org/)** is a traditional toolbox developed with statistical data processing in mind. It also contains large repository of libraries (CRAN), making it a good choice for data processing. However, R is not a general-purpose programming language, and is rarely used outside of data science domain.
-* **[Julia](https://julialang.org/)** is another language developed specifically for data science. It is intended to give better performance than Python, making it a great tool for scientific experimentation.
+* **[Python](https://www.python.org/)**, một ngôn ngữ lập trình đa năng, thường được coi là một trong những lựa chọn tốt nhất cho người mới bắt đầu vì tính đơn giản của nó. Python có rất nhiều thư viện bổ sung có thể giúp bạn giải quyết nhiều vấn đề thực tế, chẳng hạn như trích xuất dữ liệu từ tệp ZIP hoặc chuyển đổi hình ảnh sang thang độ xám. Ngoài khoa học dữ liệu, Python cũng thường được sử dụng để phát triển web. 
+* **[R](https://www.r-project.org/)** là một hộp công cụ truyền thống được phát triển với mục đích xử lý dữ liệu thống kê. Nó cũng chứa kho thư viện lớn (CRAN), khiến nó trở thành lựa chọn tốt cho xử lý dữ liệu. Tuy nhiên, R không phải là ngôn ngữ lập trình mục đích chung và hiếm khi được sử dụng bên ngoài phạm vi khoa học dữ liệu.
+* **[Julia](https://julialang.org/)** là một ngôn ngữ khác được phát triển dành riêng cho khoa học dữ liệu. Ngôn ngữ này có mục đích mang lại hiệu suất tốt hơn Python, khiến nó trở thành một công cụ tuyệt vời cho thử nghiệm khoa học.
 
-In this lesson, we will focus on using Python for simple data processing. We will assume basic familiarity with the language. If you want a deeper tour of Python, you can refer to one of the following resources:
+Trong bài học này, chúng ta sẽ tập trung vào việc sử dụng Python để xử lý dữ liệu đơn giản. Chúng ta sẽ giả định rằng bạn đã quen thuộc cơ bản với ngôn ngữ này. Nếu bạn muốn tìm hiểu sâu hơn về Python, bạn có thể tham khảo một trong các tài nguyên sau:
 
-* [Learn Python in a Fun Way with Turtle Graphics and Fractals](https://github.com/shwars/pycourse) - GitHub-based quick intro course into Python Programming
-* [Take your First Steps with Python](https://docs.microsoft.com/en-us/learn/paths/python-first-steps/?WT.mc_id=academic-77958-bethanycheum) Learning Path on [Microsoft Learn](http://learn.microsoft.com/?WT.mc_id=academic-77958-bethanycheum)
+* [Học Python theo cách thú vị với Turtle Graphics và Fractals](https://github.com/shwars/pycourse) - Khóa học giới thiệu nhanh về Lập trình Python trên GitHub
+* [Take your First Steps with Python](https://docs.microsoft.com/en-us/learn/paths/python-first-steps/?WT.mc_id=academic-77958-bethanycheum) Học trên [Microsoft Learn](http://learn.microsoft.com/?WT.mc_id=academic-77958-bethanycheum)
 
-Data can come in many forms. In this lesson, we will consider three forms of data - **tabular data**, **text** and **images**.
+Dữ liệu có thể có nhiều dạng. Trong bài học này, chúng ta sẽ xem xét ba dạng dữ liệu - dữ liệu **dạng bảng (tabular), văn bản và hình ảnh** .
 
-We will focus on a few examples of data processing, instead of giving you full overview of all related libraries. This would allow you to get the main idea of what's possible, and leave you with understanding on where to find solutions to your problems when you need them.
+Chúng tôi sẽ tập trung vào một số ví dụ về xử lý dữ liệu, thay vì cung cấp cho bạn tổng quan đầy đủ về tất cả các thư viện liên quan. Điều này sẽ cho phép bạn có được ý tưởng chính về những gì có thể và giúp bạn hiểu được nơi tìm giải pháp cho các vấn đề của mình khi bạn cần.
 
-> **Most useful advice**. When you need to perform certain operation on data that you do not know how to do, try searching for it in the internet. [Stackoverflow](https://stackoverflow.com/) usually contains a lot of useful code sample in Python for many typical tasks. 
+> **Most useful advice**. Khi bạn cần thực hiện một số thao tác trên dữ liệu mà bạn không biết cách thực hiện, hãy thử tìm kiếm trên internet. [Stackoverflow](https://stackoverflow.com/) thường chứa rất nhiều mẫu mã hữu ích bằng Python cho nhiều tác vụ thông thường. 
 
 
 
 ## [Pre-lecture quiz](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/12)
 
-## Tabular Data and Dataframes
+## Tabular Data and Dataframes (Dữ liệu dạng bảng và mảng dữ liệu)
 
-You have already met tabular data when we talked about relational databases. When you have a lot of data, and it is contained in many different linked tables, it definitely makes sense to use SQL for working with it. However, there are many cases when we have a table of data, and we need to gain some **understanding** or **insights** about this data, such as the distribution, correlation between values, etc. In data science, there are a lot of cases when we need to perform some transformations of the original data, followed by visualization. Both those steps can be easily done using Python.
+Bạn đã gặp dữ liệu dạng bảng khi chúng ta nói về cơ sở dữ liệu quan hệ. Khi bạn có nhiều dữ liệu và dữ liệu đó được chứa trong nhiều bảng được liên kết khác nhau, thì việc sử dụng SQL để làm việc với dữ liệu đó chắc chắn là hợp lý. Tuy nhiên, có nhiều trường hợp khi chúng ta có một bảng dữ liệu và chúng ta cần có được một số **hiểu sơ** hoặc **hiểu sâu** về dữ liệu này, chẳng hạn như phân phối, tương quan giữa các giá trị, v.v. Trong khoa học dữ liệu, có rất nhiều trường hợp khi chúng ta cần thực hiện một số phép biến đổi dữ liệu gốc, sau đó là trực quan hóa. Cả hai bước đó đều có thể dễ dàng thực hiện bằng Python.
 
-There are two most useful libraries in Python that can help you deal with tabular data:
-* **[Pandas](https://pandas.pydata.org/)** allows you to manipulate so-called **Dataframes**, which are analogous to relational tables. You can have named columns, and perform different operations on row, columns and dataframes in general. 
-* **[Numpy](https://numpy.org/)** is a library for working with **tensors**, i.e. multi-dimensional **arrays**. Array has values of the same underlying type, and it is simpler than dataframe, but it offers more mathematical operations, and creates less overhead.
+Có hai thư viện hữu ích nhất trong Python có thể giúp bạn xử lý dữ liệu dạng bảng:
+* **[Pandas](https://pandas.pydata.org/)** cho phép bạn thao tác với **các Dataframes**, tương tự như các bảng dạng quan hệ SQL. Bạn có thể có các cột được đặt tên và thực hiện các thao tác khác nhau trên hàng, cột và khung dữ liệu nói chung. 
+* **[Numpy](https://numpy.org/)** là một thư viện để làm việc với **các Tensors**, tức là mảng đa chiều. Mảng có các giá trị cùng kiểu cơ bản và đơn giản hơn khung dữ liệu, nhưng cung cấp nhiều phép toán hơn và tạo ra ít chi phí hơn.
 
-There are also a couple of other libraries you should know about:
-* **[Matplotlib](https://matplotlib.org/)** is a library used for data visualization and plotting graphs
-* **[SciPy](https://www.scipy.org/)** is a library with some additional scientific functions. We have already come across this library when talking about probability and statistics
+Ngoài ra còn có một số thư viện khác mà bạn nên biết:
+* **[Matplotlib](https://matplotlib.org/)** là một thư viện được sử dụng để trực quan hóa dữ liệu và vẽ đồ thị
+* **[SciPy](https://www.scipy.org/)** là một thư viện có một số chức năng khoa học bổ sung. Chúng ta đã gặp thư viện này khi nói về xác suất và thống kê.
 
-Here is a piece of code that you would typically use to import those libraries in the beginning of your Python program:
+Sau đây là một đoạn mã mà bạn thường sử dụng để nhập các thư viện đó vào đầu chương trình Python của mình:
 ```python
 import numpy as np
 import pandas as pd
@@ -49,15 +47,15 @@ import matplotlib.pyplot as plt
 from scipy import ... # you need to specify exact sub-packages that you need
 ``` 
 
-Pandas is centered around a few basic concepts.
+Pandas tập trung vào một số khái niệm cơ bản sau:
 
-### Series 
+**1.Series - Chuỗi**
 
-**Series** is a sequence of values, similar to a list or numpy array. The main difference is that series also has an **index**, and when we operate on series (eg., add them), the index is taken into account. Index can be as simple as integer row number (it is the index used by default when creating a series from list or array), or it can have a complex structure, such as date interval.
+**Series** là một chuỗi các giá trị, tương tự như một danh sách hoặc mảng numpy. Sự khác biệt chính là series cũng có một chỉ mục và khi chúng ta thao tác trên series (ví dụ: thêm), chỉ mục sẽ được tính đến. Index có thể đơn giản như số hàng nguyên (đây là chỉ mục được sử dụng theo mặc định khi tạo một series từ danh sách hoặc mảng) hoặc có thể có cấu trúc phức tạp, chẳng hạn như khoảng thời gian ngày.
 
-> **Note**: There is some introductory Pandas code in the accompanying notebook [`notebook.ipynb`](notebook.ipynb). We only outline some the examples here, and you are definitely welcome to check out the full notebook.
+> **Note**: Có một số mã Pandas giới thiệu trong sổ tay [`notebook.ipynb`](notebook.ipynb). Chúng tôi chỉ phác thảo một số ví dụ ở đây và bạn chắc chắn được chào đón để xem sổ tay đầy đủ.
 
-Consider an example: we want to analyze sales of our ice-cream spot. Let's generate a series of sales numbers (number of items sold each day) for some time period:
+Hãy xem xét một ví dụ: chúng ta muốn phân tích doanh số bán hàng của cửa hàng kem. Hãy tạo một loạt số liệu bán hàng (số mặt hàng được bán mỗi ngày) trong một khoảng thời gian nào đó:
 
 ```python
 start_date = "Jan 1, 2020"
@@ -67,47 +65,47 @@ print(f"Length of index is {len(idx)}")
 items_sold = pd.Series(np.random.randint(25,50,size=len(idx)),index=idx)
 items_sold.plot()
 ```
-![Time Series Plot](images/timeseries-1.png)
+![Time Series Plot](https://github.com/hoanglong8/Microsoft-DS-for-beginners/raw/main/2-Working-With-Data/07-python/images/timeseries-1.png)
 
-Now suppose that each week we are organizing a party for friends, and we take additional 10 packs of ice-cream for a party. We can create another series, indexed by week, to demonstrate that:
+Bây giờ giả sử rằng mỗi tuần chúng ta tổ chức một bữa tiệc cho bạn bè và chúng ta lấy thêm 10 gói kem cho bữa tiệc. Chúng ta có thể tạo một chuỗi khác, được lập chỉ mục theo tuần, để chứng minh rằng:
 ```python
 additional_items = pd.Series(10,index=pd.date_range(start_date,end_date,freq="W"))
 ```
-When we add two series together, we get total number:
+Khi chúng ta cộng hai dãy số lại với nhau, chúng ta sẽ có tổng số:
 ```python
 total_items = items_sold.add(additional_items,fill_value=0)
 total_items.plot()
 ```
-![Time Series Plot](images/timeseries-2.png)
+![Time Series Plot 2](https://github.com/hoanglong8/Microsoft-DS-for-beginners/raw/main/2-Working-With-Data/07-python/images/timeseries-2.png)
 
-> **Note** that we are not using simple syntax `total_items+additional_items`. If we did, we would have received a lot of `NaN` (*Not a Number*) values in the resulting series. This is because there are missing values for some of the index point in the `additional_items` series, and adding `Nan` to anything results in `NaN`. Thus we need to specify `fill_value` parameter during addition.
+> **Lưu ý** chúng ta không sử dụng cú pháp đơn giản `total_items+additional_items`. Nếu chúng ta làm vậy, chúng ta sẽ nhận được rất nhiều giá trị `NaN` (Not a Number) trong chuỗi kết quả. Điều này là do có một số giá trị bị thiếu cho một số điểm chỉ mục trong `additional_items` chuỗi và việc thêm `Nan` vào bất kỳ thứ gì sẽ dẫn đến `NaN`. Do đó, chúng ta cần chỉ định `fill_value` tham số trong quá trình cộng.
 
-With time series, we can also **resample** the series with different time intervals. For example, suppose we want to compute mean sales volume monthly. We can use the following code:
+Với chuỗi thời gian, chúng ta cũng có thể **lấy mẫu lại chuỗi (resample)** với các khoảng thời gian khác nhau. Ví dụ, giả sử chúng ta muốn tính khối lượng bán hàng trung bình hàng tháng. Chúng ta có thể sử dụng mã sau:
 ```python
 monthly = total_items.resample("1M").mean()
 ax = monthly.plot(kind='bar')
 ```
-![Monthly Time Series Averages](images/timeseries-3.png)
+![Monthly Time Series Averages](https://github.com/hoanglong8/Microsoft-DS-for-beginners/raw/main/2-Working-With-Data/07-python/images/timeseries-3.png)
 
 ### DataFrame
 
-A DataFrame is essentially a collection of series with the same index. We can combine several series together into a DataFrame:
+DataFrame về cơ bản là một tập hợp các chuỗi (Series) có cùng chỉ mục (Index). Chúng ta có thể kết hợp nhiều chuỗi lại với nhau thành một DataFrame:
 ```python
 a = pd.Series(range(1,10))
 b = pd.Series(["I","like","to","play","games","and","will","not","change"],index=range(0,9))
 df = pd.DataFrame([a,b])
 ```
-This will create a horizontal table like this:
+Thao tác này sẽ tạo ra một bảng nằm ngang như thế này:
 |     | 0   | 1    | 2   | 3   | 4      | 5   | 6      | 7    | 8    |
 | --- | --- | ---- | --- | --- | ------ | --- | ------ | ---- | ---- |
 | 0   | 1   | 2    | 3   | 4   | 5      | 6   | 7      | 8    | 9    |
 | 1   | I   | like | to  | use | Python | and | Pandas | very | much |
 
-We can also use Series as columns, and specify column names using dictionary:
+Chúng ta cũng có thể sử dụng Series làm cột và chỉ định tên cột bằng lệnh sau:
 ```python
 df = pd.DataFrame({ 'A' : a, 'B' : b })
 ```
-This will give us a table like this:
+Lệnh này sẽ cho chúng ta một bảng như thế này:
 
 |     | A   | B      |
 | --- | --- | ------ |
@@ -121,19 +119,19 @@ This will give us a table like this:
 | 7   | 8   | very   |
 | 8   | 9   | much   |
 
-**Note** that we can also get this table layout by transposing the previous table, eg. by writing 
+**Lưu ý** chúng ta cũng có thể có được bố cục bảng này bằng cách chuyển vị bảng trước đó, ví dụ bằng lệnh sau:
 ```python
 df = pd.DataFrame([a,b]).T..rename(columns={ 0 : 'A', 1 : 'B' })
 ```
-Here `.T` means the operation of transposing the DataFrame, i.e. changing rows and columns, and `rename` operation allows us to rename columns to match the previous example.
+Ở đây `.T` có nghĩa là thao tác chuyển vị DataFrame, tức là thay đổi hàng và cột, và `rename` thao tác này cho phép chúng ta đổi tên các cột để phù hợp với ví dụ trước.
 
-Here are a few most important operations we can perform on DataFrames:
+Sau đây là một số thao tác quan trọng nhất mà chúng ta có thể thực hiện trên DataFrame:
 
-**Column selection**. We can select individual columns by writing `df['A']` - this operation returns a Series. We can also select a subset of columns into another DataFrame by writing `df[['B','A']]` - this return another DataFrame.
+**Column selection** Chúng ta có thể chọn từng cột bằng cách viết `df['A']` - thao tác này trả về một Series. Chúng ta cũng có thể chọn một tập hợp con các cột vào một DataFrame khác bằng cách viết `df[['B','A']]` - thao tác này trả về một DataFrame khác.
 
-**Filtering** only certain rows by criteria. For example, to leave only rows with column `A` greater than 5, we can write `df[df['A']>5]`.
+**Filtering** một số hàng nhất định theo tiêu chí. Ví dụ, để chỉ để lại các hàng có `cột A` lớn hơn 5, chúng ta có thể viết `df[df['A']>5]`.
 
-> **Note**: The way filtering works is the following. The expression `df['A']<5` returns a boolean series, which indicates whether expression is `True` or `False` for each element of the original series `df['A']`. When boolean series is used as an index, it returns subset of rows in the DataFrame. Thus it is not possible to use arbitrary Python boolean expression, for example, writing `df[df['A']>5 and df['A']<7]` would be wrong. Instead, you should use special `&` operation on boolean series, writing `df[(df['A']>5) & (df['A']<7)]` (*brackets are important here*).
+> **Lưu ý:** Cách thức hoạt động của bộ lọc như sau: Biểu thức df['A']<5trả về một chuỗi boolean, biểu thị liệu biểu thức là Truehay Falsecho từng phần tử của chuỗi gốc df['A']. Khi chuỗi boolean được sử dụng làm chỉ mục, nó trả về tập hợp con của các hàng trong DataFrame. Do đó, không thể sử dụng biểu thức boolean Python tùy ý, ví dụ, viết df[df['A']>5 and df['A']<7]sẽ là sai. Thay vào đó, bạn nên sử dụng &thao tác đặc biệt trên chuỗi boolean, viết df[(df['A']>5) & (df['A']<7)]( dấu ngoặc vuông rất quan trọng ở đây ).
 
 **Creating new computable columns**. We can easily create new computable columns for our DataFrame by using intuitive expression like this:
 ```python
