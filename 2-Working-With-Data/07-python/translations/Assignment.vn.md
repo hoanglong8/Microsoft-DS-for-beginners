@@ -1,31 +1,23 @@
-# Assignment: Data Science Scenarios
+# Assignment for Data Processing in Python
 
-In this first assignment, we ask you to think about some real-life process or problem in different problem domains, and how you can improve it using the Data Science process. Think about the following:
+In this assignment, we will ask you to elaborate on the code we have started developing in our challenges. The assignment consists of two parts:
 
-1. Which data can you collect?
-1. How would you collect it?
-1. How would you store the data? How large the data is likely to be?
-1. Which insights you might be able to get from this data? Which decisions we would be able to take based on the data?
+## COVID-19 Spread Modelling
 
-Try to think about 3 different problems/processes and describe each of the points above for each problem domain.
+ - [ ] Plot *R<sub>t</sub>* graphs for 5-6 different countries on one plot for comparison, or using several plots side-by-side
+ - [ ] See how the number of deaths and recoveries correlate with number of infected cases.
+ - [ ] Find out how long a typical disease lasts by visually correlating infection rate and deaths rate and looking for some anomalies. You may need to look at different countries to find that out.
+ - [ ] Calculate the fatality rate and how it changes over time. *You may want to take into account the length of the disease in days to shift one time series before doing calculations*
 
-Here are some of the problem domains and problems that can get you started thinking:
+## COVID-19 Papers Analysis
 
-1. How can you use data to improve education process for children in schools?
-1. How can you use data to control vaccination during the pandemic?
-1. How can you use data to make sure you are being productive at work?
-## Instructions
-
-Fill in the following table (substitute suggested problem domains for your own ones if needed):
-
-| Problem Domain | Problem | Which data to collect | How to store the data | Which insights/decisions we can make | 
-|----------------|---------|-----------------------|-----------------------|--------------------------------------|
-| Education | | | | |
-| Vaccination | | | | |
-| Productivity | | | | |
+- [ ] Build co-occurrence matrix of different medications, and see which medications often occur together (i.e. mentioned in one abstract). You can modify the code for building co-occurrence matrix for medications and diagnoses.
+- [ ] Visualize this matrix using heatmap.
+- [ ] As a stretch goal, visualize the co-occurrence of medications using [chord diagram](https://en.wikipedia.org/wiki/Chord_diagram). [This library](https://pypi.org/project/chord/) may help you draw a chord diagram.
+- [ ] As another stretch goal, extract dosages of different medications (such as **400mg** in *take 400mg of chloroquine daily*) using regular expressions, and build dataframe that shows different dosages for different medications. **Note**: consider numeric values that are in close textual vicinity of the medicine name.
 
 ## Rubric
 
 Exemplary | Adequate | Needs Improvement
 --- | --- | -- |
-One was able to identify reasonable data sources, ways of storing data and possible decisions/insights for all problem domains | Some of the aspects of the solution are not detailed, data storage is not discussed, at least 2 problem domains are described | Only parts of the data solution are described, only one problem domain is considered.
+All tasks are complete, graphically illustrated and explained, including at least one of two stretch goals | More than 5 tasks are complete, no stretch goals are attempted, or the results are not clear | Less than 5 (but more than 3) tasks are complete, visualizations do not help to demonstrate the point
