@@ -133,25 +133,25 @@ Sau đây là một số thao tác quan trọng nhất mà chúng ta có thể t
 
 > **Lưu ý:** Cách thức hoạt động của bộ lọc như sau: Biểu thức `df['A']<5` trả về một chuỗi boolean, biểu thị liệu biểu thức là `True` hay `False` cho từng phần tử của chuỗi gốc `df['A']`. Khi chuỗi boolean được sử dụng làm chỉ mục, nó trả về tập hợp con của các hàng trong DataFrame. Do đó, không thể sử dụng biểu thức boolean Python tùy ý, ví dụ, viết `df[df['A']>5 and df['A']<7]` sẽ là sai. Thay vào đó, bạn nên sử dụng `&` thao tác đặc biệt trên chuỗi boolean, viết `df[(df['A']>5) & (df['A']<7)]` (dấu ngoặc vuông rất quan trọng ở đây).
 
-**Creating new computable columns**. We can easily create new computable columns for our DataFrame by using intuitive expression like this:
+**Tạo các cột tính toán mới.** Chúng ta có thể dễ dàng tạo các cột tính toán mới cho DataFrame của mình bằng cách sử dụng biểu thức trực quan như sau:
 ```python
 df['DivA'] = df['A']-df['A'].mean() 
 ``` 
-This example calculates divergence of A from its mean value. What actually happens here is we are computing a series, and then assigning this series to the left-hand-side, creating another column. Thus, we cannot use any operations that are not compatible with series, for example, the code below is wrong:
+Ví dụ này tính độ phân kỳ của A từ giá trị trung bình của nó. Điều thực sự xảy ra ở đây là chúng ta đang tính toán một chuỗi, sau đó gán chuỗi này cho vế trái, tạo ra một cột khác. Do đó, chúng ta không thể sử dụng bất kỳ phép toán nào không tương thích với chuỗi, ví dụ, mã bên dưới là sai:
 ```python
 # Wrong code -> df['ADescr'] = "Low" if df['A'] < 5 else "Hi"
 df['LenB'] = len(df['B']) # <- Wrong result
 ``` 
-The latter example, while being syntactically correct, gives us wrong result, because it assigns the length of series `B` to all values in the column, and not the length of individual elements as we intended.
+Ví dụ sau, mặc dù đúng về mặt cú pháp, nhưng lại cho chúng ta kết quả sai vì nó gán độ dài của chuỗi Bcho tất cả các giá trị trong cột, chứ không phải độ dài của từng phần tử như chúng ta mong muốn.
 
-If we need to compute complex expressions like this, we can use `apply` function. The last example can be written as follows:
+Nếu chúng ta cần tính toán các biểu thức phức tạp như thế này, chúng ta có thể sử dụng applyhàm. Ví dụ cuối cùng có thể được viết như sau:
 ```python
 df['LenB'] = df['B'].apply(lambda x : len(x))
 # or 
 df['LenB'] = df['B'].apply(len)
 ```
 
-After operations above, we will end up with the following DataFrame:
+Sau khi thực hiện các thao tác trên, chúng ta sẽ có được DataFrame sau:
 
 |     | A   | B      | DivA | LenB |
 | --- | --- | ------ | ---- | ---- |
@@ -165,22 +165,22 @@ After operations above, we will end up with the following DataFrame:
 | 7   | 8   | very   | 3.0  | 4    |
 | 8   | 9   | much   | 4.0  | 4    |
 
-**Selecting rows based on numbers** can be done using `iloc` construct. For example, to select first 5 rows from the DataFrame:
+**Lựa chọn hàng bất kỳ dựa trên số dòng của nó** có thể được thực hiện bằng cách sử dụng hàm `iloc`. Ví dụ, để chọn 5 hàng đầu tiên từ DataFrame:
 ```python
 df.iloc[:5]
 ```
 
-**Grouping** is often used to get a result similar to *pivot tables* in Excel. Suppose that we want to compute mean value of column `A` for each given number of `LenB`. Then we can group our DataFrame by `LenB`, and call `mean`:
+**Grouping** thường được sử dụng để có được kết quả tương tự như bảng trục trong Excel. Giả sử chúng ta muốn tính giá trị trung bình của `cột A` cho mỗi số đã cho của `LenB`. Sau đó, chúng ta có thể nhóm DataFrame của mình theo `LenB`, và gọi `mean`:
 ```python
 df.groupby(by='LenB').mean()
 ```
-If we need to compute mean and the number of elements in the group, then we can use more complex `aggregate` function:
+Nếu chúng ta cần tính giá trị trung bình và số phần tử trong nhóm, thì chúng ta có thể sử dụng hàm `aggregate` phức tạp hơn:
 ```python
 df.groupby(by='LenB') \
  .aggregate({ 'DivA' : len, 'A' : lambda x: x.mean() }) \
  .rename(columns={ 'DivA' : 'Count', 'A' : 'Mean'})
 ```
-This gives us the following table:
+Lệnh này sẽ cho chúng ta bảng sau:
 
 | LenB | Count | Mean     |
 | ---- | ----- | -------- |
@@ -190,78 +190,77 @@ This gives us the following table:
 | 4    | 3     | 6.333333 |
 | 6    | 2     | 6.000000 |
 
-### Getting Data
+### Getting Data - Đọc dữ liệu
 
-We have seen how easy it is to construct Series and DataFrames from Python objects. However, data usually comes in the form of a text file, or an Excel table. Luckily, Pandas offers us a simple way to load data from disk. For example, reading CSV file is as simple as this:
+Chúng ta đã thấy việc xây dựng Series và DataFrames từ các đối tượng Python dễ dàng như thế nào. Tuy nhiên, dữ liệu thường ở dạng tệp văn bản hoặc bảng Excel. May mắn thay, Pandas cung cấp cho chúng ta một cách đơn giản để tải dữ liệu từ đĩa. Ví dụ, đọc tệp CSV đơn giản như sau:
 ```python
 df = pd.read_csv('file.csv')
 ```
-We will see more examples of loading data, including fetching it from external web sites, in the "Challenge" section
+Chúng ta sẽ thấy nhiều ví dụ hơn về việc tải dữ liệu, bao gồm cả việc lấy dữ liệu từ các trang web bên ngoài, trong phần "Thử thách"
 
 
-### Printing and Plotting
+### Printing (lệnh hiển thị) and Plotting (vẽ đồ thị)
 
-A Data Scientist often has to explore the data, thus it is important to be able to visualize it. When DataFrame is big, many times we want just to make sure we are doing everything correctly by printing out the first few rows. This can be done by calling `df.head()`. If you are running it from Jupyter Notebook, it will print out the DataFrame in a nice tabular form.
+Nhà khoa học dữ liệu thường phải khám phá dữ liệu, do đó, điều quan trọng là phải có khả năng trực quan hóa dữ liệu. Khi DataFrame lớn, nhiều lần chúng ta chỉ muốn đảm bảo rằng mình đang làm mọi thứ đúng bằng cách in ra một vài hàng đầu tiên. Điều này có thể được thực hiện bằng cách gọi `df.head()`. Nếu bạn đang chạy nó từ `Jupyter Notebook`, nó sẽ in ra DataFrame dưới dạng bảng đẹp mắt.
 
-We have also seen the usage of `plot` function to visualize some columns. While `plot` is very useful for many tasks, and supports many different graph types via `kind=` parameter, you can always use raw `matplotlib` library to plot something more complex. We will cover data visualization in detail in separate course lessons.
+Chúng ta cũng đã thấy cách sử dụng hàm `plot` để trực quan hóa một số cột. Mặc dù `plot` rất hữu ích cho nhiều tác vụ và hỗ trợ nhiều loại biểu đồ khác nhau thông qua `kind=` tham số, bạn luôn có thể sử dụng thư viện thô `matplotlib` để vẽ thứ gì đó phức tạp hơn. Chúng tôi sẽ trình bày chi tiết về trực quan hóa dữ liệu trong các bài học riêng biệt của khóa học.
 
-This overview covers most important concepts of Pandas, however, the library is very rich, and there is no limit to what you can do with it! Let's now apply this knowledge for solving specific problem.
+Tổng quan này bao gồm hầu hết các khái niệm quan trọng của `Pandas`, tuy nhiên, thư viện rất phong phú và không có giới hạn nào cho những gì bạn có thể làm với nó! Bây giờ chúng ta hãy áp dụng kiến ​​thức này để giải quyết vấn đề cụ thể.
 
-## 🚀 Challenge 1: Analyzing COVID Spread
+## 🚀 Thử thách 1: Phân tích sự lây lan của COVID
 
-First problem we will focus on is modelling of epidemic spread of COVID-19. In order to do that, we will use the data on the number of infected individuals in different countries, provided by the [Center for Systems Science and Engineering](https://systems.jhu.edu/) (CSSE) at [Johns Hopkins University](https://jhu.edu/). Dataset is available in [this GitHub Repository](https://github.com/CSSEGISandData/COVID-19).
+Vấn đề đầu tiên chúng ta sẽ tập trung vào là mô hình hóa sự lây lan của dịch bệnh COVID-19. Để làm được điều đó, chúng ta sẽ sử dụng dữ liệu về số lượng cá nhân bị nhiễm bệnh ở các quốc gia khác nhau, do [Center for Systems Science and Engineering](https://systems.jhu.edu/) (CSSE) tại [Johns Hopkins University](https://jhu.edu/) cung cấp . Bộ dữ liệu có sẵn trong [this GitHub Repository](https://github.com/CSSEGISandData/COVID-19).
 
-Since we want to demonstrate how to deal with data, we invite you to open [`notebook-covidspread.ipynb`](notebook-covidspread.ipynb) and read it from top to bottom. You can also execute cells, and do some challenges that we have left for you at the end.
+Vì chúng tôi muốn trình bày cách xử lý dữ liệu, chúng tôi mời bạn mở [`notebook-covidspread.ipynb`](https://github.com/hoanglong8/Microsoft-DS-for-beginners/blob/main/2-Working-With-Data/07-python/translations/02.07.notebook-covidspread.ipynb) và đọc dữ liệu từ trên xuống dưới. Bạn cũng có thể thực hiện các ô và thực hiện một số thử thách mà chúng tôi để lại cho bạn ở cuối.
 
-![COVID Spread](images/covidspread.png)
+![COVID Spread](https://github.com/hoanglong8/Microsoft-DS-for-beginners/raw/main/2-Working-With-Data/07-python/images/covidspread.png)
 
 > If you do not know how to run code in Jupyter Notebook, have a look at [this article](https://soshnikov.com/education/how-to-execute-notebooks-from-github/).
 
-## Working with Unstructured Data
+## Working with Unstructured Data - Làm việc với dữ liệu phi cấu trúc
 
-While data very often comes in tabular form, in some cases we need to deal with less structured data, for example, text or images. In this case, to apply data processing techniques we have seen above, we need to somehow **extract** structured data. Here are a few examples:
+Mặc dù dữ liệu thường ở dạng bảng, nhưng trong một số trường hợp, chúng ta cần xử lý dữ liệu ít có cấu trúc hơn, ví dụ như văn bản hoặc hình ảnh. Trong trường hợp này, để áp dụng các kỹ thuật xử lý dữ liệu mà chúng ta đã thấy ở trên, chúng ta cần trích xuất dữ liệu có cấu trúc theo một cách nào đó. Sau đây là một số ví dụ:
 
-* Extracting keywords from text, and seeing how often those keywords appear
-* Using neural networks to extract information about objects on the picture
-* Getting information on emotions of people on video camera feed
+* Trích xuất các từ khóa từ văn bản và xem tần suất xuất hiện của các từ khóa đó
+* Sử dụng mạng nơ-ron để trích xuất thông tin về các đối tượng trên hình ảnh
+* Nhận thông tin về cảm xúc của mọi người trên nguồn cấp dữ liệu camera
 
-## 🚀 Challenge 2: Analyzing COVID Papers
+## 🚀 Thử thách 2: Phân tích các bài báo về COVID
 
-In this challenge, we will continue with the topic of COVID pandemic, and focus on processing scientific papers on the subject. There is [CORD-19 Dataset](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge) with more than 7000 (at the time of writing) papers on COVID, available with metadata and abstracts (and for about half of them there is also full text provided).
+Trong thử thách này, chúng ta sẽ tiếp tục với chủ đề về đại dịch COVID và tập trung vào việc xử lý các bài báo khoa học về chủ đề này. Có [CORD-19 Dataset](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge) với hơn 7000 bài báo (tại thời điểm viết bài) về COVID, có sẵn siêu dữ liệu và tóm tắt (và đối với khoảng một nửa trong số đó cũng có toàn văn được cung cấp).
 
-A full example of analyzing this dataset using [Text Analytics for Health](https://docs.microsoft.com/azure/cognitive-services/text-analytics/how-tos/text-analytics-for-health/?WT.mc_id=academic-77958-bethanycheum) cognitive service is described [in this blog post](https://soshnikov.com/science/analyzing-medical-papers-with-azure-and-text-analytics-for-health/). We will discuss simplified version of this analysis.
+Bài đăng trên [blog này](https://soshnikov.com/science/analyzing-medical-papers-with-azure-and-text-analytics-for-health/) mô tả ví dụ đầy đủ về việc phân tích tập dữ liệu này bằng công cụ [Text Analytics for Health awareness service](https://docs.microsoft.com/azure/cognitive-services/text-analytics/how-tos/text-analytics-for-health/?WT.mc_id=academic-77958-bethanycheum) Chúng tôi sẽ thảo luận về phiên bản đơn giản hóa của phân tích này.
 
-> **NOTE**: We do not provide a copy of the dataset as part of this repository. You may first need to download the [`metadata.csv`](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge?select=metadata.csv) file from [this dataset on Kaggle](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge). Registration with Kaggle may be required. You may also download the dataset without registration [from here](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases.html), but it will include all full texts in addition to metadata file.
+> **NOTE**: Chúng tôi không cung cấp bản sao của tập dữ liệu như một phần của kho lưu trữ này. Trước tiên, bạn có thể cần tải xuống tệp [`metadata.csv`](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge?select=metadata.csv) từ [this dataset on Kaggle](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge). Bạn cũng có thể tải xuống tập dữ liệu mà không cần đăng ký [from here](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases.html), nhưng nó sẽ bao gồm tất cả các văn bản đầy đủ ngoài tệp siêu dữ liệu metadata.
 
-Open [`notebook-papers.ipynb`](notebook-papers.ipynb) and read it from top to bottom. You can also execute cells, and do some challenges that we have left for you at the end.
+Mở [`notebook-papers.ipynb`](notebook-papers.ipynb) và đọc từ trên xuống dưới. Bạn cũng có thể thực hiện các ô và thực hiện một số thử thách mà chúng tôi để lại cho bạn ở phần cuối.
 
-![Covid Medical Treatment](images/covidtreat.png)
+![Covid Medical Treatment](https://github.com/hoanglong8/Microsoft-DS-for-beginners/raw/main/2-Working-With-Data/07-python/images/covidtreat.png)
 
-## Processing Image Data
+## Processing Image Data - Xử lý dữ liệu hình ảnh
 
-Recently, very powerful AI models have been developed that allow us to understand images. There are many tasks that can be solved using pre-trained neural networks, or cloud services. Some examples include:
+Gần đây, các mô hình AI rất mạnh mẽ đã được phát triển cho phép chúng ta hiểu hình ảnh. Có nhiều tác vụ có thể được giải quyết bằng cách sử dụng mạng nơ-ron được đào tạo trước hoặc dịch vụ đám mây. Một số ví dụ bao gồm:
 
-* **Image Classification**, which can help you categorize the image into one of the pre-defined classes. You can easily train your own image classifiers using services such as [Custom Vision](https://azure.microsoft.com/services/cognitive-services/custom-vision-service/?WT.mc_id=academic-77958-bethanycheum)
-* **Object Detection** to detect different objects in the image. Services such as [computer vision](https://azure.microsoft.com/services/cognitive-services/computer-vision/?WT.mc_id=academic-77958-bethanycheum) can detect a number of common objects, and you can train [Custom Vision](https://azure.microsoft.com/services/cognitive-services/custom-vision-service/?WT.mc_id=academic-77958-bethanycheum) model to detect some specific objects of interest.
-* **Face Detection**, including Age, Gender and Emotion detection. This can be done via [Face API](https://azure.microsoft.com/services/cognitive-services/face/?WT.mc_id=academic-77958-bethanycheum).
+* **Image Classification**, có thể giúp bạn phân loại hình ảnh thành một trong các lớp được xác định trước. Bạn có thể dễ dàng đào tạo bộ phân loại hình ảnh của riêng mình bằng các dịch vụ như [Custom Vision](https://azure.microsoft.com/services/cognitive-services/custom-vision-service/?WT.mc_id=academic-77958-bethanycheum)
+* **Object Detection** để phát hiện các đối tượng khác nhau trong hình ảnh. Các dịch vụ như [computer vision](https://azure.microsoft.com/services/cognitive-services/computer-vision/?WT.mc_id=academic-77958-bethanycheum) có thể phát hiện một số đối tượng phổ biến và bạn có thể huấn luyện mô hình [Custom Vision](https://azure.microsoft.com/services/cognitive-services/custom-vision-service/?WT.mc_id=academic-77958-bethanycheum) để phát hiện một số đối tượng cụ thể cần quan tâm khác.
+* **Face Detection**, bao gồm phát hiện Tuổi, Giới tính và Cảm xúc. Điều này có thể được thực hiện thông qua [Face API](https://azure.microsoft.com/services/cognitive-services/face/?WT.mc_id=academic-77958-bethanycheum).
 
-All those cloud services can be called using [Python SDKs](https://docs.microsoft.com/samples/azure-samples/cognitive-services-python-sdk-samples/cognitive-services-python-sdk-samples/?WT.mc_id=academic-77958-bethanycheum), and thus can be easily incorporated into your data exploration workflow. 
+Tất cả các dịch vụ đám mây đó có thể được gọi bằng [Python SDKs](https://docs.microsoft.com/samples/azure-samples/cognitive-services-python-sdk-samples/cognitive-services-python-sdk-samples/?WT.mc_id=academic-77958-bethanycheum), và có thể dễ dàng tích hợp vào quy trình khám phá dữ liệu của bạn.
 
-Here are some examples of exploring data from Image data sources:
-* In the blog post [How to Learn Data Science without Coding](https://soshnikov.com/azure/how-to-learn-data-science-without-coding/) we explore Instagram photos, trying to understand what makes people give more likes to a photo. We first extract as much information from pictures as possible using [computer vision](https://azure.microsoft.com/services/cognitive-services/computer-vision/?WT.mc_id=academic-77958-bethanycheum), and then use [Azure Machine Learning AutoML](https://docs.microsoft.com/azure/machine-learning/concept-automated-ml/?WT.mc_id=academic-77958-bethanycheum) to build interpretable model.
-* In [Facial Studies Workshop](https://github.com/CloudAdvocacy/FaceStudies) we use [Face API](https://azure.microsoft.com/services/cognitive-services/face/?WT.mc_id=academic-77958-bethanycheum) to extract emotions on people on photographs from events, in order to try to understand what makes people happy. 
+Sau đây là một số ví dụ về việc khám phá dữ liệu từ nguồn dữ liệu Hình ảnh:
+* Trong bài đăng trên blog [How to Learn Data Science without Coding](https://soshnikov.com/azure/how-to-learn-data-science-without-coding/) chúng tôi khám phá ảnh Instagram, cố gắng hiểu điều gì khiến mọi người thích ảnh nhiều hơn. Đầu tiên, chúng tôi trích xuất càng nhiều thông tin từ ảnh càng tốt bằng cách sử dụng [computer vision](https://azure.microsoft.com/services/cognitive-services/computer-vision/?WT.mc_id=academic-77958-bethanycheum), sau đó sử dụng [Azure Machine Learning AutoML](https://docs.microsoft.com/azure/machine-learning/concept-automated-ml/?WT.mc_id=academic-77958-bethanycheum) để xây dựng mô hình có thể diễn giải được.
+* Trong [Facial Studies Workshop](https://github.com/CloudAdvocacy/FaceStudies) chúng tôi sử dụng [Face API](https://azure.microsoft.com/services/cognitive-services/face/?WT.mc_id=academic-77958-bethanycheum) để trích xuất cảm xúc của mọi người trên các bức ảnh chụp sự kiện, nhằm mục đích hiểu được điều gì khiến mọi người hạnh phúc.
 
-## Conclusion
+## Conclusion - Kết luận
 
-Whether you already have structured or unstructured data, using Python you can perform all steps related to data processing and understanding. It is probably the most flexible way of data processing, and that is the reason the majority of data scientists use Python as their primary tool. Learning Python in depth is probably a good idea if you are serious about your data science journey!
-
-
+Cho dù bạn đã có dữ liệu có cấu trúc hay không có cấu trúc, sử dụng Python, bạn có thể thực hiện tất cả các bước liên quan đến xử lý và hiểu dữ liệu. Đây có lẽ là cách xử lý dữ liệu linh hoạt nhất và đó là lý do tại sao phần lớn các nhà khoa học dữ liệu sử dụng Python làm công cụ chính của họ. Học Python chuyên sâu có lẽ là một ý tưởng hay nếu bạn nghiêm túc với hành trình khoa học dữ liệu của mình!
 
 ## [Post-lecture quiz](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/13)
 
 ## Review & Self Study
 
 **Books**
+Cuốn sách của Wes McKinney: "Python để phân tích dữ liệu: Xử lý dữ liệu với Pandas, NumPy và IPython"
 * [Wes McKinney. Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython](https://www.amazon.com/gp/product/1491957662)
 
 **Online Resources**
@@ -274,7 +273,7 @@ Whether you already have structured or unstructured data, using Python you can p
 
 ## Assignment
 
-[Perform more detailed data study for the challenges above](assignment.md)
+[Thực hiện nghiên cứu dữ liệu chi tiết hơn cho những thách thức trên](https://github.com/hoanglong8/Microsoft-DS-for-beginners/blob/main/2-Working-With-Data/07-python/translations/Assignment.vn.md)
 
 ## Credits
 
