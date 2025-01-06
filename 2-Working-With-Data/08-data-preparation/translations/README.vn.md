@@ -1,39 +1,37 @@
-# Working with Data: Data Preparation
+# Data Preparation - Chuẩn bị dữ liệu
 
-|![ Sketchnote by [(@sketchthedocs)](https://sketchthedocs.dev) ](../../sketchnotes/08-DataPreparation.png)|
+![ Sketchnote by [(@sketchthedocs)](https://sketchthedocs.dev)](https://github.com/hoanglong8/Microsoft-DS-for-beginners/raw/main/sketchnotes/08-DataPreparation.png)
 |:---:|
 |Data Preparation - _Sketchnote by [@nitya](https://twitter.com/nitya)_ |
 
 ## [Pre-Lecture Quiz](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/14)
 
+Tùy thuộc vào nguồn, dữ liệu thô có thể chứa một số điểm không nhất quán gây ra khó khăn trong phân tích và mô hình hóa. Nói cách khác, dữ liệu này có thể được phân loại là thô, chưa qua xử lý và cần được "làm sạch". Bài học này tập trung vào các kỹ thuật làm sạch và chuyển đổi dữ liệu để xử lý các thách thức về dữ liệu bị thiếu, không chính xác hoặc không đầy đủ. Các chủ đề được đề cập trong bài học này sẽ sử dụng Python và thư viện Pandas và sẽ được minh họa trong [notebook](notebook.ipynb).
 
+## The importance of cleaning data - Tầm quan trọng của làm sạch dữ liệu
 
-Depending on its source, raw data may contain some inconsistencies that will cause challenges in analysis and modeling. In other words, this data can be categorized as “dirty” and will need to be cleaned up. This lesson focuses on techniques for cleaning and transforming the data to handle challenges of missing, inaccurate, or incomplete data. Topics covered in this lesson will utilize Python and the Pandas library and will be [demonstrated in the notebook](notebook.ipynb) within this directory.
+* **Dễ sử dụng và tái sử dụng:** Khi dữ liệu được tổ chức và chuẩn hóa hợp lý, việc tìm kiếm, sử dụng và chia sẻ với người khác sẽ dễ dàng hơn.
 
-## The importance of cleaning data
+* **Tính nhất quán:** Khoa học dữ liệu thường đòi hỏi phải làm việc với nhiều hơn một tập dữ liệu, trong đó các tập dữ liệu từ nhiều nguồn khác nhau cần được kết hợp với nhau. Đảm bảo rằng mỗi tập dữ liệu riêng lẻ có chuẩn hóa chung sẽ đảm bảo rằng dữ liệu vẫn hữu ích khi tất cả chúng được hợp nhất thành một tập dữ liệu.
 
-- **Ease of use and reuse**: When data is properly organized and normalized it’s easier to search, use, and share with others.
+* **Độ chính xác của mô hình:** Dữ liệu đã được làm sạch sẽ cải thiện độ chính xác của các mô hình dựa vào nó.
 
-- **Consistency**: Data science often requires working with more than one dataset, where datasets from different sources need to be joined together. Making sure that each individual data set has common standardization will ensure that the data is still useful when they are all merged into one dataset.
+## Common cleaning goals and strategies - Mục tiêu và chiến lược chung
 
-- **Model accuracy**: Data that has been cleaned improves the accuracy of models that rely on it.
+- **Tìm hiểu sơ bộ về dữ liệu - Exploring**: Khám phá dữ liệu, sẽ được đề cập chi tiết trong [bài học 15-Analyzing](https://github.com/microsoft/Data-Science-For-Beginners/tree/main/4-Data-Science-Lifecycle/15-analyzing) có thể giúp bạn khám phá dữ liệu cần được dọn dẹp. Quan sát trực quan các giá trị trong một tập dữ liệu có thể thiết lập kỳ vọng về phần còn lại của tập dữ liệu sẽ trông như thế nào hoặc cung cấp ý tưởng về các vấn đề có thể được giải quyết. Quá trình khám phá/tìm hiểu sơ bộ bao gồm truy vấn cơ bản, trực quan hóa và lấy mẫu.
 
-## Common cleaning goals and strategies
+-  **Định dạng - Formatting**: Tùy thuộc vào nguồn, dữ liệu có thể không nhất quán về cách trình bày. Điều này có thể gây ra sự cố khi tìm kiếm và biểu diễn giá trị, khi giá trị được nhìn thấy trong tập dữ liệu nhưng không được biểu diễn đúng trong hình ảnh trực quan hoặc kết quả truy vấn. Các sự cố định dạng phổ biến liên quan đến việc giải quyết khoảng trắng, ngày tháng và kiểu dữ liệu. Việc giải quyết các vấn đề định dạng thường tùy thuộc vào những người sử dụng dữ liệu. Ví dụ, các tiêu chuẩn về cách trình bày ngày tháng và số liệu có thể khác nhau tùy theo quốc gia.
 
-- **Exploring a dataset**: Data exploration, which is covered in a [later lesson](https://github.com/microsoft/Data-Science-For-Beginners/tree/main/4-Data-Science-Lifecycle/15-analyzing) can help you discover data that needs to be cleaned up. Visually observing values within a dataset can set expectations of what that rest of it will look like, or provide an idea of the problems that can be resolved. Exploration can involve basic querying, visualizations, and sampling.
+-  **Trùng lặp - Duplications**: Dữ liệu có nhiều hơn một lần xuất hiện có thể tạo ra kết quả không chính xác và thường phải được loại bỏ. Đây có thể là một sự cố thường gặp khi kết hợp hai hoặc nhiều tập dữ liệu với nhau. Tuy nhiên, có những trường hợp trùng lặp trong các tập dữ liệu đã kết hợp chứa các phần có thể cung cấp thông tin bổ sung và có thể cần được bảo toàn.
 
--  **Formatting**: Depending on the source, data can have inconsistencies in how it’s presented. This can cause problems in searching for and representing the value, where it’s seen within the dataset but is not properly represented in visualizations or query results. Common formatting problems involve resolving whitespace, dates, and data types. Resolving formatting issues is typically up to the people who are using the data. For example, standards on how dates and numbers are presented can differ by country. 
+- **Thiếu dữ liệu - Missing Data**: Dữ liệu bị thiếu có thể gây ra sự không chính xác cũng như kết quả yếu hoặc sai lệch. Đôi khi, những điều này có thể được giải quyết bằng cách "tải lại" dữ liệu, điền các giá trị bị thiếu bằng phép tính và mã như Python hoặc chỉ cần xóa giá trị và dữ liệu tương ứng. Có nhiều lý do khiến dữ liệu có thể bị thiếu và các hành động được thực hiện để giải quyết các giá trị bị thiếu này có thể phụ thuộc vào cách thức và lý do tại sao chúng bị thiếu ngay từ đầu. 
 
--  **Duplications**: Data that has more than one occurrence can produce inaccurate results and usually should be removed. This can be a common occurrence when joining two or more datasets together. However, there are instances where duplication in joined datasets contain pieces that can provide additional information and may need to be preserved.
+## Exploring DataFrame information - Khám phá thông tin của DataFrame
+> **Mục tiêu học tập:** Đến cuối phần này, bạn sẽ có thể thoải mái tìm kiếm thông tin chung về dữ liệu được lưu trữ trong pandas DataFrames.
 
-- **Missing Data**: Missing data can cause inaccuracies as well as weak or biased results. Sometimes these can be resolved by a "reload" of the data, filling in the missing values with computation and code like Python, or simply just removing the value and corresponding data. There are numerous reasons for why data may be missing and the actions that are taken to resolve these missing values can be dependent on how and why they went missing in the first place. 
+Sau khi bạn đã tải dữ liệu của mình vào pandas, nhiều khả năng dữ liệu đó sẽ nằm trong DataFrame (tham khảo [bài 07-Python](https://github.com/microsoft/Data-Science-For-Beginners/tree/main/2-Working-With-Data/07-python#dataframe) để biết thêm chi tiết). Tuy nhiên, nếu tập dữ liệu trong DataFrame của bạn có 60.000 hàng và 400 cột, làm sao bạn có thể bắt đầu hiểu được những gì mình đang làm việc? May mắn thay, [pandas](https://pandas.pydata.org/) cung cấp một số công cụ tiện lợi để nhanh chóng xem thông tin tổng thể về DataFrame ngoài một vài hàng đầu tiên và một vài hàng cuối cùng.
 
-## Exploring DataFrame information
-> **Learning goal:** By the end of this subsection, you should be comfortable finding general information about the data stored in pandas DataFrames.
-
-Once you have loaded your data into pandas, it will more likely than not be in a DataFrame(refer to the previous [lesson](https://github.com/microsoft/Data-Science-For-Beginners/tree/main/2-Working-With-Data/07-python#dataframe) for detailed overview). However, if the data set in your DataFrame has 60,000 rows and 400 columns, how do you even begin to get a sense of what you're working with? Fortunately, [pandas](https://pandas.pydata.org/) provides some convenient tools to quickly look at overall information about a DataFrame in addition to the first few and last few rows.
-
-In order to explore this functionality, we will import the Python scikit-learn library and use an iconic dataset: the **Iris data set**.
+Để khám phá chức năng này, chúng ta sẽ nhập thư viện scikit-learn của Python và sử dụng một tập dữ liệu biểu tượng: tập dữ liệu Iris (the **Iris data set**).
 
 ```python
 import pandas as pd
