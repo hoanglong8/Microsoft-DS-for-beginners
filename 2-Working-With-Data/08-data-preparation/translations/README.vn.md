@@ -27,11 +27,11 @@ Tùy thuộc vào nguồn, dữ liệu thô có thể chứa một số điểm 
 - **Thiếu dữ liệu - Missing Data**: Dữ liệu bị thiếu có thể gây ra sự không chính xác cũng như kết quả yếu hoặc sai lệch. Đôi khi, những điều này có thể được giải quyết bằng cách "tải lại" dữ liệu, điền các giá trị bị thiếu bằng phép tính và mã như Python hoặc chỉ cần xóa giá trị và dữ liệu tương ứng. Có nhiều lý do khiến dữ liệu có thể bị thiếu và các hành động được thực hiện để giải quyết các giá trị bị thiếu này có thể phụ thuộc vào cách thức và lý do tại sao chúng bị thiếu ngay từ đầu. 
 
 ## Exploring DataFrame information - Khám phá thông tin của DataFrame
-> **Mục tiêu học tập:** Đến cuối phần này, bạn sẽ có thể thoải mái tìm kiếm thông tin chung về dữ liệu được lưu trữ trong pandas DataFrames.
+> **Mục tiêu học tập:** Bạn sẽ biết cách tìm kiếm thông tin chung về dữ liệu bằng thư viện `pandas` trong DataFrames.
 
 Sau khi bạn đã tải dữ liệu của mình vào pandas, nhiều khả năng dữ liệu đó sẽ nằm trong DataFrame (tham khảo [bài 07-Python](https://github.com/microsoft/Data-Science-For-Beginners/tree/main/2-Working-With-Data/07-python#dataframe) để biết thêm chi tiết). Tuy nhiên, nếu tập dữ liệu trong DataFrame của bạn có 60.000 hàng và 400 cột, làm sao bạn có thể bắt đầu hiểu được những gì mình đang làm việc? May mắn thay, [pandas](https://pandas.pydata.org/) cung cấp một số công cụ tiện lợi để nhanh chóng xem thông tin tổng thể về DataFrame ngoài một vài hàng đầu tiên và một vài hàng cuối cùng.
 
-Để khám phá chức năng này, chúng ta sẽ nhập thư viện scikit-learn của Python và sử dụng một tập dữ liệu biểu tượng: tập dữ liệu Iris (the **Iris data set**).
+Để khám phá chức năng này, chúng ta sẽ nhập thư viện `scikit-learn` của Python và sử dụng một tập dữ liệu tên là: tập dữ liệu Iris (the **Iris data set**).
 
 ```python
 import pandas as pd
@@ -40,7 +40,7 @@ from sklearn.datasets import load_iris
 iris = load_iris()
 iris_df = pd.DataFrame(data=iris['data'], columns=iris['feature_names'])
 ```
-|                                        |sepal length (cm)|sepal width (cm)|petal length (cm)|petal width (cm)|
+|                                        |sepal length (chiều dài lá - cm)|sepal width (chiều rộng lá - cm)|petal length (chiều dài hoa - cm)|petal width (chiều rộng hoa - cm)|
 |----------------------------------------|-----------------|----------------|-----------------|----------------|
 |0                                       |5.1              |3.5             |1.4              |0.2             |
 |1                                       |4.9              |3.0             |1.4              |0.2             |
@@ -48,7 +48,7 @@ iris_df = pd.DataFrame(data=iris['data'], columns=iris['feature_names'])
 |3                                       |4.6              |3.1             |1.5              |0.2             |
 |4                                       |5.0              |3.6             |1.4              |0.2             |
 
-- **DataFrame.info**: To start off, the `info()` method is used to print a summary of the content present in a `DataFrame`. Let's take a look at this dataset to see what we have:
+- **DataFrame.info**: Để bắt đầu, hàm `info()` thường được sử dụng để xem tóm tắt nội dung có trong DataFrame. Hãy cùng xem tập dữ liệu này để xem chúng ta có gì:
 ```python
 iris_df.info()
 ```
@@ -64,9 +64,9 @@ Data columns (total 4 columns):
 dtypes: float64(4)
 memory usage: 4.8 KB
 ```
-From this, we know that the *Iris* dataset has 150 entries in four columns with no null entries. All of the data is stored as 64-bit floating-point numbers.
+Từ đó, chúng ta biết rằng tập dữ liệu Iris có 150 mục trong bốn cột không có mục nào rỗng. Tất cả dữ liệu được lưu trữ dưới dạng số dấu phẩy động 64 bit.
 
-- **DataFrame.head()**: Next, to check the actual content of the `DataFrame`, we use the `head()` method. Let's see what the first few rows of our `iris_df` look like:
+- **DataFrame.head()**: Tiếp theo, để kiểm tra nội dung thực tế của DataFrame, chúng ta sử dụng hàm `head()`. Hãy xem 5 hàng đầu tiên của `iris_df` trông như thế nào:
 ```python
 iris_df.head()
 ```
@@ -78,7 +78,7 @@ iris_df.head()
 3                4.6               3.1                1.5               0.2
 4                5.0               3.6                1.4               0.2
 ```
-- **DataFrame.tail()**: Conversely, to check the last few rows of the `DataFrame`, we use the `tail()` method:
+- **DataFrame.tail()**: Ngược lại, để kiểm tra một vài hàng cuối cùng của DataFrame, chúng ta sử dụng hàm `tail()`:
 ```python
 iris_df.tail()
 ```
@@ -90,10 +90,10 @@ iris_df.tail()
 148                6.2               3.4                5.4               2.3
 149                5.9               3.0                5.1               1.8
 ```
-> **Takeaway:** Even just by looking at the metadata about the information in a DataFrame or the first and last few values in one, you can get an immediate idea about the size, shape, and content of the data you are dealing with.
+> **Takeaway - Điểm mấu chốt:** Thậm chí chỉ cần xem siêu dữ liệu về thông tin trong DataFrame hoặc giá trị đầu tiên và cuối cùng trong một DataFrame, bạn có thể biết ngay kích thước, hình dạng và nội dung của dữ liệu bạn đang xử lý.
 
-## Dealing with Missing Data
-> **Learning goal:** By the end of this subsection, you should know how to replace or remove null values from DataFrames.
+## Dealing with Missing Data - Xử lý dữ liệu bị thiếu
+> **Mục tiêu học tập:** Bạn sẽ biết cách thay thế hoặc xóa giá trị null ra khỏi DataFrame.
 
 Most of the time the datasets you want to use (of have to use) have missing values in them. How missing data is handled carries with it subtle tradeoffs that can affect your final analysis and real-world outcomes.
 
