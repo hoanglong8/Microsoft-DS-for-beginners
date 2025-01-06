@@ -1,5 +1,7 @@
 # Working with Data: Python and the Pandas Library
 
+[Bản dịch tiếng Việt](https://github.com/hoanglong8/Microsoft-DS-for-beginners/blob/main/2-Working-With-Data/07-python/translations/README.vn.md)
+
 | ![ Sketchnote by [(@sketchthedocs)](https://sketchthedocs.dev) ](../../sketchnotes/07-WorkWithPython.png) |
 | :-------------------------------------------------------------------------------------------------------: |
 |                 Working With Python - _Sketchnote by [@nitya](https://twitter.com/nitya)_                 |
