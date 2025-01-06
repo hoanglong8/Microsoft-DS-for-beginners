@@ -95,13 +95,13 @@ iris_df.tail()
 ## Dealing with Missing Data - Xử lý dữ liệu bị thiếu
 > **Mục tiêu học tập:** Bạn sẽ biết cách thay thế hoặc xóa giá trị null ra khỏi DataFrame.
 
-Most of the time the datasets you want to use (of have to use) have missing values in them. How missing data is handled carries with it subtle tradeoffs that can affect your final analysis and real-world outcomes.
+Hầu hết các tập dữ liệu bạn làm việc sau này đều có các giá trị bị thiếu. Cách xử lý dữ liệu bị thiếu mang theo những sự đánh đổi có thể ảnh hưởng đến phân tích cuối cùng và kết quả thực tế của bạn.
 
-Pandas handles missing values in two ways. The first you've seen before in previous sections: `NaN`, or Not a Number. This is a actually a special value that is part of the IEEE floating-point specification and it is only used to indicate missing floating-point values.
+Pandas xử lý các giá trị bị thiếu theo hai cách. Cách đầu tiên bạn đã thấy trong các phần trước: `NaN` (Not a number). Đây thực ra là một giá trị đặc biệt nằm trong thông số kỹ thuật số dấu phẩy động IEEE và chỉ được sử dụng để chỉ ra các giá trị số phẩy động bị thiếu (hiểu đơn giản là nhẫm lẫn giữa dấu . và , dẫn đến một giá trị không phải ở định dạng số).
 
-For missing values apart from floats, pandas uses the Python `None` object. While it might seem confusing that you will encounter two different kinds of values that say essentially the same thing, there are sound programmatic reasons for this design choice and, in practice, going this route enables pandas to deliver a good compromise for the vast majority of cases. Notwithstanding this, both `None` and `NaN` carry restrictions that you need to be mindful of with regards to how they can be used.
+Ngoài các giá trị là số fload, pandas sử dụng xử lý theo cách 2 gọi là `None`. Khi bạn sẽ gặp phải hai loại giá trị khác nhau về cơ bản nói lên cùng một điều, nhưng có những lý do lập trình hợp lý cho lựa chọn thiết kế này và trên thực tế, việc đi theo hướng này cho phép pandas đưa ra một sự thỏa hiệp tốt cho phần lớn các trường hợp. Bất chấp điều này, cả hai `None` và `NaN` đều có những hạn chế mà bạn cần lưu ý liên quan đến cách chúng có thể được sử dụng.
 
-Check out more about `NaN` and `None` from the [notebook](https://github.com/microsoft/Data-Science-For-Beginners/blob/main/4-Data-Science-Lifecycle/15-analyzing/notebook.ipynb)!
+Xem thêm về `NaN` và `None` từ [notebook bài 15](https://github.com/microsoft/Data-Science-For-Beginners/blob/main/4-Data-Science-Lifecycle/15-analyzing/notebook.ipynb)!
 
 - **Detecting null values**: In `pandas`, the `isnull()` and `notnull()` methods are your primary methods for detecting null data. Both return Boolean masks over your data. We will be using `numpy` for `NaN` values:
 ```python
