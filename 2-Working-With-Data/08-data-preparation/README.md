@@ -1,5 +1,7 @@
 # Working with Data: Data Preparation
 
+[Bản dịch tiếng Việt](https://github.com/hoanglong8/Microsoft-DS-for-beginners/blob/main/2-Working-With-Data/08-data-preparation/translations/README.vn.md)
+
 |![ Sketchnote by [(@sketchthedocs)](https://sketchthedocs.dev) ](../../sketchnotes/08-DataPreparation.png)|
 |:---:|
 |Data Preparation - _Sketchnote by [@nitya](https://twitter.com/nitya)_ |
