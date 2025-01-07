@@ -111,13 +111,14 @@ example1 = pd.Series([0, np.nan, '', None])
 example1.isnull()
 ```
 ```
-0    False
-1     True
-2    False
-3     True
+	Series	**Isnull()**
+0    	0	False
+1     	np.nan	True
+2    	''	False
+3     	None	True
 dtype: bool
 ```
-Hãy xem kỹ kết quả ở trên, bạn có ngạc nhiên không? Mặc dù `0` là số học biểu thị cho sự trống rỗng, nhưng nó vẫn là **số nguyên** và `pandas` coi nó là số chứ không phải `null`. Còn '' thì khác hơn một chút, trong Phần 1 thì ' ' biểu diễn một giá trị chuỗi rỗng, nó là một chuỗi theo như định nghĩa của `pandas`.
+Hãy xem kỹ kết quả ở trên, bạn có ngạc nhiên không? Mặc dù `0` là số học biểu thị cho sự trống rỗng, nhưng nó vẫn là **số nguyên** và `pandas` coi nó là số chứ không phải `null`. Tiếp theo, `NaN` và `None` thì chắc chắn là `null`, còn `''` thì lại được coi là chuỗi chứ không phải `null` (trong Phần 1, `''` thường để biểu diễn một giá trị chuỗi rỗng).
 
 Bây giờ, hãy đảo ngược lại và sử dụng các phương pháp này theo cách giống như bạn sẽ sử dụng chúng trong thực tế. Bạn có thể sử dụng trực tiếp hàm Boolean cho các `Series` hoặc `DataFrame`, điều này có thể hữu ích khi cố gắng làm việc với các giá trị bị thiếu (hoặc hiện tại) bị cô lập.
 
