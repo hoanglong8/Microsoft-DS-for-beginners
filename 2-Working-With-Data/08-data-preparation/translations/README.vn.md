@@ -135,7 +135,7 @@ dtype: object
 ```
 Lưu ý rằng điều này sẽ trông giống như đầu ra của bạn từ `example3[example3.notnull()]`. Sự khác biệt ở đây là, thay vì chỉ lập chỉ mục trên các giá trị được che dấu, hàm `dropna()` đã xóa các giá trị bị thiếu đó khỏi Series `example1`.
 
-Vì DataFrames này có hai chiều nên chúng cung cấp nhiều lựa chọn hơn để loại bỏ dữ liệu.
+Vì DataFrames này có hai chiều nên chúng ta có nhiều cách để loại bỏ dữ liệu.
 
 ```python
 example2 = pd.DataFrame([[1,      np.nan, 7], 
@@ -149,9 +149,9 @@ example2
 |1     |2.0|5.0|8  |
 |2     |NaN|6.0|9  |
 
-(Did you notice that pandas upcast two of the columns to floats to accommodate the `NaN`s?)
+Bạn có thể thấy pandas có 2 cột chứa NaNs là cột `0` và `1`.
 
-You cannot drop a single value from a `DataFrame`, so you have to drop full rows or columns. Depending on what you are doing, you might want to do one or the other, and so pandas gives you options for both. Because in data science, columns generally represent variables and rows represent observations, you are more likely to drop rows of data; the default setting for `dropna()` is to drop all rows that contain any null values:
+Tuy nhiên bạn không thể xóa duy nhất 1 ô chứa NaN ra khỏi DataFrame, do đó bạn phải xóa toàn bộ hàng hoặc cột (tùy thuộc vào mục đích phân tích) và thư viện `pandas` cung cấp cho bạn các tùy chọn cho cả hai. Vì trong khoa học dữ liệu, các cột thường biểu diễn các biến và các hàng biểu diễn các quan sát, nên bạn thường nhiều khả năng xóa các hàng dữ liệu; mặc định trong hàm `dropna()` là xóa tất cả các hàng có chứa bất kỳ giá trị `null` nào:
 
 ```python
 example2.dropna()
@@ -160,7 +160,7 @@ example2.dropna()
 	0	1	2
 1	2.0	5.0	8
 ```
-If necessary, you can drop NA values from columns. Use `axis=1` to do so:
+Nếu cần, bạn có thể xóa cột chứa `null` thì bạn sử dụng `axis=1` để thực hiện:
 ```python
 example2.dropna(axis='columns')
 ```
@@ -170,9 +170,9 @@ example2.dropna(axis='columns')
 1	8
 2	9
 ```
-Notice that this can drop a lot of data that you might want to keep, particularly in smaller datasets. What if you just want to drop rows or columns that contain several or even just all null values? You specify those setting in `dropna` with the `how` and `thresh` parameters.
+Lưu ý rằng điều này có thể loại bỏ rất nhiều dữ liệu mà bạn có thể muốn giữ lại, đặc biệt là trong các tập dữ liệu nhỏ. Còn nếu bạn chỉ muốn loại bỏ các hàng hoặc cột chứa toàn bộ giá trị `null` thì sao? Bạn chỉ định các thiết lập đó bằng `dropna()` các tham số `how` và `thresh`.
 
-By default, `how='any'` (if you would like to check for yourself or see what other parameters the method has, run `example4.dropna?` in a code cell). You could alternatively specify `how='all'` so as to drop only rows or columns that contain all null values. Let's expand our example `DataFrame` to see this in action.
+Theo mặc định, `how='any'`(nếu bạn muốn tự kiểm tra hoặc xem phương thức có những tham số nào khác, hãy chạy `example4.dropna?` trong ô mã). Bạn cũng có thể chỉ định `how='all'`để chỉ xóa các hàng hoặc cột chứa tất cả các giá trị `null`. Hãy mở rộng ví dụ của `DataFrame` để xem điều này hoạt động như thế nào.
 
 ```python
 example2[3] = np.nan
@@ -184,7 +184,7 @@ example2
 |1     |2.0|5.0|8  |NaN|
 |2     |NaN|6.0|9  |NaN|
 
-The `thresh` parameter gives you finer-grained control: you set the number of *non-null* values that a row or column needs to have in order to be kept:
+Tham số `thresh` cung cấp cho bạn khả năng kiểm soát chi tiết hơn: bạn đặt số lượng giá trị `không null` mà một hàng hoặc cột cần có để được giữ lại, trong ví dụ này là giữ lại cột 3:
 ```python
 example2.dropna(axis='rows', thresh=3)
 ```
@@ -192,9 +192,9 @@ example2.dropna(axis='rows', thresh=3)
 	0	1	2	3
 1	2.0	5.0	8	NaN
 ```
-Here, the first and last row have been dropped, because they contain only two non-null values.
+Ở đây, hàng đầu tiên và hàng cuối cùng đã bị loại bỏ vì chúng chỉ chứa hai giá trị không null.
 
-- **Filling null values**: Depending on your dataset, it can sometimes make more sense to fill null values with valid ones rather than drop them. You could use `isnull` to do this in place, but that can be laborious, particularly if you have a lot of values to fill. Because this is such a common task in data science, pandas provides `fillna`, which returns a copy of the `Series` or `DataFrame` with the missing values replaced with one of your choosing. Let's create another example `Series` to see how this works in practice.
+- **Filling null values - Điền giá trị null**: Tùy thuộc vào tập dữ liệu của bạn, đôi khi có thể hợp lý hơn khi điền giá trị `null` bằng giá trị hợp lệ thay vì xóa chúng. Bạn có thể sử dụng `isnull()` để thực hiện việc này tại chỗ, nhưng điều đó có thể tốn nhiều công sức, đặc biệt là nếu bạn có nhiều giá trị cần điền. Vì đây là một tác vụ phổ biến trong khoa học dữ liệu, `pandas` cung cấp hàm `fillna()`, trả về một bản sao của `Series` hoặc `DataFrame` với các giá trị bị thiếu được thay thế bằng một trong những giá trị bạn chọn. Hãy tạo một ví dụ khác để xem cách thức hoạt động của nó trong thực tế.
 ```python
 example3 = pd.Series([1, np.nan, 2, None, 3], index=list('abcde'))
 example3
@@ -207,7 +207,7 @@ d    NaN
 e    3.0
 dtype: float64
 ```
-You can fill all of the null entries with a single value, such as `0`:
+Bạn có thể điền tất cả các mục `null` bằng một giá trị cụ thể, chẳng hạn như `0`:
 ```python
 example3.fillna(0)
 ```
@@ -219,7 +219,7 @@ d    0.0
 e    3.0
 dtype: float64
 ```
-You can **forward-fill** null values, which is to use the last valid value to fill a null:
+Bạn có thể dùng phương thức `ffill` **(foward-fill)** để điền tất cả các mục `null` bằng các giá trị hợp lệ theo trình tự tăng dần, ví dụ là `1` rồi đến `2`:
 ```python
 example3.fillna(method='ffill')
 ```
@@ -231,7 +231,7 @@ d    2.0
 e    3.0
 dtype: float64
 ```
-You can also **back-fill** to propagate the next valid value backward to fill a null:
+Hoặc bạn có thể dùng phương thức `bfill` **(back-fill)** để điền tất cả các mục `null` bằng các giá trị hợp lệ theo trình tự giảm dần, ví dụ là `3` đến `2` rồi đến `1`:
 ```python
 example3.fillna(method='bfill')
 ```
@@ -243,27 +243,27 @@ d    3.0
 e    3.0
 dtype: float64
 ```
-As you might guess, this works the same with `DataFrame`s, but you can also specify an `axis` along which to fill null values. taking the previously used `example2` again:
+Như bạn có thể đoán, điều này cũng hoạt động tương tự với `DataFrames`, nhưng bạn cũng có thể chỉ định một giá trị `axis` để điền vào các giá trị `null`. Lấy ví dụ trong `example2`, cột cần điền là cột 1, giá trị NaN ở dòng `0` được thay thế bằng giá trị '1' theo phương thức `ffill`:
 ```python
 example2.fillna(method='ffill', axis=1)
 ```
 ```
 	0	1	2	3
-0	1.0	1.0	7.0	7.0
-1	2.0	5.0	8.0	8.0
-2	NaN	6.0	9.0	9.0
+0	1.0	1.0	7.0	NaN
+1	2.0	5.0	8.0	NaN
+2	NaN	6.0	9.0	NaN
 ```
-Notice that when a previous value is not available for forward-filling, the null value remains.
+Lưu ý rằng khi giá trị trước đó không có sẵn để điền tiếp thì giá trị null vẫn giữ nguyên.
 
-> **Takeaway:** There are multiple ways to deal with missing values in your datasets. The specific strategy you use (removing them, replacing them, or even how you replace them) should be dictated by the particulars of that data. You will develop a better sense of how to deal with missing values the more you handle and interact with datasets.
+> **Takeaway - Điểm mấu chốt:** Có nhiều cách để xử lý các giá trị bị thiếu trong tập dữ liệu của bạn. Chiến lược cụ thể mà bạn sử dụng (xóa, thay thế hoặc thậm chí cách bạn thay thế) nên được quyết định bởi các chi tiết của dữ liệu đó. Bạn sẽ phát triển ý thức tốt hơn về cách xử lý các giá trị bị thiếu khi bạn xử lý và tương tác với tập dữ liệu nhiều hơn.
 
-## Removing duplicate data
+## Removing duplicate data - Xóa dữ liệu trùng
 
-> **Learning goal:** By the end of this subsection, you should be comfortable identifying and removing duplicate values from DataFrames.
+> **Mục tiêu:** Bạn sẽ biết cách xác định và loại bỏ các giá trị trùng lặp khỏi DataFrame.
 
-In addition to missing data, you will often encounter duplicated data in real-world datasets. Fortunately, `pandas` provides an easy means of detecting and removing duplicate entries.
+Ngoài dữ liệu bị thiếu, bạn thường gặp dữ liệu trùng lặp trong các tập dữ liệu thực tế. May mắn thay, `pandas` cung cấp một phương tiện dễ dàng để phát hiện và loại bỏ các mục trùng lặp.
 
-- **Identifying duplicates: `duplicated`**: You can easily spot duplicate values using the `duplicated` method in pandas, which returns a Boolean mask indicating whether an entry in a `DataFrame` is a duplicate of an earlier one. Let's create another example `DataFrame` to see this in action.
+- **Identifying duplicates - Phát hiện trùng lặp**: Bạn có thể dễ dàng phát hiện các giá trị trùng lặp bằng hàm `duplicated()` trong pandas, hàm này trả về giá trị Boolean Y/N cho biết liệu một mục trong `DataFrame` có trùng lặp với mục trước đó (ở trong cùng 1 cột) hay không. Hãy tạo một ví dụ khác để xem điều này hoạt động như thế nào.
 ```python
 example4 = pd.DataFrame({'letters': ['A','B'] * 2 + ['B'],
                          'numbers': [1, 2, 1, 3, 3]})
@@ -288,7 +288,7 @@ example4.duplicated()
 4     True
 dtype: bool
 ```
-- **Dropping duplicates: `drop_duplicates`:** simply returns a copy of the data for which all of the `duplicated` values are `False`:
+- **Dropping duplicates - Xóa dữ liệu trùng:** trả về một bản sao của dữ liệu có tất cả `duplicated` các giá trị là False:
 ```python
 example4.drop_duplicates()
 ```
@@ -298,36 +298,36 @@ example4.drop_duplicates()
 1	B	2
 3	B	3
 ```
-Both `duplicated` and `drop_duplicates` default to consider all columns but you can specify that they examine only a subset of columns in your `DataFrame`:
+Cả hai hàm `duplicated` và `drop_duplicates` đều mặc định kiểm tra tất cả các cột bị trùng, hoặc là bạn có thể chỉ định chúng chỉ kiểm tra một cột bất kỳ trong DataFrame, ví dụ như cột `letters`:
 ```python
 example4.drop_duplicates(['letters'])
 ```
 ```
-letters	numbers
+	letters	numbers
 0	A	1
 1	B	2
 ```
 
-> **Takeaway:** Removing duplicate data is an essential part of almost every data-science project. Duplicate data can change the results of your analyses and give you inaccurate results!
+> **Takeaway - Điểm mấu chốt:** Xóa dữ liệu trùng lặp là một phần thiết yếu của hầu hết mọi dự án khoa học dữ liệu. Dữ liệu trùng lặp có thể thay đổi kết quả phân tích của bạn và cung cấp cho bạn kết quả không chính xác!
 
 
-## 🚀 Challenge
+## 🚀 Challenge - Thử thách
 
-All of the discussed materials are provided as a [Jupyter Notebook](https://github.com/microsoft/Data-Science-For-Beginners/blob/main/2-Working-With-Data/08-data-preparation/notebook.ipynb). Additionally, there are exercises present after each section, give them a try!
+Tất cả các tài liệu được thảo luận đều được cung cấp ở [Jupyter Notebook](https://github.com/microsoft/Data-Science-For-Beginners/blob/main/2-Working-With-Data/08-data-preparation/notebook.ipynb).
 
 ## [Post-Lecture Quiz](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/15)
 
 
 
-## Review & Self Study
+## Review & Self Study - Đánh giá & Tự học
 
-There are many ways to discover and approach preparing your data for analysis and modeling and cleaning the data is an important step that is a "hands on" experience. Try these challenges from Kaggle to explore techniques that this lesson didn't cover.
+Có nhiều cách để khám phá và tiếp cận việc chuẩn bị dữ liệu của bạn để phân tích và lập mô hình và việc làm sạch dữ liệu là một bước quan trọng, là trải nghiệm "thực hành". Hãy thử những thử thách này từ Kaggle để khám phá các kỹ thuật khác mà bài học này không đề cập đến.
 
-- [Data Cleaning Challenge: Parsing Dates](https://www.kaggle.com/rtatman/data-cleaning-challenge-parsing-dates/)
+- [Data Cleaning Challenge: Parsing Dates - Dữ liệu dạng ngày](https://www.kaggle.com/rtatman/data-cleaning-challenge-parsing-dates/)
 
-- [Data Cleaning Challenge: Scale and Normalize Data](https://www.kaggle.com/rtatman/data-cleaning-challenge-scale-and-normalize-data)
+- [Data Cleaning Challenge: Scale and Normalize Data - Mở rộng và chuẩn hóa dữ liệu](https://www.kaggle.com/rtatman/data-cleaning-challenge-scale-and-normalize-data)
 
 
 ## Assignment
 
-[Evaluating Data from a Form](assignment.md)
+[Evaluating Data from a Form - Đánh giá dữ liệu](https://github.com/hoanglong8/Microsoft-DS-for-beginners/blob/main/2-Working-With-Data/08-data-preparation/translations/Assignment.vn.md)
