@@ -103,7 +103,7 @@ Ngoài các giá trị là số fload, pandas sử dụng xử lý theo cách 2 
 
 Xem thêm về `NaN` và `None` từ [notebook bài 15](https://github.com/microsoft/Data-Science-For-Beginners/blob/main/4-Data-Science-Lifecycle/15-analyzing/notebook.ipynb)!
 
-- **Detecting null values**: In `pandas`, the `isnull()` and `notnull()` methods are your primary methods for detecting null data. Both return Boolean masks over your data. We will be using `numpy` for `NaN` values:
+- **Phát hiện giá trị Null**: Trong `pandas`, các hàm `isnull()` và `notnull()` là các hàm thường được dùng để phát hiện dữ liệu 'null'. Cả hai đều trả về kết quả Boolean (tức là True or False) trên dữ liệu của bạn. Chúng tôi sẽ sử dụng thư viện `numpy` để phát hiện các giá trị NaN như sau:
 ```python
 import numpy as np
 
@@ -117,13 +117,13 @@ example1.isnull()
 3     True
 dtype: bool
 ```
-Look closely at the output. Does any of it surprise you? While `0` is an arithmetic null, it's nevertheless a perfectly good integer and pandas treats it as such. `''` is a little more subtle. While we used it in Section 1 to represent an empty string value, it is nevertheless a string object and not a representation of null as far as pandas is concerned.
+Hãy xem kỹ kết quả ở trên, bạn có ngạc nhiên không? Mặc dù `0` là số học biểu thị cho sự trống rỗng, nhưng nó vẫn là **số nguyên** và `pandas` coi nó là số chứ không phải `null`. Còn '' thì khác hơn một chút, trong Phần 1 thì ' ' biểu diễn một giá trị chuỗi rỗng, nó là một chuỗi theo như định nghĩa của `pandas`.
 
-Now, let's turn this around and use these methods in a manner more like you will use them in practice. You can use Boolean masks  directly as a ``Series`` or ``DataFrame`` index, which can be useful when trying to work with isolated missing (or present) values.
+Bây giờ, hãy đảo ngược lại và sử dụng các phương pháp này theo cách giống như bạn sẽ sử dụng chúng trong thực tế. Bạn có thể sử dụng trực tiếp hàm Boolean cho các `Series` hoặc `DataFrame`, điều này có thể hữu ích khi cố gắng làm việc với các giá trị bị thiếu (hoặc hiện tại) bị cô lập.
 
-> **Takeaway**: Both the `isnull()` and `notnull()` methods produce similar results when you use them in `DataFrame`s: they show the results and the index of those results, which will help you enormously as you wrestle with your data.
+> **Takeaway - Điểm mấu chốt**: Cả hai hàm `isnull()` và `notnull()` đều tạo ra kết quả tương tự khi bạn sử dụng chúng trong DataFrames: chúng hiển thị kết quả và chỉ mục của các kết quả đó, điều này sẽ giúp bạn rất nhiều khi xử lý dữ liệu.
 
-- **Dropping null values**: Beyond identifying missing values, pandas provides a convenient means to remove null values from `Series` and `DataFrame`s. (Particularly on large data sets, it is often more advisable to simply remove missing [NA] values from your analysis than deal with them in other ways.) To see this in action, let's return to `example1`:
+- **Dropping null values - Xóa các giá trị null**: Ngoài việc xác định các giá trị bị thiếu, `pandas` cung cấp một số hàm để xóa các giá trị `null` ra khỏi `Series` và `DataFrames`. (Đặc biệt trên các tập dữ liệu lớn, thường thì việc xóa các giá trị [N/A] (Not available) bị thiếu khỏi phân tích của bạn sẽ hiệu quả hơn là xử lý chúng theo những cách khác.) Để xem cách thực hiện, chúng ta hãy quay lại example 1 như sau:
 ```python
 example1 = example1.dropna()
 example1
@@ -133,9 +133,9 @@ example1
 2     
 dtype: object
 ```
-Note that this should look like your output from `example3[example3.notnull()]`. The difference here is that, rather than just indexing on the masked values, `dropna` has removed those missing values from the `Series` `example1`.
+Lưu ý rằng điều này sẽ trông giống như đầu ra của bạn từ `example3[example3.notnull()]`. Sự khác biệt ở đây là, thay vì chỉ lập chỉ mục trên các giá trị được che dấu, hàm `dropna()` đã xóa các giá trị bị thiếu đó khỏi Series `example1`.
 
-Because `DataFrame`s have two dimensions, they afford more options for dropping data.
+Vì DataFrames này có hai chiều nên chúng cung cấp nhiều lựa chọn hơn để loại bỏ dữ liệu.
 
 ```python
 example2 = pd.DataFrame([[1,      np.nan, 7], 
