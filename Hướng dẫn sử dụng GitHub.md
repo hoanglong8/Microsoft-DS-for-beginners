@@ -46,11 +46,13 @@
 
 ## 4. Giới thiệu về GitHub Projects
 
+# Sơ đồ Quản lý Dự án
+
 ```mermaid
-Graph LR
-A["Milestone - Giai đoạn"] --> B["Project - Dự án"]
-    B --> C["Issue - Công việc"]
-    C --> D["Task - Nhiệm vụ"]
+graph TD
+  A["Milestone - Giai đoạn"] --> B["Project - Dự án"]
+  B --> C["Issue - Công việc"]
+  C --> D["Task - Nhiệm vụ"]
 ```
 
 4.1. **Các phiên bản Projects**  
