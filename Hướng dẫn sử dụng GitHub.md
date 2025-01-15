@@ -46,6 +46,13 @@
 
 ## 4. Giới thiệu về GitHub Projects
 
+```mermaid
+Graph LR
+A["Milestone - Giai đoạn"] --> B["Project - Dự án"]
+    B --> C["Issue - Công việc"]
+    C --> D["Task - Nhiệm vụ"]
+```
+
 4.1. **Các phiên bản Projects**  
 - **Projects Classic** và **Projects (Beta)**.  
 - Sự khác biệt: Projects Beta có nhiều tính năng hiện đại hơn (Board, Table, Roadmap…).
